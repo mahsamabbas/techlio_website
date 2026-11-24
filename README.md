@@ -34,7 +34,7 @@ Adding a file to `case-studies`, `services` or `offers` creates its page and add
 | `src/components/`, `src/layouts/` | Shared sections and the page shell |
 | `src/lib/content.js` | Loads `content/` |
 | `src/styles/main.css` | Design system |
-| `public/js/diagrams.js` | Data for the nine interactive diagrams |
+| `public/js/diagrams.js` | Data for the ten interactive diagrams |
 | `public/js/pipeline.js` | Diagram renderer |
 | `public/admin/` | Editor configuration |
 

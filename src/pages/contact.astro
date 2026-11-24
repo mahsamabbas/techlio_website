@@ -2,11 +2,11 @@
 import Base from '../layouts/Base.astro';
 import BookingForm from '../components/BookingForm.astro';
 import Proof from '../components/Proof.astro';
-import { site, pages, cta, phoneHref } from '../lib/content.js';
+import { site, pages, cta, phoneHref, faqSchema } from '../lib/content.js';
 const p = pages.contact;
 ---
 
-<Base title="Contact" description={p.metaDescription}>
+<Base title="Contact Techlio" description={p.metaDescription} schema={faqSchema(p.faqs)}>
   <section class="page-hero">
     <div class="wrap">
       <h1>{p.heroTitle}</h1>

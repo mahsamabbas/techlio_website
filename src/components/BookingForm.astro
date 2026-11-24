@@ -1,5 +1,6 @@
 ---
-// Booking form. Posts to "Form endpoint" from Site settings when set; otherwise drafts an email.
+// Booking form. Posts to "Form endpoint" from Site settings when set, otherwise to Netlify Forms.
+// If neither accepts it, the visitor's mail app opens with the request drafted to the recipient email.
 import { site, pages, services, offers, phoneHref } from '../lib/content.js';
 const codes = ['+1', '+44', '+92', '+49', '+33', '+31', '+34', '+39', '+46', '+41', '+353', '+61', '+65', 'Other'];
 const starts = [...offers.map((o) => o.title), ...services.map((s) => s.title), 'Co-build with embedded engineers'];
@@ -18,7 +19,19 @@ const home = pages.home;
         {site.offices.map((o) => <div><dt>{o.country}</dt><dd>{o.address}</dd></div>)}
       </dl>
     </div>
-    <form class="form" id="scope-form" data-email={site.email} data-endpoint={site.formEndpoint} novalidate>
+    <form
+      class="form"
+      id="scope-form"
+      name="scoping-call"
+      method="POST"
+      action="/contact/"
+      data-netlify="true"
+      netlify-honeypot="website"
+      data-email={site.formEmail || site.email}
+      data-endpoint={site.formEndpoint}
+      novalidate
+    >
+      <input type="hidden" name="form-name" value="scoping-call" />
       <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required /></div>
       <div class="field">
         <label for="f-email">Work email</label><input id="f-email" name="email" type="email" autocomplete="email" required />
@@ -69,7 +82,7 @@ const home = pages.home;
           <option>Other</option>
         </select>
       </div>
-      <label class="check field-wide"><input type="checkbox" name="nda" /> Send a mutual NDA before we talk</label>
+      <label class="check field-wide"><input type="checkbox" name="nda" value="Yes" /> Send a mutual NDA before we talk</label>
       <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
       <div class="field-wide form-foot">
         <button class="btn btn-primary" type="submit">Request scoping call</button>

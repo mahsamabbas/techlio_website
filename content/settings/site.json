@@ -18,7 +18,7 @@
   "termsUrl": "https://techlio.co/terms-of-use/",
   "privacyUrl": "https://techlio.co/privacy-policy/",
   "careersUrl": "https://techlio.co/career/",
-  "tagline": "AI-ready engineering firm. We design, build, secure and run AI agents, automations and SaaS platforms for startups and enterprises.",
+  "tagline": "AI engineering firm. We build AI agents, n8n and AI automations, SaaS products and secure cloud systems for startups, enterprises and growing businesses.",
   "regions": "US, UK and Europe",
   "badge": "Upwork Top Rated Plus",
   "ctaLabel": "Book a technical scoping call",
@@ -65,12 +65,13 @@
     "AWS",
     "Microsoft Azure",
     "Google Cloud",
-    "LLM integration",
-    "Generative AI",
-    "Computer vision",
-    "Cloud security",
-    "CI/CD and DevOps",
-    "Custom applications"
+    "n8n",
+    "OpenAI",
+    "Claude",
+    "LangChain",
+    "Python",
+    "React",
+    "Node.js"
   ],
   "industries": [
     "Health care",
@@ -89,5 +90,6 @@
     "Logistics"
   ],
   "reviews": [],
+  "formEmail": "mahsam@techlio.co",
   "formEndpoint": ""
 }

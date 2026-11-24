@@ -47,7 +47,7 @@
   ],
   "closeTitle": "What should your team be able to ask, and have done?",
   "closeText": "Bring the questions and tasks you have in mind. We will show you what a grounded, auditable agent for them would involve.",
-  "order": 2,
+  "order": 3,
   "short": "Agents and knowledge",
   "card": {
     "lead": "Agents that act, with answers you can audit.",
@@ -58,5 +58,9 @@
       "Guardrails",
       "Eval pipelines"
     ]
-  }
+  },
+  "examplesTitle": "",
+  "examples": [],
+  "faqs": [],
+  "metaTitle": "AI Agent Development and RAG Systems"
 }

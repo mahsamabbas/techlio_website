@@ -505,4 +505,70 @@ window.TL_DIAGRAMS = {
       ] },
     ],
   },
+
+  /* n8n and AI business automation: a customer request handled end to end */
+  smallbiz: {
+    title: 'A customer request, handled without anyone typing',
+    columns: [
+      { label: 'Customers', nodes: [
+        { id: 'call', label: 'Phone call', sub: 'answered or missed' },
+        { id: 'chat', label: 'WhatsApp, Instagram', sub: 'messages' },
+        { id: 'form', label: 'Website form', sub: 'enquiries' },
+      ] },
+      { label: 'AI assistant', nodes: [
+        { id: 'understand', label: 'Understand', sub: 'what do they need?' },
+        { id: 'check', label: 'Check', sub: 'calendar, stock, prices' },
+      ] },
+      { label: 'Your tools', nodes: [
+        { id: 'calendar', label: 'Booking calendar', sub: 'appointment added' },
+        { id: 'orders', label: 'Order sheet', sub: 'order added' },
+      ] },
+      { label: 'Follow-up', nodes: [
+        { id: 'confirm', label: 'Confirmation', sub: 'text or email' },
+        { id: 'remind', label: 'Reminder, review', sub: 'sent on schedule' },
+      ] },
+      { label: 'Owner', nodes: [{ id: 'summary', label: 'Daily summary', sub: 'and anything unusual' }] },
+    ],
+    edges: [
+      ['call', 'understand'], ['chat', 'understand'], ['form', 'understand'], ['understand', 'check'],
+      ['check', 'calendar'], ['check', 'orders'], ['calendar', 'confirm'], ['orders', 'confirm'],
+      ['confirm', 'remind'], ['confirm', 'summary'], ['remind', 'summary'], ['understand', 'summary'],
+    ],
+    details: {
+      call: { title: 'Phone call', body: 'A missed call no longer means a lost customer.', points: ['Instant text back with a booking link', 'Voicemails transcribed and routed'] },
+      chat: { title: 'WhatsApp and Instagram', body: 'Messages are answered in minutes, at any hour, in your tone.', points: ['Uses your real menu, prices and policies', 'Hands over to a person when asked'] },
+      form: { title: 'Website form', body: 'Enquiries go straight into the same flow instead of an inbox.', points: ['No copying into spreadsheets', 'Spam filtered out'] },
+      understand: { title: 'Understand', body: 'AI reads the message and works out what the customer wants.', points: ['Asks a follow-up question if details are missing', 'Unusual requests go to you, not a guess'] },
+      check: { title: 'Check', body: 'Before promising anything, the workflow checks your real availability, stock and prices.', points: ['Reads your live calendar and sheets', 'Never double-books'] },
+      calendar: { title: 'Booking calendar', body: 'Appointments land in the calendar you already use.', points: ['Google Calendar, Calendly or your booking system', 'Reschedules and cancellations handled'] },
+      orders: { title: 'Order sheet', body: 'Orders are recorded in one place with everything the team needs.', points: ['Google Sheets, Airtable or your point of sale', 'Deposit or payment link attached'] },
+      confirm: { title: 'Confirmation', body: 'The customer gets a clear confirmation straight away.', points: ['Text, WhatsApp or email', 'Includes time, address and what to bring'] },
+      remind: { title: 'Reminder and review', body: 'Reminders reduce no-shows, and a review request follows a good visit.', points: ['Timing you choose', 'Stops if the customer replies'] },
+      summary: { title: 'Daily summary', body: 'You see what happened today and anything that needs your decision.', points: ['One message each evening', 'Exceptions flagged with full details'] },
+    },
+    scenarios: [
+      { id: 'dental', label: 'Dental clinic: missed call', outcome: 'Booked, reminded and reviewed', steps: [
+        { node: 'call', log: 'Missed call after hours, text back sent with booking link' },
+        { node: 'understand', log: 'Patient wants a cleaning next week' },
+        { node: 'check', log: 'Thursday 3 pm is free' },
+        { node: 'calendar', log: 'Appointment added to the clinic calendar' },
+        { node: 'confirm', log: 'Confirmation text sent to the patient', state: 'verified' },
+        { node: 'remind', log: 'Reminder the day before, review request after the visit', state: 'verified' },
+        { node: 'summary', log: 'Included in the evening summary', state: 'verified' },
+      ] },
+      { id: 'bakery', label: 'Bakery: custom cake order', outcome: 'Order recorded with deposit link', steps: [
+        { node: 'chat', log: 'Instagram message asking for a birthday cake on Saturday' },
+        { node: 'understand', log: 'Size, flavour and pickup time collected' },
+        { node: 'check', log: 'Saturday pickup slot available' },
+        { node: 'orders', log: 'Order added to the order sheet' },
+        { node: 'confirm', log: 'Order summary and deposit link sent', state: 'verified' },
+        { node: 'summary', log: 'Added to tomorrow’s prep list', state: 'verified' },
+      ] },
+      { id: 'unusual', label: 'Unusual request', outcome: 'Passed to the owner with details', steps: [
+        { node: 'chat', log: 'Message asking about a wholesale arrangement' },
+        { node: 'understand', log: 'Outside the normal menu, not answered automatically', state: 'review' },
+        { node: 'summary', log: 'Sent to the owner now with the full conversation', state: 'review' },
+      ] },
+    ],
+  },
 };

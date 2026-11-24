@@ -7,7 +7,7 @@ import Steps from '../components/Steps.astro';
 import Blocks from '../components/Blocks.astro';
 import CaseCards from '../components/CaseCards.astro';
 import Closing from '../components/Closing.astro';
-import { services, offers } from '../lib/content.js';
+import { services, offers, serviceSchema, faqSchema, breadcrumbSchema } from '../lib/content.js';
 
 export function getStaticPaths() {
   return [
@@ -18,9 +18,14 @@ export function getStaticPaths() {
 
 const { kind, entry: e } = Astro.props;
 const has = (list) => Array.isArray(list) && list.length > 0;
+const schema = [
+  serviceSchema(e),
+  breadcrumbSchema([{ name: 'Home', path: '/' }, { name: e.title, path: `/${e.slug}/` }]),
+  ...faqSchema(e.faqs),
+];
 ---
 
-<Base title={e.title} description={e.description} diagrams={Boolean(e.diagram)}>
+<Base title={e.metaTitle || e.title} description={e.description} diagrams={Boolean(e.diagram)} schema={schema}>
   {
     kind === 'service' ? (
       <>
@@ -35,14 +40,26 @@ const has = (list) => Array.isArray(list) && list.length > 0;
         <Section title={e.offerTitle} intro={e.offerIntro}>
           <Steps items={e.offerings} cols={4} />
         </Section>
+        {has(e.examples) && (
+          <Section tint title={e.examplesTitle}>
+            <Blocks items={e.examples} />
+          </Section>
+        )}
         {has(e.cases) && (
-          <Section tint title="Related client work">
+          <Section tint={!has(e.examples)} title="Related client work">
             <CaseCards slugs={e.cases} />
           </Section>
         )}
-        <Section title={e.whyTitle}>
+        <Section tint={has(e.examples)} title={e.whyTitle}>
           <Blocks items={e.why} />
         </Section>
+        {has(e.faqs) && (
+          <Section title="Common questions">
+            <div class="faq">
+              {e.faqs.map((f) => <details><summary>{f.question}</summary><p>{f.answer}</p></details>)}
+            </div>
+          </Section>
+        )}
       </>
     ) : (
       <>

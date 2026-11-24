@@ -7,14 +7,14 @@ import CaseCards from '../components/CaseCards.astro';
 import StatsBand from '../components/StatsBand.astro';
 import BookingForm from '../components/BookingForm.astro';
 import Proof from '../components/Proof.astro';
-import { site, pages, services, offers, cta } from '../lib/content.js';
+import { site, pages, services, offers, cta, websiteSchema } from '../lib/content.js';
 
 const home = pages.home;
 const pad = (n) => String(n).padStart(2, '0');
 const marquee = [...site.platforms, ...site.platforms];
 ---
 
-<Base title={home.metaTitle} description={home.metaDescription} diagrams home>
+<Base title={home.metaTitle} description={home.metaDescription} diagrams home schema={[websiteSchema]}>
   <section class="hero">
     <div class="wrap">
       <p class="badge">{site.badge}</p>

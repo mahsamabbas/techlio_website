@@ -1,0 +1,14 @@
+# Old techlio.co addresses -> new pages, so existing search rankings and links carry over.
+/about-us/                      /about/                    301
+/customer/                      /case-studies/             301
+/projects/*                     /case-studies/             301
+/services/                      /#services                 301
+/ai-data-innovation/            /ai-agents/                301
+/cloud-infrastructure-devops/   /cloud-devops/             301
+/engineering-development/       /product-development/      301
+/strategic-consultation/        /ai-consulting/            301
+/operational-services/          /n8n-ai-automation/        301
+/digital-branding-marketing/    /                          301
+/fixed-model/                   /process/#engagement       301
+/time-model/                    /process/#engagement       301
+/dedicated-team-model/          /process/#engagement       301

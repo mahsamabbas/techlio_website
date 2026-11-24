@@ -40,6 +40,7 @@ collections:
           - { label: "Platforms strip", name: platforms, widget: list, field: { label: "Platform", name: item, widget: string } }
           - { label: "Industries", name: industries, widget: list, field: { label: "Industry", name: item, widget: string } }
           - { label: "Client reviews", name: reviews, widget: list, required: false, summary: "{{fields.name}}, {{fields.company}}", hint: "Only real reviews from named clients.", fields: [ { label: "Quote", name: quote, widget: text }, { label: "Name", name: name, widget: string }, { label: "Role", name: role, widget: string }, { label: "Company", name: company, widget: string }, { label: "Source", name: source, widget: string, hint: "For example: Upwork, Clutch, LinkedIn" } ] }
+          - { label: "Booking form recipient email", name: formEmail, widget: string, hint: "Used when the form has to fall back to email" }
           - { label: "Form endpoint", name: formEndpoint, widget: string, required: false, hint: "Form backend URL. When empty, the booking form drafts an email instead." }
   - name: pages
     label: Pages
@@ -175,10 +176,11 @@ collections:
       - { label: "Page address", name: slug, widget: string, hint: "Lowercase words joined by hyphens. Changing this changes the page URL." }
       - { label: "Order", name: order, widget: number, value_type: int }
       - { label: "Short name", name: short, widget: string, hint: "Used in the footer and links" }
+      - { label: "Browser title", name: metaTitle, widget: string, required: false, hint: "Shown in search results and the browser tab" }
       - { label: "Search description", name: description, widget: text }
       - { label: "Page heading", name: h1, widget: string }
       - { label: "Intro", name: intro, widget: text }
-      - { label: "Diagram", name: diagram, widget: select, required: false, options: ["", "agent", "knowledge", "workflow", "roadmap", "saas", "secure", "platform", "modernize", "release"], hint: "Interactive diagram shown under the page heading. Leave empty for none." }
+      - { label: "Diagram", name: diagram, widget: select, required: false, options: ["", "agent", "knowledge", "workflow", "roadmap", "saas", "smallbiz", "secure", "platform", "modernize", "release"], hint: "Interactive diagram shown under the page heading. Leave empty for none." }
       - { label: "Diagram description", name: caption, widget: text, required: false, hint: "Read by screen readers" }
       - { label: "Home page card", name: card, widget: object, fields: [ { label: "Lead line", name: lead, widget: string }, { label: "Text", name: text, widget: text }, { label: "Tags", name: tags, widget: list, field: { label: "Tag", name: item, widget: string } } ] }
       - { label: "Steps heading", name: offerTitle, widget: string }
@@ -186,11 +188,16 @@ collections:
       - { label: "Steps", name: offerings, widget: list, summary: "{{fields.title}}", fields: [
             { label: "Title", name: title, widget: string },
             { label: "Text", name: text, widget: text } ] }
+      - { label: "Examples heading", name: examplesTitle, widget: string, required: false }
+      - { label: "Examples", name: examples, widget: list, required: false, summary: "{{fields.title}}", fields: [
+            { label: "Title", name: title, widget: string },
+            { label: "Text", name: text, widget: text } ] }
       - { label: "Related case studies", name: cases, widget: relation, collection: case_studies, search_fields: ["name"], value_field: "slug", display_fields: ["name"], multiple: true, required: false }
       - { label: "Reasons heading", name: whyTitle, widget: string }
       - { label: "Reasons", name: why, widget: list, summary: "{{fields.title}}", fields: [
             { label: "Title", name: title, widget: string },
             { label: "Text", name: text, widget: text } ] }
+      - { label: "FAQs", name: faqs, widget: list, required: false, summary: "{{fields.question}}", hint: "Shown on the page and marked up for search engines", fields: [ { label: "Question", name: question, widget: string }, { label: "Answer", name: answer, widget: text } ] }
       - { label: "Closing heading", name: closeTitle, widget: string }
       - { label: "Closing text", name: closeText, widget: text }
   - name: offers
@@ -208,12 +215,13 @@ collections:
       - { label: "Name", name: title, widget: string }
       - { label: "Page address", name: slug, widget: string, hint: "Lowercase words joined by hyphens. Changing this changes the page URL." }
       - { label: "Order", name: order, widget: number, value_type: int }
+      - { label: "Browser title", name: metaTitle, widget: string, required: false, hint: "Shown in search results and the browser tab" }
       - { label: "Search description", name: description, widget: text }
       - { label: "Label above heading", name: kicker, widget: string, required: false }
       - { label: "Page heading", name: h1, widget: string }
       - { label: "Intro", name: intro, widget: text }
       - { label: "Main button label", name: primaryLabel, widget: string }
-      - { label: "Diagram", name: diagram, widget: select, required: false, options: ["", "agent", "knowledge", "workflow", "roadmap", "saas", "secure", "platform", "modernize", "release"], hint: "Interactive diagram shown under the page heading. Leave empty for none." }
+      - { label: "Diagram", name: diagram, widget: select, required: false, options: ["", "agent", "knowledge", "workflow", "roadmap", "saas", "smallbiz", "secure", "platform", "modernize", "release"], hint: "Interactive diagram shown under the page heading. Leave empty for none." }
       - { label: "Diagram description", name: caption, widget: text, required: false }
       - { label: "Audience heading", name: audienceTitle, widget: string, required: false }
       - { label: "Audience intro", name: audienceIntro, widget: text, required: false }

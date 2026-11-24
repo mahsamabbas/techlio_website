@@ -4,14 +4,19 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { site } from '../lib/content.js';
 
-const { title, description, diagrams = false, home = false } = Astro.props;
+const { title, description, diagrams = false, home = false, schema = [] } = Astro.props;
 const fullTitle = home ? title : `${title} | ${site.name}`;
 const canonical = new URL(Astro.url.pathname, site.url).href;
+const image = new URL('/og.png', site.url).href;
 const org = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
+  '@id': `${site.url}/#organization`,
   name: site.name,
   url: site.url,
+  logo: new URL('/favicon.svg', site.url).href,
+  description: site.tagline,
+  areaServed: ['US', 'GB', 'Europe'],
   email: site.email,
   telephone: site.phone,
   sameAs: [site.linkedin, site.x],
@@ -32,6 +37,13 @@ const org = {
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={image} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@techlio" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="theme-color" content="#12161c" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -41,6 +53,7 @@ const org = {
       rel="stylesheet"
     />
     <script is:inline type="application/ld+json" set:html={JSON.stringify(org)} />
+    {schema.map((item) => <script is:inline type="application/ld+json" set:html={JSON.stringify(item)} />)}
   </head>
   <body>
     <Header />

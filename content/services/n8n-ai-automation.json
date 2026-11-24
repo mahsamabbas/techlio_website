@@ -1,0 +1,112 @@
+{
+  "slug": "n8n-ai-automation",
+  "order": 2,
+  "title": "n8n & AI Business Automation",
+  "short": "Business automation",
+  "metaTitle": "n8n and AI Automation for Small Businesses",
+  "description": "Techlio automates small and mid-sized businesses with n8n and AI: bookings, orders, follow-ups, invoices and reminders that run themselves. For clinics, shops, agencies and service businesses.",
+  "h1": "Automate the busywork in your business with n8n and AI.",
+  "intro": "If your team copies details between WhatsApp, spreadsheets, a calendar and an inbox, that work can run itself. We connect the tools you already use with n8n and add AI where a message has to be read and understood, so bookings, orders, reminders and follow-ups happen without anyone typing them.",
+  "diagram": "smallbiz",
+  "caption": "A customer call, chat message or website form is understood by an AI assistant, checked against the calendar and stock, booked or added to the order sheet, confirmed, followed up with reminders and summarized for the owner.",
+  "card": {
+    "lead": "Stop doing by hand what software can do overnight.",
+    "text": "We connect your phone, chat, calendar, spreadsheets and payment tools with n8n and AI, so bookings, orders and follow-ups run on their own.",
+    "tags": [
+      "n8n workflows",
+      "Bookings and reminders",
+      "Order handling",
+      "Follow-ups and reviews"
+    ]
+  },
+  "offerTitle": "How we automate a business",
+  "offerIntro": "Four stages, in order. Most first automations are live within two to three weeks.",
+  "offerings": [
+    {
+      "title": "Find the manual work",
+      "text": "A short call and a walk through your day. We list every task someone repeats by hand and estimate the hours each one costs."
+    },
+    {
+      "title": "Pick the first win",
+      "text": "We start with the automation that saves the most time for the least change, and agree what done looks like before building."
+    },
+    {
+      "title": "Build and connect",
+      "text": "We build the workflow in n8n, connect your existing tools and test it with your real messages, orders and bookings."
+    },
+    {
+      "title": "Hand over and support",
+      "text": "Your team gets a short walkthrough and a simple way to pause or adjust the automation. We monitor it and fix what breaks."
+    }
+  ],
+  "examplesTitle": "What this looks like in your business",
+  "examples": [
+    {
+      "title": "Dental and medical clinics",
+      "text": "Missed calls get an instant text back, patients book into your calendar by message, reminders go out the day before, and a review request follows each visit."
+    },
+    {
+      "title": "Bakeries and food businesses",
+      "text": "Custom orders from WhatsApp and Instagram land in one order sheet with pickup time and deposit link, and tomorrow's prep list arrives every evening."
+    },
+    {
+      "title": "Salons, gyms and studios",
+      "text": "Bookings, reschedules and no-show follow-ups handled by message, with waitlist spots filled automatically when someone cancels."
+    },
+    {
+      "title": "Agencies and consultancies",
+      "text": "New leads are qualified, added to your CRM and booked into a call, and client reports are assembled and sent on schedule."
+    },
+    {
+      "title": "Trades and home services",
+      "text": "Quote requests are captured with photos and address, jobs are scheduled, and invoices and payment reminders go out without chasing."
+    },
+    {
+      "title": "Online and retail shops",
+      "text": "Order updates, stock alerts, supplier reorders and customer questions answered from your own product and policy information."
+    }
+  ],
+  "cases": [
+    "awkward-media",
+    "ordaos"
+  ],
+  "whyTitle": "Why owners choose this over hiring or another app",
+  "why": [
+    {
+      "title": "It uses the tools you already have",
+      "text": "No new system for your staff to learn. We connect your phone, chat, calendar, sheets and accounting tools as they are."
+    },
+    {
+      "title": "You stay in control",
+      "text": "Anything unusual goes to you or your team with the details attached. The automation handles the routine and asks about the rest."
+    },
+    {
+      "title": "You own it",
+      "text": "Workflows run in your own n8n account. There is no lock-in, and you can see and change every step."
+    }
+  ],
+  "closeTitle": "Which task would you hand off first?",
+  "closeText": "Tell us what your team repeats every day. We will reply within 24 hours with what we would automate first and what it would take.",
+  "faqs": [
+    {
+      "question": "What is n8n?",
+      "answer": "n8n is a workflow automation tool that connects apps such as email, WhatsApp, calendars, spreadsheets, CRMs, accounting and payment systems, and moves information between them automatically. We add AI steps where something needs to be read, classified or written."
+    },
+    {
+      "question": "Do I need technical staff to use it?",
+      "answer": "No. We build, test and monitor the workflows. Your team only needs to know what the automation does and where its exceptions show up, which we cover in the handover."
+    },
+    {
+      "question": "Which tools can you connect?",
+      "answer": "n8n has ready-made connections for hundreds of common business apps, and we can connect almost anything else that has an API. Tell us what you use on the scoping call."
+    },
+    {
+      "question": "Is my customer data safe?",
+      "answer": "Workflows run in your own account with access limited to what each step needs. For clinics and other businesses handling sensitive records, we design the workflow around the privacy rules that apply to you."
+    },
+    {
+      "question": "How long does one automation take?",
+      "answer": "A single workflow is usually a matter of days or a few weeks, not months. You get a fixed scope and timeline after the first call."
+    }
+  ]
+}

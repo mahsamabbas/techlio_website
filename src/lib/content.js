@@ -28,3 +28,35 @@ export const nav = [
 
 /** Case studies for a list of slugs, skipping any that no longer exist. */
 export const pickCases = (slugs = []) => slugs.map((s) => cases.find((c) => c.slug === s)).filter(Boolean);
+
+/** Structured data helpers (schema.org JSON-LD). */
+const abs = (path) => new URL(path, site.url).href;
+export const faqSchema = (faqs = []) =>
+  faqs.length
+    ? [{
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.answer } })),
+      }]
+    : [];
+export const breadcrumbSchema = (trail) => ({
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: trail.map((t, i) => ({ '@type': 'ListItem', position: i + 1, name: t.name, item: abs(t.path) })),
+});
+export const serviceSchema = (e) => ({
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: e.title,
+  description: e.description,
+  url: abs(`/${e.slug}/`),
+  provider: { '@id': `${site.url}/#organization` },
+  areaServed: ['US', 'GB', 'Europe'],
+});
+export const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: site.name,
+  url: site.url,
+  publisher: { '@id': `${site.url}/#organization` },
+};

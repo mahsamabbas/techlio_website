@@ -47,7 +47,7 @@
   ],
   "closeTitle": "Start with a free AI readiness assessment",
   "closeText": "Thirty minutes with a senior engineer, a look at your stack and goals, and a straight answer on where AI will and will not pay off.",
-  "order": 6,
+  "order": 7,
   "short": "Advisory and architecture",
   "card": {
     "lead": "Decide what to build before you pay to build it.",
@@ -58,5 +58,9 @@
       "Architecture review",
       "Feasibility study"
     ]
-  }
+  },
+  "examplesTitle": "",
+  "examples": [],
+  "faqs": [],
+  "metaTitle": "AI Consulting and Architecture"
 }

@@ -4,7 +4,7 @@ import Section from '../../components/Section.astro';
 import Blocks from '../../components/Blocks.astro';
 import CaseCards from '../../components/CaseCards.astro';
 import Closing from '../../components/Closing.astro';
-import { cases } from '../../lib/content.js';
+import { cases, breadcrumbSchema } from '../../lib/content.js';
 
 export function getStaticPaths() {
   return cases.map((c) => ({ params: { slug: c.slug }, props: { c } }));
@@ -12,10 +12,17 @@ export function getStaticPaths() {
 
 const { c } = Astro.props;
 const related = cases.filter((x) => x.slug !== c.slug).slice(0, 2).map((x) => x.slug);
+const schema = [
+  breadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'Case studies', path: '/case-studies/' },
+    { name: c.name, path: `/case-studies/${c.slug}/` },
+  ]),
+];
 const host = c.liveUrl ? new URL(c.liveUrl).hostname : '';
 ---
 
-<Base title={`${c.name} case study`} description={`${c.headline}. A Techlio case study.`}>
+<Base title={`${c.name} case study: ${c.categories[0]}`} description={`${c.headline}. A Techlio case study.`} schema={schema}>
   <section class="page-hero case">
     <div class="wrap">
       <a class="back" href="/case-studies/">Back to all case studies</a>

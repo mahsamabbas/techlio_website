@@ -439,3 +439,11 @@ p { max-width: 68ch; }
 @media (max-width: 760px) {
   .metric-row, .ticks-2, .case-index, .service-grid { grid-template-columns: 1fr; }
 }
+
+/* Seven service cards: let the last one span the row */
+.service-grid > .service-card:last-child:nth-child(3n + 1) { grid-column: 1 / -1; }
+@media (max-width: 1020px) {
+  .service-grid > .service-card:last-child:nth-child(3n + 1) { grid-column: auto; }
+  .service-grid > .service-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
+}
+.form button[disabled] { opacity: 0.6; cursor: progress; }
