@@ -457,3 +457,19 @@ p { max-width: 64ch; }
   .marquee li[aria-hidden='true'] { display: none; }
   * { transition-duration: 0.01ms !important; }
 }
+
+/* Review fixes */
+.hero h1 { font-size: clamp(2.4rem, 1.3rem + 3.6vw, 4.2rem); line-height: 1.05; }
+.hero-grid { grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); }
+.section-foot { max-width: none; }
+.metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.metric { padding-right: 1rem; margin-right: 0; max-width: none; }
+.metric strong { font-size: 1.7rem; }
+.case-summary { max-width: none; }
+@media (max-width: 940px) {
+  .hero-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .metrics { grid-template-columns: 1fr 1fr; }
+  .metric { border-right: 0; }
+}
