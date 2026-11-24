@@ -31,7 +31,7 @@ const marquee = [...clients, ...clients];
     <p>{site.clientsLabel}</p>
     <div class="marquee">
       <ul>
-        {marquee.map((c, i) => <li aria-hidden={i >= clients.length ? 'true' : undefined}>{c.logo ? <img src={c.logo} alt={c.name} width={c.logoWidth} height={c.logoHeight} loading="lazy" /> : c.name}</li>)}
+        {marquee.map((c, i) => <li aria-hidden={i >= clients.length ? 'true' : undefined}>{c.logo ? <img src={c.logo} alt={c.name} width={c.logoWidth} height={c.logoHeight} /> : c.name}</li>)}
       </ul>
     </div>
   </section>
