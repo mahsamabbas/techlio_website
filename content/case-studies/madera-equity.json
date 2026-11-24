@@ -48,16 +48,16 @@
   "liveUrl": "https://www.maderaequity.com",
   "metrics": [
     {
+      "value": "5",
+      "label": "stages delivered, discovery to support"
+    },
+    {
       "value": "120+",
       "label": "communities acquired by Madera, per its site"
     },
     {
       "value": "10,000+",
       "label": "units in its active market"
-    },
-    {
-      "value": "5",
-      "label": "stages delivered, discovery to support"
     }
   ],
   "solutions": [

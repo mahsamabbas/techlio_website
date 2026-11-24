@@ -48,16 +48,16 @@
   "liveUrl": "https://www.advateklighting.com",
   "metrics": [
     {
+      "value": "5",
+      "label": "stages delivered, discovery to support"
+    },
+    {
       "value": "25",
       "label": "automation triggers per controller in SHOWTime"
     },
     {
       "value": "0",
       "label": "extra playback hardware needed for a recorded show"
-    },
-    {
-      "value": "5",
-      "label": "stages delivered, discovery to support"
     }
   ],
   "solutions": [

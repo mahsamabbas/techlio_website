@@ -48,16 +48,16 @@
   "liveUrl": "https://signalhouse.io",
   "metrics": [
     {
+      "value": "5",
+      "label": "stages delivered, discovery to support"
+    },
+    {
       "value": "4",
       "label": "channels on one platform: 10DLC, toll-free, short code, voice"
     },
     {
       "value": "Top 5",
       "label": "CPaaS provider on G2, as listed by Signal House"
-    },
-    {
-      "value": "5",
-      "label": "stages delivered, discovery to support"
     }
   ],
   "solutions": [

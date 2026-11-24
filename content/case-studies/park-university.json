@@ -48,16 +48,16 @@
   "liveUrl": "https://www.park.edu",
   "metrics": [
     {
+      "value": "5",
+      "label": "stages delivered, discovery to support"
+    },
+    {
       "value": "80+",
       "label": "academic programmes offered by the university"
     },
     {
       "value": "65+",
       "label": "online degrees"
-    },
-    {
-      "value": "5",
-      "label": "stages delivered, discovery to support"
     }
   ],
   "solutions": [

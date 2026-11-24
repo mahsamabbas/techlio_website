@@ -48,16 +48,16 @@
   "liveUrl": "https://www.nuooly.com",
   "metrics": [
     {
+      "value": "5",
+      "label": "stages delivered, discovery to support"
+    },
+    {
       "value": "7",
       "label": "professional practice areas served"
     },
     {
       "value": "Web + iOS",
       "label": "member experience across devices"
-    },
-    {
-      "value": "5",
-      "label": "stages delivered, discovery to support"
     }
   ],
   "solutions": [
