@@ -91,7 +91,7 @@ const host = (url) => (url ? new URL(url).hostname : '');
               <span class="case-visual-name">{c.name}</span>
               <span class="case-visual-panel">
                 <span>{c.liveUrl ? `Live at ${host(c.liveUrl)}` : c.industry}</span>
-                <ul class="chips">{c.stack.slice(0, 5).map((t) => <li>{t}</li>)}</ul>
+                <ul class="chips">{(c.services || c.stack).slice(0, 4).map((t) => <li>{t}</li>)}</ul>
               </span>
             </a>
             <div>

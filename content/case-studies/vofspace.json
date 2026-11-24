@@ -1,0 +1,89 @@
+{
+  "slug": "vofspace",
+  "order": 10,
+  "name": "Vofspace",
+  "industry": "SaaS, productivity",
+  "categories": [
+    "Virtual office",
+    "Video",
+    "Payments"
+  ],
+  "services": [
+    "SaaS engineering",
+    "Business automation"
+  ],
+  "headline": "A virtual office that has hosted 20K+ sessions and processed $3M+",
+  "overview": "Vofspace is a virtual office platform built end to end by Techlio for independent professionals, coaches, educators and service providers. It brings HD video meetings, scheduling, payment collection and per-client communication into one dashboard.",
+  "liveUrl": "https://vofspace.com",
+  "duration": "8 months, fixed scope",
+  "team": [
+    "1 full-stack developer",
+    "1 backend developer",
+    "1 UI/UX designer",
+    "1 QA engineer"
+  ],
+  "stack": [
+    "React",
+    "Node.js",
+    "WebRTC",
+    "Stripe",
+    "PostgreSQL",
+    "Figma"
+  ],
+  "metrics": [
+    {
+      "value": "$3M+",
+      "label": "processed through automated billing"
+    },
+    {
+      "value": "20K+",
+      "label": "sessions hosted"
+    },
+    {
+      "value": "15+",
+      "label": "industries served"
+    }
+  ],
+  "challenges": [
+    {
+      "title": "Fragmented professional tools",
+      "text": "Independent professionals ran video, scheduling, invoicing and messaging across four to six platforms."
+    },
+    {
+      "title": "No automated payment collection",
+      "text": "Billing after sessions was manual and prone to delays."
+    },
+    {
+      "title": "No dedicated client communication",
+      "text": "Conversations happened in email or WhatsApp with no per-client history."
+    },
+    {
+      "title": "Barriers for non-technical users",
+      "text": "Counsellors, instructors and tutors needed zero technical setup and no downloads for their clients."
+    }
+  ],
+  "solutions": [
+    {
+      "title": "Unified virtual office dashboard",
+      "text": "HD video, scheduling, payments and client communication in one environment."
+    },
+    {
+      "title": "Automated post-session billing",
+      "text": "Stripe-powered collection that triggers after each session, removing manual invoicing."
+    },
+    {
+      "title": "Per-client channels",
+      "text": "A dedicated messaging channel for each client, keeping history and notes in one view."
+    },
+    {
+      "title": "Zero-download client access",
+      "text": "A browser-native experience where clients join from a link on any device."
+    }
+  ],
+  "results": [
+    "20K+ sessions hosted and $3M+ processed through automated billing",
+    "Professionals across 15+ industries on the platform",
+    "Post-session payment delays reduced to near zero",
+    "Featured in Woman's World"
+  ]
+}

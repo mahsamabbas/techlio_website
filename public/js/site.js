@@ -1,4 +1,4 @@
-/* Navigation toggle and booking form. */
+/* Navigation, motion, case study filters and the booking form. */
 (function () {
   'use strict';
 
@@ -9,6 +9,86 @@
       var open = toggle.getAttribute('aria-expanded') === 'true';
       toggle.setAttribute('aria-expanded', String(!open));
       nav.classList.toggle('is-open', !open);
+    });
+  }
+
+
+  // Services menu: close on outside click, Escape, or after choosing a link.
+  var menu = document.querySelector('.nav-menu');
+  if (menu) {
+    document.addEventListener('click', function (ev) { if (menu.open && !menu.contains(ev.target)) menu.open = false; });
+    document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape' && menu.open) { menu.open = false; menu.querySelector('summary').focus(); } });
+  }
+
+  // Header shadow and reading progress bar.
+  var header = document.querySelector('.site-header');
+  var bar = document.querySelector('.progress');
+  var ticking = false;
+  function onScroll() {
+    ticking = false;
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    if (header) header.classList.toggle('is-stuck', window.scrollY > 8);
+    if (bar) bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, window.scrollY / max) : 0) + ')';
+  }
+  window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  onScroll();
+
+  var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Scroll reveal: only elements that start below the fold, so nothing flashes on load.
+  if (!calm && 'IntersectionObserver' in window) {
+    var targets = document.querySelectorAll('.section-head, .svc-card, .info-card, .case-row, .case-card, .case-item, .phase, .timeline > li, .path, .badge-card, .review, .form, .booking-copy, .cta-banner, .proof-banner, .pains li, .ticks-grid li, .rail li, .dark-panel, .leader, .faq details, .doc-section');
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    Array.prototype.forEach.call(targets, function (el) {
+      if (el.getBoundingClientRect().top < window.innerHeight * 0.92) return;
+      var i = Array.prototype.indexOf.call(el.parentNode.children, el);
+      el.style.setProperty('--d', Math.min(i, 5) * 70 + 'ms');
+      el.classList.add('reveal');
+      io.observe(el);
+    });
+  }
+
+  // Count-up for headline numbers.
+  if (!calm && 'IntersectionObserver' in window) {
+    var counters = document.querySelectorAll('.stat strong, .badge-card strong, .metric strong, .case-hero-metrics strong');
+    var cio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        cio.unobserve(e.target);
+        var el = e.target, text = el.textContent, m = text.match(/^(\D*)([\d,]+)(.*)$/);
+        if (!m) return;
+        var end = parseInt(m[2].replace(/,/g, ''), 10);
+        if (!end || end < 3) return;
+        var commas = m[2].indexOf(',') > -1, start = null, dur = 1100;
+        el.style.fontVariantNumeric = 'tabular-nums';
+        function step(t) {
+          if (start === null) start = t;
+          var k = Math.min(1, (t - start) / dur), eased = 1 - Math.pow(1 - k, 3), v = Math.round(end * eased);
+          el.textContent = m[1] + (commas ? v.toLocaleString('en-US') : v) + m[3];
+          if (k < 1) requestAnimationFrame(step); else el.textContent = text;
+        }
+        requestAnimationFrame(step);
+      });
+    }, { threshold: 0.6 });
+    Array.prototype.forEach.call(counters, function (el) { cio.observe(el); });
+  }
+
+  // Case study filters.
+  var filters = document.querySelectorAll('.filter');
+  if (filters.length) {
+    var items = document.querySelectorAll('.case-item'), empty = document.querySelector('.filter-empty');
+    Array.prototype.forEach.call(filters, function (btn) {
+      btn.addEventListener('click', function () {
+        var f = btn.getAttribute('data-filter'), shown = 0;
+        Array.prototype.forEach.call(filters, function (b) { b.setAttribute('aria-pressed', String(b === btn)); });
+        Array.prototype.forEach.call(items, function (it) {
+          var match = f === 'all' || it.getAttribute('data-services').split('|').indexOf(f) > -1;
+          it.hidden = !match; if (match) { shown++; it.classList.add('is-in'); }
+        });
+        if (empty) empty.hidden = shown > 0;
+      });
     });
   }
 

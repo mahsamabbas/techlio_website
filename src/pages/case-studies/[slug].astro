@@ -29,6 +29,7 @@ const host = c.liveUrl ? new URL(c.liveUrl).hostname : '';
       <span class="eyebrow">{c.industry}</span>
       <h1>{c.headline}</h1>
       <p class="lede">{c.overview}</p>
+      <ul class="chips chips-large case-services">{(c.services || []).map((t) => <li>{t}</li>)}</ul>
       <div class="case-hero-metrics">
         {c.metrics.map((m) => <div class="info-card"><strong>{m.value}</strong><p>{m.label}</p></div>)}
       </div>

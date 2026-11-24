@@ -1,6 +1,6 @@
 {
   "slug": "spinlab-ai",
-  "order": 3,
+  "order": 4,
   "name": "SpinLab AI",
   "industry": "Sports tech",
   "categories": [
@@ -80,5 +80,10 @@
     "20+ biomechanical metrics tracked per throw with no hardware",
     "200+ drill library integrated with AI recommendations",
     "Multi-tier subscription model live with coach and player plans"
+  ],
+  "services": [
+    "AI development",
+    "SaaS engineering",
+    "Cloud & DevOps"
   ]
 }

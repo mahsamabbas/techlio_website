@@ -1,7 +1,8 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Closing from '../../components/Closing.astro';
-import { site, cases, initials } from '../../lib/content.js';
+import { site, cases } from '../../lib/content.js';
+const areas = [...new Set(cases.flatMap((c) => c.services || []))];
 ---
 
 <Base
@@ -12,17 +13,22 @@ import { site, cases, initials } from '../../lib/content.js';
     <div class="wrap">
       <span class="eyebrow">Case studies</span>
       <h1>Systems we engineered, <span class="accent">and what they do now.</span></h1>
-      <p class="lede">AI products, modernized platforms and SaaS built with client teams, several of them over many years.</p>
+      <p class="lede">AI systems, automation, cloud platforms and SaaS built with client teams, several of them over many years. Filter by the kind of work you need.</p>
+      <div class="filters" role="group" aria-label="Filter case studies by service">
+        <button type="button" class="filter" aria-pressed="true" data-filter="all">All work</button>
+        {areas.map((a) => <button type="button" class="filter" aria-pressed="false" data-filter={a}>{a}</button>)}
+      </div>
+      <p class="filter-empty" hidden>No case studies match that filter yet.</p>
       <div class="case-list">
         {
           cases.map((c) => (
-            <article class="case-item">
+            <article class="case-item" data-services={(c.services || []).join("|")}>
               <span class="tile" aria-hidden="true">{c.name}</span>
               <div>
                 <h2>{c.headline}</h2>
                 <dl>
                   <div><dt>Client:</dt><dd>{c.name}, {c.industry}</dd></div>
-                  <div><dt>Services:</dt><dd>{c.categories.join(', ')}</dd></div>
+                  <div><dt>Services:</dt><dd>{(c.services || c.categories).join(', ')}</dd></div>
                   {c.metrics[0] && <div><dt>Result:</dt><dd>{c.metrics[0].value} {c.metrics[0].label}</dd></div>}
                 </dl>
                 <a class="btn btn-primary btn-small" href={`/case-studies/${c.slug}/`}>Read the {c.name} case study</a>

@@ -1,6 +1,6 @@
 {
   "slug": "dp360-crm",
-  "order": 4,
+  "order": 5,
   "name": "DP360 CRM",
   "industry": "Automotive and powersports",
   "categories": [
@@ -80,5 +80,10 @@
     "300+ OEM, DMS, portal and website integrations supported",
     "Core modules moved from Angular 1 to Angular 17",
     "Near real-time SMS and calling through Twilio and Telnyx"
+  ],
+  "services": [
+    "Cloud & DevOps",
+    "Business automation",
+    "SaaS engineering"
   ]
 }

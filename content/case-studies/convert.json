@@ -1,0 +1,90 @@
+{
+  "slug": "convert",
+  "order": 6,
+  "name": "Convert",
+  "industry": "SaaS, experimentation",
+  "categories": [
+    "Full-stack experimentation",
+    "MCP server",
+    "Performance"
+  ],
+  "services": [
+    "AI development",
+    "SaaS engineering",
+    "Cloud & DevOps"
+  ],
+  "headline": "Full-stack experimentation and an MCP server for a platform behind 40,000+ sites",
+  "overview": "Convert.com is an A/B testing and experimentation platform serving agencies and e-commerce brands. Techlio partnered with Convert to extend and scale the platform: full-stack experimentation, an improved visual editor and a remote MCP server that powers AI-driven experimentation workflows.",
+  "liveUrl": "https://convert.com",
+  "duration": "12 months, ongoing",
+  "team": [
+    "2 full-stack developers",
+    "1 backend engineer",
+    "1 UI/UX designer",
+    "1 QA engineer"
+  ],
+  "stack": [
+    "React",
+    "Node.js",
+    ".NET",
+    "PostgreSQL",
+    "AWS",
+    "Figma"
+  ],
+  "metrics": [
+    {
+      "value": "40+",
+      "label": "audience targeting filters live"
+    },
+    {
+      "value": "0",
+      "label": "added snippet load time"
+    },
+    {
+      "value": "90+",
+      "label": "integrations"
+    }
+  ],
+  "challenges": [
+    {
+      "title": "Scaling to full-stack experimentation",
+      "text": "Convert needed server-side feature flags, rollouts and a headless API without disrupting existing customers."
+    },
+    {
+      "title": "AI workflow integration",
+      "text": "Customers wanted to automate their experimentation cycle through AI tooling, which needed a stable MCP server."
+    },
+    {
+      "title": "Flicker-free performance",
+      "text": "New capabilities had to preserve zero-flicker rendering across every feature."
+    },
+    {
+      "title": "Complex targeting at scale",
+      "text": "Agencies needed 40+ audience filters and trustworthy statistics with no impact on page speed."
+    }
+  ],
+  "solutions": [
+    {
+      "title": "Full-stack experimentation module",
+      "text": "A server-side layer with feature flags, staged rollouts and a headless API."
+    },
+    {
+      "title": "Remote MCP server",
+      "text": "A stable remote MCP server that lets teams automate the experimentation cycle, from hypothesis to analysis, with AI assistants."
+    },
+    {
+      "title": "Goals and statistics engine",
+      "text": "Custom conversion tracking with Frequentist and Bayesian engines, SRM checks and collision prevention."
+    },
+    {
+      "title": "Performance-first architecture",
+      "text": "Every new feature engineered to keep the flicker-free standard and leave Core Web Vitals unaffected."
+    }
+  ],
+  "results": [
+    "Full-stack experimentation launched across all plan tiers",
+    "MCP server integration enabling AI-automated experimentation workflows",
+    "40+ audience targeting filters live in production",
+    "Zero increase in snippet load time after the feature expansion"
+  ]
+}

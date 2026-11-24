@@ -16,7 +16,7 @@ const items = pickCases(slugs);
           </div>
         </div>
         <p>{c.headline}.</p>
-        <ul class="chips">{c.categories.map((t) => <li>{t}</li>)}</ul>
+        <ul class="chips">{(c.services || c.categories).map((t) => <li>{t}</li>)}</ul>
         <span class="more">Read case study</span>
       </article>
     ))

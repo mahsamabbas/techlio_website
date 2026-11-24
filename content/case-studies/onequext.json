@@ -1,0 +1,91 @@
+{
+  "slug": "onequext",
+  "order": 3,
+  "name": "OneQuext",
+  "industry": "Proptech",
+  "categories": [
+    "Platform consolidation",
+    "AI leasing",
+    "IoT"
+  ],
+  "services": [
+    "AI development",
+    "Business automation",
+    "Cloud & DevOps",
+    "SaaS engineering"
+  ],
+  "headline": "Three property-tech products merged into one platform, with zero downtime",
+  "overview": "OneQuext is a unified smart community platform for multifamily residential properties. Techlio engineered the consolidated platform, merging Quext, Homebase and GeoKey into one system that manages access control, smart devices, video intercom, managed Wi-Fi and automated leasing.",
+  "liveUrl": "https://onequext.com",
+  "duration": "14 months, ongoing",
+  "team": [
+    "2 full-stack developers",
+    "1 IoT engineer",
+    "1 UI/UX designer",
+    "1 QA engineer"
+  ],
+  "stack": [
+    "React",
+    "Node.js",
+    "IoT / Z-Wave",
+    "AWS",
+    "PostgreSQL",
+    "Figma"
+  ],
+  "metrics": [
+    {
+      "value": "87%",
+      "label": "resident app adoption"
+    },
+    {
+      "value": "163 hrs",
+      "label": "staff time saved per property a year"
+    },
+    {
+      "value": "30%",
+      "label": "energy savings"
+    }
+  ],
+  "challenges": [
+    {
+      "title": "Three disconnected products",
+      "text": "Access control, smart home devices and internet ran as separate platforms, so property managers juggled multiple logins, vendors and support channels."
+    },
+    {
+      "title": "No unified resident experience",
+      "text": "Residents needed separate apps or credentials for door access, thermostats, packages and internet."
+    },
+    {
+      "title": "Manual leasing and visitor workflows",
+      "text": "Leasing approvals, self-guided tours and visitor access were handled by hand, with no AI-assisted fraud detection."
+    },
+    {
+      "title": "No operational visibility",
+      "text": "Properties had no central view of HVAC usage, lighting, leaks or access events."
+    }
+  ],
+  "solutions": [
+    {
+      "title": "Unified platform architecture",
+      "text": "Quext, Homebase and GeoKey consolidated into one platform with a single staff login and a single resident app."
+    },
+    {
+      "title": "Mobile-first access control",
+      "text": "Mobile keys, Apple and Google Wallet tap-to-unlock, video intercom and camera integration across community entry points."
+    },
+    {
+      "title": "Smart device hub",
+      "text": "Hubless thermostat control, Z-Wave lighting and leak detection with real-time alerts, managed centrally."
+    },
+    {
+      "title": "AI-powered automated leasing",
+      "text": "An automated leasing module with AI fraud detection, fast approvals, self-guided touring and visitor management."
+    }
+  ],
+  "results": [
+    "87% resident app adoption across deployed properties",
+    "163+ staff hours saved per property per year through automation",
+    "30% energy savings through smart thermostat control",
+    "Three legacy products unified into one platform with zero-downtime migration"
+  ]
+}

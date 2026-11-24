@@ -1,6 +1,6 @@
 {
   "slug": "xo-armor",
-  "order": 8,
+  "order": 12,
   "name": "XO Armor",
   "industry": "Medtech",
   "categories": [
@@ -80,5 +80,9 @@
     "10K+ custom devices printed through the platform",
     "45 to 60 minute scan-to-print turnaround, down from weeks",
     "2K+ subscribers managing devices and orders through the portal"
+  ],
+  "services": [
+    "SaaS engineering",
+    "Cloud & DevOps"
   ]
 }

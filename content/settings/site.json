@@ -57,8 +57,8 @@
       "label": "Radio and TV stations on the vCreative platform we help build"
     },
     {
-      "value": "2,000+",
-      "label": "Dealerships running on DP360 CRM, which we modernized"
+      "value": "87%",
+      "label": "Resident app adoption on the OneQuext platform we consolidated"
     }
   ],
   "platforms": [
@@ -89,7 +89,36 @@
     "Fintech",
     "Logistics"
   ],
-  "reviews": [],
+  "reviews": [
+    {
+      "quote": "Techlio took three separate products, Quext, Homebase and GeoKey, and turned them into one platform our property teams and residents use every day. They also built AI into it, from AI-powered leasing to automated workflows, and moved everything over with zero downtime. 87% of residents at our deployed properties now use the app.",
+      "name": "Jared",
+      "role": "Chief Product Officer",
+      "company": "OneQuext",
+      "source": "Client testimonial"
+    },
+    {
+      "quote": "Techlio built the software behind XO Armor: the iPhone scanning app, the design software, and the portal our clinics use. Custom orthotics that used to take weeks now take under an hour, and more than 50 clinics and athletic programs rely on it.",
+      "name": "Jacob",
+      "role": "COO",
+      "company": "XO Armor",
+      "source": "Client testimonial"
+    },
+    {
+      "quote": "Techlio’s team worked alongside ours for a year on our experimentation platform. They helped us grow to more than 90 integrations and brought in LLM-powered features and AI automation that save our team hours every week.",
+      "name": "Claudiu",
+      "role": "CTO",
+      "company": "Convert",
+      "source": "Client testimonial"
+    },
+    {
+      "quote": "Techlio delivered our deductible funding platform in six months. Automated payments and real-time tracking helped our contractors close twice as many deals.",
+      "name": "Laura",
+      "role": "Product Manager",
+      "company": "Fund My Deductible",
+      "source": "Client testimonial"
+    }
+  ],
   "formEmail": "mahsam@techlio.co",
   "formEndpoint": "",
   "clientsLabel": "Trusted by product and engineering teams at"

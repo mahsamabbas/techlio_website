@@ -1,6 +1,6 @@
 {
   "slug": "awkward-media",
-  "order": 6,
+  "order": 8,
   "name": "Awkward Media",
   "industry": "Marketing, SEO agency",
   "categories": [
@@ -72,5 +72,10 @@
     "An AI agent explains results to clients in plain language",
     "Automation frees specialists from repetitive reporting work",
     "3 years as Awkward Media's embedded engineering team"
+  ],
+  "services": [
+    "AI development",
+    "Business automation",
+    "Web & growth"
   ]
 }

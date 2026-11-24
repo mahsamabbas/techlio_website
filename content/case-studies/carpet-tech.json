@@ -1,0 +1,89 @@
+{
+  "slug": "carpet-tech",
+  "order": 13,
+  "name": "Carpet Tech",
+  "industry": "Home services",
+  "categories": [
+    "Multi-location SEO",
+    "Lead generation",
+    "Rebrand"
+  ],
+  "services": [
+    "Web & growth",
+    "Business automation"
+  ],
+  "headline": "A multi-location web platform growing inbound leads 10 to 15% a month",
+  "overview": "Carpet Tech is a multi-location home services and restoration company operating across Texas and New Mexico. Techlio redesigned and rebuilt its full web presence as a lead-generation platform serving more than ten city locations.",
+  "liveUrl": "https://carpettech.com",
+  "duration": "6 months, fixed scope",
+  "team": [
+    "1 full-stack developer",
+    "1 backend developer",
+    "1 UI/UX designer",
+    "1 QA engineer"
+  ],
+  "stack": [
+    "WordPress",
+    "React",
+    "Node.js",
+    "Google Ads API",
+    "CRM integration",
+    "Figma"
+  ],
+  "metrics": [
+    {
+      "value": "10-15%",
+      "label": "month-over-month lead growth"
+    },
+    {
+      "value": "10+",
+      "label": "city landing pages"
+    },
+    {
+      "value": "4",
+      "label": "divisions under one brand"
+    }
+  ],
+  "challenges": [
+    {
+      "title": "Fragmented multi-location presence",
+      "text": "Service areas had no dedicated local pages, so high-intent local searches went to a generic homepage."
+    },
+    {
+      "title": "Poor lead conversion",
+      "text": "No structured lead forms, click-to-call or service-specific quote flows."
+    },
+    {
+      "title": "Outdated brand",
+      "text": "The site did not reflect a four-division operation."
+    },
+    {
+      "title": "No emergency pathways",
+      "text": "Water and fire restoration customers had no prominent urgent contact route."
+    }
+  ],
+  "solutions": [
+    {
+      "title": "Multi-location SEO architecture",
+      "text": "Dedicated city and service pages for Lubbock, Amarillo, Odessa, Midland, McKinney, Frisco, Plano, Clovis and more."
+    },
+    {
+      "title": "Lead generation system",
+      "text": "Structured quote forms, click-to-call and service-specific calls to action connected to the CRM."
+    },
+    {
+      "title": "Four-division visual system",
+      "text": "A refreshed brand covering Carpet Tech, CT Restoration, CT Specialty Flooring and CT Indoor Air Quality."
+    },
+    {
+      "title": "Emergency response UX",
+      "text": "Prominent 24/7 contact pathways and restoration-specific landing pages."
+    }
+  ],
+  "results": [
+    "10 to 15% month-over-month growth in inbound leads",
+    "10+ city-specific landing pages live with local SEO",
+    "Four-division brand architecture unified across the site",
+    "Click-to-call and quote forms on every service and location page"
+  ]
+}

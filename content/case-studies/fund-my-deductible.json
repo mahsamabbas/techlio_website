@@ -1,0 +1,91 @@
+{
+  "slug": "fund-my-deductible",
+  "order": 9,
+  "name": "Fund My Deductible",
+  "industry": "Insurtech, fintech",
+  "categories": [
+    "Compliance workflow",
+    "Three-portal platform",
+    "Payments"
+  ],
+  "services": [
+    "SaaS engineering",
+    "Business automation",
+    "Security & compliance",
+    "Cloud & DevOps"
+  ],
+  "headline": "A compliance-sensitive funding platform that doubled deals closed for contractors",
+  "overview": "Fund My Deductible lets roofing and restoration contractors fund their customers' insurance deductibles through a legally complex workflow that had no dedicated software. Techlio built the secure three-sided platform end to end, connecting contractors, sales teams and homeowners with automated agreements, income tracking and full audit trails.",
+  "liveUrl": "https://fundmydeductible.com",
+  "duration": "7 months, fixed scope",
+  "team": [
+    "1 full-stack developer",
+    "1 backend developer",
+    "1 UI/UX designer",
+    "1 QA engineer"
+  ],
+  "stack": [
+    "React",
+    "Node.js",
+    "MySQL",
+    "Stripe",
+    "AWS",
+    "Figma"
+  ],
+  "metrics": [
+    {
+      "value": "2x",
+      "label": "more deals closed, reported by contractors"
+    },
+    {
+      "value": "5 min",
+      "label": "homeowner setup"
+    },
+    {
+      "value": "3",
+      "label": "connected portals"
+    }
+  ],
+  "challenges": [
+    {
+      "title": "No compliance infrastructure",
+      "text": "Deductible funding is regulated differently state to state, and contractors had no software to execute agreements consistently."
+    },
+    {
+      "title": "Manual deal tracking",
+      "text": "Arrangements lived in spreadsheets and paper agreements, creating risk of lost deals and disputes."
+    },
+    {
+      "title": "No sales team visibility",
+      "text": "Salespeople could not track their own funded deals, commissions or agreement status."
+    },
+    {
+      "title": "High deal loss",
+      "text": "Customers dropped out when the funding setup had too much friction."
+    }
+  ],
+  "solutions": [
+    {
+      "title": "Funding agreement engine",
+      "text": "A legally structured digital agreement system that generates an executed funding agreement for every customer."
+    },
+    {
+      "title": "Three-portal architecture",
+      "text": "Separate contractor, salesperson and homeowner portals, each with its own responsibilities and full transparency."
+    },
+    {
+      "title": "Automated income and performance tracking",
+      "text": "A real-time dashboard of funded deals, payment status and team performance."
+    },
+    {
+      "title": "Five-minute homeowner onboarding",
+      "text": "A signup flow where homeowners set up a payment plan and sign the agreement from any device."
+    }
+  ],
+  "results": [
+    "2x more deals closed, as reported by contractors after adoption",
+    "5-minute homeowner setup, reducing deal loss at the agreement stage",
+    "Three-portal system live for contractors, sales teams and homeowners",
+    "Platform endorsed by industry legal counsel at the Win the Storm conference"
+  ]
+}

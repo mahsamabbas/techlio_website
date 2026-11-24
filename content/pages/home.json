@@ -28,11 +28,11 @@
     }
   ],
   "workTitle": "Client work, *with the numbers*",
-  "workIntro": "AI systems and platforms we engineered for clients in biotech, media and sports tech.",
+  "workIntro": "AI systems and platforms we engineered for clients in biotech, media and proptech.",
   "featuredCases": [
     "ordaos",
     "vcreative",
-    "spinlab-ai"
+    "onequext"
   ],
   "bookingTitle": "Tell us *what you are building*",
   "bookingIntro": "A senior engineer reads every request and replies within 24 hours with questions, a first read on approach, and times for a 30-minute scoping call.",
@@ -42,6 +42,6 @@
     "You talk to an engineer, not a salesperson",
     "You leave the call with a written scope outline"
   ],
-  "proofTitle": "Results our clients can point to",
-  "proofIntro": "Outcomes from platforms we built and still run with our clients."
+  "proofTitle": "Don't take it from us",
+  "proofIntro": "Outcomes from platforms we built, and what the people who run them say."
 }

@@ -1,6 +1,6 @@
 {
   "slug": "launchboom",
-  "order": 5,
+  "order": 7,
   "name": "LaunchBoom",
   "industry": "Martech, crowdfunding",
   "categories": [
@@ -78,5 +78,10 @@
     "1,000+ creators launched through LaunchKit",
     "10K+ pre-launch pages built on the page builder",
     "Included in every LaunchBoom program across products, games and lodging"
+  ],
+  "services": [
+    "AI development",
+    "SaaS engineering",
+    "Business automation"
   ]
 }
