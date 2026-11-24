@@ -1,80 +1,113 @@
 ---
 import Base from '../layouts/Base.astro';
 import Section from '../components/Section.astro';
-import Steps from '../components/Steps.astro';
 import Diagram from '../components/Diagram.astro';
-import CaseCards from '../components/CaseCards.astro';
+import Icon from '../components/Icon.astro';
 import StatsBand from '../components/StatsBand.astro';
 import BookingForm from '../components/BookingForm.astro';
 import Proof from '../components/Proof.astro';
-import { site, pages, services, offers, cta, websiteSchema } from '../lib/content.js';
+import { site, pages, services, offers, cases, cta, websiteSchema, pickCases, fmt } from '../lib/content.js';
 
 const home = pages.home;
 const pad = (n) => String(n).padStart(2, '0');
-const marquee = [...site.platforms, ...site.platforms];
+const clients = cases.map((c) => c.name);
+const marquee = [...clients, ...clients];
+const featured = pickCases(home.featuredCases);
+const host = (url) => (url ? new URL(url).hostname : '');
 ---
 
 <Base title={home.metaTitle} description={home.metaDescription} diagrams home schema={[websiteSchema]}>
   <section class="hero">
-    <div class="wrap">
-      <p class="badge">{site.badge}</p>
-      <h1>{home.heroTitle}</h1>
-      <p class="lede">{home.heroIntro}</p>
-      <div class="actions">
-        <a class="btn btn-primary" href={cta.href}>{cta.label}</a>
-        <a class="btn btn-ghost" href="/case-studies/">{home.heroSecondaryLabel}</a>
+    <div class="wrap hero-grid">
+      <div>
+        <p class="badge">{site.badge}</p>
+        <h1 set:html={fmt(home.heroTitle)} />
+        <p class="lede">{home.heroIntro}</p>
+        <div class="actions">
+          <a class="btn btn-primary" href={cta.href}>{cta.label}</a>
+          <a class="btn btn-ghost" href="/case-studies/">{home.heroSecondaryLabel}</a>
+        </div>
+        <ul class="proofline">{site.heroProof.map((p) => <li>{p}</li>)}</ul>
       </div>
-      <ul class="proofline">{site.heroProof.map((p) => <li>{p}</li>)}</ul>
       <Diagram
         id="agent"
+        compact
         autorun
         caption="A user request passes through tenant scoping, retrieval, orchestration, guardrails and a confidence check before a verified action is written back and logged."
       />
     </div>
   </section>
 
-  <section class="strip" aria-label="Platforms and capabilities">
-    <div class="wrap strip-row">
-      <p>What we build on</p>
-      <div class="marquee">
-        <ul>
-          {marquee.map((p, i) => <li aria-hidden={i >= site.platforms.length ? 'true' : undefined}>{p}</li>)}
-        </ul>
-      </div>
+  <section class="strip" aria-label="Clients">
+    <p>{site.clientsLabel}</p>
+    <div class="marquee">
+      <ul>
+        {marquee.map((name, i) => <li aria-hidden={i >= clients.length ? 'true' : undefined}>{name}</li>)}
+      </ul>
     </div>
   </section>
 
-  <Section id="services" title={home.servicesTitle} intro={home.servicesIntro}>
-    <ol class="service-grid">
+  <Section id="services" eyebrow="Services" title={home.servicesTitle} intro={home.servicesIntro}>
+    <ol class="svc-grid">
       {
         services.map((s, i) => (
-          <li class="service-card">
-            <span class="step-n" aria-hidden="true">{pad(i + 1)}</span>
+          <li class="svc-card">
+            <Icon name={s.slug} />
+            <span class="svc-n">{pad(i + 1)}</span>
             <h3><a href={`/${s.slug}/`}>{s.title}</a></h3>
-            <p class="service-lead">{s.card.lead}</p>
+            <p class="svc-lead">{s.card.lead}</p>
             <p>{s.card.text}</p>
             <ul class="chips">{s.card.tags.map((t) => <li>{t}</li>)}</ul>
-            <a class="more" href={`/${s.slug}/`}>Explore {s.short.toLowerCase()}</a>
+            <span class="more">Learn more</span>
+            <span class="svc-ghost" aria-hidden="true">{i + 1}</span>
           </li>
         ))
       }
+      <li class="svc-card is-offers">
+        <span class="svc-n">Fixed scope</span>
+        <h3>{home.offersPrompt}</h3>
+        <ul>
+          {offers.map((o) => <li><a href={`/${o.slug}/`}>{o.title}</a></li>)}
+        </ul>
+      </li>
     </ol>
-    <div class="offer-row">
-      <p>{home.offersPrompt}</p>
-      {offers.map((o) => <a class="btn btn-ghost" href={`/${o.slug}/`}>{o.title}</a>)}
-    </div>
   </Section>
 
   <StatsBand />
 
-  <Section id="process" title={home.processTitle} intro={home.processIntro}>
-    <Steps items={home.process} cols={4} />
-    <p class="section-foot"><a class="more" href="/process/">See the full process and engagement options</a></p>
+  <Section id="process" eyebrow="Process" center title={home.processTitle} intro={home.processIntro}>
+    <ol class="phases">
+      {home.process.map((p) => <li class="phase"><h3>{p.title}</h3><p>{p.text}</p></li>)}
+    </ol>
+    <p class="section-foot"><a class="btn btn-ghost" href="/process/">See the full process</a></p>
   </Section>
 
-  <Section id="work" tint title={home.workTitle} intro={home.workIntro}>
-    <CaseCards slugs={home.featuredCases} />
-    <p class="section-foot"><a class="more" href="/case-studies/">Browse all case studies</a></p>
+  <Section id="work" eyebrow="Case studies" split title={home.workTitle} intro={home.workIntro}>
+    <div class="case-rows">
+      {
+        featured.map((c, i) => (
+          <article class="case-row">
+            <a class="case-visual" href={`/case-studies/${c.slug}/`} tabindex="-1" aria-hidden="true">
+              <span class="case-visual-name">{c.name}</span>
+              <span class="case-visual-panel">
+                <span>{c.liveUrl ? `Live at ${host(c.liveUrl)}` : c.industry}</span>
+                <ul class="chips">{c.stack.slice(0, 5).map((t) => <li>{t}</li>)}</ul>
+              </span>
+            </a>
+            <div>
+              <p class="case-eyebrow">{pad(i + 1)} / {c.industry}</p>
+              <h3><a href={`/case-studies/${c.slug}/`}>{c.headline}</a></h3>
+              <p class="case-summary">{c.overview}</p>
+              <div class="metrics">
+                {c.metrics.map((m) => <p class="metric"><strong>{m.value}</strong><span>{m.label}</span></p>)}
+              </div>
+              <a class="more" href={`/case-studies/${c.slug}/`}>Read the {c.name} case study</a>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+    <p class="section-foot"><a class="btn btn-ghost" href="/case-studies/">View all case studies</a></p>
   </Section>
 
   <BookingForm />

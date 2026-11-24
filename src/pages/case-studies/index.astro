@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Closing from '../../components/Closing.astro';
-import { site, cases } from '../../lib/content.js';
+import { site, cases, initials } from '../../lib/content.js';
 ---
 
 <Base
@@ -10,21 +10,24 @@ import { site, cases } from '../../lib/content.js';
 >
   <section class="page-hero">
     <div class="wrap">
-      <a class="back" href="/">Back to home</a>
-      <h1>Systems we engineered, and what they do now.</h1>
+      <span class="eyebrow">Case studies</span>
+      <h1>Systems we engineered, <span class="accent">and what they do now.</span></h1>
       <p class="lede">AI products, modernized platforms and SaaS built with client teams, several of them over many years.</p>
-      <div class="case-index">
+      <div class="case-list">
         {
           cases.map((c) => (
-            <a class="case-index-card" href={`/case-studies/${c.slug}/`}>
-              <span class="case-tag">{c.industry}</span>
-              <strong>{c.name}</strong>
-              <span>{c.headline}</span>
-              {c.metrics[0] && (
-                <span class="case-index-metric"><b>{c.metrics[0].value}</b> {c.metrics[0].label}</span>
-              )}
-              <span class="chips-inline">{c.categories.join(', ')}</span>
-            </a>
+            <article class="case-item">
+              <span class="tile" aria-hidden="true">{c.name}</span>
+              <div>
+                <h2>{c.headline}</h2>
+                <dl>
+                  <div><dt>Client:</dt><dd>{c.name}, {c.industry}</dd></div>
+                  <div><dt>Services:</dt><dd>{c.categories.join(', ')}</dd></div>
+                  {c.metrics[0] && <div><dt>Result:</dt><dd>{c.metrics[0].value} {c.metrics[0].label}</dd></div>}
+                </dl>
+                <a class="btn btn-primary btn-small" href={`/case-studies/${c.slug}/`}>Read the {c.name} case study</a>
+              </div>
+            </article>
           ))
         }
       </div>
@@ -33,7 +36,10 @@ import { site, cases } from '../../lib/content.js';
 
   <section class="section tint">
     <div class="wrap">
-      <div class="section-head"><h2>Industries we have shipped in</h2></div>
+      <div class="section-head">
+        <span class="eyebrow">Industries</span>
+        <h2>Industries we have <span class="accent">shipped in</span></h2>
+      </div>
       <ul class="chips chips-large">{site.industries.map((x) => <li>{x}</li>)}</ul>
     </div>
   </section>

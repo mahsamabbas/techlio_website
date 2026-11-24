@@ -23,17 +23,16 @@ const host = c.liveUrl ? new URL(c.liveUrl).hostname : '';
 ---
 
 <Base title={`${c.name} case study: ${c.categories[0]}`} description={`${c.headline}. A Techlio case study.`} schema={schema}>
-  <section class="page-hero case">
+  <section class="page-hero">
     <div class="wrap">
-      <a class="back" href="/case-studies/">Back to all case studies</a>
-      <p class="case-tag">{c.industry}</p>
+      <a class="back" href="/case-studies/">All case studies</a>
+      <span class="eyebrow">{c.industry}</span>
       <h1>{c.headline}</h1>
       <p class="lede">{c.overview}</p>
-      <p class="chips-inline">{c.categories.join(', ')}</p>
-      <div class="metric-row">
-        {c.metrics.map((m) => <p class="case-headline-metric"><strong>{m.value}</strong> {m.label}</p>)}
+      <div class="case-hero-metrics">
+        {c.metrics.map((m) => <div class="info-card"><strong>{m.value}</strong><p>{m.label}</p></div>)}
       </div>
-      <dl class="facts case-facts">
+      <dl class="facts">
         <div><dt>Client</dt><dd>{c.name}</dd></div>
         <div><dt>Duration</dt><dd>{c.duration}</dd></div>
         <div><dt>Team</dt><dd>{c.team.join(', ')}</dd></div>
@@ -42,23 +41,23 @@ const host = c.liveUrl ? new URL(c.liveUrl).hostname : '';
     </div>
   </section>
 
-  <Section tint title="The challenge">
+  <Section eyebrow="Challenge" tint title="The *challenge*">
     <Blocks items={c.challenges} cols={2} />
   </Section>
 
-  <Section title="What we built">
+  <Section eyebrow="Solution" title="What *we built*">
     <Blocks items={c.solutions} cols={2} />
-    <h3 class="case-sub">Stack</h3>
+    <h3 class="sub">Stack</h3>
     <ul class="chips chips-large">{c.stack.map((x) => <li>{x}</li>)}</ul>
   </Section>
 
-  <Section tint title="Results">
+  <Section eyebrow="Results" tint title="The *results*">
     <ul class="ticks ticks-grid ticks-2">{c.results.map((x) => <li>{x}</li>)}</ul>
   </Section>
 
   <Closing title="Have a similar problem?" text="Tell us where you are and we will share how we would approach it." />
 
-  <Section title="More case studies">
+  <Section eyebrow="More work" title="More *case studies*">
     <CaseCards slugs={related} />
   </Section>
 </Base>

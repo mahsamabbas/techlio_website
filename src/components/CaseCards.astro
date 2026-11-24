@@ -1,21 +1,23 @@
 ---
-import { pickCases } from '../lib/content.js';
+import { pickCases, initials } from '../lib/content.js';
 const { slugs = [] } = Astro.props;
 const items = pickCases(slugs);
 ---
 
-<div class={`case-grid case-grid-${items.length}`}>
+<div class={`case-cards case-cards-${items.length}`}>
   {
     items.map((c) => (
       <article class="case-card">
-        <p class="case-tag">{c.industry}</p>
-        <h3><a href={`/case-studies/${c.slug}/`}>{c.name}</a></h3>
+        <div class="case-card-head">
+          <span class="tile" aria-hidden="true">{initials(c.name)}</span>
+          <div>
+            <p class="case-tag">{c.industry}</p>
+            <h3><a href={`/case-studies/${c.slug}/`}>{c.name}</a></h3>
+          </div>
+        </div>
         <p>{c.headline}.</p>
-        {c.metrics[0] && (
-          <p class="case-metric"><strong>{c.metrics[0].value}</strong> {c.metrics[0].label}</p>
-        )}
         <ul class="chips">{c.categories.map((t) => <li>{t}</li>)}</ul>
-        <a class="more" href={`/case-studies/${c.slug}/`}>Read the {c.name} case study</a>
+        <span class="more">Read case study</span>
       </article>
     ))
   }

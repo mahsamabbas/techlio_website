@@ -2,6 +2,6 @@
 const { items = [], cols = 3 } = Astro.props;
 ---
 
-<div class={`blocks blocks-${cols}`}>
-  {items.map((it) => <div class="block"><h3>{it.title}</h3><p>{it.text}</p></div>)}
+<div class={`cards cards-${cols}`}>
+  {items.map((it) => <div class="info-card"><h3>{it.title}</h3><p>{it.text}</p></div>)}
 </div>

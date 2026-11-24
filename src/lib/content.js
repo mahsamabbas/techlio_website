@@ -60,3 +60,9 @@ export const websiteSchema = {
   url: site.url,
   publisher: { '@id': `${site.url}/#organization` },
 };
+
+/** Heading formatting: words wrapped in *asterisks* render in the accent colour. */
+const escapeHtml = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+export const fmt = (s = '') => escapeHtml(s).replace(/\*([^*]+)\*/g, '<span class="accent">$1</span>');
+export const plain = (s = '') => String(s).replace(/\*/g, '');
+export const initials = (name = '') => name.replace(/[^A-Za-z0-9 ]/g, '').split(/\s+/).filter(Boolean).slice(0, 2).map((w) => w[0].toUpperCase()).join('');

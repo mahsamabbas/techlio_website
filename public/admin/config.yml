@@ -1,4 +1,5 @@
 # Decap CMS configuration for the Techlio content editor at /admin.
+# Tip for editors: wrap words in *asterisks* in a heading to show them in the accent colour.
 # Generated layout: one section per content type. Fields mirror the JSON files in /content.
 backend:
   name: github
@@ -34,6 +35,7 @@ collections:
           - { label: "Main button label", name: ctaLabel, widget: string }
           - { label: "Header button label", name: navCtaLabel, widget: string }
           - { label: "Response promise", name: responsePromise, widget: string }
+          - { label: "Client strip label", name: clientsLabel, widget: string }
           - { label: "Hero proof points", name: heroProof, widget: list, field: { label: "Proof point", name: item, widget: string } }
           - { label: "Stats band", name: stats, widget: list, summary: "{{fields.value}} {{fields.label}}", fields: [ { label: "Value", name: value, widget: string }, { label: "Label", name: label, widget: string } ] }
           - { label: "Proof badges", name: proof, widget: list, summary: "{{fields.value}}", fields: [ { label: "Value", name: value, widget: string }, { label: "Label", name: label, widget: string } ] }

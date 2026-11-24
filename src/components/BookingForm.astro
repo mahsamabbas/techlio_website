@@ -1,25 +1,30 @@
 ---
 // Booking form. Posts to "Form endpoint" from Site settings when set, otherwise to Netlify Forms.
 // If neither accepts it, the visitor's mail app opens with the request drafted to the recipient email.
-import { site, pages, services, offers, phoneHref } from '../lib/content.js';
+import { site, pages, services, offers, phoneHref, fmt } from '../lib/content.js';
 const codes = ['+1', '+44', '+92', '+49', '+33', '+31', '+34', '+39', '+46', '+41', '+353', '+61', '+65', 'Other'];
 const starts = [...offers.map((o) => o.title), ...services.map((s) => s.title), 'Co-build with embedded engineers'];
 const home = pages.home;
 ---
 
 <section class="section booking" id="book">
-  <div class="wrap booking-grid">
-    <div class="booking-copy">
-      <h2>{home.bookingTitle}</h2>
-      <p>{home.bookingIntro}</p>
-      <ul class="ticks">{home.bookingPoints.map((p) => <li>{p}</li>)}</ul>
-      <dl class="contact-list">
-        <div><dt>Email</dt><dd><a href={`mailto:${site.email}`}>{site.email}</a></dd></div>
-        <div><dt>Phone</dt><dd><a href={`tel:${phoneHref}`}>{site.phone}</a></dd></div>
-        {site.offices.map((o) => <div><dt>{o.country}</dt><dd>{o.address}</dd></div>)}
-      </dl>
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Book a call</span>
+      <h2 set:html={fmt(home.bookingTitle)} />
     </div>
-    <form
+    <div class="booking-grid">
+      <div class="booking-copy">
+        <h3>Schedule a free scoping call</h3>
+        <p>{home.bookingIntro}</p>
+        <ul class="ticks">{home.bookingPoints.map((p) => <li>{p}</li>)}</ul>
+        <dl class="contact-list">
+          <div><dt>Mail</dt><dd><a href={`mailto:${site.email}`}>{site.email}</a></dd></div>
+          <div><dt>Call</dt><dd><a href={`tel:${phoneHref}`}>{site.phone}</a></dd></div>
+          {site.offices.map((o) => <div><dt>{o.country === 'Pakistan' ? 'PK' : 'US'}</dt><dd>{o.address}</dd></div>)}
+        </dl>
+      </div>
+      <form
       class="form"
       id="scope-form"
       name="scoping-call"
@@ -32,6 +37,7 @@ const home = pages.home;
       novalidate
     >
       <input type="hidden" name="form-name" value="scoping-call" />
+      <p class="form-title">Tell us about your project</p>
       <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required /></div>
       <div class="field">
         <label for="f-email">Work email</label><input id="f-email" name="email" type="email" autocomplete="email" required />
@@ -76,7 +82,6 @@ const home = pages.home;
           <option value="">Choose one</option>
           <option>Search engine</option>
           <option>AI assistant</option>
-          <option>Upwork</option>
           <option>LinkedIn</option>
           <option>Referral</option>
           <option>Other</option>
@@ -89,5 +94,6 @@ const home = pages.home;
         <p id="scope-status" class="form-status" role="status"></p>
       </div>
     </form>
+    </div>
   </div>
 </section>

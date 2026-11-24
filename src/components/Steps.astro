@@ -1,18 +1,18 @@
 ---
-// Numbered cards. Use only where the items are an ordered sequence.
-const { items = [], cols = 4 } = Astro.props;
-const pad = (n) => String(n).padStart(2, '0');
+// Ordered steps, shown as a vertical timeline.
+const { items = [] } = Astro.props;
 ---
 
-<ol class={`steps steps-${cols}`}>
+<ol class="timeline">
   {
-    items.map((it, i) => (
-      <li class="step">
-        <span class="step-n" aria-hidden="true">{pad(i + 1)}</span>
-        {it.when && <span class="step-when">{it.when}</span>}
-        <h3>{it.title}</h3>
-        <p>{it.text}</p>
-        {it.list && it.list.length > 0 && <ul class="ticks">{it.list.map((l) => <li>{l}</li>)}</ul>}
+    items.map((it) => (
+      <li>
+        <div>
+          {it.when && <span class="step-when">{it.when}</span>}
+          <h3>{it.title}</h3>
+          <p>{it.text}</p>
+          {it.list && it.list.length > 0 && <ul class="ticks">{it.list.map((l) => <li>{l}</li>)}</ul>}
+        </div>
       </li>
     ))
   }

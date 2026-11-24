@@ -5,23 +5,24 @@ import Steps from '../components/Steps.astro';
 import Blocks from '../components/Blocks.astro';
 import Diagram from '../components/Diagram.astro';
 import Closing from '../components/Closing.astro';
-import { pages } from '../lib/content.js';
+import { pages, fmt } from '../lib/content.js';
 const p = pages.process;
 ---
 
 <Base title="How We Work: Process and Engagement Models" description={p.metaDescription} diagrams>
   <section class="page-hero">
     <div class="wrap">
-      <h1>{p.heroTitle}</h1>
+      <span class="eyebrow">Our process</span>
+      <h1 set:html={fmt(p.heroTitle)} />
       <p class="lede">{p.heroIntro}</p>
       <ol class="rail" aria-label="Process stages">
-        {p.stages.map((s, i) => <li><span aria-hidden="true">{i + 1}</span>{s}</li>)}
+        {p.stages.map((s) => <li>{s}</li>)}
       </ol>
     </div>
   </section>
 
-  <Section id="engagement" tint title={p.pathsTitle} intro={p.pathsIntro}>
-    <div class="paths">
+  <Section id="engagement" eyebrow="Engagement" tint title={p.pathsTitle} intro={p.pathsIntro}>
+    <div class="cards cards-3">
       {
         p.paths.map((path) => (
           <article class="path">
@@ -40,15 +41,15 @@ const p = pages.process;
     <p class="note">{p.pathsNote}</p>
   </Section>
 
-  <Section title={p.phaseATitle} intro={p.phaseAIntro}>
-    <Steps items={p.phaseA} cols={3} />
+  <Section eyebrow="Phase A" title={p.phaseATitle} intro={p.phaseAIntro}>
+    <Steps items={p.phaseA} />
   </Section>
 
-  <Section tint title={p.phaseBTitle} intro={p.phaseBIntro}>
-    <Steps items={p.phaseB} cols={5} />
+  <Section eyebrow="Phase B" tint title={p.phaseBTitle} intro={p.phaseBIntro}>
+    <Steps items={p.phaseB} />
   </Section>
 
-  <Section id="how-we-build" title={p.buildTitle} intro={p.buildIntro}>
+  <Section id="how-we-build" eyebrow="Engineering" title={p.buildTitle} intro={p.buildIntro}>
     <Diagram
       id="release"
       caption="A pull request passes automated tests, the eval suite and senior review, then staging and a canary, before full production rollout and monitoring."

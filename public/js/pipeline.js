@@ -42,10 +42,10 @@
       });
     } else {
       W = 360;
-      var vw = 164, vh = 56, hgap = 16, rowGap = 14, bandGap = 46, y = 8;
+      var vw = 164, vh = 52, hgap = 16, rowGap = 10, bandGap = 34, y = 6;
       cfg.columns.forEach(function (col) {
         labels.push({ x: 8, y: y + 12, text: col.label, anchor: 'start' });
-        y += 24;
+        y += 20;
         for (var i = 0; i < col.nodes.length; i += 2) {
           var row = col.nodes.slice(i, i + 2);
           var rowW = row.length * vw + (row.length - 1) * hgap;
@@ -86,7 +86,8 @@
     var nodeIndex = {};
     cfg.columns.forEach(function (c) { c.nodes.forEach(function (n) { nodeIndex[n.id] = n; }); });
 
-    var state = { scenario: cfg.scenarios[0], selected: null, runId: 0, vertical: narrow.matches };
+    var compact = fig.hasAttribute('data-compact');
+    var state = { scenario: cfg.scenarios[0], selected: null, runId: 0, vertical: compact || narrow.matches };
     var els = { nodes: {}, edges: {} };
 
     // Chrome
@@ -116,6 +117,7 @@
     function showInspector(nodeId) {
       inspector.textContent = '';
       state.selected = nodeId;
+      inspector.classList.toggle('has-detail', Boolean(nodeId));
       Object.keys(els.nodes).forEach(function (k) { els.nodes[k].classList.toggle('is-selected', k === nodeId); });
       if (!nodeId) {
         h('p', { class: 'pipe-panel-label' }, inspector, 'Inspect a stage');
@@ -148,10 +150,10 @@
       Object.keys(L.pos).forEach(function (nid) {
         var p = L.pos[nid], n = nodeIndex[nid];
         var g = svg('g', { class: 'pipe-node', tabindex: 0, role: 'button', 'aria-label': n.label + ': ' + n.sub, transform: 'translate(' + p.x + ' ' + p.y + ')' }, root);
-        svg('rect', { width: p.w, height: p.h, rx: 2 }, g);
-        svg('rect', { width: 4, height: p.h, class: 'pipe-node-bar' }, g);
-        svg('text', { x: 16, y: 24, class: 'pipe-node-label' }, g).textContent = n.label;
-        svg('text', { x: 16, y: 42, class: 'pipe-node-sub' }, g).textContent = n.sub;
+        svg('rect', { width: p.w, height: p.h, rx: 10 }, g);
+        svg('rect', { x: 6, y: 10, width: 3, height: p.h - 20, rx: 1.5, class: 'pipe-node-bar' }, g);
+        svg('text', { x: 16, y: p.h / 2 - 4, class: 'pipe-node-label' }, g).textContent = n.label;
+        svg('text', { x: 16, y: p.h / 2 + 13, class: 'pipe-node-sub' }, g).textContent = n.sub;
         g.addEventListener('click', function () { showInspector(nid); });
         g.addEventListener('keydown', function (ev) {
           if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); showInspector(nid); }
@@ -213,7 +215,7 @@
     }
 
     draw();
-    narrow.addEventListener('change', function (e) { state.vertical = e.matches; state.runId++; draw(); clearStates(); });
+    narrow.addEventListener('change', function (e) { state.vertical = compact || e.matches; state.runId++; draw(); clearStates(); });
 
     if (fig.hasAttribute('data-autorun') && 'IntersectionObserver' in window) {
       var io = new IntersectionObserver(function (entries) {

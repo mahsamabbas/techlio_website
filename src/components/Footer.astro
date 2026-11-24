@@ -1,14 +1,14 @@
 ---
-import Mark from './Mark.astro';
-import { site, services, offers, nav, cta, phoneHref } from '../lib/content.js';
+import { site, services, offers, nav, phoneHref } from '../lib/content.js';
 ---
 
 <footer class="site-footer">
   <div class="wrap footer-grid">
     <div class="footer-brand">
-      <a class="brand" href="/" aria-label={`${site.name} home`}><Mark /><span>{site.name}</span></a>
+      <a class="brand" href="/" aria-label={`${site.name} home`}>
+        <img src="/logo.png" width="113" height="34" alt={site.name} />
+      </a>
       <p>{site.tagline}</p>
-      <a class="btn btn-light" href={cta.href}>{cta.label}</a>
     </div>
     <div>
       <h2 class="footer-h">Services</h2>
@@ -22,6 +22,7 @@ import { site, services, offers, nav, cta, phoneHref } from '../lib/content.js';
       <ul>
         {nav.map((n) => <li><a href={n.href}>{n.label}</a></li>)}
         <li><a href={site.careersUrl}>Careers</a></li>
+        <li><a href="/contact/#book">Book a call</a></li>
       </ul>
     </div>
     <div>
@@ -31,7 +32,7 @@ import { site, services, offers, nav, cta, phoneHref } from '../lib/content.js';
         <li><a href={`tel:${phoneHref}`}>{site.phone}</a></li>
         <li><a href={site.linkedin} rel="noopener">LinkedIn</a> / <a href={site.x} rel="noopener">X</a></li>
       </ul>
-      {site.offices.map((o) => <address><strong>{o.country}</strong><br />{o.address}</address>)}
+      {site.offices.map((o) => <address><strong>{o.country}</strong>{o.address}</address>)}
     </div>
   </div>
   <div class="wrap footer-legal">

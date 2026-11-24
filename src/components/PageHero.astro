@@ -1,20 +1,23 @@
 ---
 import Diagram from './Diagram.astro';
-import { cta } from '../lib/content.js';
-const { back, kicker, title, intro, primaryLabel = cta.label, secondary, diagram, caption } = Astro.props;
+import { cta, fmt } from '../lib/content.js';
+const { back, eyebrow, kicker, title, intro, primaryLabel = cta.label, secondary, diagram, caption } = Astro.props;
 ---
 
-<section class="page-hero">
-  <div class="wrap">
-    {back && <a class="back" href={back.href}>Back to {back.label}</a>}
-    {kicker && <p class="kicker">{kicker}</p>}
-    <h1>{title}</h1>
-    <p class="lede">{intro}</p>
-    <div class="actions">
-      <a class="btn btn-primary" href={cta.href}>{primaryLabel}</a>
-      {secondary && <a class="btn btn-ghost" href={secondary.href}>{secondary.label}</a>}
+<section class:list={['page-hero', { 'has-visual': Boolean(diagram) }]}>
+  <div class:list={['wrap', { 'hero-grid': Boolean(diagram) }]}>
+    <div>
+      {back && <a class="back" href={back.href}>{back.label}</a>}
+      {eyebrow && <span class="eyebrow">{eyebrow}</span>}
+      {kicker && <p class="kicker">{kicker}</p>}
+      <h1 set:html={fmt(title)} />
+      <p class="lede">{intro}</p>
+      <div class="actions">
+        <a class="btn btn-primary" href={cta.href}>{primaryLabel}</a>
+        {secondary && <a class="btn btn-ghost" href={secondary.href}>{secondary.label}</a>}
+      </div>
+      <slot />
     </div>
-    <slot />
-    {diagram && <Diagram id={diagram} caption={caption} />}
+    {diagram && <Diagram id={diagram} caption={caption} compact autorun />}
   </div>
 </section>

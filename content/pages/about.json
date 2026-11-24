@@ -1,8 +1,8 @@
 {
   "metaDescription": "Techlio is an AI-ready engineering firm with offices in the USA and Pakistan, partnering with startups and enterprises to design, build, secure and scale AI-driven products.",
-  "heroTitle": "An engineering firm first. AI is what we build with it.",
+  "heroTitle": "An engineering firm first. *AI is what we build with it.*",
   "heroIntro": "Techlio partners with startups and enterprises to design, build, secure and scale AI-driven digital products. We are engineers who learned AI by shipping it into real systems.",
-  "purposeTitle": "What we are here to do",
+  "purposeTitle": "What we are *here to do*",
   "purpose": [
     {
       "title": "Mission",
@@ -13,7 +13,7 @@
       "text": "To be the AI and engineering partner that teams trust with their hardest ideas, and the one they call for the next."
     }
   ],
-  "valuesTitle": "How we behave on a project",
+  "valuesTitle": "How we behave *on a project*",
   "values": [
     {
       "title": "Transparency",
@@ -40,7 +40,7 @@
       "text": "We fit your tools, time zone and release rhythm instead of asking you to adopt ours."
     }
   ],
-  "officesTitle": "Where we work",
+  "officesTitle": "Where *we work*",
   "closeTitle": "Meet the engineers who would do the work",
   "closeText": "The scoping call is with a senior engineer who stays on your project."
 }

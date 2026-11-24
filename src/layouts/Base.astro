@@ -14,7 +14,7 @@ const org = {
   '@id': `${site.url}/#organization`,
   name: site.name,
   url: site.url,
-  logo: new URL('/favicon.svg', site.url).href,
+  logo: new URL('/logo.png', site.url).href,
   description: site.tagline,
   areaServed: ['US', 'GB', 'Europe'],
   email: site.email,
@@ -44,12 +44,12 @@ const org = {
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={image} />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    <meta name="theme-color" content="#12161c" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#032147" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300..800&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <script is:inline type="application/ld+json" set:html={JSON.stringify(org)} />

@@ -1,13 +1,13 @@
 {
   "metaTitle": "Techlio | AI Agents, n8n Automation and Software Development Company",
   "metaDescription": "Techlio builds AI agents, n8n and AI business automation, SaaS products and secure cloud systems for startups, enterprises and small businesses in the US, UK and Europe. Book a free scoping call.",
-  "heroTitle": "We build AI agents, automations and software that run your business.",
+  "heroTitle": "We build AI agents, automations and software *that run your business.*",
   "heroIntro": "Techlio is an AI engineering firm. We automate manual work with n8n and AI, build AI agents and SaaS products, and secure the cloud systems they run on, for startups, enterprises and growing local businesses.",
   "heroSecondaryLabel": "See shipped work",
-  "servicesTitle": "What we do",
+  "servicesTitle": "AI, automation and engineering *under one roof*",
   "servicesIntro": "Seven services, one senior team. Pick the one that matches the problem in front of you.",
   "offersPrompt": "Prefer a fixed scope and a fixed date?",
-  "processTitle": "From first call to running system",
+  "processTitle": "From first call *to running system*",
   "processIntro": "Four phases, each ending in something you can hold us to.",
   "process": [
     {
@@ -27,14 +27,14 @@
       "text": "We monitor quality, cost and latency in production, improve from real usage, and hand over when your team is ready."
     }
   ],
-  "workTitle": "Shipped, in production, in use",
+  "workTitle": "Client work, *with the numbers*",
   "workIntro": "AI systems and platforms we engineered for clients in biotech, media and sports tech.",
   "featuredCases": [
     "ordaos",
     "vcreative",
     "spinlab-ai"
   ],
-  "bookingTitle": "Tell us what you are building",
+  "bookingTitle": "Tell us *what you are building*",
   "bookingIntro": "A senior engineer reads every request and replies within 24 hours with questions, a first read on approach, and times for a 30-minute scoping call.",
   "bookingPoints": [
     "Reply within 24 hours",
@@ -42,6 +42,6 @@
     "You talk to an engineer, not a salesperson",
     "You leave the call with a written scope outline"
   ],
-  "proofTitle": "Proof you can check",
-  "proofIntro": "We would rather you verify a number than take our word for it."
+  "proofTitle": "Results our clients can point to",
+  "proofIntro": "Outcomes from platforms we built and still run with our clients."
 }

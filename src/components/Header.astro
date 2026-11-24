@@ -1,38 +1,30 @@
 ---
-import Mark from './Mark.astro';
-import { site, services, offers, nav, cta, phoneHref } from '../lib/content.js';
+import { site, services, offers, nav, cta } from '../lib/content.js';
 
 const path = Astro.url.pathname;
 const current = (href) => (path === href ? 'page' : undefined);
 ---
 
 <a class="skip" href="#main">Skip to content</a>
-<div class="utility">
-  <div class="wrap utility-row">
-    <span>Delivering across the {site.regions}</span>
-    <span class="utility-links">
-      <a href={`mailto:${site.email}`}>{site.email}</a>
-      <a href={`tel:${phoneHref}`}>{site.phone}</a>
-      <a href={site.linkedin} rel="noopener">LinkedIn</a>
-      <a href={site.x} rel="noopener">X</a>
-    </span>
-  </div>
-</div>
 <header class="site-header">
   <div class="wrap header-row">
-    <a class="brand" href="/" aria-label={`${site.name} home`}><Mark /><span>{site.name}</span></a>
+    <a class="brand" href="/" aria-label={`${site.name} home`}>
+      <img src="/logo.png" width="113" height="34" alt={site.name} />
+    </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
-      <details class="nav-menu">
-        <summary>Services</summary>
-        <div class="nav-panel">
-          <p class="nav-panel-h">Practices</p>
-          {services.map((s) => <a href={`/${s.slug}/`} aria-current={current(`/${s.slug}/`)}>{s.title}</a>)}
-          <p class="nav-panel-h">Fixed-scope offers</p>
-          {offers.map((o) => <a href={`/${o.slug}/`} aria-current={current(`/${o.slug}/`)}>{o.title}</a>)}
-        </div>
-      </details>
-      {nav.map((n) => <a href={n.href} aria-current={path.startsWith(n.href) ? 'page' : undefined}>{n.label}</a>)}
+      <div class="nav-links">
+        <details class="nav-menu">
+          <summary>Services</summary>
+          <div class="nav-panel">
+            <p class="nav-panel-h">Services</p>
+            {services.map((s) => <a href={`/${s.slug}/`} aria-current={current(`/${s.slug}/`)}>{s.title}</a>)}
+            <p class="nav-panel-h">Fixed-scope offers</p>
+            {offers.map((o) => <a href={`/${o.slug}/`} aria-current={current(`/${o.slug}/`)}>{o.title}</a>)}
+          </div>
+        </details>
+        {nav.map((n) => <a href={n.href} aria-current={path.startsWith(n.href) ? 'page' : undefined}>{n.label}</a>)}
+      </div>
       <a class="btn btn-primary btn-small" href={cta.href}>{site.navCtaLabel}</a>
     </nav>
   </div>

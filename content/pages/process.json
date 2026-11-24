@@ -1,6 +1,6 @@
 {
   "metaDescription": "How Techlio works: a five-stage process, three engagement paths from advisory to end-to-end delivery, and the release discipline behind every build.",
-  "heroTitle": "You always know what happens next, and who owns it.",
+  "heroTitle": "You always know what happens next, *and who owns it.*",
   "heroIntro": "One process for every engagement, whether we advise, build alongside your team or deliver the whole product.",
   "stages": [
     "Scoping call",
@@ -9,7 +9,7 @@
     "Build in weekly releases",
     "Launch and improve"
   ],
-  "pathsTitle": "Three ways to work with us",
+  "pathsTitle": "Three ways *to work with us*",
   "pathsIntro": "Each path includes the one before it. Many clients start with advisory and move right as trust builds.",
   "paths": [
     {
@@ -41,7 +41,7 @@
     }
   ],
   "pathsNote": "Day to day we work in the tools you already use, including Slack, Jira, Trello and Asana.",
-  "phaseATitle": "Phase A: discovery and design",
+  "phaseATitle": "Phase A: *discovery and design*",
   "phaseAIntro": "Three steps, in order. Nothing is built until you have approved the output of the third.",
   "phaseA": [
     {
@@ -64,7 +64,7 @@
       "list": []
     }
   ],
-  "phaseBTitle": "Phase B: build and run",
+  "phaseBTitle": "Phase B: *build and run*",
   "phaseBIntro": "Five steps, in order, repeated in weekly cycles until launch.",
   "phaseB": [
     {
@@ -88,7 +88,7 @@
       "text": "Quality, cost and latency are tracked. Production failures become new eval cases."
     }
   ],
-  "buildTitle": "How a change reaches production",
+  "buildTitle": "How a change *reaches production*",
   "buildIntro": "The same pipeline applies to code, prompts and model upgrades. Run both traces to see what happens when a change makes things worse.",
   "principles": [
     {

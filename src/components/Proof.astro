@@ -1,17 +1,17 @@
 ---
-// Proof badges, plus client reviews when any are entered in Site settings.
+// Results banner, plus client reviews when any are entered in Site settings.
 import { site, pages } from '../lib/content.js';
 const reviews = site.reviews || [];
 ---
 
-<section class="section reviews">
+<section class="proof">
   <div class="wrap">
-    <div class="section-head">
+    <div class="proof-banner">
       <h2>{pages.home.proofTitle}</h2>
       <p>{pages.home.proofIntro}</p>
-    </div>
-    <div class="badges">
-      {site.proof.map((p) => <div class="badge-card"><strong>{p.value}</strong><span>{p.label}</span></div>)}
+      <div class="badges">
+        {site.proof.map((p) => <div class="badge-card"><strong>{p.value}</strong><span>{p.label}</span></div>)}
+      </div>
     </div>
     {
       reviews.length > 0 && (
@@ -20,7 +20,8 @@ const reviews = site.reviews || [];
             <figure class="review">
               <blockquote>{r.quote}</blockquote>
               <figcaption>
-                {r.name}, {r.role}, {r.company}
+                <strong>{r.name}</strong>
+                {r.role}, {r.company}
                 <span>{r.source}</span>
               </figcaption>
             </figure>

@@ -20,20 +20,16 @@
   "careersUrl": "https://techlio.co/career/",
   "tagline": "AI engineering firm. We build AI agents, n8n and AI automations, SaaS products and secure cloud systems for startups, enterprises and growing businesses.",
   "regions": "US, UK and Europe",
-  "badge": "Upwork Top Rated Plus",
+  "badge": "AI engineering firm for the US, UK and Europe",
   "ctaLabel": "Book a technical scoping call",
   "navCtaLabel": "Book a scoping call",
   "responsePromise": "We reply within 24 hours. A mutual NDA is available before the first call.",
   "heroProof": [
-    "$700K+ verified client delivery",
+    "70+ clients served",
     "95% client retention",
-    "70+ clients served"
+    "$700K+ delivered"
   ],
   "stats": [
-    {
-      "value": "$700K+",
-      "label": "Verified client delivery"
-    },
     {
       "value": "70+",
       "label": "Clients served"
@@ -44,21 +40,25 @@
     },
     {
       "value": "14",
-      "label": "Industries shipped in"
+      "label": "Industries"
+    },
+    {
+      "value": "7+ yrs",
+      "label": "Longest client partnership"
     }
   ],
   "proof": [
     {
-      "value": "Top Rated Plus",
-      "label": "Our standing on Upwork, where every contract and review is public"
+      "value": "$200M+",
+      "label": "Presales powered by the platform we built for LaunchBoom"
     },
     {
-      "value": "$700K+",
-      "label": "Verified client delivery"
+      "value": "9,000+",
+      "label": "Radio and TV stations on the vCreative platform we help build"
     },
     {
-      "value": "95%",
-      "label": "Client retention across 70+ clients"
+      "value": "2,000+",
+      "label": "Dealerships running on DP360 CRM, which we modernized"
     }
   ],
   "platforms": [
@@ -91,5 +91,6 @@
   ],
   "reviews": [],
   "formEmail": "mahsam@techlio.co",
-  "formEndpoint": ""
+  "formEndpoint": "",
+  "clientsLabel": "Trusted by product and engineering teams at"
 }

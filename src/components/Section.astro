@@ -1,11 +1,13 @@
 ---
-const { id, title, intro, tint = false, class: extra = '' } = Astro.props;
+import { fmt } from '../lib/content.js';
+const { id, eyebrow, title, intro, tint = false, center = false, split = false, class: extra = '' } = Astro.props;
 ---
 
 <section class:list={['section', { tint }, extra]} id={id}>
   <div class="wrap">
-    <div class="section-head">
-      <h2>{title}</h2>
+    <div class:list={['section-head', { center, split }]}>
+      {eyebrow && <span class="eyebrow">{eyebrow}</span>}
+      <h2 set:html={fmt(title)} />
       {intro && <p>{intro}</p>}
     </div>
     <slot />

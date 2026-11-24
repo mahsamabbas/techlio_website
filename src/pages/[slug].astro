@@ -30,15 +30,15 @@ const schema = [
     kind === 'service' ? (
       <>
         <PageHero
-          back={{ href: '/#services', label: 'all services' }}
+          back={{ href: '/#services', label: 'All services' }}
           title={e.h1}
           intro={e.intro}
           secondary={{ href: '/case-studies/', label: 'See shipped work' }}
           diagram={e.diagram}
           caption={e.caption}
         />
-        <Section title={e.offerTitle} intro={e.offerIntro}>
-          <Steps items={e.offerings} cols={4} />
+        <Section eyebrow="How it works" title={e.offerTitle} intro={e.offerIntro}>
+          <Steps items={e.offerings} />
         </Section>
         {has(e.examples) && (
           <Section tint title={e.examplesTitle}>
@@ -46,7 +46,7 @@ const schema = [
           </Section>
         )}
         {has(e.cases) && (
-          <Section tint={!has(e.examples)} title="Related client work">
+          <Section tint={!has(e.examples)} eyebrow="Client work" title="Related *client work*">
             <CaseCards slugs={e.cases} />
           </Section>
         )}
@@ -54,7 +54,7 @@ const schema = [
           <Blocks items={e.why} />
         </Section>
         {has(e.faqs) && (
-          <Section title="Common questions">
+          <Section eyebrow="FAQ" title="Common *questions*">
             <div class="faq">
               {e.faqs.map((f) => <details><summary>{f.question}</summary><p>{f.answer}</p></details>)}
             </div>
@@ -83,7 +83,7 @@ const schema = [
           </Section>
         )}
         <Section tint title={e.stepsTitle} intro={e.stepsIntro}>
-          <Steps items={e.steps} cols={4} />
+          <Steps items={e.steps} />
         </Section>
         {has(e.deliverables) && (
           <Section title={e.deliverablesTitle}>
@@ -94,7 +94,7 @@ const schema = [
           <Blocks items={e.why} />
         </Section>
         {has(e.cases) && (
-          <Section tint={!has(e.deliverables)} title="Related client work">
+          <Section tint={!has(e.deliverables)} eyebrow="Client work" title="Related *client work*">
             <CaseCards slugs={e.cases} />
           </Section>
         )}
