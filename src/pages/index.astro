@@ -77,7 +77,7 @@ const host = (url) => (url ? new URL(url).hostname : '');
 
   <Section id="process" eyebrow="Process" center title={home.processTitle} intro={home.processIntro}>
     <ol class="phases">
-      {home.process.map((p) => <li class="phase"><h3>{p.title}</h3><p>{p.text}</p></li>)}
+      {home.process.map((p) => <li class="phase"><span class="phase-label">{p.title}</span><h3>{p.lead || p.title}</h3><p>{p.text}</p></li>)}
     </ol>
     <p class="section-foot"><a class="btn btn-ghost" href="/process/">See the full process</a></p>
   </Section>

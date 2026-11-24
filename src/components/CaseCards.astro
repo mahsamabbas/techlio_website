@@ -1,5 +1,5 @@
 ---
-import { pickCases, initials } from '../lib/content.js';
+import { pickCases } from '../lib/content.js';
 const { slugs = [] } = Astro.props;
 const items = pickCases(slugs);
 ---
@@ -8,16 +8,15 @@ const items = pickCases(slugs);
   {
     items.map((c) => (
       <article class="case-card">
-        <div class="case-card-head">
-          {c.logo ? <span class="tile has-logo"><img src={c.logo} alt="" width={c.logoWidth} height={c.logoHeight} loading="lazy" /></span> : <span class="tile" aria-hidden="true">{initials(c.name)}</span>}
-          <div>
-            <p class="case-tag">{c.industry}</p>
-            <h3><a href={`/case-studies/${c.slug}/`}>{c.name}</a></h3>
-          </div>
+        <div class="case-card-visual">
+          {c.logo ? <img src={c.logo} alt="" width={c.logoWidth} height={c.logoHeight} loading="lazy" /> : <span aria-hidden="true">{c.name}</span>}
         </div>
-        <p>{c.headline}.</p>
-        <ul class="chips">{(c.services || c.categories).map((t) => <li>{t}</li>)}</ul>
-        <span class="more">Read case study</span>
+        <div class="case-card-body">
+          <p class="case-tag">{c.industry}</p>
+          <h3><a href={`/case-studies/${c.slug}/`}>{c.headline}</a></h3>
+          {c.metrics && c.metrics[0] && <p class="case-card-metric"><strong>{c.metrics[0].value}</strong><span>{c.metrics[0].label}</span></p>}
+          <span class="more">Read the {c.name} case study</span>
+        </div>
       </article>
     ))
   }

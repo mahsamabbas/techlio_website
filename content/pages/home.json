@@ -12,18 +12,22 @@
   "process": [
     {
       "title": "Scope",
+      "lead": "Agree what success means",
       "text": "A free 30-minute call with a senior engineer, followed by a focused discovery of your stack, workflows and goals."
     },
     {
       "title": "Design",
+      "lead": "Architect before code",
       "text": "You get a proposal with scope, timeline and approach, and an architecture you can question, before any code is written."
     },
     {
       "title": "Build",
+      "lead": "Ship every week",
       "text": "Weekly releases you can use. Every change passes tests, evals and security checks and is reviewed by a senior engineer."
     },
     {
       "title": "Run",
+      "lead": "Operate and improve",
       "text": "We monitor quality, cost and latency in production, improve from real usage, and hand over when your team is ready."
     }
   ],

@@ -1,7 +1,26 @@
 ---
 const { items = [], cols = 3 } = Astro.props;
+// Line icons cycled across the cards so each card has its own mark.
+const icons = [
+  'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM12 12h.01',
+  'm12 3 9 5-9 5-9-5zM3 13l9 5 9-5',
+  'M12 3 5 6v6c0 4 3 7 7 9 4-2 7-5 7-9V6zM9 12l2 2 4-4',
+  'M13 3 5 13h6l-1 8 8-10h-6z',
+  'M4 20V10M10 20V4M16 20v-7M22 20H2',
+  'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM8.5 12l2.5 2.5 4.5-5',
+];
 ---
 
 <div class={`cards cards-${cols}`}>
-  {items.map((it) => <div class="info-card"><h3>{it.title}</h3><p>{it.text}</p></div>)}
+  {
+    items.map((it, i) => (
+      <div class="info-card">
+        <span class="icon-chip" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d={icons[i % icons.length]} /></svg>
+        </span>
+        <h3>{it.title}</h3>
+        <p>{it.text}</p>
+      </div>
+    ))
+  }
 </div>

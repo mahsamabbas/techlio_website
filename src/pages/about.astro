@@ -42,12 +42,14 @@ const marquee = [...clients, ...clients];
         <div class="wrap">
           <figure class="leader">
             <figcaption>
+              <span class="leader-avatar" aria-hidden="true">{p.founderName.split(' ').map((w) => w[0]).join('')}</span>
               <strong>{p.founderName}</strong>
               <span>{p.founderRole}</span>
+              <a class="leader-link" href={site.linkedin} target="_blank" rel="noopener">Techlio on LinkedIn</a>
             </figcaption>
             <div>
               <span class="eyebrow">Leadership</span>
-              <blockquote>{p.founderQuote}</blockquote>
+              <blockquote set:html={fmt(p.founderQuote)} />
             </div>
           </figure>
         </div>

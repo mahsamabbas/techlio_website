@@ -65,7 +65,8 @@ collections:
           - { label: "Process heading", name: processTitle, widget: string }
           - { label: "Process intro", name: processIntro, widget: text }
           - { label: "Process phases", name: process, widget: list, summary: "{{fields.title}}", fields: [
-            { label: "Title", name: title, widget: string },
+            { label: "Phase name", name: title, widget: string },
+            { label: "Headline", name: lead, widget: string, required: false },
             { label: "Text", name: text, widget: text } ] }
           - { label: "Work heading", name: workTitle, widget: string }
           - { label: "Work intro", name: workIntro, widget: text }

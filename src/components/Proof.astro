@@ -1,7 +1,12 @@
 ---
-// Results banner, plus client reviews when any are entered in Site settings.
+// Results banner joined to a white panel with review profiles and client reviews.
 import { site, pages } from '../lib/content.js';
 const reviews = site.reviews || [];
+const profiles = [
+  site.clutch && { name: 'Clutch', note: 'Verified client reviews', href: site.clutch },
+  site.google && { name: 'Google', note: 'Business profile and reviews', href: site.google },
+  site.linkedin && { name: 'LinkedIn', note: 'Team and company updates', href: site.linkedin },
+].filter(Boolean);
 ---
 
 <section class="proof">
@@ -13,30 +18,43 @@ const reviews = site.reviews || [];
         {site.proof.map((p) => <div class="badge-card"><strong>{p.value}</strong><span>{p.label}</span></div>)}
       </div>
     </div>
-    {
-      reviews.length > 0 && (
-        <div class="review-grid">
-          {reviews.map((r) => (
-            <figure class="review">
-              <blockquote>{r.quote}</blockquote>
-              <figcaption>
-                <strong>{r.name}</strong>
-                {r.role}, {r.company}
-                <span>{r.source}</span>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-      )
-    }
-    {
-      (site.clutch || site.google) && (
-        <div class="profiles">
-          <span>Check us independently</span>
-          {site.clutch && <a class="profile-link" href={site.clutch} target="_blank" rel="noopener">Techlio on Clutch</a>}
-          {site.google && <a class="profile-link" href={site.google} target="_blank" rel="noopener">Techlio on Google</a>}
-        </div>
-      )
-    }
+    <div class="proof-panel">
+      {
+        profiles.length > 0 && (
+          <ul class="platforms">
+            {profiles.map((p) => (
+              <li>
+                <a href={p.href} target="_blank" rel="noopener">
+                  <strong>{p.name}</strong>
+                  <span>{p.note}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+      {
+        reviews.length > 0 && (
+          <>
+            <div class="proof-head">
+              <h3>What clients say about working with {site.name}</h3>
+              {site.clutch && <a class="more" href={site.clutch} target="_blank" rel="noopener">See reviews on Clutch</a>}
+            </div>
+            <div class="review-grid">
+              {reviews.map((r) => (
+                <figure class="review">
+                  <blockquote>{r.quote}</blockquote>
+                  <figcaption>
+                    <strong>{r.name}</strong>
+                    {r.role}, {r.company}
+                    <span>{r.source}</span>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </>
+        )
+      }
+    </div>
   </div>
 </section>
