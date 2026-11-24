@@ -556,3 +556,16 @@ p { max-width: 64ch; }
 @media (max-width: 720px) {
   .review-grid { grid-template-columns: 1fr; }
 }
+
+/* Keep the hero steady while the diagram trace runs: top-align the columns and
+   give the trace a fixed height so the card never resizes. */
+.hero-grid { align-items: start; }
+.hero .hero-grid > div:first-child { padding-top: clamp(0rem, 3vw, 2.5rem); }
+.pipe-log { height: 10.5rem; align-content: start; }
+.pipe[data-compact] .pipe-log { height: 5.6rem; max-height: none; }
+.pipe-outcome { min-height: 1.5em; }
+.pipe[data-compact] .pipe-inspector { min-height: 9.5rem; }
+.pipe[data-compact] .pipe-inspector:not(.has-detail) { display: block; }
+@media (max-width: 720px) {
+  .pipe-log, .pipe[data-compact] .pipe-log { height: 9rem; }
+}
