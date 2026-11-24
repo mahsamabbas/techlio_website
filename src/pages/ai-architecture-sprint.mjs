@@ -1,0 +1,57 @@
+import { closing } from '../layout.mjs';
+import { pageHero, numbered, blocks, section } from '../components.mjs';
+
+export default {
+  slug: 'ai-architecture-sprint',
+  title: '14-Day AI & Architecture Sprint',
+  description: 'A fixed-scope, 14-day Techlio sprint: a working AI prototype on your data, an architecture decision record, an eval baseline and a build estimate.',
+  body: `
+${pageHero({
+  kicker: 'Fixed scope, fixed date',
+  title: 'A working AI prototype and a build-ready architecture in 14 days.',
+  intro: 'Two weeks with a senior Techlio team. You finish with a prototype running on your own data, the architecture to take it to production, and the numbers to decide whether you should.',
+  primary: 'Book a sprint scoping call',
+  secondary: { href: 'process.html', label: 'How we work' },
+})}
+${section({
+  title: 'Who the sprint is for',
+  intro: 'It fits when you need evidence before a bigger commitment.',
+  body: blocks([
+    { title: 'Founders raising or just funded', text: 'You need something real to show investors and first customers, and a credible plan for what the round will build.' },
+    { title: 'Engineering leaders with a mandate', text: 'Leadership wants AI in the product. You want a prototype and an architecture before you commit headcount.' },
+    { title: 'Teams quoted months of discovery', text: 'You have been offered a long discovery phase and would rather learn by building the riskiest part first.' },
+  ]),
+})}
+${section({
+  tone: 'tint',
+  title: 'What happens in the 14 days',
+  body: numbered([
+    { when: 'Days 1 to 2', title: 'Lock the scope', text: 'One use case, one success measure, data access confirmed. Anything that does not fit is written down for later.' },
+    { when: 'Days 3 to 5', title: 'Architecture and evals', text: 'We design the system and build the eval set from your real cases, so progress is measured from the first commit.' },
+    { when: 'Days 6 to 11', title: 'Build the prototype', text: 'A working prototype on your data with daily builds you can try. Guardrails are in from the start.' },
+    { when: 'Days 12 to 14', title: 'Harden and hand over', text: 'Final eval run, a walkthrough with your team, and a written recommendation: build, change course or stop.' },
+  ], 'steps-4'),
+})}
+${section({
+  title: 'What you keep',
+  body: `<ul class="ticks ticks-grid">
+    <li>Working prototype running on your data</li>
+    <li>Source code in your repository</li>
+    <li>Architecture decision record</li>
+    <li>Eval set and baseline scores</li>
+    <li>Production build estimate with assumptions</li>
+    <li>Recorded walkthrough for your team</li>
+  </ul>`,
+})}
+${section({
+  tone: 'tint',
+  title: 'Why a sprint beats a long discovery',
+  body: blocks([
+    { title: 'Scope that cannot creep', text: 'One use case and fourteen days. The constraint forces the decisions that long discoveries postpone.' },
+    { title: 'Seniors on the keyboard', text: 'The engineers who scope the sprint build it. Nothing is handed down to a junior team after the kickoff.' },
+    { title: 'Nothing thrown away', text: 'The prototype is built on the production architecture, so a go decision continues the same codebase.' },
+  ]),
+})}
+${closing('Have a use case worth two weeks?', 'Tell us the problem and the data you have. We will confirm within 24 hours whether it fits a sprint.')}
+`,
+};

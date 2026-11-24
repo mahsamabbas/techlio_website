@@ -1,0 +1,28 @@
+import { servicePage } from '../templates.mjs';
+
+export default servicePage({
+  slug: 'product-development',
+  title: 'SaaS & Product Engineering',
+  description: 'Senior-led SaaS, web and mobile product engineering from Techlio: multi-tenant architecture, UI/UX design, cloud and DevOps.',
+  h1: 'Products built to pass a security review and a growth spurt.',
+  intro: 'We design and build multi-tenant SaaS platforms, web and mobile apps and the cloud they run on. Tenancy, billing and observability are designed in from the first sprint, so enterprise buyers and sudden traffic are not emergencies.',
+  diagram: 'saas',
+  caption: 'A signed-in request passes through auth and the API gateway to the application API, tenant-scoped data, background workers, billing and observability.',
+  offerTitle: 'How a product gets built',
+  offerIntro: 'Four stages, in order. You see working software every week from the second one on.',
+  offerings: [
+    { title: 'Discovery and design', text: 'Product strategy, user flows and a clickable UI/UX prototype, tested with real users before engineering starts.' },
+    { title: 'Architecture', text: 'Tenancy model, data design, integration points and cloud setup on AWS, Azure or Google Cloud, written down and reviewed with your team.' },
+    { title: 'Build and QA', text: 'Weekly releases to a staging environment you can use, with automated tests and continuous delivery from day one.' },
+    { title: 'Launch and operate', text: 'Production rollout, monitoring, on-call runbooks and a roadmap for what comes next. We stay on or hand over cleanly.' },
+  ],
+  cases: ['convert', 'vofspace'],
+  whyTitle: 'What you get beyond the features',
+  why: [
+    { title: 'Strict multi-tenant security', text: 'Isolation is enforced in the database and tested on every change, so one customer can never read another’s data.' },
+    { title: 'Senior-led delivery', text: 'A senior engineer leads your build and reviews every merge. You always know who is accountable for a release.' },
+    { title: 'Ready for AI later', text: 'Clean interfaces and event data from the start mean AI features can be added without re-plumbing the product.' },
+  ],
+  closeTitle: 'Have a product to build or a platform to scale?',
+  closeText: 'Tell us where it stands today. You will get a first read on architecture, timeline and team shape within 24 hours.',
+});
