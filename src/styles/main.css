@@ -578,3 +578,11 @@ p { max-width: 64ch; }
 .case-item .tile.has-logo { padding: 1.25rem; }
 .case-visual-logo { display: block; height: 30px; width: auto; max-width: 180px; object-fit: contain; object-position: left center; }
 .case-logo { display: block; height: 40px; width: auto; max-width: 220px; margin-bottom: 1.5rem; object-fit: contain; object-position: left center; }
+
+/* Click-through fixes: steadier diagram card, larger tap targets, calm mobile menu */
+.pipe-tab, .pipe-run { min-height: 2.5rem; }
+.pipe[data-compact] .pipe-inspector { min-height: 13rem; }
+@media (max-width: 940px) {
+  .nav-panel { animation: none; }
+  .pipe[data-compact] .pipe-inspector { min-height: 0; }
+}
