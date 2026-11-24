@@ -21,7 +21,7 @@ npm run verify   # build, then check links, anchors and contact details on every
 
 Adding a file to `case-studies`, `services` or `offers` creates its page and adds it to the navigation and listings.
 
-**The `/admin` editor** is [Decap CMS](https://decapcms.org). It saves edits as commits to the `main` branch, and the host rebuilds the site.
+**The `/admin` editor** is [Decap CMS](https://decapcms.org). It saves edits as commits to the `site-rebuild` branch (the branch Netlify publishes), and the host rebuilds the site.
 
 - On your computer: run `npm run cms` in one terminal and `npm run dev` in another, then open `http://localhost:4321/admin/`.
 - On the live site: Decap needs a GitHub login. Hosting on Netlify provides one (enable the GitHub OAuth provider for the site); other hosts need an OAuth proxy. Editors need write access to this repository.
