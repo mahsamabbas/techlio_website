@@ -1,27 +1,60 @@
 {
   "team": [],
   "stack": [],
-  "challenges": [],
-  "results": [],
+  "challenges": [
+    {
+      "title": "Shows depended on a connected console",
+      "text": "Permanent installations needed lighting to run on its own, without a media server or lighting desk attached."
+    },
+    {
+      "title": "Installers configure many devices on site",
+      "text": "Finding, setting up and updating controllers had to be quick and consistent for every unit."
+    },
+    {
+      "title": "Networked devices are an attack surface",
+      "text": "Controllers sit on building and venue networks, so the management interface and firmware updates have to be protected."
+    }
+  ],
+  "results": [
+    "Controllers run recorded shows without a connected console",
+    "Fallback playback starts automatically when live data is lost",
+    "Operators run shows from a simple branded dashboard",
+    "One configuration workflow for live and standalone use",
+    "Software maintained under a support agreement"
+  ],
   "duration": "",
-  "logo": "",
-  "logoWidth": 0,
-  "logoHeight": 0,
+  "logo": "/clients/advatek-lighting.png",
+  "logoWidth": 1213,
+  "logoHeight": 157,
   "slug": "advatek-lighting",
   "order": 16,
   "name": "Advatek Lighting",
-  "industry": "Entertainment lighting technology",
+  "industry": "LED pixel control technology",
   "categories": [
-    "Product engineering",
-    "Dedicated team"
+    "AI automation",
+    "Device management software",
+    "Dashboards",
+    "Security"
   ],
   "services": [
-    "End-to-end delivery"
+    "AI development",
+    "Security & compliance",
+    "End-to-end delivery",
+    "SaaS engineering",
+    "Business automation"
   ],
-  "headline": "End-to-end product engineering for a maker of LED pixel lighting controllers",
-  "overview": "Advatek Lighting is an Australian company that makes the PixLite range of LED pixel controllers and supporting software, used in stage and screen productions, art installations and architectural projects. Techlio delivered product work for Advatek from discovery and design through development, deployment and ongoing support.",
+  "headline": "Control, recording and playback software for professional LED pixel lighting",
+  "overview": "Advatek Lighting makes PixLite pixel controllers used in architectural, entertainment and themed lighting installations. Techlio built the software around the hardware, from discovery through design, development, deployment and support: the web-based management interface, the SHOWTime recording and playback features with their dashboard, and the tools installers use to find, configure and update controllers.",
   "liveUrl": "https://www.advateklighting.com",
   "metrics": [
+    {
+      "value": "25",
+      "label": "automation triggers per controller in SHOWTime"
+    },
+    {
+      "value": "0",
+      "label": "extra playback hardware needed for a recorded show"
+    },
     {
       "value": "5",
       "label": "stages delivered, discovery to support"
@@ -29,20 +62,24 @@
   ],
   "solutions": [
     {
-      "title": "Discovery",
-      "text": "We worked with the client's team to define users, scope and success measures before any design or code."
+      "title": "Web-based management interface",
+      "text": "A browser interface served by the controller for configuration, monitoring and diagnostics, with the same workflow for live and standalone operation."
     },
     {
-      "title": "Design",
-      "text": "User flows and interface design for the product, reviewed with the client before build."
+      "title": "Show recording and playback",
+      "text": "Lighting data recorded as scenes, organised into playlists and replayed from the controller, with frame rates monitored during record and playback."
     },
     {
-      "title": "Development",
-      "text": "Engineering and QA by a dedicated Techlio team, released in increments the client could use and test."
+      "title": "Automation with triggers",
+      "text": "Rules that start playlists on boot, begin a recording when a control channel reaches a value, set intensity or fall back to recorded scenes automatically if live data stops."
     },
     {
-      "title": "Deployment and support",
-      "text": "Production launch, followed by an ongoing support agreement for fixes, improvements and new features."
+      "title": "Operator dashboard",
+      "text": "A configurable dashboard for playback and mode selection that venues can rearrange and brand for their own staff."
+    },
+    {
+      "title": "Security built in",
+      "text": "Techlio's security baseline applied from the first sprint: OWASP-based secure coding and review, role-based access control, encryption in transit and at rest, least-privilege access to cloud resources and vulnerability scans before each release. For Advatek that covers access control on the management interface and integrity checks on firmware and configuration updates."
     }
   ]
 }

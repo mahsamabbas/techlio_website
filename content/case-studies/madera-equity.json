@@ -1,26 +1,60 @@
 {
   "team": [],
   "stack": [],
-  "challenges": [],
-  "results": [],
+  "challenges": [
+    {
+      "title": "Institutional investors expect clarity",
+      "text": "Track record, markets and strategy had to be presented precisely and kept current."
+    },
+    {
+      "title": "Content and enquiries handled manually",
+      "text": "Publishing research and routing investor enquiries took repeated manual effort."
+    },
+    {
+      "title": "Financial audience, high trust bar",
+      "text": "A firm handling investor relationships needs a platform with no weak points in forms, access or hosting."
+    }
+  ],
+  "results": [
+    "Strategy, markets and performance presented for institutional investors",
+    "Insights published through an automated workflow",
+    "Enquiries routed without manual handling",
+    "Dashboards for enquiries and engagement",
+    "Ongoing support after launch"
+  ],
   "duration": "",
-  "logo": "",
-  "logoWidth": 0,
-  "logoHeight": 0,
+  "logo": "/clients/madera-equity.png",
+  "logoWidth": 771,
+  "logoHeight": 148,
   "slug": "madera-equity",
   "order": 18,
   "name": "Madera Equity",
-  "industry": "Real estate investment",
+  "industry": "Real estate investment (multifamily)",
   "categories": [
-    "Product engineering"
+    "AI automation",
+    "Property technology",
+    "Dashboards",
+    "Security"
   ],
   "services": [
-    "End-to-end delivery"
+    "AI development",
+    "Security & compliance",
+    "End-to-end delivery",
+    "Web & growth",
+    "Business automation"
   ],
-  "headline": "End-to-end product delivery for a multifamily investment and management firm",
-  "overview": "Madera Equity is a vertically integrated multifamily investment and property management firm focused on Sun Belt markets. Techlio delivered a digital product for Madera Equity from discovery and design through development, deployment and ongoing support.",
+  "headline": "A digital platform for a multifamily property investment firm",
+  "overview": "Madera Equity invests in and manages multifamily communities across Texas and the wider Sun Belt, and treats technology as part of how it creates value. Techlio built its digital platform from discovery and design through development, deployment and support: the public site that presents strategy, markets, performance, case studies and insights, with automated content and enquiry workflows and dashboards for the team.",
   "liveUrl": "https://www.maderaequity.com",
   "metrics": [
+    {
+      "value": "120+",
+      "label": "communities acquired by Madera, per its site"
+    },
+    {
+      "value": "10,000+",
+      "label": "units in its active market"
+    },
     {
       "value": "5",
       "label": "stages delivered, discovery to support"
@@ -28,20 +62,24 @@
   ],
   "solutions": [
     {
-      "title": "Discovery",
-      "text": "We worked with the client's team to define users, scope and success measures before any design or code."
+      "title": "Investor-facing platform",
+      "text": "Strategy, market focus, performance, case studies, team and insights presented in a fast, structured site with a clear route to get in touch or reach investor access."
     },
     {
-      "title": "Design",
-      "text": "User flows and interface design for the product, reviewed with the client before build."
+      "title": "Performance and market views",
+      "text": "Portfolio figures and market coverage shown as clear data views that the team can update without a developer."
     },
     {
-      "title": "Development",
-      "text": "Engineering and QA by a dedicated Techlio team, released in increments the client could use and test."
+      "title": "Automated content and enquiry workflows",
+      "text": "Insights publishing and enquiry routing run as automated workflows, so new research goes live and new contacts reach the right person."
     },
     {
-      "title": "Deployment and support",
-      "text": "Production launch, followed by an ongoing support agreement for fixes, improvements and new features."
+      "title": "Dashboards for the team",
+      "text": "Dashboards that bring together enquiries and engagement so the team can see what investors are reading and asking about."
+    },
+    {
+      "title": "Security built in",
+      "text": "Techlio's security baseline applied from the first sprint: OWASP-based secure coding and review, role-based access control, encryption in transit and at rest, least-privilege access to cloud resources and vulnerability scans before each release. For Madera that covers hardened forms, consent-based cookies and analytics, and strict separation from third-party investor systems."
     }
   ]
 }

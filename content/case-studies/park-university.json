@@ -1,26 +1,60 @@
 {
   "team": [],
   "stack": [],
-  "challenges": [],
-  "results": [],
+  "challenges": [
+    {
+      "title": "Many campuses, online and on site",
+      "text": "Courses, students and staff are spread across two campuses, several centres and online study, and all of them need one consistent record."
+    },
+    {
+      "title": "Administrative work done by hand",
+      "text": "Enrolment, scheduling and reporting steps consumed staff time that should go to students."
+    },
+    {
+      "title": "Student records are protected data",
+      "text": "Education records need strict role-based access and an audit trail."
+    }
+  ],
+  "results": [
+    "One platform for courses, students and academic operations",
+    "Routine administrative steps automated",
+    "Dashboards for enrolment and student progress",
+    "Role-based access for students, faculty and staff",
+    "Ongoing support after launch"
+  ],
   "duration": "",
-  "logo": "",
-  "logoWidth": 0,
-  "logoHeight": 0,
+  "logo": "/clients/park-university.png",
+  "logoWidth": 427,
+  "logoHeight": 157,
   "slug": "park-university",
   "order": 17,
   "name": "Park University",
   "industry": "Higher education",
   "categories": [
-    "Product engineering"
+    "AI automation",
+    "University management platform",
+    "Dashboards",
+    "Security"
   ],
   "services": [
-    "End-to-end delivery"
+    "AI development",
+    "Security & compliance",
+    "End-to-end delivery",
+    "Business automation",
+    "Cloud & DevOps"
   ],
-  "headline": "End-to-end product delivery for a university with 65+ online degrees",
-  "overview": "Park University is a private, nonprofit university founded in 1875, with a flagship campus in Parkville, Missouri, a campus in Gilbert, Arizona, and more than 65 online degrees. Techlio delivered a digital product for Park University from discovery and design through development, deployment and ongoing support.",
+  "headline": "A university platform for managing courses, students and day-to-day academic operations",
+  "overview": "Park University is a private, nonprofit university founded in 1875, with campuses in Parkville, Missouri and Gilbert, Arizona, campus centres across the US and more than 65 online degrees. Techlio built its platform for managing courses, students and academic operations, from discovery and design through development, deployment and support, with automated workflows and dashboards for staff.",
   "liveUrl": "https://www.park.edu",
   "metrics": [
+    {
+      "value": "80+",
+      "label": "academic programmes offered by the university"
+    },
+    {
+      "value": "65+",
+      "label": "online degrees"
+    },
     {
       "value": "5",
       "label": "stages delivered, discovery to support"
@@ -28,20 +62,24 @@
   ],
   "solutions": [
     {
-      "title": "Discovery",
-      "text": "We worked with the client's team to define users, scope and success measures before any design or code."
+      "title": "Course and programme management",
+      "text": "Programmes, courses, sections and schedules managed in one place across online and on-campus delivery."
     },
     {
-      "title": "Design",
-      "text": "User flows and interface design for the product, reviewed with the client before build."
+      "title": "Student records and enrolment",
+      "text": "Student profiles, enrolment and progress tracked through each term, with self-service for students and tools for advisers and faculty."
     },
     {
-      "title": "Development",
-      "text": "Engineering and QA by a dedicated Techlio team, released in increments the client could use and test."
+      "title": "Workflow automation",
+      "text": "Routine steps such as enrolment confirmations, reminders, approvals and report generation run automatically."
     },
     {
-      "title": "Deployment and support",
-      "text": "Production launch, followed by an ongoing support agreement for fixes, improvements and new features."
+      "title": "Dashboards for staff",
+      "text": "Dashboards that show enrolment, course load and student progress so departments can act on current numbers."
+    },
+    {
+      "title": "Security built in",
+      "text": "Techlio's security baseline applied from the first sprint: OWASP-based secure coding and review, role-based access control, encryption in transit and at rest, least-privilege access to cloud resources and vulnerability scans before each release. For Park that means access by role for students, faculty and administrators, and student records designed around education privacy requirements."
     }
   ]
 }

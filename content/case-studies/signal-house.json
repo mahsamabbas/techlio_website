@@ -1,38 +1,59 @@
 {
   "team": [],
   "stack": [],
-  "challenges": [],
+  "challenges": [
+    {
+      "title": "Carrier registration is slow and manual",
+      "text": "Sending business texts in the US means registering brands and campaigns with carriers. Done by hand, that delays every new customer."
+    },
+    {
+      "title": "Customers needed to serve themselves",
+      "text": "Buying numbers, tracking delivery, reading logs and understanding spend all had to work without a support ticket."
+    },
+    {
+      "title": "Messaging data is sensitive",
+      "text": "Message content, phone numbers and billing records need strict account isolation and controlled access."
+    }
+  ],
   "results": [
-    "Portal V2 pages delivered across registration, settings, message logs and analytics",
-    "Rebilling issues resolved",
-    "Call activity populated automatically in the conversations channel",
-    "Releases verified in staging and production"
+    "Customers register, buy numbers and start sending from a self-serve portal",
+    "Registration, provisioning and billing steps automated",
+    "Dashboards for delivery, usage and call analytics",
+    "Integrations for CRMs and AI agents on the same API",
+    "Every release verified in staging and production"
   ],
   "duration": "",
-  "logo": "",
-  "logoWidth": 0,
-  "logoHeight": 0,
+  "logo": "/clients/signal-house.png",
+  "logoWidth": 286,
+  "logoHeight": 153,
   "slug": "signal-house",
   "order": 14,
   "name": "Signal House",
   "industry": "Communications platform (CPaaS)",
   "categories": [
+    "AI automation",
     "Customer portal",
-    "Billing",
-    "CRM integration"
+    "Billing and analytics",
+    "Security"
   ],
   "services": [
+    "AI development",
+    "Security & compliance",
     "End-to-end delivery",
     "SaaS engineering",
     "Business automation"
   ],
-  "headline": "Portal, billing and CRM integration work for a business messaging platform",
-  "overview": "Signal House is a communications platform that provides SMS, MMS and voice APIs for businesses, with a focus on 10DLC messaging. Techlio took the product from discovery and design through development, deployment and ongoing support, including the second version of its customer portal.",
+  "headline": "A self-serve messaging and voice platform built for businesses and AI agents",
+  "overview": "Signal House is a communications platform that gives businesses SMS, MMS and voice APIs over direct carrier connections, across 10DLC, toll-free and short code numbers. Techlio built the product end to end, from discovery and design through development, deployment and ongoing support: the self-serve customer portal, automated registration and billing flows, analytics dashboards and the integrations that let CRMs and AI agents send messages through the platform.",
   "liveUrl": "https://signalhouse.io",
   "metrics": [
     {
-      "value": "V2",
-      "label": "customer portal designed and built"
+      "value": "4",
+      "label": "channels on one platform: 10DLC, toll-free, short code, voice"
+    },
+    {
+      "value": "Top 5",
+      "label": "CPaaS provider on G2, as listed by Signal House"
     },
     {
       "value": "5",
@@ -41,20 +62,24 @@
   ],
   "solutions": [
     {
-      "title": "Customer portal V2",
-      "text": "Registration, settings, message logs, number management and analytics pages for the new version of the self-serve portal."
+      "title": "Self-serve customer portal",
+      "text": "Registration, account settings, number management, message logs and call logs in one portal, rebuilt as Portal V2."
     },
     {
-      "title": "Billing reliability",
-      "text": "Investigation and fixes for rebilling issues so customer charges are applied correctly."
+      "title": "Automated onboarding and billing",
+      "text": "Brand and campaign registration, number provisioning, usage rating and rebilling run as automated workflows instead of manual back-office steps."
     },
     {
-      "title": "CRM integration",
-      "text": "GoHighLevel integration work, including syncing notes against the right contact and showing call activity inside the conversations channel."
+      "title": "Analytics dashboards",
+      "text": "Delivery, usage and call analytics so customers and the Signal House team can see volume, deliverability and spend at a glance."
     },
     {
-      "title": "Voice interface and release testing",
-      "text": "Testing and fixes for the voice app, with tickets verified in both staging and production before release."
+      "title": "AI agent and CRM integrations",
+      "text": "API and integration work that lets AI agents and tools such as GoHighLevel send and track messages, including notes synced to the right contact and call activity shown inside the conversation channel."
+    },
+    {
+      "title": "Security built in",
+      "text": "Techlio's security baseline applied from the first sprint: OWASP-based secure coding and review, role-based access control, encryption in transit and at rest, least-privilege access to cloud resources and vulnerability scans before each release. For Signal House that covers per-account data isolation, API key handling and two-factor verification flows."
     }
   ]
 }

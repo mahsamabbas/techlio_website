@@ -1,36 +1,59 @@
 {
   "team": [],
   "stack": [],
-  "challenges": [],
+  "challenges": [
+    {
+      "title": "Trust depends on vetting",
+      "text": "Every member is screened for experience and background, so onboarding needed structure without becoming a manual bottleneck."
+    },
+    {
+      "title": "Members need to find the right peer quickly",
+      "text": "The value of the network is a relevant, trusted connection, which depends on good profiles and search."
+    },
+    {
+      "title": "Personal and payment data",
+      "text": "Profiles, background information and membership payments call for careful access control."
+    }
+  ],
   "results": [
-    "Mobile app delivered with onboarding, profiles, memberships and payments",
-    "Payments integrated through Braintree",
-    "Messaging, projects and alerts available to members"
+    "Full member journey live: apply, get vetted, join, connect",
+    "Community search and messaging between members",
+    "Membership billing running without manual work",
+    "Admin dashboards for applications and member activity",
+    "Ongoing support after launch"
   ],
   "duration": "",
-  "logo": "",
-  "logoWidth": 0,
-  "logoHeight": 0,
+  "logo": "/clients/nuooly.png",
+  "logoWidth": 365,
+  "logoHeight": 203,
   "slug": "nuooly",
   "order": 15,
   "name": "Nuooly",
-  "industry": "Professional community",
+  "industry": "Professional community platform",
   "categories": [
-    "Mobile app",
-    "Memberships",
-    "Payments"
+    "AI automation",
+    "Membership platform",
+    "Web and mobile app",
+    "Security"
   ],
   "services": [
+    "AI development",
+    "Security & compliance",
     "End-to-end delivery",
-    "SaaS engineering"
+    "SaaS engineering",
+    "Business automation"
   ],
-  "headline": "A membership community app for independent professionals",
-  "overview": "Nuooly describes itself as an exclusive community uniting and empowering independent professionals. Techlio delivered the product end to end, from discovery and design through development, deployment and support, including its mobile app.",
+  "headline": "A vetted community platform for independent professionals, built from discovery to support",
+  "overview": "Nuooly is an exclusive community for independent professionals in fields such as legal, accounting, HR, finance and IT. Members get a trusted peer network, mastermind groups, business resources and concierge support. Techlio built the full product: member sign-up and vetting, profiles, community search, memberships and payments, messaging and the admin dashboards the Nuooly team runs the community from.",
   "liveUrl": "https://www.nuooly.com",
   "metrics": [
     {
-      "value": "iOS",
-      "label": "mobile app delivered and tested"
+      "value": "7",
+      "label": "professional practice areas served"
+    },
+    {
+      "value": "Web + iOS",
+      "label": "member experience across devices"
     },
     {
       "value": "5",
@@ -39,20 +62,24 @@
   ],
   "solutions": [
     {
-      "title": "Member onboarding",
-      "text": "Sign-up, login and a guided multi-step profile creation flow with profile photos and bios."
+      "title": "Member onboarding and vetting",
+      "text": "Sign-up with social login, a multi-step professional profile and a review workflow that moves applicants through vetting."
+    },
+    {
+      "title": "Community search and messaging",
+      "text": "Search across members by practice area and expertise, with direct messages, projects and alerts to keep collaboration and referrals moving."
     },
     {
       "title": "Memberships and payments",
-      "text": "Membership plans and card payments in account settings, integrated with Braintree."
+      "text": "Membership plans with online payment, renewals and receipts handled automatically."
     },
     {
-      "title": "Community features",
-      "text": "Messages, projects and alerts for members inside the app."
+      "title": "Automation and admin dashboards",
+      "text": "Automated notifications, reminders and onboarding steps, with dashboards that show applications, membership and activity to the Nuooly team."
     },
     {
-      "title": "Deployment and support",
-      "text": "Structured app testing before release, then ongoing fixes and improvements under a support agreement."
+      "title": "Security built in",
+      "text": "Techlio's security baseline applied from the first sprint: OWASP-based secure coding and review, role-based access control, encryption in transit and at rest, least-privilege access to cloud resources and vulnerability scans before each release. For Nuooly that means restricted access to member and vetting data and payment details handled by the payment provider rather than stored in the app."
     }
   ]
 }
