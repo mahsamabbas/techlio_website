@@ -1,0 +1,84 @@
+{
+  "slug": "dp360-crm",
+  "order": 4,
+  "name": "DP360 CRM",
+  "industry": "Automotive and powersports",
+  "categories": [
+    "Legacy modernization",
+    "Cloud and DevOps"
+  ],
+  "headline": "Moving a CRM used by 2,000+ dealerships off Angular 1, with CI/CD and real-time messaging",
+  "overview": "Dealership Performance 360 CRM is a lead management and sales CRM for powersports, marine, RV, trailer, automotive and agriculture retailers across the US, Canada and the UK. Since 2019 Techlio has been a core engineering team on it: modernizing the legacy front end, building SMS and telephony infrastructure and keeping a 300+ partner integration ecosystem running.",
+  "liveUrl": "https://dealershipperformancecrm.com",
+  "duration": "7+ years, ongoing",
+  "team": [
+    "1 technical lead",
+    "4 full-stack developers"
+  ],
+  "stack": [
+    "Angular 17",
+    "CakePHP",
+    "Node.js",
+    "MySQL",
+    "AWS",
+    "Twilio / Telnyx",
+    "Docker",
+    "GitHub Actions"
+  ],
+  "metrics": [
+    {
+      "value": "2,000+",
+      "label": "dealerships on the CRM"
+    },
+    {
+      "value": "300+",
+      "label": "integrations kept running"
+    },
+    {
+      "value": "1 to 17",
+      "label": "Angular versions modernized"
+    }
+  ],
+  "challenges": [
+    {
+      "title": "Legacy AngularJS front end",
+      "text": "Angular 1 made screens slow, new features risky and the codebase harder to maintain as the dealer base grew."
+    },
+    {
+      "title": "High-volume communications",
+      "text": "Thousands of dealerships send texts and calls daily, each needing near real-time delivery, routing and compliance."
+    },
+    {
+      "title": "Lead response speed",
+      "text": "Leads must reach the right salesperson fast or the sale goes to a quicker competitor."
+    },
+    {
+      "title": "Integration-heavy ecosystem",
+      "text": "With 300+ OEMs, DMS providers, lead portals and website vendors connected, any change can break a dealer's data flow."
+    }
+  ],
+  "solutions": [
+    {
+      "title": "Angular 17 revamp",
+      "text": "Performance bottlenecks profiled and most modules rebuilt from Angular 1 to Angular 17, keeping backward compatibility and data integrity."
+    },
+    {
+      "title": "SMS and telephony platform",
+      "text": "Webhook-driven texting and calling on Twilio and Telnyx with call routing, recordings, tracking and real-time dealer alerts."
+    },
+    {
+      "title": "Lead routing and automation",
+      "text": "Lead routing, appointment reminders and engagement workflows on AWS SQS and Lambda for reliable asynchronous processing."
+    },
+    {
+      "title": "Scalable infrastructure and CI/CD",
+      "text": "Services containerized with Docker, deployments automated with GitHub Actions, and load-balanced EC2 monitored with CloudWatch."
+    }
+  ],
+  "results": [
+    "2,000+ dealerships run their daily sales process on DP360",
+    "300+ OEM, DMS, portal and website integrations supported",
+    "Core modules moved from Angular 1 to Angular 17",
+    "Near real-time SMS and calling through Twilio and Telnyx"
+  ]
+}

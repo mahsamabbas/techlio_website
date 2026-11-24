@@ -1,30 +1,46 @@
 # Techlio website
 
-Marketing site for [Techlio](https://techlio.co). Static, zero dependencies: Node 18+ is all you need.
+Marketing site for [Techlio](https://techlio.co), built with [Astro](https://astro.build). All text lives in JSON files under `content/` and can be edited without code through the editor at `/admin`.
 
 ```
-npm run build    # src/ -> dist/
-npm run dev      # build, then preview at http://localhost:4173
-npm run verify   # build + check links, anchors, assets and contact facts on every page
+npm install
+npm run dev      # http://localhost:4321
+npm run build    # static site in dist/
+npm run verify   # build, then check links, anchors and contact details on every page
 ```
 
-Deploy `dist/` to any static host. `netlify.toml` is included.
+## Editing content
 
-## Layout
+| What | File | In the editor |
+| --- | --- | --- |
+| Contact details, offices, stats, proof, reviews, form endpoint | `content/settings/site.json` | Site settings |
+| Home, Process, About, Contact text and FAQs | `content/pages/*.json` | Pages |
+| Case studies (add, edit, reorder) | `content/case-studies/*.json` | Case studies |
+| Service pages and their home-page cards | `content/services/*.json` | Services |
+| Fixed-scope offer pages | `content/offers/*.json` | Fixed-scope offers |
+
+Adding a file to `case-studies`, `services` or `offers` creates its page and adds it to the navigation and listings.
+
+**The `/admin` editor** is [Decap CMS](https://decapcms.org). It saves edits as commits to the `main` branch, and the host rebuilds the site.
+
+- On your computer: run `npm run cms` in one terminal and `npm run dev` in another, then open `http://localhost:4321/admin/`.
+- On the live site: Decap needs a GitHub login. Hosting on Netlify provides one (enable the GitHub OAuth provider for the site); other hosts need an OAuth proxy. Editors need write access to this repository.
+
+## Code layout
 
 | Path | What it holds |
 | --- | --- |
-| `src/site.mjs` | Brand facts: contact details, offices, social links, proof numbers, case studies, navigation |
-| `src/layout.mjs` | Page shell: head, header, footer, closing call-to-action |
-| `src/components.mjs`, `src/templates.mjs` | Shared sections and the service-page template |
-| `src/pages/*.mjs` | One file per page |
-| `src/assets/js/diagrams.js` | Data for the seven interactive pipeline diagrams |
-| `src/assets/js/pipeline.js` | Diagram renderer (SVG, keyboard accessible, vertical layout on phones) |
-| `src/assets/css/main.css` | Design system |
+| `src/pages/` | Routes. `[slug].astro` renders every service and offer; `case-studies/[slug].astro` renders every case study |
+| `src/components/`, `src/layouts/` | Shared sections and the page shell |
+| `src/lib/content.js` | Loads `content/` |
+| `src/styles/main.css` | Design system |
+| `public/js/diagrams.js` | Data for the nine interactive diagrams |
+| `public/js/pipeline.js` | Diagram renderer |
+| `public/admin/` | Editor configuration |
 
 ## Before launch
 
-- **Form delivery.** `formEndpoint` in `src/site.mjs` is empty, so the booking form drafts an email to contact@techlio.co. Set it to a form backend URL to submit directly.
-- **Reviews.** `reviews` in `src/site.mjs` is empty. Add real, attributable client reviews and they render on the home and contact pages.
-- **Legal and careers pages** link to the existing techlio.co URLs and are not part of this build.
-- **Case studies** contain only what techlio.co publishes today. Add challenge, solution, stack and results per project in `src/site.mjs`.
+- Set **Form endpoint** in Site settings so the booking form submits directly. Until then it drafts an email to the contact address.
+- Add real client reviews in Site settings.
+- Confirm each client named in `content/case-studies/` has agreed to be published.
+- Terms, privacy and careers links point to the existing techlio.co pages; those pages are not part of this build.

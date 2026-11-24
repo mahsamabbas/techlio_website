@@ -1,0 +1,80 @@
+---
+// Booking form. Posts to "Form endpoint" from Site settings when set; otherwise drafts an email.
+import { site, pages, services, offers, phoneHref } from '../lib/content.js';
+const codes = ['+1', '+44', '+92', '+49', '+33', '+31', '+34', '+39', '+46', '+41', '+353', '+61', '+65', 'Other'];
+const starts = [...offers.map((o) => o.title), ...services.map((s) => s.title), 'Co-build with embedded engineers'];
+const home = pages.home;
+---
+
+<section class="section booking" id="book">
+  <div class="wrap booking-grid">
+    <div class="booking-copy">
+      <h2>{home.bookingTitle}</h2>
+      <p>{home.bookingIntro}</p>
+      <ul class="ticks">{home.bookingPoints.map((p) => <li>{p}</li>)}</ul>
+      <dl class="contact-list">
+        <div><dt>Email</dt><dd><a href={`mailto:${site.email}`}>{site.email}</a></dd></div>
+        <div><dt>Phone</dt><dd><a href={`tel:${phoneHref}`}>{site.phone}</a></dd></div>
+        {site.offices.map((o) => <div><dt>{o.country}</dt><dd>{o.address}</dd></div>)}
+      </dl>
+    </div>
+    <form class="form" id="scope-form" data-email={site.email} data-endpoint={site.formEndpoint} novalidate>
+      <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required /></div>
+      <div class="field">
+        <label for="f-email">Work email</label><input id="f-email" name="email" type="email" autocomplete="email" required />
+      </div>
+      <div class="field">
+        <label for="f-company">Company <span class="opt">optional</span></label>
+        <input id="f-company" name="company" autocomplete="organization" />
+      </div>
+      <div class="field">
+        <label for="f-phone">Phone <span class="opt">optional</span></label>
+        <div class="phone">
+          <select name="code" aria-label="Country code">{codes.map((c) => <option>{c}</option>)}</select>
+          <input id="f-phone" name="phone" type="tel" autocomplete="tel-national" />
+        </div>
+      </div>
+      <div class="field field-wide">
+        <label for="f-project">What are you building, and where is it stuck?</label>
+        <textarea id="f-project" name="project" rows="5" required></textarea>
+      </div>
+      <div class="field">
+        <label for="f-interest">Where should we start?</label>
+        <select id="f-interest" name="interest">
+          <option value="Not sure yet">Not sure yet</option>
+          {starts.map((s) => <option value={s}>{s}</option>)}
+        </select>
+      </div>
+      <div class="field">
+        <label for="f-budget">Budget range</label>
+        <select id="f-budget" name="budget" required>
+          <option value="">Choose a range</option>
+          <option>Under $10K</option>
+          <option>$10K to $25K</option>
+          <option>$25K to $50K</option>
+          <option>$50K to $100K</option>
+          <option>$100K or more</option>
+          <option>Not set yet</option>
+        </select>
+      </div>
+      <div class="field field-wide">
+        <label for="f-source">How did you find us?</label>
+        <select id="f-source" name="source" required>
+          <option value="">Choose one</option>
+          <option>Search engine</option>
+          <option>AI assistant</option>
+          <option>Upwork</option>
+          <option>LinkedIn</option>
+          <option>Referral</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <label class="check field-wide"><input type="checkbox" name="nda" /> Send a mutual NDA before we talk</label>
+      <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+      <div class="field-wide form-foot">
+        <button class="btn btn-primary" type="submit">Request scoping call</button>
+        <p id="scope-status" class="form-status" role="status"></p>
+      </div>
+    </form>
+  </div>
+</section>

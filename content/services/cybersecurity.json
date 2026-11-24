@@ -1,0 +1,62 @@
+{
+  "slug": "cybersecurity",
+  "order": 4,
+  "title": "Cybersecurity & DevSecOps",
+  "short": "Cybersecurity",
+  "description": "Techlio secures applications, cloud and AI systems: security assessments, identity and access hardening, automated checks in the pipeline, monitoring and response.",
+  "h1": "Security built into the system, not bolted on before the audit.",
+  "intro": "We assess, harden and monitor the applications, cloud accounts and AI features your business runs on. The engineers who find a weakness are the same ones who fix it in code.",
+  "diagram": "secure",
+  "caption": "A code change passes secret scanning, code analysis, dependency and infrastructure checks, then a security review, before deployment and runtime monitoring.",
+  "card": {
+    "lead": "Pass the security review, and deserve to.",
+    "text": "Security assessments, access hardening and automated checks in every release, covering your application, your cloud and the AI features on top.",
+    "tags": [
+      "Security assessment",
+      "Access control and MFA",
+      "DevSecOps",
+      "AI security testing"
+    ]
+  },
+  "offerTitle": "How we secure a system",
+  "offerIntro": "Four stages, in order. Each one leaves you with evidence you can show a customer or an auditor.",
+  "offerings": [
+    {
+      "title": "Assess",
+      "text": "Threat model, architecture and code review, and a cloud configuration review. Findings are ranked by real risk, with the fix described for each."
+    },
+    {
+      "title": "Harden",
+      "text": "Role-based access, multi-factor authentication, secrets management, tenant isolation and least-privilege cloud permissions, implemented in your codebase."
+    },
+    {
+      "title": "Automate",
+      "text": "Secret scanning, code analysis, dependency and infrastructure checks run on every change, so a vulnerability is stopped before it is merged."
+    },
+    {
+      "title": "Monitor and respond",
+      "text": "Logging, alerting and incident runbooks in place, with a named owner for every alert and a tested path to roll back."
+    }
+  ],
+  "cases": [
+    "vcreative",
+    "dp360-crm"
+  ],
+  "whyTitle": "Why engineering teams bring us in",
+  "why": [
+    {
+      "title": "Engineers who fix, not just report",
+      "text": "You get merged pull requests alongside the findings. A PDF of issues with no owner is where most security work stalls."
+    },
+    {
+      "title": "AI attack surface included",
+      "text": "Prompt injection, data leakage through retrieval and over-permissioned tools are tested the same way as the rest of your application."
+    },
+    {
+      "title": "Evidence for your buyers",
+      "text": "Access controls, test results and audit trails are documented as we go, which shortens the security questionnaires your sales team faces."
+    }
+  ],
+  "closeTitle": "Facing a security review, or want one before a customer asks?",
+  "closeText": "Tell us what you run and who is asking. You will get a first read on scope and priorities within 24 hours."
+}

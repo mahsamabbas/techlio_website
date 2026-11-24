@@ -1,0 +1,19 @@
+---
+// Numbered cards. Use only where the items are an ordered sequence.
+const { items = [], cols = 4 } = Astro.props;
+const pad = (n) => String(n).padStart(2, '0');
+---
+
+<ol class={`steps steps-${cols}`}>
+  {
+    items.map((it, i) => (
+      <li class="step">
+        <span class="step-n" aria-hidden="true">{pad(i + 1)}</span>
+        {it.when && <span class="step-when">{it.when}</span>}
+        <h3>{it.title}</h3>
+        <p>{it.text}</p>
+        {it.list && it.list.length > 0 && <ul class="ticks">{it.list.map((l) => <li>{l}</li>)}</ul>}
+      </li>
+    ))
+  }
+</ol>

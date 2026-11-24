@@ -1,0 +1,83 @@
+{
+  "slug": "ordaos",
+  "order": 1,
+  "name": "Ordaōs",
+  "industry": "Biotech, AI drug discovery",
+  "categories": [
+    "AI agents and RAG",
+    "Workflow automation"
+  ],
+  "headline": "Source-grounded AI search and 12 production workflows for a protein design biotech",
+  "overview": "Ordaōs is a New York biotech that designs therapeutic proteins with generative AI. Techlio built the AI layer around that science: Python automation, retrieval-augmented generation over its research knowledge, and end-to-end AI workflows connecting data, analysis and reporting.",
+  "liveUrl": "https://ordaos.bio",
+  "duration": "2 years",
+  "team": [
+    "2 AI/ML engineers",
+    "1 Python developer",
+    "1 QA engineer"
+  ],
+  "stack": [
+    "Python",
+    "Claude",
+    "pgvector",
+    "LangChain",
+    "n8n",
+    "AWS"
+  ],
+  "metrics": [
+    {
+      "value": "12",
+      "label": "AI workflows in production"
+    },
+    {
+      "value": "45%",
+      "label": "less manual data and reporting work"
+    },
+    {
+      "value": "250K",
+      "label": "documents searchable through RAG"
+    }
+  ],
+  "challenges": [
+    {
+      "title": "Knowledge spread across sources",
+      "text": "Papers, assay results, design runs and partner documents lived in separate systems, so finding context for a target meant hours of searching."
+    },
+    {
+      "title": "Manual, repetitive workflows",
+      "text": "Scientists and operations staff moved data between tools and compiled reports by hand."
+    },
+    {
+      "title": "Accuracy in a scientific domain",
+      "text": "Generic AI tools hallucinate and cannot cite sources, which is unacceptable when answers inform therapeutic design."
+    },
+    {
+      "title": "Scaling with partner programs",
+      "text": "Each new partnership added data and reporting load that a small team had to absorb without new headcount."
+    }
+  ],
+  "solutions": [
+    {
+      "title": "RAG knowledge assistant",
+      "text": "A retrieval system over research and program documents that answers in plain language with citations back to the source."
+    },
+    {
+      "title": "Python data and automation pipelines",
+      "text": "Services that ingest, clean and structure scientific and operational data so it flows downstream without manual handling."
+    },
+    {
+      "title": "AI automation flows",
+      "text": "LLM-powered flows for recurring tasks such as summarizing results, drafting program updates and routing information."
+    },
+    {
+      "title": "End-to-end workflows with guardrails",
+      "text": "Ingestion, retrieval, generation and human review connected with logging, so every output is traceable and reviewable."
+    }
+  ],
+  "results": [
+    "12 end-to-end AI workflows live in production",
+    "250,000 research and program documents searchable through RAG",
+    "45% less manual data and reporting work, about 18 hours saved per employee each week",
+    "Cited, source-grounded answers for scientific and partner questions"
+  ]
+}

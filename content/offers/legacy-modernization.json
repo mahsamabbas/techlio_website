@@ -1,0 +1,69 @@
+{
+  "slug": "legacy-modernization",
+  "order": 2,
+  "title": "Legacy-to-AI Modernization",
+  "description": "Techlio modernizes legacy systems route by route behind a facade, then adds AI capability on clean services. No rewrite, no feature freeze.",
+  "kicker": "Fixed first milestone",
+  "h1": "Make the system you have ready for AI, without a rewrite.",
+  "intro": "Your legacy platform still earns the revenue, and it is also why every AI idea stalls. We modernize it one capability at a time behind a routing facade, then attach AI to the parts that are ready.",
+  "primaryLabel": "Book a modernization diagnostic",
+  "diagram": "modernize",
+  "caption": "Traffic passes through a routing facade that sends each route to the legacy application or a new service, while a change stream keeps data in sync and feeds AI capability.",
+  "audienceTitle": "",
+  "audienceIntro": "",
+  "audience": [],
+  "painsTitle": "Signs it is time",
+  "pains": [
+    "Every AI proof of concept dies at “we can’t get clean data out of the old system”.",
+    "Releases are rare and tense because nobody is sure what a change will break.",
+    "The engineers who understand the core modules can be counted on one hand.",
+    "A full rewrite has been proposed, estimated and shelved more than once."
+  ],
+  "stepsTitle": "How the modernization runs",
+  "stepsIntro": "Four steps, in order. The first is a fixed-price diagnostic.",
+  "steps": [
+    {
+      "when": "Weeks 1 to 2",
+      "title": "Diagnose",
+      "text": "We read the code, map the seams and data flows, and rank capabilities by risk and by how much AI value they unlock."
+    },
+    {
+      "when": "Weeks 3 to 4",
+      "title": "Put the facade in",
+      "text": "A routing layer goes in front of the legacy system. Nothing changes for users, and every route can now be moved independently."
+    },
+    {
+      "when": "Weeks 5 to 8",
+      "title": "Carve out the first service",
+      "text": "One capability is rebuilt with tests and documentation, run in parallel with the old path, then switched over."
+    },
+    {
+      "when": "Ongoing",
+      "title": "Add AI and repeat",
+      "text": "The first AI feature ships on the new service. The next capability follows on a predictable cadence."
+    }
+  ],
+  "deliverablesTitle": "",
+  "deliverables": [],
+  "whyTitle": "Why this approach works",
+  "why": [
+    {
+      "title": "No feature freeze",
+      "text": "The old system keeps shipping while it shrinks. Your roadmap does not stop for the migration."
+    },
+    {
+      "title": "Reversible at every step",
+      "text": "Any route can be sent back to the legacy path in seconds, so a bad cutover is an incident, not a crisis."
+    },
+    {
+      "title": "No blame for the past",
+      "text": "Legacy code is code that worked long enough to matter. We document it as it is and move forward."
+    }
+  ],
+  "cases": [
+    "vcreative",
+    "dp360-crm"
+  ],
+  "closeTitle": "Start with a two-week diagnostic",
+  "closeText": "You get a seam map, a ranked migration plan and an honest view of what AI can do on your stack today."
+}

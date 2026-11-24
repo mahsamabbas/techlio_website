@@ -1,0 +1,9 @@
+---
+import { site } from '../lib/content.js';
+---
+
+<section class="stats" aria-label={`${site.name} in numbers`}>
+  <div class="wrap stats-row">
+    {site.stats.map((s) => <div class="stat"><strong>{s.value}</strong><span>{s.label}</span></div>)}
+  </div>
+</section>

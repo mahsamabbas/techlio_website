@@ -1,0 +1,84 @@
+{
+  "slug": "spinlab-ai",
+  "order": 3,
+  "name": "SpinLab AI",
+  "industry": "Sports tech",
+  "categories": [
+    "Computer vision",
+    "AI SaaS"
+  ],
+  "headline": "Lab-grade quarterback biomechanics from a single phone video",
+  "overview": "SpinLab AI is a quarterback training platform built end to end by Techlio. It turns a phone video into biomechanics data with no sensors or special equipment, and serves players, coaches and programs across the NFL, CFL and major college football.",
+  "liveUrl": "https://spinlabai.com",
+  "duration": "9 months, fixed scope",
+  "team": [
+    "1 AI/ML engineer",
+    "2 full-stack developers",
+    "1 UI/UX designer",
+    "1 QA engineer"
+  ],
+  "stack": [
+    "React",
+    "Node.js",
+    "Python",
+    "TensorFlow",
+    "AWS",
+    "Figma"
+  ],
+  "metrics": [
+    {
+      "value": "20+",
+      "label": "biomechanical metrics per throw"
+    },
+    {
+      "value": "30+",
+      "label": "college programs using it"
+    },
+    {
+      "value": "200+",
+      "label": "drills tied to AI recommendations"
+    }
+  ],
+  "challenges": [
+    {
+      "title": "No accessible biomechanics tools",
+      "text": "Professional motion analysis needed lab equipment most players and college programs could not reach."
+    },
+    {
+      "title": "Manual coaching feedback",
+      "text": "Coaches relied on observation, with no quantitative data to track progress or prescribe drills."
+    },
+    {
+      "title": "No recruiting infrastructure",
+      "text": "Players lacked standardized, data-backed reports to share with recruiters."
+    },
+    {
+      "title": "Fragmented training resources",
+      "text": "Drills, coaching calls, video feedback and performance data sat in disconnected tools."
+    }
+  ],
+  "solutions": [
+    {
+      "title": "AI biomechanics engine",
+      "text": "A computer vision pipeline that converts phone video into 3D analysis covering more than 20 metrics, including release time and hip rotation speed."
+    },
+    {
+      "title": "Personalized drill engine",
+      "text": "Recommendations based on each athlete's biomechanics data, injury risk indicators and performance gaps."
+    },
+    {
+      "title": "Recruiting and performance dashboard",
+      "text": "A data profile with overlay video, leaderboard rankings and shareable reports for coaches and scouts."
+    },
+    {
+      "title": "Full SaaS platform",
+      "text": "Multi-plan subscriptions, coach and player portals, global leaderboards and live coaching call scheduling."
+    }
+  ],
+  "results": [
+    "Adopted by quarterbacks from the NFL, CFL and 30+ college programs",
+    "20+ biomechanical metrics tracked per throw with no hardware",
+    "200+ drill library integrated with AI recommendations",
+    "Multi-tier subscription model live with coach and player plans"
+  ]
+}

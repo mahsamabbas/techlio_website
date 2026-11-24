@@ -1,0 +1,84 @@
+{
+  "slug": "xo-armor",
+  "order": 8,
+  "name": "XO Armor",
+  "industry": "Medtech",
+  "categories": [
+    "Product engineering",
+    "Mobile"
+  ],
+  "headline": "Scan-to-print software that cut custom orthotics from weeks to under an hour",
+  "overview": "XO Armor lets clinics and athletic programs 3D-print custom orthotics on site. Techlio built the core software: the iPhone scanning app, the desktop customization software, the subscription and ordering portal, and the dashboard and database that tie it together.",
+  "liveUrl": "https://xoarmortech.com",
+  "duration": "2 years",
+  "team": [
+    "2 full-stack developers",
+    "1 mobile developer",
+    "1 UI/UX designer",
+    "1 QA engineer"
+  ],
+  "stack": [
+    "React Native",
+    "Electron",
+    "Node.js",
+    "PostgreSQL",
+    "AWS",
+    "Three.js"
+  ],
+  "metrics": [
+    {
+      "value": "10K+",
+      "label": "custom devices printed"
+    },
+    {
+      "value": "50+",
+      "label": "clinics and programs"
+    },
+    {
+      "value": "45-60 min",
+      "label": "scan to finished device"
+    }
+  ],
+  "challenges": [
+    {
+      "title": "Weeks-long turnaround",
+      "text": "Custom splints and braces were fabricated off site, leaving patients waiting or settling for poor fits."
+    },
+    {
+      "title": "Scanning without specialist hardware",
+      "text": "Accurate 3D capture normally required expensive scanners and trained technicians."
+    },
+    {
+      "title": "Design tools built for engineers",
+      "text": "Turning a scan into a printable device demanded CAD expertise clinicians do not have."
+    },
+    {
+      "title": "Operations across a growing network",
+      "text": "Subscriptions, catalogs, print activity and support needed one system."
+    }
+  ],
+  "solutions": [
+    {
+      "title": "iPhone 3D scanning app",
+      "text": "Captures an accurate model of a hand, wrist, foot or ankle in about 30 seconds on a phone."
+    },
+    {
+      "title": "Scan-to-print customization software",
+      "text": "Desktop software that produces a print-ready device with controls for material, padding and coverage, no CAD skills needed."
+    },
+    {
+      "title": "Guided on-site workflow",
+      "text": "Scanning, design and the clinic's printer connected in one offline-capable workflow."
+    },
+    {
+      "title": "Subscription portal and admin dashboard",
+      "text": "Ordering, the device catalog and tracking for clinics, users, devices and print activity."
+    }
+  ],
+  "results": [
+    "50+ clinics and programs, including Auburn, Louisville and the New Orleans Saints",
+    "10K+ custom devices printed through the platform",
+    "45 to 60 minute scan-to-print turnaround, down from weeks",
+    "2K+ subscribers managing devices and orders through the portal"
+  ]
+}

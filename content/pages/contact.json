@@ -1,0 +1,28 @@
+{
+  "metaDescription": "Book a technical scoping call with Techlio. Reply within 24 hours, NDA available, offices in the USA and Pakistan.",
+  "heroTitle": "Bring the problem. Leave with a plan.",
+  "heroIntro": "Send a few lines about what you are building. Within 24 hours a senior engineer replies with questions, a first read on approach and times for a call.",
+  "faqTitle": "Before you book",
+  "faqs": [
+    {
+      "question": "What happens after I send the form?",
+      "answer": "A senior engineer reads it and replies within 24 hours with questions and times for a free 30-minute scoping call. After a focused discovery you receive a proposal with scope, timeline and approach before any code is written."
+    },
+    {
+      "question": "Can we sign an NDA first?",
+      "answer": "Yes. Tick the NDA box and we send a mutual NDA before the call. We are also happy to sign yours."
+    },
+    {
+      "question": "Do you work with early-stage startups or only enterprises?",
+      "answer": "Both. We work with early-stage AI startups and with established enterprises, and the engagement is sized to match."
+    },
+    {
+      "question": "We are not sure we are ready for AI. Is a call still useful?",
+      "answer": "Yes. We offer a free AI readiness assessment that reviews your stack, workflows and goals and tells you plainly where AI would and would not help."
+    },
+    {
+      "question": "Which platforms do you build on?",
+      "answer": "AWS, Azure and Google Cloud, with generative AI, LLM integration and custom application development on top."
+    }
+  ]
+}

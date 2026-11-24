@@ -1,0 +1,76 @@
+{
+  "slug": "awkward-media",
+  "order": 6,
+  "name": "Awkward Media",
+  "industry": "Marketing, SEO agency",
+  "categories": [
+    "AI agents",
+    "Workflow automation"
+  ],
+  "headline": "An AI agent and live-rankings app that turned an SEO service into a product",
+  "overview": "Awkward Media is a Toronto SEO agency serving clients in 34 cities across Canada and the US. Since 2023 Techlio has been its engineering team, building its websites, the client app where customers track rankings live, an AI agent, and internal AI and SEO tools that automate delivery.",
+  "liveUrl": "https://awkward-media.com",
+  "duration": "3 years, ongoing",
+  "team": [
+    "3 full-stack developers"
+  ],
+  "stack": [
+    "React / TypeScript",
+    "Supabase / Postgres",
+    "WordPress / PHP",
+    "OpenAI / AI agents",
+    "Google SEO APIs"
+  ],
+  "metrics": [
+    {
+      "value": "34",
+      "label": "cities tracking rankings live"
+    },
+    {
+      "value": "3 yrs",
+      "label": "as the embedded engineering team"
+    }
+  ],
+  "challenges": [
+    {
+      "title": "Guarantees need proof",
+      "text": "Promising results in 20 days meant clients had to see rankings in real time, not in a monthly PDF."
+    },
+    {
+      "title": "Manual SEO delivery",
+      "text": "Rank tracking, reporting and Google Business Profile updates took hours of repetitive specialist time."
+    },
+    {
+      "title": "New AI search channels",
+      "text": "As buyers moved to AI answer engines, the agency needed to show prospects where they stood."
+    },
+    {
+      "title": "A website that must rank",
+      "text": "The agency's own site has to win the searches it sells across many service and city pages."
+    }
+  ],
+  "solutions": [
+    {
+      "title": "Client app with live rankings",
+      "text": "A React and Supabase app where clients see keyword and Maps rankings, progress and reports at any time."
+    },
+    {
+      "title": "AI agent for clients",
+      "text": "An agent inside the app that answers questions about each client's rankings, traffic and next steps in plain language."
+    },
+    {
+      "title": "Internal AI and SEO tools",
+      "text": "Automation for rank tracking, reporting, content and Google Business Profile tasks."
+    },
+    {
+      "title": "WordPress to React website",
+      "text": "The marketing site rebuilt in React with scalable service, industry and city pages and a free AI visibility audit."
+    }
+  ],
+  "results": [
+    "Clients in 34 cities across Canada and the US track rankings live in the app",
+    "An AI agent explains results to clients in plain language",
+    "Automation frees specialists from repetitive reporting work",
+    "3 years as Awkward Media's embedded engineering team"
+  ]
+}

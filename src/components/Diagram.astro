@@ -1,0 +1,9 @@
+---
+// Mount point for an interactive pipeline diagram (public/js/pipeline.js renders it from public/js/diagrams.js).
+const { id, caption = '', autorun = false } = Astro.props;
+---
+
+<figure class="pipe" data-diagram={id} data-autorun={autorun ? '' : undefined}>
+  <noscript><p class="pipe-noscript">This diagram is interactive and needs JavaScript. {caption}</p></noscript>
+  {caption && <figcaption class="sr-only">{caption}</figcaption>}
+</figure>

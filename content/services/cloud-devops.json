@@ -1,0 +1,62 @@
+{
+  "slug": "cloud-devops",
+  "order": 5,
+  "title": "Cloud & DevOps",
+  "short": "Cloud and DevOps",
+  "description": "Cloud architecture, migration, CI/CD, infrastructure as code and operations from Techlio on AWS, Azure and Google Cloud.",
+  "h1": "Releases that are routine, on infrastructure you can reason about.",
+  "intro": "We design, migrate and run cloud infrastructure on AWS, Azure and Google Cloud. Deployments become a button, environments are defined in code, and you can see cost and reliability at a glance.",
+  "diagram": "platform",
+  "caption": "A developer push triggers the CI pipeline and infrastructure as code, deploys to staging and production, and feeds autoscaling, observability and cost reporting.",
+  "card": {
+    "lead": "Deploy on a Tuesday afternoon without holding your breath.",
+    "text": "Cloud architecture, migration, CI/CD pipelines and infrastructure as code, with monitoring and cost reporting your team can read.",
+    "tags": [
+      "Cloud architecture",
+      "Migration",
+      "CI/CD",
+      "Infrastructure as code"
+    ]
+  },
+  "offerTitle": "How we get you there",
+  "offerIntro": "Four stages, in order. You can stop after any of them and keep what was built.",
+  "offerings": [
+    {
+      "title": "Cloud strategy and architecture",
+      "text": "A review of what you run today and a target design covering networking, environments, data, security boundaries and cost."
+    },
+    {
+      "title": "Migration",
+      "text": "Workloads moved in stages with rollback at each step, containerized where it helps, with data migrations rehearsed before the real cutover."
+    },
+    {
+      "title": "CI/CD and infrastructure as code",
+      "text": "Automated build, test and deploy pipelines, with every environment defined in version control so it can be recreated on demand."
+    },
+    {
+      "title": "Operate and optimize",
+      "text": "Dashboards, alerts and runbooks for the team on call, plus regular cost and reliability reviews with concrete actions."
+    }
+  ],
+  "cases": [
+    "dp360-crm",
+    "launchboom"
+  ],
+  "whyTitle": "What changes for your team",
+  "why": [
+    {
+      "title": "Deploys stop being events",
+      "text": "Small, automated releases with canaries and rollback replace the long, tense deployment evening."
+    },
+    {
+      "title": "Nothing lives in one person’s head",
+      "text": "Infrastructure is code, reviewed and versioned. A new engineer can read how production is built."
+    },
+    {
+      "title": "Cost you can explain",
+      "text": "Spend is tagged by service and environment and reviewed on a schedule, so the bill has no surprises."
+    }
+  ],
+  "closeTitle": "Is your infrastructure slowing your releases?",
+  "closeText": "Describe your current setup and what hurts. We will reply within 24 hours with where we would start."
+}

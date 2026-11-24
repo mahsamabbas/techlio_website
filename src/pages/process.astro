@@ -1,0 +1,60 @@
+---
+import Base from '../layouts/Base.astro';
+import Section from '../components/Section.astro';
+import Steps from '../components/Steps.astro';
+import Blocks from '../components/Blocks.astro';
+import Diagram from '../components/Diagram.astro';
+import Closing from '../components/Closing.astro';
+import { pages } from '../lib/content.js';
+const p = pages.process;
+---
+
+<Base title="Process and engagement" description={p.metaDescription} diagrams>
+  <section class="page-hero">
+    <div class="wrap">
+      <h1>{p.heroTitle}</h1>
+      <p class="lede">{p.heroIntro}</p>
+      <ol class="rail" aria-label="Process stages">
+        {p.stages.map((s, i) => <li><span aria-hidden="true">{i + 1}</span>{s}</li>)}
+      </ol>
+    </div>
+  </section>
+
+  <Section id="engagement" tint title={p.pathsTitle} intro={p.pathsIntro}>
+    <div class="paths">
+      {
+        p.paths.map((path) => (
+          <article class="path">
+            <h3>{path.name}</h3>
+            <p class="path-line">{path.line}</p>
+            <p>{path.text}</p>
+            <dl class="facts facts-stack">
+              <div><dt>Best for</dt><dd>{path.fit}</dd></div>
+              <div><dt>Commercial model</dt><dd>{path.model}</dd></div>
+            </dl>
+            <a class="more" href={path.href}>{path.link}</a>
+          </article>
+        ))
+      }
+    </div>
+    <p class="note">{p.pathsNote}</p>
+  </Section>
+
+  <Section title={p.phaseATitle} intro={p.phaseAIntro}>
+    <Steps items={p.phaseA} cols={3} />
+  </Section>
+
+  <Section tint title={p.phaseBTitle} intro={p.phaseBIntro}>
+    <Steps items={p.phaseB} cols={5} />
+  </Section>
+
+  <Section id="how-we-build" title={p.buildTitle} intro={p.buildIntro}>
+    <Diagram
+      id="release"
+      caption="A pull request passes automated tests, the eval suite and senior review, then staging and a canary, before full production rollout and monitoring."
+    />
+    <Blocks items={p.principles} cols={4} />
+  </Section>
+
+  <Closing title={p.closeTitle} text={p.closeText} />
+</Base>

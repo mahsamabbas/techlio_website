@@ -1,0 +1,46 @@
+{
+  "metaDescription": "Techlio is an AI-ready engineering firm with offices in the USA and Pakistan, partnering with startups and enterprises to design, build, secure and scale AI-driven products.",
+  "heroTitle": "An engineering firm first. AI is what we build with it.",
+  "heroIntro": "Techlio partners with startups and enterprises to design, build, secure and scale AI-driven digital products. We are engineers who learned AI by shipping it into real systems.",
+  "purposeTitle": "What we are here to do",
+  "purpose": [
+    {
+      "title": "Mission",
+      "text": "Deliver AI-led innovation and full-cycle engineering that solves real problems for our clients and keeps paying off after launch."
+    },
+    {
+      "title": "Vision",
+      "text": "To be the AI and engineering partner that teams trust with their hardest ideas, and the one they call for the next."
+    }
+  ],
+  "valuesTitle": "How we behave on a project",
+  "values": [
+    {
+      "title": "Transparency",
+      "text": "You hear about a slipped estimate or a failed approach from us, the day we know."
+    },
+    {
+      "title": "Quality as the standard",
+      "text": "Tests, evals, security checks and senior review are part of the work, not an optional extra on the invoice."
+    },
+    {
+      "title": "Client first",
+      "text": "Decisions are made for the product and the client, including when that means recommending less work."
+    },
+    {
+      "title": "Partnership over transactions",
+      "text": "Several of our clients have worked with us for seven years or more. We plan for the long run, not the first invoice."
+    },
+    {
+      "title": "Problem solving",
+      "text": "Hard constraints are the interesting part. We would rather be handed the difficult module."
+    },
+    {
+      "title": "Adaptive workflow",
+      "text": "We fit your tools, time zone and release rhythm instead of asking you to adopt ours."
+    }
+  ],
+  "officesTitle": "Where we work",
+  "closeTitle": "Meet the engineers who would do the work",
+  "closeText": "The scoping call is with a senior engineer who stays on your project."
+}

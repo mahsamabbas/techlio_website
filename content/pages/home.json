@@ -1,0 +1,47 @@
+{
+  "metaTitle": "Techlio | AI, cybersecurity and SaaS engineering",
+  "metaDescription": "Techlio is an AI-ready engineering firm. Senior engineers build and secure AI agents, workflow automation and SaaS platforms that hold up in production. Book a technical scoping call.",
+  "heroTitle": "AI that holds up in production, built and secured by senior engineers.",
+  "heroIntro": "Techlio designs, builds, secures and runs AI agents, workflow automation and SaaS platforms for funded startups and engineering leaders. Every release is tested against evals, guarded by human review and owned by the engineers who scoped it.",
+  "heroSecondaryLabel": "See shipped work",
+  "servicesTitle": "Six practices, one standard of engineering",
+  "servicesIntro": "Pick the entry point that matches where you are. The same senior team and the same release discipline sit behind each one.",
+  "offersPrompt": "Prefer a fixed scope and a fixed date?",
+  "processTitle": "From first call to running system",
+  "processIntro": "Four phases, each ending in something you can hold us to.",
+  "process": [
+    {
+      "title": "Scope",
+      "text": "A free 30-minute call with a senior engineer, followed by a focused discovery of your stack, workflows and goals."
+    },
+    {
+      "title": "Design",
+      "text": "You get a proposal with scope, timeline and approach, and an architecture you can question, before any code is written."
+    },
+    {
+      "title": "Build",
+      "text": "Weekly releases you can use. Every change passes tests, evals and security checks and is reviewed by a senior engineer."
+    },
+    {
+      "title": "Run",
+      "text": "We monitor quality, cost and latency in production, improve from real usage, and hand over when your team is ready."
+    }
+  ],
+  "workTitle": "Shipped, in production, in use",
+  "workIntro": "AI systems and platforms we engineered for clients in biotech, media and sports tech.",
+  "featuredCases": [
+    "ordaos",
+    "vcreative",
+    "spinlab-ai"
+  ],
+  "bookingTitle": "Tell us what you are building",
+  "bookingIntro": "A senior engineer reads every request and replies within 24 hours with questions, a first read on approach, and times for a 30-minute scoping call.",
+  "bookingPoints": [
+    "Reply within 24 hours",
+    "Mutual NDA before the call if you want one",
+    "You talk to an engineer, not a salesperson",
+    "You leave the call with a written scope outline"
+  ],
+  "proofTitle": "Proof you can check",
+  "proofIntro": "We would rather you verify a number than take our word for it."
+}

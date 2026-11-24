@@ -1,0 +1,31 @@
+---
+import Base from '../layouts/Base.astro';
+import BookingForm from '../components/BookingForm.astro';
+import Proof from '../components/Proof.astro';
+import { site, pages, cta, phoneHref } from '../lib/content.js';
+const p = pages.contact;
+---
+
+<Base title="Contact" description={p.metaDescription}>
+  <section class="page-hero">
+    <div class="wrap">
+      <h1>{p.heroTitle}</h1>
+      <p class="lede">{p.heroIntro}</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#book">{cta.label}</a>
+        <a class="btn btn-ghost" href={`mailto:${site.email}`}>{site.email}</a>
+        <a class="btn btn-ghost" href={`tel:${phoneHref}`}>{site.phone}</a>
+      </div>
+    </div>
+  </section>
+  <BookingForm />
+  <Proof />
+  <section class="section tint">
+    <div class="wrap">
+      <div class="section-head"><h2>{p.faqTitle}</h2></div>
+      <div class="faq">
+        {p.faqs.map((f) => <details><summary>{f.question}</summary><p>{f.answer}</p></details>)}
+      </div>
+    </div>
+  </section>
+</Base>

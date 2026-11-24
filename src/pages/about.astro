@@ -1,0 +1,41 @@
+---
+import Base from '../layouts/Base.astro';
+import Section from '../components/Section.astro';
+import Blocks from '../components/Blocks.astro';
+import StatsBand from '../components/StatsBand.astro';
+import Closing from '../components/Closing.astro';
+import { site, pages } from '../lib/content.js';
+const p = pages.about;
+---
+
+<Base title="About" description={p.metaDescription}>
+  <section class="page-hero">
+    <div class="wrap">
+      <h1>{p.heroTitle}</h1>
+      <p class="lede">{p.heroIntro}</p>
+    </div>
+  </section>
+
+  <StatsBand />
+
+  <Section title={p.purposeTitle}>
+    <Blocks items={p.purpose} cols={2} />
+  </Section>
+
+  <Section tint title={p.valuesTitle}>
+    <Blocks items={p.values} />
+  </Section>
+
+  <Section title={p.officesTitle} intro={`Two offices, with delivery across the ${site.regions}.`}>
+    <div class="blocks blocks-2">
+      {site.offices.map((o) => <div class="block"><h3>{o.country}</h3><address>{o.address}</address></div>)}
+    </div>
+    <h3 class="case-sub">Platforms</h3>
+    <ul class="chips chips-large">{site.platforms.map((x) => <li>{x}</li>)}</ul>
+    <h3 class="case-sub">Industries</h3>
+    <ul class="chips chips-large">{site.industries.map((x) => <li>{x}</li>)}</ul>
+    <p class="note">Want to join the team? <a href={site.careersUrl}>See open roles</a>.</p>
+  </Section>
+
+  <Closing title={p.closeTitle} text={p.closeText} />
+</Base>

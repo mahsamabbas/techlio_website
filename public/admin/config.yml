@@ -1,0 +1,239 @@
+# Decap CMS configuration for the Techlio content editor at /admin.
+# Generated layout: one section per content type. Fields mirror the JSON files in /content.
+backend:
+  name: github
+  repo: mahsamabbas/techlio_website
+  branch: main
+# For editing on your own computer: run "npm run cms" and "npm run dev", then open http://localhost:4321/admin/
+local_backend: true
+media_folder: public/uploads
+public_folder: /uploads
+site_url: https://techlio.co
+collections:
+  - name: settings
+    label: Site settings
+    editor: { preview: false }
+    files:
+      - name: site
+        label: Company details, proof and reviews
+        file: content/settings/site.json
+        fields:
+          - { label: "Company name", name: name, widget: string }
+          - { label: "Website address", name: url, widget: string }
+          - { label: "Email", name: email, widget: string }
+          - { label: "Phone", name: phone, widget: string }
+          - { label: "Offices", name: offices, widget: list, summary: "{{fields.country}}", fields: [ { label: "Country", name: country, widget: string }, { label: "Address", name: address, widget: string } ] }
+          - { label: "LinkedIn URL", name: linkedin, widget: string }
+          - { label: "X URL", name: x, widget: string }
+          - { label: "Terms of use URL", name: termsUrl, widget: string }
+          - { label: "Privacy policy URL", name: privacyUrl, widget: string }
+          - { label: "Careers URL", name: careersUrl, widget: string }
+          - { label: "Footer tagline", name: tagline, widget: text }
+          - { label: "Regions served", name: regions, widget: string, hint: "Shown as: Delivering across the ..." }
+          - { label: "Hero badge", name: badge, widget: string }
+          - { label: "Main button label", name: ctaLabel, widget: string }
+          - { label: "Header button label", name: navCtaLabel, widget: string }
+          - { label: "Response promise", name: responsePromise, widget: string }
+          - { label: "Hero proof points", name: heroProof, widget: list, field: { label: "Proof point", name: item, widget: string } }
+          - { label: "Stats band", name: stats, widget: list, summary: "{{fields.value}} {{fields.label}}", fields: [ { label: "Value", name: value, widget: string }, { label: "Label", name: label, widget: string } ] }
+          - { label: "Proof badges", name: proof, widget: list, summary: "{{fields.value}}", fields: [ { label: "Value", name: value, widget: string }, { label: "Label", name: label, widget: string } ] }
+          - { label: "Platforms strip", name: platforms, widget: list, field: { label: "Platform", name: item, widget: string } }
+          - { label: "Industries", name: industries, widget: list, field: { label: "Industry", name: item, widget: string } }
+          - { label: "Client reviews", name: reviews, widget: list, required: false, summary: "{{fields.name}}, {{fields.company}}", hint: "Only real reviews from named clients.", fields: [ { label: "Quote", name: quote, widget: text }, { label: "Name", name: name, widget: string }, { label: "Role", name: role, widget: string }, { label: "Company", name: company, widget: string }, { label: "Source", name: source, widget: string, hint: "For example: Upwork, Clutch, LinkedIn" } ] }
+          - { label: "Form endpoint", name: formEndpoint, widget: string, required: false, hint: "Form backend URL. When empty, the booking form drafts an email instead." }
+  - name: pages
+    label: Pages
+    editor: { preview: false }
+    files:
+      - name: home
+        label: Home
+        file: content/pages/home.json
+        fields:
+          - { label: "Browser title", name: metaTitle, widget: string }
+          - { label: "Search description", name: metaDescription, widget: text }
+          - { label: "Hero heading", name: heroTitle, widget: string }
+          - { label: "Hero intro", name: heroIntro, widget: text }
+          - { label: "Hero second button", name: heroSecondaryLabel, widget: string }
+          - { label: "Services heading", name: servicesTitle, widget: string }
+          - { label: "Services intro", name: servicesIntro, widget: text }
+          - { label: "Offers prompt", name: offersPrompt, widget: string }
+          - { label: "Process heading", name: processTitle, widget: string }
+          - { label: "Process intro", name: processIntro, widget: text }
+          - { label: "Process phases", name: process, widget: list, summary: "{{fields.title}}", fields: [
+            { label: "Title", name: title, widget: string },
+            { label: "Text", name: text, widget: text } ] }
+          - { label: "Work heading", name: workTitle, widget: string }
+          - { label: "Work intro", name: workIntro, widget: text }
+          - { label: "Featured case studies", name: featuredCases, widget: relation, collection: case_studies, search_fields: ["name"], value_field: "slug", display_fields: ["name"], multiple: true, max: 3 }
+          - { label: "Booking heading", name: bookingTitle, widget: string }
+          - { label: "Booking intro", name: bookingIntro, widget: text }
+          - { label: "Booking points", name: bookingPoints, widget: list, field: { label: "Point", name: item, widget: string } }
+          - { label: "Proof heading", name: proofTitle, widget: string }
+          - { label: "Proof intro", name: proofIntro, widget: text }
+      - name: process
+        label: Process
+        file: content/pages/process.json
+        fields:
+          - { label: "Search description", name: metaDescription, widget: text }
+          - { label: "Hero heading", name: heroTitle, widget: string }
+          - { label: "Hero intro", name: heroIntro, widget: text }
+          - { label: "Process stages", name: stages, widget: list, field: { label: "Stage", name: item, widget: string } }
+          - { label: "Engagement heading", name: pathsTitle, widget: string }
+          - { label: "Engagement intro", name: pathsIntro, widget: text }
+          - { label: "Engagement paths", name: paths, widget: list, summary: "{{fields.name}}", fields: [ { label: "Name", name: name, widget: string }, { label: "One-line summary", name: line, widget: string }, { label: "Description", name: text, widget: text }, { label: "Best for", name: fit, widget: string }, { label: "Commercial model", name: model, widget: string }, { label: "Link address", name: href, widget: string }, { label: "Link text", name: link, widget: string } ] }
+          - { label: "Engagement note", name: pathsNote, widget: string }
+          - { label: "Phase A heading", name: phaseATitle, widget: string }
+          - { label: "Phase A intro", name: phaseAIntro, widget: text }
+          - { label: "Phase A steps", name: phaseA, widget: list, summary: "{{fields.title}}", fields: [
+            { label: "Title", name: title, widget: string },
+            { label: "Text", name: text, widget: text },
+            { label: "Bullet points", name: list, widget: list, required: false, field: { label: "Point", name: item, widget: string } } ] }
+          - { label: "Phase B heading", name: phaseBTitle, widget: string }
+          - { label: "Phase B intro", name: phaseBIntro, widget: text }
+          - { label: "Phase B steps", name: phaseB, widget: list, summary: "{{fields.title}}", fields: [
+            { label: "Title", name: title, widget: string },
+            { label: "Text", name: text, widget: text } ] }
+          - { label: "Build section heading", name: buildTitle, widget: string }
+          - { label: "Build section intro", name: buildIntro, widget: text }
+          - { label: "Engineering principles", name: principles, widget: list, summary: "{{fields.title}}", fields: [
+            { label: "Title", name: title, widget: string },
+            { label: "Text", name: text, widget: text } ] }
+          - { label: "Closing heading", name: closeTitle, widget: string }
+          - { label: "Closing text", name: closeText, widget: text }
+      - name: about
+        label: About
+        file: content/pages/about.json
+        fields:
+          - { label: "Search description", name: metaDescription, widget: text }
+          - { label: "Hero heading", name: heroTitle, widget: string }
+          - { label: "Hero intro", name: heroIntro, widget: text }
+          - { label: "Purpose heading", name: purposeTitle, widget: string }
+          - { label: "Mission and vision", name: purpose, widget: list, summary: "{{fields.title}}", fields: [
+            { label: "Title", name: title, widget: string },
+            { label: "Text", name: text, widget: text } ] }
+          - { label: "Values heading", name: valuesTitle, widget: string }
+          - { label: "Values", name: values, widget: list, summary: "{{fields.title}}", fields: [
+            { label: "Title", name: title, widget: string },
+            { label: "Text", name: text, widget: text } ] }
+          - { label: "Offices heading", name: officesTitle, widget: string }
+          - { label: "Closing heading", name: closeTitle, widget: string }
+          - { label: "Closing text", name: closeText, widget: text }
+      - name: contact
+        label: Contact
+        file: content/pages/contact.json
+        fields:
+          - { label: "Search description", name: metaDescription, widget: text }
+          - { label: "Hero heading", name: heroTitle, widget: string }
+          - { label: "Hero intro", name: heroIntro, widget: text }
+          - { label: "FAQ heading", name: faqTitle, widget: string }
+          - { label: "FAQs", name: faqs, widget: list, summary: "{{fields.question}}", fields: [ { label: "Question", name: question, widget: string }, { label: "Answer", name: answer, widget: text } ] }
+  - name: case_studies
+    label: Case studies
+    label_singular: Case study
+    folder: content/case-studies
+    extension: json
+    format: json
+    create: true
+    identifier_field: name
+    slug: "{{fields.slug}}"
+    summary: "{{name}} ({{industry}})"
+    sortable_fields: [order, name]
+    editor: { preview: false }
+    fields:
+      - { label: "Client or product name", name: name, widget: string }
+      - { label: "Page address", name: slug, widget: string, hint: "Lowercase words joined by hyphens. Changing this changes the page URL." }
+      - { label: "Order", name: order, widget: number, value_type: int, hint: "Lower numbers appear first" }
+      - { label: "Industry", name: industry, widget: string }
+      - { label: "Categories", name: categories, widget: list, field: { label: "Category", name: item, widget: string } }
+      - { label: "Headline", name: headline, widget: string, hint: "One sentence, no full stop" }
+      - { label: "Overview", name: overview, widget: text }
+      - { label: "Live website", name: liveUrl, widget: string, required: false, hint: "Full address starting with https://" }
+      - { label: "Duration", name: duration, widget: string }
+      - { label: "Team", name: team, widget: list, field: { label: "Role", name: item, widget: string } }
+      - { label: "Tech stack", name: stack, widget: list, field: { label: "Technology", name: item, widget: string } }
+      - { label: "Headline metrics", name: metrics, widget: list, max: 3, summary: "{{fields.value}} {{fields.label}}", fields: [ { label: "Value", name: value, widget: string }, { label: "Label", name: label, widget: string } ] }
+      - { label: "Challenges", name: challenges, widget: list, summary: "{{fields.title}}", fields: [
+            { label: "Title", name: title, widget: string },
+            { label: "Text", name: text, widget: text } ] }
+      - { label: "What we built", name: solutions, widget: list, summary: "{{fields.title}}", fields: [
+            { label: "Title", name: title, widget: string },
+            { label: "Text", name: text, widget: text } ] }
+      - { label: "Results", name: results, widget: list, field: { label: "Result", name: item, widget: string } }
+  - name: services
+    label: Services
+    label_singular: Service
+    folder: content/services
+    extension: json
+    format: json
+    create: true
+    identifier_field: title
+    slug: "{{fields.slug}}"
+    sortable_fields: [order, title]
+    editor: { preview: false }
+    fields:
+      - { label: "Name", name: title, widget: string }
+      - { label: "Page address", name: slug, widget: string, hint: "Lowercase words joined by hyphens. Changing this changes the page URL." }
+      - { label: "Order", name: order, widget: number, value_type: int }
+      - { label: "Short name", name: short, widget: string, hint: "Used in the footer and links" }
+      - { label: "Search description", name: description, widget: text }
+      - { label: "Page heading", name: h1, widget: string }
+      - { label: "Intro", name: intro, widget: text }
+      - { label: "Diagram", name: diagram, widget: select, required: false, options: ["", "agent", "knowledge", "workflow", "roadmap", "saas", "secure", "platform", "modernize", "release"], hint: "Interactive diagram shown under the page heading. Leave empty for none." }
+      - { label: "Diagram description", name: caption, widget: text, required: false, hint: "Read by screen readers" }
+      - { label: "Home page card", name: card, widget: object, fields: [ { label: "Lead line", name: lead, widget: string }, { label: "Text", name: text, widget: text }, { label: "Tags", name: tags, widget: list, field: { label: "Tag", name: item, widget: string } } ] }
+      - { label: "Steps heading", name: offerTitle, widget: string }
+      - { label: "Steps intro", name: offerIntro, widget: text, required: false }
+      - { label: "Steps", name: offerings, widget: list, summary: "{{fields.title}}", fields: [
+            { label: "Title", name: title, widget: string },
+            { label: "Text", name: text, widget: text } ] }
+      - { label: "Related case studies", name: cases, widget: relation, collection: case_studies, search_fields: ["name"], value_field: "slug", display_fields: ["name"], multiple: true, required: false }
+      - { label: "Reasons heading", name: whyTitle, widget: string }
+      - { label: "Reasons", name: why, widget: list, summary: "{{fields.title}}", fields: [
+            { label: "Title", name: title, widget: string },
+            { label: "Text", name: text, widget: text } ] }
+      - { label: "Closing heading", name: closeTitle, widget: string }
+      - { label: "Closing text", name: closeText, widget: text }
+  - name: offers
+    label: Fixed-scope offers
+    label_singular: Offer
+    folder: content/offers
+    extension: json
+    format: json
+    create: true
+    identifier_field: title
+    slug: "{{fields.slug}}"
+    sortable_fields: [order, title]
+    editor: { preview: false }
+    fields:
+      - { label: "Name", name: title, widget: string }
+      - { label: "Page address", name: slug, widget: string, hint: "Lowercase words joined by hyphens. Changing this changes the page URL." }
+      - { label: "Order", name: order, widget: number, value_type: int }
+      - { label: "Search description", name: description, widget: text }
+      - { label: "Label above heading", name: kicker, widget: string, required: false }
+      - { label: "Page heading", name: h1, widget: string }
+      - { label: "Intro", name: intro, widget: text }
+      - { label: "Main button label", name: primaryLabel, widget: string }
+      - { label: "Diagram", name: diagram, widget: select, required: false, options: ["", "agent", "knowledge", "workflow", "roadmap", "saas", "secure", "platform", "modernize", "release"], hint: "Interactive diagram shown under the page heading. Leave empty for none." }
+      - { label: "Diagram description", name: caption, widget: text, required: false }
+      - { label: "Audience heading", name: audienceTitle, widget: string, required: false }
+      - { label: "Audience intro", name: audienceIntro, widget: text, required: false }
+      - { label: "Audience", name: audience, widget: list, required: false, summary: "{{fields.title}}", fields: [
+            { label: "Title", name: title, widget: string },
+            { label: "Text", name: text, widget: text } ] }
+      - { label: "Pain points heading", name: painsTitle, widget: string, required: false }
+      - { label: "Pain points", name: pains, widget: list, required: false, field: { label: "Pain point", name: item, widget: string } }
+      - { label: "Timeline heading", name: stepsTitle, widget: string }
+      - { label: "Timeline intro", name: stepsIntro, widget: text, required: false }
+      - { label: "Timeline steps", name: steps, widget: list, summary: "{{fields.title}}", fields: [
+            { label: "Title", name: title, widget: string },
+            { label: "Text", name: text, widget: text },
+            { label: "When", name: when, widget: string, required: false } ] }
+      - { label: "Deliverables heading", name: deliverablesTitle, widget: string, required: false }
+      - { label: "Deliverables", name: deliverables, widget: list, required: false, field: { label: "Deliverable", name: item, widget: string } }
+      - { label: "Reasons heading", name: whyTitle, widget: string }
+      - { label: "Reasons", name: why, widget: list, summary: "{{fields.title}}", fields: [
+            { label: "Title", name: title, widget: string },
+            { label: "Text", name: text, widget: text } ] }
+      - { label: "Related case studies", name: cases, widget: relation, collection: case_studies, search_fields: ["name"], value_field: "slug", display_fields: ["name"], multiple: true, required: false }
+      - { label: "Closing heading", name: closeTitle, widget: string }
+      - { label: "Closing text", name: closeText, widget: text }

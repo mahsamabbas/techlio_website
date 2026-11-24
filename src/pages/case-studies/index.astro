@@ -1,0 +1,45 @@
+---
+import Base from '../../layouts/Base.astro';
+import Closing from '../../components/Closing.astro';
+import { site, cases } from '../../lib/content.js';
+---
+
+<Base
+  title="Case studies"
+  description="AI, modernization and SaaS systems engineered by Techlio for clients in biotech, media, sports tech, automotive, martech and medtech."
+>
+  <section class="page-hero">
+    <div class="wrap">
+      <a class="back" href="/">Back to home</a>
+      <h1>Systems we engineered, and what they do now.</h1>
+      <p class="lede">AI products, modernized platforms and SaaS built with client teams, several of them over many years.</p>
+      <div class="case-index">
+        {
+          cases.map((c) => (
+            <a class="case-index-card" href={`/case-studies/${c.slug}/`}>
+              <span class="case-tag">{c.industry}</span>
+              <strong>{c.name}</strong>
+              <span>{c.headline}</span>
+              {c.metrics[0] && (
+                <span class="case-index-metric"><b>{c.metrics[0].value}</b> {c.metrics[0].label}</span>
+              )}
+              <span class="chips-inline">{c.categories.join(', ')}</span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section tint">
+    <div class="wrap">
+      <div class="section-head"><h2>Industries we have shipped in</h2></div>
+      <ul class="chips chips-large">{site.industries.map((x) => <li>{x}</li>)}</ul>
+    </div>
+  </section>
+
+  <Closing
+    title="Building something in the same territory?"
+    text="Tell us about it and we will share how we would approach the architecture."
+  />
+</Base>

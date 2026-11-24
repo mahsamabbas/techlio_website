@@ -1,0 +1,82 @@
+{
+  "slug": "launchboom",
+  "order": 5,
+  "name": "LaunchBoom",
+  "industry": "Martech, crowdfunding",
+  "categories": [
+    "SaaS engineering",
+    "AI features"
+  ],
+  "headline": "The pre-launch platform behind $200M+ in crowdfunding presales",
+  "overview": "LaunchBoom is a crowdfunding marketing agency and a Kickstarter Premier Partner. Techlio built and runs LaunchKit, the pre-launch platform included in every LaunchBoom program: page builder, reservation funnels, analytics, A/B testing, integrations and AI copywriting, along with the marketing site.",
+  "liveUrl": "https://launchboom.com",
+  "duration": "3 years, ongoing",
+  "team": [
+    "2 full-stack developers",
+    "1 QA engineer"
+  ],
+  "stack": [
+    "Laravel",
+    "React",
+    "Node.js",
+    "MySQL",
+    "DigitalOcean",
+    "Laravel Forge"
+  ],
+  "metrics": [
+    {
+      "value": "$200M+",
+      "label": "presales powered by the platform"
+    },
+    {
+      "value": "1,000+",
+      "label": "creators launched"
+    },
+    {
+      "value": "10K+",
+      "label": "pre-launch pages built"
+    }
+  ],
+  "challenges": [
+    {
+      "title": "Manual, agency-built funnels",
+      "text": "Landing pages, reservation checkout and email flows were assembled by hand across separate tools for every campaign."
+    },
+    {
+      "title": "No single view of performance",
+      "text": "Reservations, cost per lead and traffic sources lived in different dashboards."
+    },
+    {
+      "title": "Creator-owned payments and data",
+      "text": "Creators needed funnels on their own domains with payments and emails going to their own accounts."
+    },
+    {
+      "title": "Scaling ads and copy",
+      "text": "Writing page and ad copy for hundreds of campaigns a year took significant strategist time."
+    }
+  ],
+  "solutions": [
+    {
+      "title": "Page and funnel builder",
+      "text": "A drag-and-drop builder for reservation pages and checkouts on each creator's own domain, live without code."
+    },
+    {
+      "title": "Analytics and A/B testing",
+      "text": "A dashboard tracking reservations, cost per lead and revenue predictions, with real-time page variant testing."
+    },
+    {
+      "title": "Direct-to-creator integrations",
+      "text": "Connections to creators' own payment processors, email platforms and Meta ad accounts."
+    },
+    {
+      "title": "AI copywriting",
+      "text": "Page and ad copy generated in multiple styles within minutes."
+    }
+  ],
+  "results": [
+    "$200M+ in presales powered by the platform",
+    "1,000+ creators launched through LaunchKit",
+    "10K+ pre-launch pages built on the page builder",
+    "Included in every LaunchBoom program across products, games and lodging"
+  ]
+}

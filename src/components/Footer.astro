@@ -1,0 +1,41 @@
+---
+import Mark from './Mark.astro';
+import { site, services, offers, nav, cta, phoneHref } from '../lib/content.js';
+---
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="/" aria-label={`${site.name} home`}><Mark /><span>{site.name}</span></a>
+      <p>{site.tagline}</p>
+      <a class="btn btn-light" href={cta.href}>{cta.label}</a>
+    </div>
+    <div>
+      <h2 class="footer-h">Services</h2>
+      <ul>
+        {services.map((s) => <li><a href={`/${s.slug}/`}>{s.short}</a></li>)}
+        {offers.map((o) => <li><a href={`/${o.slug}/`}>{o.title}</a></li>)}
+      </ul>
+    </div>
+    <div>
+      <h2 class="footer-h">Company</h2>
+      <ul>
+        {nav.map((n) => <li><a href={n.href}>{n.label}</a></li>)}
+        <li><a href={site.careersUrl}>Careers</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="footer-h">Contact</h2>
+      <ul>
+        <li><a href={`mailto:${site.email}`}>{site.email}</a></li>
+        <li><a href={`tel:${phoneHref}`}>{site.phone}</a></li>
+        <li><a href={site.linkedin} rel="noopener">LinkedIn</a> / <a href={site.x} rel="noopener">X</a></li>
+      </ul>
+      {site.offices.map((o) => <address><strong>{o.country}</strong><br />{o.address}</address>)}
+    </div>
+  </div>
+  <div class="wrap footer-legal">
+    <span>{site.name} {new Date().getFullYear()} All Rights Reserved</span>
+    <span><a href={site.termsUrl}>Terms of use</a><a href={site.privacyUrl}>Privacy Policy</a></span>
+  </div>
+</footer>

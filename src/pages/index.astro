@@ -1,0 +1,82 @@
+---
+import Base from '../layouts/Base.astro';
+import Section from '../components/Section.astro';
+import Steps from '../components/Steps.astro';
+import Diagram from '../components/Diagram.astro';
+import CaseCards from '../components/CaseCards.astro';
+import StatsBand from '../components/StatsBand.astro';
+import BookingForm from '../components/BookingForm.astro';
+import Proof from '../components/Proof.astro';
+import { site, pages, services, offers, cta } from '../lib/content.js';
+
+const home = pages.home;
+const pad = (n) => String(n).padStart(2, '0');
+const marquee = [...site.platforms, ...site.platforms];
+---
+
+<Base title={home.metaTitle} description={home.metaDescription} diagrams home>
+  <section class="hero">
+    <div class="wrap">
+      <p class="badge">{site.badge}</p>
+      <h1>{home.heroTitle}</h1>
+      <p class="lede">{home.heroIntro}</p>
+      <div class="actions">
+        <a class="btn btn-primary" href={cta.href}>{cta.label}</a>
+        <a class="btn btn-ghost" href="/case-studies/">{home.heroSecondaryLabel}</a>
+      </div>
+      <ul class="proofline">{site.heroProof.map((p) => <li>{p}</li>)}</ul>
+      <Diagram
+        id="agent"
+        autorun
+        caption="A user request passes through tenant scoping, retrieval, orchestration, guardrails and a confidence check before a verified action is written back and logged."
+      />
+    </div>
+  </section>
+
+  <section class="strip" aria-label="Platforms and capabilities">
+    <div class="wrap strip-row">
+      <p>What we build on</p>
+      <div class="marquee">
+        <ul>
+          {marquee.map((p, i) => <li aria-hidden={i >= site.platforms.length ? 'true' : undefined}>{p}</li>)}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <Section id="services" title={home.servicesTitle} intro={home.servicesIntro}>
+    <ol class="service-grid">
+      {
+        services.map((s, i) => (
+          <li class="service-card">
+            <span class="step-n" aria-hidden="true">{pad(i + 1)}</span>
+            <h3><a href={`/${s.slug}/`}>{s.title}</a></h3>
+            <p class="service-lead">{s.card.lead}</p>
+            <p>{s.card.text}</p>
+            <ul class="chips">{s.card.tags.map((t) => <li>{t}</li>)}</ul>
+            <a class="more" href={`/${s.slug}/`}>Explore {s.short.toLowerCase()}</a>
+          </li>
+        ))
+      }
+    </ol>
+    <div class="offer-row">
+      <p>{home.offersPrompt}</p>
+      {offers.map((o) => <a class="btn btn-ghost" href={`/${o.slug}/`}>{o.title}</a>)}
+    </div>
+  </Section>
+
+  <StatsBand />
+
+  <Section id="process" title={home.processTitle} intro={home.processIntro}>
+    <Steps items={home.process} cols={4} />
+    <p class="section-foot"><a class="more" href="/process/">See the full process and engagement options</a></p>
+  </Section>
+
+  <Section id="work" tint title={home.workTitle} intro={home.workIntro}>
+    <CaseCards slugs={home.featuredCases} />
+    <p class="section-foot"><a class="more" href="/case-studies/">Browse all case studies</a></p>
+  </Section>
+
+  <BookingForm />
+  <Proof />
+</Base>

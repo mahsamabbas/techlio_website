@@ -1,0 +1,84 @@
+{
+  "slug": "vcreative",
+  "order": 2,
+  "name": "vCreative",
+  "industry": "Media and broadcast",
+  "categories": [
+    "Legacy modernization",
+    "AI features",
+    "Security controls"
+  ],
+  "headline": "Seven years modernizing the workflow platform behind 9,000+ radio and TV stations",
+  "overview": "vCreative runs everything between selling an ad and getting it on air for groups such as Cumulus, Cox Media Group, Saga Communications and Hubbard Radio. Since 2019 Techlio has worked as an embedded engineering team on its core web platform: modernizing the front end, building TV production workflows and shipping AI features for order intake and scriptwriting.",
+  "liveUrl": "https://vcreativeinc.com",
+  "duration": "7+ years, ongoing",
+  "team": [
+    "1 technical lead",
+    "3 full-stack developers",
+    "1 QA engineer"
+  ],
+  "stack": [
+    "Angular 19",
+    "PrimeNG",
+    "NestJS",
+    "TypeORM",
+    "AWS Lambda",
+    "RxJS"
+  ],
+  "metrics": [
+    {
+      "value": "9,000+",
+      "label": "stations on the platform"
+    },
+    {
+      "value": "300K+",
+      "label": "hours saved per year across vCreative"
+    },
+    {
+      "value": "3M+",
+      "label": "workflows managed"
+    }
+  ],
+  "challenges": [
+    {
+      "title": "Aging front-end stack",
+      "text": "An older Angular and PrimeNG version made features slower to ship and releases harder to test across hundreds of screens."
+    },
+    {
+      "title": "Expanding from radio to TV",
+      "text": "TV production needs spot lists, jobs, files, out cues and automated delivery to air, which the radio-first product did not fully support."
+    },
+    {
+      "title": "Manual order intake and scripts",
+      "text": "Sales and production staff typed long production orders and scripts by hand, every day, across thousands of stations."
+    },
+    {
+      "title": "Enterprise security and control",
+      "text": "Multi-market station groups needed role-based access, MFA and reliable notifications for large distributed teams."
+    }
+  ],
+  "solutions": [
+    {
+      "title": "Angular 19 and PrimeNG upgrade",
+      "text": "The platform was modernized with full regression testing across the Workflow Builder and order screens."
+    },
+    {
+      "title": "TV production module",
+      "text": "A new TV interface with spot lists, jobs, files and out cues, a script editor and automated delivery from studio to air."
+    },
+    {
+      "title": "AI order intake and scripts",
+      "text": "An AI intake workspace with typed prompts and voice-to-text, plus AI-generated scripts inside order forms."
+    },
+    {
+      "title": "Security and workflow controls",
+      "text": "Role-based access and navigation, MFA safeguards, managerial notifications and mobile-friendly order submission."
+    }
+  ],
+  "results": [
+    "9,000+ stations and media teams on the platform Techlio helps build",
+    "3M+ workflows managed and 300K+ hours saved per year across vCreative",
+    "Full Angular 19 and PrimeNG modernization delivered",
+    "AI script generation and voice-to-text intake built into order forms"
+  ]
+}

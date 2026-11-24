@@ -1,0 +1,93 @@
+{
+  "name": "Techlio",
+  "url": "https://techlio.co",
+  "email": "contact@techlio.co",
+  "phone": "+1-240-3957308",
+  "offices": [
+    {
+      "country": "USA",
+      "address": "310 Wyndale Dr, The Colony, Dallas, Texas 75056"
+    },
+    {
+      "country": "Pakistan",
+      "address": "Office no 1108, 11th floor, HighQ Tower, Jail Rd, Gulberg V, Lahore"
+    }
+  ],
+  "linkedin": "https://www.linkedin.com/company/techlio-private-limited/",
+  "x": "https://x.com/techlio",
+  "termsUrl": "https://techlio.co/terms-of-use/",
+  "privacyUrl": "https://techlio.co/privacy-policy/",
+  "careersUrl": "https://techlio.co/career/",
+  "tagline": "AI-ready engineering firm. We design, build, secure and run AI agents, automations and SaaS platforms for startups and enterprises.",
+  "regions": "US, UK and Europe",
+  "badge": "Upwork Top Rated Plus",
+  "ctaLabel": "Book a technical scoping call",
+  "navCtaLabel": "Book a scoping call",
+  "responsePromise": "We reply within 24 hours. A mutual NDA is available before the first call.",
+  "heroProof": [
+    "$700K+ verified client delivery",
+    "95% client retention",
+    "70+ clients served"
+  ],
+  "stats": [
+    {
+      "value": "$700K+",
+      "label": "Verified client delivery"
+    },
+    {
+      "value": "70+",
+      "label": "Clients served"
+    },
+    {
+      "value": "95%",
+      "label": "Client retention"
+    },
+    {
+      "value": "14",
+      "label": "Industries shipped in"
+    }
+  ],
+  "proof": [
+    {
+      "value": "Top Rated Plus",
+      "label": "Our standing on Upwork, where every contract and review is public"
+    },
+    {
+      "value": "$700K+",
+      "label": "Verified client delivery"
+    },
+    {
+      "value": "95%",
+      "label": "Client retention across 70+ clients"
+    }
+  ],
+  "platforms": [
+    "AWS",
+    "Microsoft Azure",
+    "Google Cloud",
+    "LLM integration",
+    "Generative AI",
+    "Computer vision",
+    "Cloud security",
+    "CI/CD and DevOps",
+    "Custom applications"
+  ],
+  "industries": [
+    "Health care",
+    "Corporate sector",
+    "Software and IT",
+    "Food and beverage",
+    "Financial services",
+    "Wellness and coaching",
+    "SaaS and IT service providers",
+    "Retail and consumer goods",
+    "Transportation",
+    "Ag tech",
+    "E-commerce",
+    "Media and entertainment",
+    "Fintech",
+    "Logistics"
+  ],
+  "reviews": [],
+  "formEndpoint": ""
+}
