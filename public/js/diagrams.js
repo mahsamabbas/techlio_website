@@ -94,7 +94,7 @@ window.TL_DIAGRAMS = {
       ] },
       { label: 'Review', nodes: [{ id: 'review', label: 'Senior review', sub: 'diff and eval report' }] },
       { label: 'Release', nodes: [
-        { id: 'staging', label: 'Staging', sub: 'production-like data shape' },
+        { id: 'staging', label: 'Staging', sub: 'production-like data' },
         { id: 'canary', label: 'Canary', sub: 'small share of traffic' },
       ] },
       { label: 'Run', nodes: [
@@ -466,7 +466,7 @@ window.TL_DIAGRAMS = {
         { id: 'infra', label: 'Infrastructure as code', sub: 'plan and apply' },
       ] },
       { label: 'Environments', nodes: [
-        { id: 'stage', label: 'Staging', sub: 'same shape as production' },
+        { id: 'stage', label: 'Staging', sub: 'mirrors production' },
         { id: 'production', label: 'Production', sub: 'containers, load balanced' },
       ] },
       { label: 'Operate', nodes: [
