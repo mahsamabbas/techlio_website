@@ -1,6 +1,6 @@
 {
   "slug": "ai-consulting",
-  "title": "AI Advisory & Architecture",
+  "title": "AI Strategy & Readiness",
   "description": "AI readiness assessment, opportunity roadmap and architecture review from senior Techlio engineers, before you commit to a build.",
   "h1": "Know what to build, and what to leave alone.",
   "intro": "Before you fund a build, get an engineer’s read on it. We review your stack and workflows, rank the AI opportunities by value and feasibility, and design the first one in enough detail to estimate honestly.",
@@ -47,20 +47,21 @@
   ],
   "closeTitle": "Start with a free AI readiness assessment",
   "closeText": "Thirty minutes with a senior engineer, a look at your stack and goals, and a straight answer on where AI will and will not pay off.",
-  "order": 7,
-  "short": "Advisory and architecture",
+  "order": 1,
+  "short": "AI strategy and readiness",
   "card": {
     "lead": "Decide what to build before you pay to build it.",
-    "text": "A stack review, a ranked list of AI opportunities and an architecture your team or ours can build from. Starts with a free AI readiness assessment.",
+    "text": "A readiness assessment, a ranked list of AI opportunities and an architecture your team or ours can build from.",
     "tags": [
       "AI readiness",
-      "Roadmap",
-      "Architecture review",
-      "Feasibility study"
+      "Use-case ranking",
+      "Architecture",
+      "Build estimate"
     ]
   },
   "examplesTitle": "",
   "examples": [],
   "faqs": [],
-  "metaTitle": "AI Consulting and Architecture"
+  "metaTitle": "AI Strategy, Readiness Assessment and Architecture",
+  "stage": "Plan"
 }

@@ -13,7 +13,7 @@
   "pathsIntro": "Each path includes the one before it. Many clients start with advisory and move right as trust builds.",
   "paths": [
     {
-      "name": "Advisory and architecture",
+      "name": "Strategy and architecture",
       "line": "You build, we guide.",
       "text": "Senior engineers review your stack, rank the opportunities and design the system. Your team, or any vendor, builds from the result.",
       "fit": "Teams with engineers but no AI track record",
@@ -22,20 +22,20 @@
       "link": "Advisory in detail"
     },
     {
-      "name": "Co-build with embedded engineers",
-      "line": "We build alongside your team.",
-      "text": "A senior Techlio pod joins your standups, repositories and release process. You keep direction and ownership; we add capacity and AI depth.",
+      "name": "Embedded AI pod",
+      "line": "Forward-deployed senior engineers inside your team.",
+      "text": "A senior Techlio pod joins your standups, repositories and release process and works on the use cases that matter most. You keep direction and ownership; we add capacity and AI depth.",
       "fit": "Teams with a roadmap and not enough senior hands",
       "model": "Dedicated team, fixed monthly invoice",
       "href": "/contact/#book",
-      "link": "Ask about a senior pod"
+      "link": "Ask about an embedded pod"
     },
     {
       "name": "End-to-end product delivery",
       "line": "We own it from scope to production.",
       "text": "Design, engineering, QA, cloud, security and launch from one accountable team, against a statement of work agreed before any code is written.",
       "fit": "Founders and business units without an engineering team",
-      "model": "Fixed price against a detailed scope",
+      "model": "Fixed price per milestone, tied to agreed acceptance metrics",
       "href": "/product-development/",
       "link": "Product engineering in detail"
     }

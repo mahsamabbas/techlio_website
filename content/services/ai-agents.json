@@ -1,9 +1,9 @@
 {
   "slug": "ai-agents",
-  "title": "AI Agents & Knowledge Systems",
+  "title": "AI Agents & Agentic Systems",
   "description": "Techlio builds AI agents and RAG knowledge systems grounded in your data, with citations, guardrails, evals and full audit trails.",
-  "h1": "Agents that cite their sources and stay inside their permissions.",
-  "intro": "We build assistants and agents that answer from your documents, databases and tickets, take action through permissioned tools, and hand off to a person when the evidence is thin.",
+  "h1": "AI agents that reach production, *and stay there.*",
+  "intro": "Most agent pilots stall on the same things: messy data, legacy integrations and no way to prove the agent is right. We build agents, copilots and knowledge systems with those solved first, so they ship, act through permissioned tools and hand off to a person when the evidence is thin.",
   "diagram": "knowledge",
   "caption": "A question passes an access check, searches company sources, is composed and cited, then checked for grounding before it is delivered or handed off.",
   "offerTitle": "How an agent gets built",
@@ -47,20 +47,21 @@
   ],
   "closeTitle": "What should your team be able to ask, and have done?",
   "closeText": "Bring the questions and tasks you have in mind. We will show you what a grounded, auditable agent for them would involve.",
-  "order": 3,
-  "short": "Agents and knowledge",
+  "order": 2,
+  "short": "AI agents",
   "card": {
     "lead": "Agents that act, with answers you can audit.",
-    "text": "Assistants and agents grounded in your own data, with citations, guardrails and a full trace behind every action they take.",
+    "text": "Agents, copilots and knowledge systems grounded in your data, with evals, guardrails and a full trace behind every action.",
     "tags": [
+      "Agentic AI",
+      "Copilots",
       "RAG",
-      "Tool-using agents",
-      "Guardrails",
       "Eval pipelines"
     ]
   },
   "examplesTitle": "",
   "examples": [],
   "faqs": [],
-  "metaTitle": "AI Agent Development and RAG Systems"
+  "metaTitle": "AI Agent Development and Agentic AI Systems",
+  "stage": "Build"
 }

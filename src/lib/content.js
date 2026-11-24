@@ -4,6 +4,9 @@ import home from '../../content/pages/home.json';
 import processPage from '../../content/pages/process.json';
 import about from '../../content/pages/about.json';
 import contact from '../../content/pages/contact.json';
+import privacy from '../../content/pages/privacy.json';
+import terms from '../../content/pages/terms.json';
+import careers from '../../content/pages/careers.json';
 
 const list = (mods) =>
   Object.values(mods)
@@ -14,7 +17,7 @@ export const services = list(import.meta.glob('../../content/services/*.json', {
 export const offers = list(import.meta.glob('../../content/offers/*.json', { eager: true }));
 export const cases = list(import.meta.glob('../../content/case-studies/*.json', { eager: true }));
 
-export const pages = { home, process: processPage, about, contact };
+export const pages = { home, process: processPage, about, contact, privacy, terms, careers };
 export { site };
 
 export const cta = { href: '/contact/#book', label: site.ctaLabel };

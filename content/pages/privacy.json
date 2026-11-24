@@ -1,0 +1,47 @@
+{
+  "title": "Privacy Policy",
+  "updated": "June 29, 2025",
+  "intro": "This policy explains how Techlio LLC collects, uses, shares and protects personal data from website visitors and clients, in line with U.S. data protection laws and the GDPR. It forms part of our Terms of Use.",
+  "sections": [
+    {
+      "heading": "Who we are",
+      "body": "Techlio LLC is the data controller for personal data collected through this website and related services. The website is a marketing tool, and the data we collect is used for marketing and business communication. Questions can be sent to contact@techlio.co."
+    },
+    {
+      "heading": "What personal data we collect",
+      "body": "Information you provide: contact details, company and job information, LinkedIn profile, the content of your messages, CV details if you apply for a job, and referral information. Information collected automatically: IP address, approximate location, browser and device details, referral source, browsing behaviour on the site and cookie data."
+    },
+    {
+      "heading": "How we use and share your information",
+      "body": "We share data with Techlio affiliates and with service providers that support our website, hosting or analytics, who must meet comparable data protection standards. We do not sell your data or share it for third-party marketing without your explicit consent. We may disclose data when required by law, for legal proceedings, to protect legal rights or to prevent fraud."
+    },
+    {
+      "heading": "Consent for communication",
+      "body": "By submitting a contact, enquiry or newsletter form you agree to receive communications about Techlio's services. You can opt out at any time through the unsubscribe link or by emailing contact@techlio.co. Phone numbers and SMS opt-ins are not shared with third parties."
+    },
+    {
+      "heading": "How long we keep your information",
+      "body": "We delete data when it is no longer needed or lawfully justified. Deletion requests are honoured unless a legal obligation requires us to retain the data. Analytics data about people with no business relationship with us is kept for no longer than one year."
+    },
+    {
+      "heading": "Cookies",
+      "body": "We use functional, analytics and advertising cookies to run the site, understand how it is used and show relevant ads on other platforms. You can block or delete cookies in your browser settings."
+    },
+    {
+      "heading": "Where your data is processed",
+      "body": "Data is processed in the United States and may be transferred to other regions where Techlio or its service providers operate. Transfers rely on contractual safeguards and comply with applicable protections, including the GDPR."
+    },
+    {
+      "heading": "Your rights",
+      "body": "Depending on where you live, you may ask for information about, access to, correction or deletion of your data; object to certain processing or automated decisions; restrict or port your data; or withdraw consent. Send requests to contact@techlio.co. We may need to verify your identity. You may also complain to a supervisory authority."
+    },
+    {
+      "heading": "Profiling",
+      "body": "Profiling is carried out only with your explicit consent to receive marketing materials."
+    },
+    {
+      "heading": "Data security",
+      "body": "Our security measures include confidentiality agreements for employees and partners, a mandatory information security policy and annual reviews of security practices approved by executive management."
+    }
+  ]
+}

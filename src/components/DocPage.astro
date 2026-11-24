@@ -1,0 +1,26 @@
+---
+// Simple text page (privacy, terms, careers) rendered from a content file.
+import Base from '../layouts/Base.astro';
+import Closing from './Closing.astro';
+const { page, eyebrow, description, cta = false } = Astro.props;
+---
+
+<Base title={page.title} description={description}>
+  <section class="page-hero">
+    <div class="wrap doc">
+      <span class="eyebrow">{eyebrow}</span>
+      <h1>{page.title}</h1>
+      {page.updated && <p class="doc-updated">Last updated {page.updated}</p>}
+      <p class="lede">{page.intro}</p>
+      {
+        page.sections.map((s) => (
+          <section class="doc-section">
+            <h2>{s.heading}</h2>
+            <p>{s.body}</p>
+          </section>
+        ))
+      }
+    </div>
+  </section>
+  {cta && <Closing title="Rather talk it through?" text="Tell us a little about yourself and what you are looking for." />}
+</Base>

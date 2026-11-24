@@ -2,10 +2,13 @@
 import Base from '../layouts/Base.astro';
 import Section from '../components/Section.astro';
 import Blocks from '../components/Blocks.astro';
-import StatsBand from '../components/StatsBand.astro';
+import Icon from '../components/Icon.astro';
+import CaseCards from '../components/CaseCards.astro';
 import Closing from '../components/Closing.astro';
-import { site, pages, fmt } from '../lib/content.js';
+import { site, pages, services, cases, cta, fmt } from '../lib/content.js';
 const p = pages.about;
+const clients = cases.map((c) => c.name);
+const marquee = [...clients, ...clients];
 ---
 
 <Base title="About Techlio" description={p.metaDescription}>
@@ -14,28 +17,90 @@ const p = pages.about;
       <span class="eyebrow">About</span>
       <h1 set:html={fmt(p.heroTitle)} />
       <p class="lede">{p.heroIntro}</p>
+      <div class="actions">
+        <a class="btn btn-primary" href={cta.href}>{cta.label}</a>
+        <a class="btn btn-ghost" href="/case-studies/">See our work</a>
+      </div>
+      <div class="stats-row about-stats">
+        {site.stats.map((s) => <div class="stat"><strong>{s.value}</strong><span>{s.label}</span></div>)}
+      </div>
     </div>
   </section>
 
-  <StatsBand />
+  <section class="strip" aria-label="Clients">
+    <p>{site.clientsLabel}</p>
+    <div class="marquee">
+      <ul>
+        {marquee.map((name, i) => <li aria-hidden={i >= clients.length ? 'true' : undefined}>{name}</li>)}
+      </ul>
+    </div>
+  </section>
 
-  <Section eyebrow="Purpose" title={p.purposeTitle}>
+  {
+    p.founderQuote && (
+      <section class="section">
+        <div class="wrap">
+          <figure class="leader">
+            <figcaption>
+              <strong>{p.founderName}</strong>
+              <span>{p.founderRole}</span>
+            </figcaption>
+            <div>
+              <span class="eyebrow">Leadership</span>
+              <blockquote>{p.founderQuote}</blockquote>
+            </div>
+          </figure>
+        </div>
+      </section>
+    )
+  }
+
+  <Section eyebrow="What we do" title={p.servicesTitle} intro={p.servicesIntro}>
+    <div class="cards cards-4">
+      {
+        services.map((s) => (
+          <a class="info-card link-card" href={`/${s.slug}/`}>
+            <Icon name={s.slug} />
+            <h3>{s.title}</h3>
+            <p>{s.card.lead}</p>
+            <span class="more">Learn more</span>
+          </a>
+        ))
+      }
+    </div>
+  </Section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="dark-panel">
+        <span class="eyebrow">How we work</span>
+        <h2 set:html={fmt(p.howTitle)} />
+        <p>{p.howIntro}</p>
+        <div class="cards cards-2">
+          {p.how.map((it) => <div class="info-card"><h3>{it.title}</h3><p>{it.text}</p></div>)}
+        </div>
+        <a class="btn btn-ghost" href="/process/">See our process</a>
+      </div>
+    </div>
+  </section>
+
+  <Section eyebrow="Results" title={p.resultsTitle}>
+    <CaseCards slugs={p.featuredCases} />
+  </Section>
+
+  <Section eyebrow="Purpose" tint title={p.purposeTitle}>
     <Blocks items={p.purpose} cols={2} />
   </Section>
 
-  <Section eyebrow="Values" tint title={p.valuesTitle}>
+  <Section eyebrow="Values" title={p.valuesTitle}>
     <Blocks items={p.values} />
   </Section>
 
-  <Section eyebrow="Offices" title={p.officesTitle} intro={`Two offices, with delivery across the ${site.regions}.`}>
+  <Section eyebrow="Offices" tint title={p.officesTitle} intro={`Two offices, with delivery across the ${site.regions}.`}>
     <div class="cards cards-2">
       {site.offices.map((o) => <div class="info-card"><h3>{o.country}</h3><address>{o.address}</address></div>)}
     </div>
-    <h3 class="sub">Platforms</h3>
-    <ul class="chips chips-large">{site.platforms.map((x) => <li>{x}</li>)}</ul>
-    <h3 class="sub">Industries</h3>
-    <ul class="chips chips-large">{site.industries.map((x) => <li>{x}</li>)}</ul>
-    <p class="note">Want to join the team? <a href={site.careersUrl}>See open roles</a>.</p>
+    <p class="note">Want to join the team? <a href={site.careersUrl}>See careers</a>.</p>
   </Section>
 
   <Closing title={p.closeTitle} text={p.closeText} />

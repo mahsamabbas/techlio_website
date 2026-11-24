@@ -1,7 +1,7 @@
 {
   "metaDescription": "Techlio is an AI-ready engineering firm with offices in the USA and Pakistan, partnering with startups and enterprises to design, build, secure and scale AI-driven products.",
   "heroTitle": "An engineering firm first. *AI is what we build with it.*",
-  "heroIntro": "Techlio partners with startups and enterprises to design, build, secure and scale AI-driven digital products. We are engineers who learned AI by shipping it into real systems.",
+  "heroIntro": "Techlio partners with startups and enterprises to design, build, secure and run AI-driven products. We are engineers who learned AI by shipping it into real systems, some of which we have now run with clients for seven years or more.",
   "purposeTitle": "What we are *here to do*",
   "purpose": [
     {
@@ -42,5 +42,36 @@
   ],
   "officesTitle": "Where *we work*",
   "closeTitle": "Meet the engineers who would do the work",
-  "closeText": "The scoping call is with a senior engineer who stays on your project."
+  "closeText": "The scoping call is with a senior engineer who stays on your project.",
+  "founderQuote": "",
+  "founderName": "",
+  "founderRole": "",
+  "servicesTitle": "One team, *from plan to production*",
+  "servicesIntro": "The people who scope your project are the people who build and run it.",
+  "howTitle": "Built to run, *not to demo*",
+  "howIntro": "A few things stay the same on every engagement, whatever its size.",
+  "how": [
+    {
+      "title": "Evals over guesswork",
+      "text": "Answer quality is a number tracked per release, built from your own cases."
+    },
+    {
+      "title": "Senior-led execution",
+      "text": "The engineer you meet on the first call stays on the work and reviews every release."
+    },
+    {
+      "title": "Honest about fit",
+      "text": "If AI is not the right answer to a problem, we say so before you spend money on it."
+    },
+    {
+      "title": "Your data stays yours",
+      "text": "Work happens in your accounts and repositories. A mutual NDA is available before the first call."
+    }
+  ],
+  "resultsTitle": "Featured *results*",
+  "featuredCases": [
+    "vcreative",
+    "launchboom",
+    "dp360-crm"
+  ]
 }

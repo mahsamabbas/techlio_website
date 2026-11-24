@@ -1,11 +1,11 @@
 {
   "slug": "n8n-ai-automation",
-  "order": 2,
+  "order": 4,
   "title": "n8n & AI Business Automation",
   "short": "Business automation",
   "metaTitle": "n8n and AI Automation for Small Businesses",
   "description": "Techlio automates small and mid-sized businesses with n8n and AI: bookings, orders, follow-ups, invoices and reminders that run themselves. For clinics, shops, agencies and service businesses.",
-  "h1": "Automate the busywork in your business with n8n and AI.",
+  "h1": "Automate the busywork in your business *with n8n and AI.*",
   "intro": "If your team copies details between WhatsApp, spreadsheets, a calendar and an inbox, that work can run itself. We connect the tools you already use with n8n and add AI where a message has to be read and understood, so bookings, orders, reminders and follow-ups happen without anyone typing them.",
   "diagram": "smallbiz",
   "caption": "A customer call, chat message or website form is understood by an AI assistant, checked against the calendar and stock, booked or added to the order sheet, confirmed, followed up with reminders and summarized for the owner.",
@@ -108,5 +108,6 @@
       "question": "How long does one automation take?",
       "answer": "A single workflow is usually a matter of days or a few weeks, not months. You get a fixed scope and timeline after the first call."
     }
-  ]
+  ],
+  "stage": "Build"
 }

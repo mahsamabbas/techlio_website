@@ -1,0 +1,77 @@
+{
+  "slug": "ai-pilot-rescue",
+  "order": 2,
+  "title": "AI Pilot-to-Production Rescue",
+  "metaTitle": "AI Pilot Rescue: From Stalled Prototype to Production",
+  "description": "Techlio takes stalled AI pilots and prototypes to production: diagnosis, eval harness, integration with real systems, guardrails, security and a monitored launch.",
+  "kicker": "Fixed-price diagnostic",
+  "h1": "Your AI pilot works in the demo. *We get it into production.*",
+  "intro": "Most AI pilots stall between a good demo and real users. The model is rarely the problem. It is the legacy integration, the missing evaluation, the security review and the question of who watches it after launch. We take the pilot you have and close those gaps.",
+  "primaryLabel": "Book a pilot diagnostic",
+  "diagram": "release",
+  "caption": "A change passes automated tests, the eval suite and senior review, then staging and a canary, before full production rollout and monitoring.",
+  "audienceTitle": "",
+  "audienceIntro": "",
+  "audience": [],
+  "painsTitle": "Signs your pilot *is stuck*",
+  "pains": [
+    "It impressed everyone in the demo, and nobody will sign off on putting it in front of customers.",
+    "It works on clean sample data and breaks on what your real systems send it.",
+    "Nobody can say how accurate it is, so every prompt change is a gamble.",
+    "Security, legal or IT has questions the pilot team cannot answer."
+  ],
+  "stepsTitle": "How a rescue *runs*",
+  "stepsIntro": "Four steps, in order. You get a go, fix or stop recommendation after the first.",
+  "steps": [
+    {
+      "when": "Week 1",
+      "title": "Diagnose",
+      "text": "We read the code, prompts and data flows, run the pilot against real cases and give you a written verdict: what works, what blocks production and what it will take."
+    },
+    {
+      "when": "Weeks 2 to 3",
+      "title": "Measure and connect",
+      "text": "We build the eval set from your real cases so quality becomes a number, and connect the pilot to the production systems it has been avoiding."
+    },
+    {
+      "when": "Weeks 4 to 6",
+      "title": "Harden",
+      "text": "Guardrails, permissions, human review on risky actions, cost limits, logging and the security evidence your reviewers ask for."
+    },
+    {
+      "when": "Weeks 7 to 8",
+      "title": "Launch and hand over",
+      "text": "Canary release to a small group, monitoring in place, then full rollout and a handover to your team or to our managed operations."
+    }
+  ],
+  "deliverablesTitle": "What you *keep*",
+  "deliverables": [
+    "Written diagnostic with a go, fix or stop verdict",
+    "Eval set and baseline scores",
+    "Production integration with your systems",
+    "Guardrails and human review points",
+    "Security and audit documentation",
+    "Monitoring dashboards and runbook"
+  ],
+  "whyTitle": "Why teams *call us in*",
+  "why": [
+    {
+      "title": "We keep what works",
+      "text": "Your pilot is not thrown away. We keep the parts that hold up and rebuild only what blocks production."
+    },
+    {
+      "title": "Quality becomes a number",
+      "text": "Once the eval set exists, every change is scored before release and arguments about whether it is good enough end."
+    },
+    {
+      "title": "No blame for the pilot",
+      "text": "Pilots are built to learn fast. Getting to production is a different job, and it is the one we do."
+    }
+  ],
+  "cases": [
+    "ordaos",
+    "vcreative"
+  ],
+  "closeTitle": "Have a pilot that will not ship?",
+  "closeText": "Send us what you have. Within 24 hours we will tell you whether a one-week diagnostic makes sense."
+}

@@ -53,7 +53,7 @@ const host = (url) => (url ? new URL(url).hostname : '');
         services.map((s, i) => (
           <li class="svc-card">
             <Icon name={s.slug} />
-            <span class="svc-n">{pad(i + 1)}</span>
+            <span class="svc-n">{pad(i + 1)} / {s.stage}</span>
             <h3><a href={`/${s.slug}/`}>{s.title}</a></h3>
             <p class="svc-lead">{s.card.lead}</p>
             <p>{s.card.text}</p>

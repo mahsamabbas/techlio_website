@@ -1,21 +1,21 @@
 {
   "slug": "cybersecurity",
-  "order": 5,
-  "title": "Cybersecurity & DevSecOps",
-  "short": "Cybersecurity",
-  "description": "Techlio secures applications, cloud and AI systems: security assessments, identity and access hardening, automated checks in the pipeline, monitoring and response.",
-  "h1": "Security built into the system, not bolted on before the audit.",
-  "intro": "We assess, harden and monitor the applications, cloud accounts and AI features your business runs on. The engineers who find a weakness are the same ones who fix it in code.",
+  "order": 6,
+  "title": "AI Security & Governance",
+  "short": "AI security and governance",
+  "description": "Techlio secures and governs applications, cloud and AI systems: security assessments, access hardening, AI risk documentation and audit trails, automated checks in the pipeline, monitoring and response.",
+  "h1": "AI you can defend *to a security team and a regulator.*",
+  "intro": "Buyers now ask how an AI system is secured, governed and audited before they sign. We assess, harden and document the applications, cloud accounts and AI features your business runs on, and the engineers who find a weakness are the ones who fix it in code.",
   "diagram": "secure",
   "caption": "A code change passes secret scanning, code analysis, dependency and infrastructure checks, then a security review, before deployment and runtime monitoring.",
   "card": {
     "lead": "Pass the security review, and deserve to.",
-    "text": "Security assessments, access hardening and automated checks in every release, covering your application, your cloud and the AI features on top.",
+    "text": "Security assessments, access hardening, AI risk documentation and automated checks in every release, across your app, cloud and AI features.",
     "tags": [
       "Security assessment",
-      "Access control and MFA",
+      "AI governance",
       "DevSecOps",
-      "AI security testing"
+      "AI red-teaming"
     ]
   },
   "offerTitle": "How we secure a system",
@@ -23,19 +23,19 @@
   "offerings": [
     {
       "title": "Assess",
-      "text": "Threat model, architecture and code review, and a cloud configuration review. Findings are ranked by real risk, with the fix described for each."
+      "text": "Threat model, architecture and code review, cloud configuration review and an inventory of where AI touches your data. Findings are ranked by real risk, with the fix described for each."
     },
     {
       "title": "Harden",
-      "text": "Role-based access, multi-factor authentication, secrets management, tenant isolation and least-privilege cloud permissions, implemented in your codebase."
+      "text": "Role-based access, multi-factor authentication, secrets management, tenant isolation and least-privilege permissions for both people and AI agents, implemented in your codebase."
     },
     {
-      "title": "Automate",
-      "text": "Secret scanning, code analysis, dependency and infrastructure checks run on every change, so a vulnerability is stopped before it is merged."
+      "title": "Govern",
+      "text": "The engineering side of AI governance: risk classification of each AI use, model and data documentation, human oversight points and audit trails, organised around frameworks such as the EU AI Act and the NIST AI Risk Management Framework."
     },
     {
-      "title": "Monitor and respond",
-      "text": "Logging, alerting and incident runbooks in place, with a named owner for every alert and a tested path to roll back."
+      "title": "Automate and monitor",
+      "text": "Secret scanning, code analysis, dependency and infrastructure checks on every change, plus logging, alerting and incident runbooks with a named owner."
     }
   ],
   "cases": [
@@ -51,17 +51,27 @@
     },
     {
       "title": "AI attack surface included",
-      "text": "Prompt injection, data leakage through retrieval and over-permissioned tools are tested the same way as the rest of your application."
+      "text": "Prompt injection, data leakage through retrieval and over-permissioned agent tools are tested the same way as the rest of your application."
     },
     {
-      "title": "Evidence for your buyers",
-      "text": "Access controls, test results and audit trails are documented as we go, which shortens the security questionnaires your sales team faces."
+      "title": "Evidence for buyers and auditors",
+      "text": "Access controls, test results, model documentation and audit trails are produced as we go, which shortens security questionnaires and compliance reviews."
     }
   ],
   "closeTitle": "Facing a security review, or want one before a customer asks?",
   "closeText": "Tell us what you run and who is asking. You will get a first read on scope and priorities within 24 hours.",
   "examplesTitle": "",
   "examples": [],
-  "faqs": [],
-  "metaTitle": "Cybersecurity and DevSecOps Services"
+  "faqs": [
+    {
+      "question": "Do you provide legal or compliance advice?",
+      "answer": "No. We do the engineering work that compliance depends on, such as access controls, documentation, logging and audit trails, and we work alongside your legal or compliance advisers."
+    },
+    {
+      "question": "Can you secure an AI system someone else built?",
+      "answer": "Yes. We start with an assessment of the existing system and its data flows, then fix the highest-risk findings first."
+    }
+  ],
+  "metaTitle": "AI Security, Governance and DevSecOps Services",
+  "stage": "Secure"
 }

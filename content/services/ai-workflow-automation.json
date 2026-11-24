@@ -2,7 +2,7 @@
   "slug": "ai-workflow-automation",
   "title": "AI Workflow Automation",
   "description": "Techlio automates document-heavy and back-office workflows with AI, deterministic validation and human approval on exceptions.",
-  "h1": "Automate the workflow, keep a person on the exceptions.",
+  "h1": "Automate the workflow, *keep a person on the exceptions.*",
   "intro": "Most operational work is the same handful of steps repeated thousands of times. We automate those steps with AI where judgment is needed, plain rules where it is not, and an approver for anything unusual.",
   "diagram": "workflow",
   "caption": "An invoice arrives by email, is classified, extracted, validated against the purchase order, approved if needed, posted to the ERP and logged.",
@@ -47,7 +47,7 @@
   ],
   "closeTitle": "Which workflow costs your team the most hours?",
   "closeText": "Bring one process to the scoping call. We will tell you what can be automated, what should not be, and what it would take.",
-  "order": 1,
+  "order": 3,
   "short": "Workflow automation",
   "card": {
     "lead": "Take the repetitive work off your team.",
@@ -62,5 +62,6 @@
   "examplesTitle": "",
   "examples": [],
   "faqs": [],
-  "metaTitle": "AI Workflow Automation Services"
+  "metaTitle": "AI Workflow Automation Services",
+  "stage": "Build"
 }

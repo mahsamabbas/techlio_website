@@ -110,6 +110,18 @@ collections:
           - { label: "Search description", name: metaDescription, widget: text }
           - { label: "Hero heading", name: heroTitle, widget: string }
           - { label: "Hero intro", name: heroIntro, widget: text }
+          - { label: "Founder quote", name: founderQuote, widget: text, required: false, hint: "Leave empty to hide the leadership section" }
+          - { label: "Founder name", name: founderName, widget: string, required: false }
+          - { label: "Founder role", name: founderRole, widget: string, required: false }
+          - { label: "Services heading", name: servicesTitle, widget: string }
+          - { label: "Services intro", name: servicesIntro, widget: text }
+          - { label: "How we work heading", name: howTitle, widget: string }
+          - { label: "How we work intro", name: howIntro, widget: text }
+          - { label: "How we work points", name: how, widget: list, summary: "{{fields.title}}", fields: [
+                { label: "Title", name: title, widget: string },
+                { label: "Text", name: text, widget: text } ] }
+          - { label: "Results heading", name: resultsTitle, widget: string }
+          - { label: "Featured case studies", name: featuredCases, widget: relation, collection: case_studies, search_fields: ["name"], value_field: "slug", display_fields: ["name"], multiple: true, max: 3 }
           - { label: "Purpose heading", name: purposeTitle, widget: string }
           - { label: "Mission and vision", name: purpose, widget: list, summary: "{{fields.title}}", fields: [
             { label: "Title", name: title, widget: string },
@@ -130,6 +142,29 @@ collections:
           - { label: "Hero intro", name: heroIntro, widget: text }
           - { label: "FAQ heading", name: faqTitle, widget: string }
           - { label: "FAQs", name: faqs, widget: list, summary: "{{fields.question}}", fields: [ { label: "Question", name: question, widget: string }, { label: "Answer", name: answer, widget: text } ] }
+      - name: privacy
+        label: Privacy policy
+        file: content/pages/privacy.json
+        fields:
+          - { label: "Title", name: title, widget: string }
+          - { label: "Last updated", name: updated, widget: string }
+          - { label: "Intro", name: intro, widget: text }
+          - { label: "Sections", name: sections, widget: list, summary: "{{fields.heading}}", fields: [ { label: "Heading", name: heading, widget: string }, { label: "Text", name: body, widget: text } ] }
+      - name: terms
+        label: Terms of use
+        file: content/pages/terms.json
+        fields:
+          - { label: "Title", name: title, widget: string }
+          - { label: "Last updated", name: updated, widget: string }
+          - { label: "Intro", name: intro, widget: text }
+          - { label: "Sections", name: sections, widget: list, summary: "{{fields.heading}}", fields: [ { label: "Heading", name: heading, widget: string }, { label: "Text", name: body, widget: text } ] }
+      - name: careers
+        label: Careers
+        file: content/pages/careers.json
+        fields:
+          - { label: "Title", name: title, widget: string }
+          - { label: "Intro", name: intro, widget: text }
+          - { label: "Sections", name: sections, widget: list, summary: "{{fields.heading}}", fields: [ { label: "Heading", name: heading, widget: string }, { label: "Text", name: body, widget: text } ] }
   - name: case_studies
     label: Case studies
     label_singular: Case study
@@ -177,6 +212,7 @@ collections:
       - { label: "Name", name: title, widget: string }
       - { label: "Page address", name: slug, widget: string, hint: "Lowercase words joined by hyphens. Changing this changes the page URL." }
       - { label: "Order", name: order, widget: number, value_type: int }
+      - { label: "Stage", name: stage, widget: select, options: ["Plan", "Build", "Secure", "Run"], hint: "Where this service sits in the plan, build, secure, run lifecycle" }
       - { label: "Short name", name: short, widget: string, hint: "Used in the footer and links" }
       - { label: "Browser title", name: metaTitle, widget: string, required: false, hint: "Shown in search results and the browser tab" }
       - { label: "Search description", name: description, widget: text }

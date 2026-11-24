@@ -1,6 +1,6 @@
 {
   "slug": "legacy-modernization",
-  "order": 2,
+  "order": 3,
   "title": "Legacy-to-AI Modernization",
   "description": "Techlio modernizes legacy systems route by route behind a facade, then adds AI capability on clean services. No rewrite, no feature freeze.",
   "kicker": "Fixed first milestone",

@@ -1,0 +1,18 @@
+{
+  "title": "Careers",
+  "intro": "We hire engineers, designers and operators who like owning hard problems end to end. If that sounds like you, we would like to hear from you.",
+  "sections": [
+    {
+      "heading": "How to apply",
+      "body": "Email your CV and a short note about the work you are proudest of to contact@techlio.co. Tell us which role or area you are interested in."
+    },
+    {
+      "heading": "What we look for",
+      "body": "Senior judgment, clear writing and a habit of finishing. Experience with AI systems helps, and so does a record of shipping software that real users depend on."
+    },
+    {
+      "heading": "Where we work",
+      "body": "Our team is based in Lahore, Pakistan, and works with clients across the US, UK and Europe."
+    }
+  ]
+}
