@@ -2,9 +2,10 @@
 import '../styles/main.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import BookDialog from '../components/BookDialog.astro';
 import { site } from '../lib/content.js';
 
-const { title, description, diagrams = false, home = false, schema = [] } = Astro.props;
+const { title, description, diagrams = false, home = false, form = false, schema = [] } = Astro.props;
 const fullTitle = home ? title : `${title} | ${site.name}`;
 const canonical = new URL(Astro.url.pathname, site.url).href;
 const image = new URL('/og.png', site.url).href;
@@ -19,7 +20,7 @@ const org = {
   areaServed: ['US', 'GB', 'Europe'],
   email: site.email,
   telephone: site.phone,
-  sameAs: [site.linkedin, site.x],
+  sameAs: [site.linkedin, site.x, site.clutch, site.google].filter(Boolean),
   address: site.offices.map((o) => ({ '@type': 'PostalAddress', streetAddress: o.address, addressCountry: o.country })),
 };
 ---
@@ -62,6 +63,7 @@ const org = {
       <slot />
     </main>
     <Footer />
+    {!form && <BookDialog />}
     {diagrams && <script is:inline src="/js/diagrams.js" defer></script>}
     {diagrams && <script is:inline src="/js/pipeline.js" defer></script>}
     <script is:inline src="/js/site.js" defer></script>

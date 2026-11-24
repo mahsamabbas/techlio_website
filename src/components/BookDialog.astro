@@ -1,0 +1,16 @@
+---
+// Booking dialog for pages without the inline form. Opened by any link to #book; without JavaScript those links go to the contact page.
+import ScopeForm from './ScopeForm.astro';
+import { site } from '../lib/content.js';
+---
+
+<dialog class="book-dialog" id="book-dialog" aria-labelledby="book-dialog-title">
+  <div class="book-dialog-head">
+    <div>
+      <h2 id="book-dialog-title">Book a free scoping call</h2>
+      <p>{site.responsePromise}</p>
+    </div>
+    <button class="book-dialog-close" type="button" aria-label="Close" data-close-dialog></button>
+  </div>
+  <ScopeForm />
+</dialog>

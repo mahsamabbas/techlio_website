@@ -31,6 +31,13 @@ import { site, services, offers, nav, phoneHref } from '../lib/content.js';
         <li><a href={`mailto:${site.email}`}>{site.email}</a></li>
         <li><a href={`tel:${phoneHref}`}>{site.phone}</a></li>
         <li><a href={site.linkedin} rel="noopener">LinkedIn</a> / <a href={site.x} rel="noopener">X</a></li>
+        {(site.clutch || site.google) && (
+          <li>
+            {site.clutch && <a href={site.clutch} target="_blank" rel="noopener">Clutch</a>}
+            {site.clutch && site.google && ' / '}
+            {site.google && <a href={site.google} target="_blank" rel="noopener">Google Business Profile</a>}
+          </li>
+        )}
       </ul>
       {site.offices.map((o) => <address><strong>{o.country}</strong>{o.address}</address>)}
     </div>

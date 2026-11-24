@@ -26,6 +26,8 @@ collections:
           - { label: "Offices", name: offices, widget: list, summary: "{{fields.country}}", fields: [ { label: "Country", name: country, widget: string }, { label: "Address", name: address, widget: string } ] }
           - { label: "LinkedIn URL", name: linkedin, widget: string }
           - { label: "X URL", name: x, widget: string }
+          - { label: "Clutch profile URL", name: clutch, widget: string, required: false }
+          - { label: "Google Business Profile URL", name: google, widget: string, required: false }
           - { label: "Terms of use URL", name: termsUrl, widget: string }
           - { label: "Privacy policy URL", name: privacyUrl, widget: string }
           - { label: "Careers URL", name: careersUrl, widget: string }

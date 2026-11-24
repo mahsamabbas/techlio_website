@@ -29,5 +29,14 @@ const reviews = site.reviews || [];
         </div>
       )
     }
+    {
+      (site.clutch || site.google) && (
+        <div class="profiles">
+          <span>Check us independently</span>
+          {site.clutch && <a class="profile-link" href={site.clutch} target="_blank" rel="noopener">Techlio on Clutch</a>}
+          {site.google && <a class="profile-link" href={site.google} target="_blank" rel="noopener">Techlio on Google</a>}
+        </div>
+      )
+    }
   </div>
 </section>

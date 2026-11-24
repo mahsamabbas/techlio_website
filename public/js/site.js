@@ -92,6 +92,38 @@
     });
   }
 
+  // Booking links: scroll to the form when it is on this page, otherwise open it in a dialog. No page load either way.
+  var bookSection = document.getElementById('book');
+  var bookDialog = document.getElementById('book-dialog');
+  function focusForm(root) {
+    var first = root.querySelector('input:not([type="hidden"]):not(.hp)');
+    if (first) try { first.focus({ preventScroll: true }); } catch (e) { first.focus(); }
+  }
+  if (bookDialog && bookDialog.showModal) {
+    bookDialog.addEventListener('click', function (ev) {
+      if (ev.target === bookDialog || ev.target.closest('[data-close-dialog]')) bookDialog.close();
+    });
+    bookDialog.addEventListener('close', function () { document.documentElement.classList.remove('dialog-open'); });
+  }
+  document.addEventListener('click', function (ev) {
+    var link = ev.target.closest && ev.target.closest('a[href$="#book"]');
+    if (!link || ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.button) return;
+    if (bookSection) {
+      ev.preventDefault();
+      if (nav && nav.classList.contains('is-open')) { nav.classList.remove('is-open'); toggle.setAttribute('aria-expanded', 'false'); }
+      bookSection.scrollIntoView({ behavior: calm ? 'auto' : 'smooth', block: 'start' });
+      bookSection.classList.remove('is-target');
+      setTimeout(function () { bookSection.classList.add('is-target'); focusForm(bookSection); }, calm ? 0 : 650);
+    } else if (bookDialog && bookDialog.showModal) {
+      ev.preventDefault();
+      if (nav && nav.classList.contains('is-open')) { nav.classList.remove('is-open'); toggle.setAttribute('aria-expanded', 'false'); }
+      document.documentElement.classList.add('dialog-open');
+      bookDialog.showModal();
+      bookDialog.scrollTop = 0;
+      focusForm(bookDialog);
+    }
+  });
+
   var form = document.getElementById('scope-form');
   if (!form) return;
   var status = document.getElementById('scope-status');
