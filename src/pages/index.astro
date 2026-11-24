@@ -10,7 +10,7 @@ import { site, pages, services, offers, cases, cta, websiteSchema, pickCases, fm
 
 const home = pages.home;
 const pad = (n) => String(n).padStart(2, '0');
-const clients = cases.map((c) => c.name);
+const clients = cases;
 const marquee = [...clients, ...clients];
 const featured = pickCases(home.featuredCases);
 const host = (url) => (url ? new URL(url).hostname : '');
@@ -42,7 +42,7 @@ const host = (url) => (url ? new URL(url).hostname : '');
     <p>{site.clientsLabel}</p>
     <div class="marquee">
       <ul>
-        {marquee.map((name, i) => <li aria-hidden={i >= clients.length ? 'true' : undefined}>{name}</li>)}
+        {marquee.map((c, i) => <li aria-hidden={i >= clients.length ? 'true' : undefined}>{c.logo ? <img src={c.logo} alt={c.name} width={c.logoWidth} height={c.logoHeight} loading="lazy" /> : c.name}</li>)}
       </ul>
     </div>
   </section>
@@ -90,6 +90,7 @@ const host = (url) => (url ? new URL(url).hostname : '');
             <a class="case-visual" href={`/case-studies/${c.slug}/`} tabindex="-1" aria-hidden="true">
               <span class="case-visual-name">{c.name}</span>
               <span class="case-visual-panel">
+                {c.logo && <img class="case-visual-logo" src={c.logo} alt="" width={c.logoWidth} height={c.logoHeight} loading="lazy" />}
                 <span>{c.liveUrl ? `Live at ${host(c.liveUrl)}` : c.industry}</span>
                 <ul class="chips">{(c.services || c.stack).slice(0, 4).map((t) => <li>{t}</li>)}</ul>
               </span>

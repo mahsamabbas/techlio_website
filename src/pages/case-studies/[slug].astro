@@ -26,6 +26,7 @@ const host = c.liveUrl ? new URL(c.liveUrl).hostname : '';
   <section class="page-hero">
     <div class="wrap">
       <a class="back" href="/case-studies/">All case studies</a>
+      {c.logo && <img class="case-logo" src={c.logo} alt={`${c.name} logo`} width={c.logoWidth} height={c.logoHeight} />}
       <span class="eyebrow">{c.industry}</span>
       <h1>{c.headline}</h1>
       <p class="lede">{c.overview}</p>

@@ -84,5 +84,8 @@
   "services": [
     "SaaS engineering",
     "Cloud & DevOps"
-  ]
+  ],
+  "logo": "/clients/xo-armor.png",
+  "logoWidth": 107,
+  "logoHeight": 97
 }

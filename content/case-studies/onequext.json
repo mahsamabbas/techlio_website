@@ -87,5 +87,8 @@
     "163+ staff hours saved per property per year through automation",
     "30% energy savings through smart thermostat control",
     "Three legacy products unified into one platform with zero-downtime migration"
-  ]
+  ],
+  "logo": "/clients/onequext.png",
+  "logoWidth": 169,
+  "logoHeight": 86
 }

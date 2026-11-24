@@ -84,5 +84,8 @@
     "AI development",
     "Business automation",
     "Cloud & DevOps"
-  ]
+  ],
+  "logo": "/clients/ordaos.png",
+  "logoWidth": 325,
+  "logoHeight": 79
 }

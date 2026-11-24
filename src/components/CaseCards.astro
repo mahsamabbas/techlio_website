@@ -9,7 +9,7 @@ const items = pickCases(slugs);
     items.map((c) => (
       <article class="case-card">
         <div class="case-card-head">
-          <span class="tile" aria-hidden="true">{initials(c.name)}</span>
+          {c.logo ? <span class="tile has-logo"><img src={c.logo} alt="" width={c.logoWidth} height={c.logoHeight} loading="lazy" /></span> : <span class="tile" aria-hidden="true">{initials(c.name)}</span>}
           <div>
             <p class="case-tag">{c.industry}</p>
             <h3><a href={`/case-studies/${c.slug}/`}>{c.name}</a></h3>

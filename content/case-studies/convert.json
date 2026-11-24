@@ -86,5 +86,8 @@
     "MCP server integration enabling AI-automated experimentation workflows",
     "40+ audience targeting filters live in production",
     "Zero increase in snippet load time after the feature expansion"
-  ]
+  ],
+  "logo": "/clients/convert.png",
+  "logoWidth": 313,
+  "logoHeight": 73
 }

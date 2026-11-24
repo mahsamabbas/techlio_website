@@ -85,5 +85,8 @@
     "AI development",
     "SaaS engineering",
     "Cloud & DevOps"
-  ]
+  ],
+  "logo": "/clients/coverai.png",
+  "logoWidth": 269,
+  "logoHeight": 80
 }

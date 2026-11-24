@@ -181,6 +181,9 @@ collections:
       - { label: "Client or product name", name: name, widget: string }
       - { label: "Page address", name: slug, widget: string, hint: "Lowercase words joined by hyphens. Changing this changes the page URL." }
       - { label: "Order", name: order, widget: number, value_type: int, hint: "Lower numbers appear first" }
+      - { label: "Client logo", name: logo, widget: image, required: false, hint: "Transparent PNG or SVG works best" }
+      - { label: "Logo width (px)", name: logoWidth, widget: number, value_type: int, required: false }
+      - { label: "Logo height (px)", name: logoHeight, widget: number, value_type: int, required: false }
       - { label: "Industry", name: industry, widget: string }
       - { label: "Categories", name: categories, widget: list, field: { label: "Category", name: item, widget: string } }
       - { label: "Service areas", name: services, widget: select, multiple: true, options: ["AI development", "Business automation", "Cloud & DevOps", "Security & compliance", "SaaS engineering", "Web & growth"], hint: "Used for the filter on the case studies page" }

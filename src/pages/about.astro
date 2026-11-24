@@ -7,7 +7,7 @@ import CaseCards from '../components/CaseCards.astro';
 import Closing from '../components/Closing.astro';
 import { site, pages, services, cases, cta, fmt } from '../lib/content.js';
 const p = pages.about;
-const clients = cases.map((c) => c.name);
+const clients = cases;
 const marquee = [...clients, ...clients];
 ---
 
@@ -31,7 +31,7 @@ const marquee = [...clients, ...clients];
     <p>{site.clientsLabel}</p>
     <div class="marquee">
       <ul>
-        {marquee.map((name, i) => <li aria-hidden={i >= clients.length ? 'true' : undefined}>{name}</li>)}
+        {marquee.map((c, i) => <li aria-hidden={i >= clients.length ? 'true' : undefined}>{c.logo ? <img src={c.logo} alt={c.name} width={c.logoWidth} height={c.logoHeight} loading="lazy" /> : c.name}</li>)}
       </ul>
     </div>
   </section>

@@ -85,5 +85,8 @@
     "Cloud & DevOps",
     "Business automation",
     "SaaS engineering"
-  ]
+  ],
+  "logo": "/clients/dp360-crm.png",
+  "logoWidth": 346,
+  "logoHeight": 54
 }

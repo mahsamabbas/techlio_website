@@ -86,5 +86,8 @@
     "Security & compliance",
     "Cloud & DevOps",
     "SaaS engineering"
-  ]
+  ],
+  "logo": "/clients/vcreative.png",
+  "logoWidth": 188,
+  "logoHeight": 42
 }

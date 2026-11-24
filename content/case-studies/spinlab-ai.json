@@ -85,5 +85,8 @@
     "AI development",
     "SaaS engineering",
     "Cloud & DevOps"
-  ]
+  ],
+  "logo": "/clients/spinlab-ai.png",
+  "logoWidth": 276,
+  "logoHeight": 88
 }

@@ -23,7 +23,7 @@ const areas = [...new Set(cases.flatMap((c) => c.services || []))];
         {
           cases.map((c) => (
             <article class="case-item" data-services={(c.services || []).join("|")}>
-              <span class="tile" aria-hidden="true">{c.name}</span>
+              {c.logo ? <span class="tile has-logo"><img src={c.logo} alt={`${c.name} logo`} width={c.logoWidth} height={c.logoHeight} loading="lazy" /></span> : <span class="tile" aria-hidden="true">{c.name}</span>}
               <div>
                 <h2>{c.headline}</h2>
                 <dl>

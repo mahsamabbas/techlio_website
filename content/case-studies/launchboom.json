@@ -83,5 +83,8 @@
     "AI development",
     "SaaS engineering",
     "Business automation"
-  ]
+  ],
+  "logo": "/clients/launchboom.png",
+  "logoWidth": 406,
+  "logoHeight": 44
 }
