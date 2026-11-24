@@ -19,6 +19,7 @@ const schema = [
     { name: c.name, path: `/case-studies/${c.slug}/` },
   ]),
 ];
+const has = (list) => Array.isArray(list) && list.length > 0;
 const host = c.liveUrl ? new URL(c.liveUrl).hostname : '';
 ---
 
@@ -36,26 +37,30 @@ const host = c.liveUrl ? new URL(c.liveUrl).hostname : '';
       </div>
       <dl class="facts">
         <div><dt>Client</dt><dd>{c.name}</dd></div>
-        <div><dt>Duration</dt><dd>{c.duration}</dd></div>
-        <div><dt>Team</dt><dd>{c.team.join(', ')}</dd></div>
+        {c.duration && <div><dt>Duration</dt><dd>{c.duration}</dd></div>}
+        {has(c.team) && <div><dt>Team</dt><dd>{c.team.join(', ')}</dd></div>}
         {host && <div><dt>Live</dt><dd><a href={c.liveUrl} rel="noopener">{host}</a></dd></div>}
       </dl>
     </div>
   </section>
 
-  <Section eyebrow="Challenge" tint title="The *challenge*">
-    <Blocks items={c.challenges} cols={2} />
-  </Section>
+  {has(c.challenges) && (
+    <Section eyebrow="Challenge" tint title="The *challenge*">
+      <Blocks items={c.challenges} cols={2} />
+    </Section>
+  )}
 
   <Section eyebrow="Solution" title="What *we built*">
     <Blocks items={c.solutions} cols={2} />
-    <h3 class="sub">Stack</h3>
-    <ul class="chips chips-large">{c.stack.map((x) => <li>{x}</li>)}</ul>
+    {has(c.stack) && <h3 class="sub">Stack</h3>}
+    {has(c.stack) && <ul class="chips chips-large">{c.stack.map((x) => <li>{x}</li>)}</ul>}
   </Section>
 
-  <Section eyebrow="Results" tint title="The *results*">
-    <ul class="ticks ticks-grid ticks-2">{c.results.map((x) => <li>{x}</li>)}</ul>
-  </Section>
+  {has(c.results) && (
+    <Section eyebrow="Results" tint title="The *results*">
+      <ul class="ticks ticks-grid ticks-2">{c.results.map((x) => <li>{x}</li>)}</ul>
+    </Section>
+  )}
 
   <Closing title="Have a similar problem?" text="Tell us where you are and we will share how we would approach it." />
 

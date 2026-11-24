@@ -1,0 +1,58 @@
+{
+  "team": [],
+  "stack": [],
+  "challenges": [],
+  "results": [
+    "Mobile app delivered with onboarding, profiles, memberships and payments",
+    "Payments integrated through Braintree",
+    "Messaging, projects and alerts available to members"
+  ],
+  "duration": "",
+  "logo": "",
+  "logoWidth": 0,
+  "logoHeight": 0,
+  "slug": "nuooly",
+  "order": 15,
+  "name": "Nuooly",
+  "industry": "Professional community",
+  "categories": [
+    "Mobile app",
+    "Memberships",
+    "Payments"
+  ],
+  "services": [
+    "End-to-end delivery",
+    "SaaS engineering"
+  ],
+  "headline": "A membership community app for independent professionals",
+  "overview": "Nuooly describes itself as an exclusive community uniting and empowering independent professionals. Techlio delivered the product end to end, from discovery and design through development, deployment and support, including its mobile app.",
+  "liveUrl": "https://www.nuooly.com",
+  "metrics": [
+    {
+      "value": "iOS",
+      "label": "mobile app delivered and tested"
+    },
+    {
+      "value": "5",
+      "label": "stages delivered, discovery to support"
+    }
+  ],
+  "solutions": [
+    {
+      "title": "Member onboarding",
+      "text": "Sign-up, login and a guided multi-step profile creation flow with profile photos and bios."
+    },
+    {
+      "title": "Memberships and payments",
+      "text": "Membership plans and card payments in account settings, integrated with Braintree."
+    },
+    {
+      "title": "Community features",
+      "text": "Messages, projects and alerts for members inside the app."
+    },
+    {
+      "title": "Deployment and support",
+      "text": "Structured app testing before release, then ongoing fixes and improvements under a support agreement."
+    }
+  ]
+}

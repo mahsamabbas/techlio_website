@@ -186,11 +186,11 @@ collections:
       - { label: "Logo height (px)", name: logoHeight, widget: number, value_type: int, required: false }
       - { label: "Industry", name: industry, widget: string }
       - { label: "Categories", name: categories, widget: list, field: { label: "Category", name: item, widget: string } }
-      - { label: "Service areas", name: services, widget: select, multiple: true, options: ["AI development", "Business automation", "Cloud & DevOps", "Security & compliance", "SaaS engineering", "Web & growth"], hint: "Used for the filter on the case studies page" }
+      - { label: "Service areas", name: services, widget: select, multiple: true, options: ["AI development", "Business automation", "Cloud & DevOps", "Security & compliance", "SaaS engineering", "Web & growth", "End-to-end delivery"], hint: "Used for the filter on the case studies page" }
       - { label: "Headline", name: headline, widget: string, hint: "One sentence, no full stop" }
       - { label: "Overview", name: overview, widget: text }
       - { label: "Live website", name: liveUrl, widget: string, required: false, hint: "Full address starting with https://" }
-      - { label: "Duration", name: duration, widget: string }
+      - { label: "Duration", name: duration, widget: string, required: false }
       - { label: "Team", name: team, widget: list, field: { label: "Role", name: item, widget: string } }
       - { label: "Tech stack", name: stack, widget: list, field: { label: "Technology", name: item, widget: string } }
       - { label: "Headline metrics", name: metrics, widget: list, max: 3, summary: "{{fields.value}} {{fields.label}}", fields: [ { label: "Value", name: value, widget: string }, { label: "Label", name: label, widget: string } ] }

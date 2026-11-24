@@ -1,0 +1,47 @@
+{
+  "team": [],
+  "stack": [],
+  "challenges": [],
+  "results": [],
+  "duration": "",
+  "logo": "",
+  "logoWidth": 0,
+  "logoHeight": 0,
+  "slug": "park-university",
+  "order": 17,
+  "name": "Park University",
+  "industry": "Higher education",
+  "categories": [
+    "Product engineering"
+  ],
+  "services": [
+    "End-to-end delivery"
+  ],
+  "headline": "End-to-end product delivery for a university with 65+ online degrees",
+  "overview": "Park University is a private, nonprofit university founded in 1875, with a flagship campus in Parkville, Missouri, a campus in Gilbert, Arizona, and more than 65 online degrees. Techlio delivered a digital product for Park University from discovery and design through development, deployment and ongoing support.",
+  "liveUrl": "https://www.park.edu",
+  "metrics": [
+    {
+      "value": "5",
+      "label": "stages delivered, discovery to support"
+    }
+  ],
+  "solutions": [
+    {
+      "title": "Discovery",
+      "text": "We worked with the client's team to define users, scope and success measures before any design or code."
+    },
+    {
+      "title": "Design",
+      "text": "User flows and interface design for the product, reviewed with the client before build."
+    },
+    {
+      "title": "Development",
+      "text": "Engineering and QA by a dedicated Techlio team, released in increments the client could use and test."
+    },
+    {
+      "title": "Deployment and support",
+      "text": "Production launch, followed by an ongoing support agreement for fixes, improvements and new features."
+    }
+  ]
+}

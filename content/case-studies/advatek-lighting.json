@@ -1,0 +1,48 @@
+{
+  "team": [],
+  "stack": [],
+  "challenges": [],
+  "results": [],
+  "duration": "",
+  "logo": "",
+  "logoWidth": 0,
+  "logoHeight": 0,
+  "slug": "advatek-lighting",
+  "order": 16,
+  "name": "Advatek Lighting",
+  "industry": "Entertainment lighting technology",
+  "categories": [
+    "Product engineering",
+    "Dedicated team"
+  ],
+  "services": [
+    "End-to-end delivery"
+  ],
+  "headline": "End-to-end product engineering for a maker of LED pixel lighting controllers",
+  "overview": "Advatek Lighting is an Australian company that makes the PixLite range of LED pixel controllers and supporting software, used in stage and screen productions, art installations and architectural projects. Techlio delivered product work for Advatek from discovery and design through development, deployment and ongoing support.",
+  "liveUrl": "https://www.advateklighting.com",
+  "metrics": [
+    {
+      "value": "5",
+      "label": "stages delivered, discovery to support"
+    }
+  ],
+  "solutions": [
+    {
+      "title": "Discovery",
+      "text": "We worked with the client's team to define users, scope and success measures before any design or code."
+    },
+    {
+      "title": "Design",
+      "text": "User flows and interface design for the product, reviewed with the client before build."
+    },
+    {
+      "title": "Development",
+      "text": "Engineering and QA by a dedicated Techlio team, released in increments the client could use and test."
+    },
+    {
+      "title": "Deployment and support",
+      "text": "Production launch, followed by an ongoing support agreement for fixes, improvements and new features."
+    }
+  ]
+}

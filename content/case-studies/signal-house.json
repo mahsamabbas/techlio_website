@@ -1,0 +1,60 @@
+{
+  "team": [],
+  "stack": [],
+  "challenges": [],
+  "results": [
+    "Portal V2 pages delivered across registration, settings, message logs and analytics",
+    "Rebilling issues resolved",
+    "Call activity populated automatically in the conversations channel",
+    "Releases verified in staging and production"
+  ],
+  "duration": "",
+  "logo": "",
+  "logoWidth": 0,
+  "logoHeight": 0,
+  "slug": "signal-house",
+  "order": 14,
+  "name": "Signal House",
+  "industry": "Communications platform (CPaaS)",
+  "categories": [
+    "Customer portal",
+    "Billing",
+    "CRM integration"
+  ],
+  "services": [
+    "End-to-end delivery",
+    "SaaS engineering",
+    "Business automation"
+  ],
+  "headline": "Portal, billing and CRM integration work for a business messaging platform",
+  "overview": "Signal House is a communications platform that provides SMS, MMS and voice APIs for businesses, with a focus on 10DLC messaging. Techlio took the product from discovery and design through development, deployment and ongoing support, including the second version of its customer portal.",
+  "liveUrl": "https://signalhouse.io",
+  "metrics": [
+    {
+      "value": "V2",
+      "label": "customer portal designed and built"
+    },
+    {
+      "value": "5",
+      "label": "stages delivered, discovery to support"
+    }
+  ],
+  "solutions": [
+    {
+      "title": "Customer portal V2",
+      "text": "Registration, settings, message logs, number management and analytics pages for the new version of the self-serve portal."
+    },
+    {
+      "title": "Billing reliability",
+      "text": "Investigation and fixes for rebilling issues so customer charges are applied correctly."
+    },
+    {
+      "title": "CRM integration",
+      "text": "GoHighLevel integration work, including syncing notes against the right contact and showing call activity inside the conversations channel."
+    },
+    {
+      "title": "Voice interface and release testing",
+      "text": "Testing and fixes for the voice app, with tickets verified in both staging and production before release."
+    }
+  ]
+}
