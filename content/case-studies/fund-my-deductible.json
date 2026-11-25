@@ -1,7 +1,10 @@
 {
+  "name": "Fund My Deductible",
   "slug": "fund-my-deductible",
   "order": 9,
-  "name": "Fund My Deductible",
+  "logo": "/uploads/fmd.png",
+  "logoWidth": 152,
+  "logoHeight": 83,
   "industry": "Insurtech, fintech",
   "categories": [
     "Compliance workflow",
@@ -23,6 +26,7 @@
     "1 UI/UX designer",
     "1 QA engineer"
   ],
+  "architecture": "Three React portals share one Node.js API on MySQL, hosted on AWS. Stripe handles payments and payouts.",
   "stack": [
     "React",
     "Node.js",
@@ -86,9 +90,5 @@
     "5-minute homeowner setup, reducing deal loss at the agreement stage",
     "Three-portal system live for contractors, sales teams and homeowners",
     "Platform endorsed by industry legal counsel at the Win the Storm conference"
-  ],
-  "logo": "/clients/fund-my-deductible.png",
-  "logoWidth": 152,
-  "logoHeight": 83,
-  "architecture": "Three React portals share one Node.js API on MySQL, hosted on AWS. Stripe handles payments and payouts."
+  ]
 }
