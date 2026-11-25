@@ -38,10 +38,8 @@
   ],
   "services": [
     "AI development",
-    "Security & compliance",
     "End-to-end delivery",
-    "Business automation",
-    "Cloud & DevOps"
+    "Business automation"
   ],
   "headline": "A university platform for managing courses, students and day-to-day academic operations",
   "overview": "Park University is a private, nonprofit university founded in 1875, with campuses in Parkville, Missouri and Gilbert, Arizona, campus centres across the US and more than 65 online degrees. Techlio built its platform for managing courses, students and academic operations, from discovery and design through development, deployment and support, with automated workflows and dashboards for staff.",
