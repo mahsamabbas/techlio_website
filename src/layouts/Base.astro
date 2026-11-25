@@ -21,7 +21,7 @@ const org = {
   areaServed: ['US', 'GB', 'Europe'],
   email: site.email,
   telephone: site.phone,
-  sameAs: [site.linkedin, site.x, site.clutch, site.google].filter(Boolean),
+  sameAs: [site.linkedin, site.clutch, site.google].filter(Boolean),
   address: site.offices.map((o) => ({ '@type': 'PostalAddress', streetAddress: o.address, addressCountry: o.country })),
 };
 ---
@@ -41,7 +41,6 @@ const org = {
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={image} />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@techlio" />
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={image} />

@@ -29,7 +29,6 @@ collections:
           - { label: "Google Analytics 4 ID", name: ga4Id, widget: string, required: false, hint: "Looks like G-XXXXXXXXXX. Leave empty to switch Analytics off." }
           - { label: "Google Tag Manager ID", name: gtmId, widget: string, required: false, hint: "Looks like GTM-XXXXXXX. Leave empty to switch tracking off." }
           - { label: "LinkedIn URL", name: linkedin, widget: string }
-          - { label: "X URL", name: x, widget: string }
           - { label: "Clutch profile URL", name: clutch, widget: string, required: false }
           - { label: "Google Business Profile URL", name: google, widget: string, required: false }
           - { label: "Clutch logo", name: clutchLogo, widget: image, required: false, hint: "Official logo file from Clutch. Shown on the review card on the home page." }
