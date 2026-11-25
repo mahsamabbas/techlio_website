@@ -37,6 +37,11 @@ const schema = [
           diagram={e.diagram}
           caption={e.caption}
         />
+        {e.answer && (
+          <section class="answer-band">
+            <div class="wrap"><div class="article-answer"><strong>In short</strong><p>{e.answer}</p></div></div>
+          </section>
+        )}
         <Section eyebrow="How it works" title={e.offerTitle} intro={e.offerIntro}>
           <Steps items={e.offerings} />
         </Section>
@@ -72,6 +77,11 @@ const schema = [
           diagram={e.diagram}
           caption={e.caption}
         />
+        {e.answer && (
+          <section class="answer-band">
+            <div class="wrap"><div class="article-answer"><strong>In short</strong><p>{e.answer}</p></div></div>
+          </section>
+        )}
         {has(e.audience) && (
           <Section title={e.audienceTitle} intro={e.audienceIntro}>
             <Blocks items={e.audience} />
@@ -96,6 +106,13 @@ const schema = [
         {has(e.cases) && (
           <Section tint={!has(e.deliverables)} eyebrow="Client work" title="Related *client work*">
             <CaseCards slugs={e.cases} />
+          </Section>
+        )}
+        {has(e.faqs) && (
+          <Section eyebrow="FAQ" title="Common *questions*">
+            <div class="faq">
+              {e.faqs.map((f) => <details><summary>{f.question}</summary><p>{f.answer}</p></details>)}
+            </div>
           </Section>
         )}
       </>

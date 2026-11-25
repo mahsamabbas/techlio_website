@@ -61,7 +61,29 @@
   },
   "examplesTitle": "",
   "examples": [],
-  "faqs": [],
+  "faqs": [
+    {
+      "question": "Do you build the whole product or work with our team?",
+      "answer": "Either. We deliver end to end with one accountable team, or embed engineers alongside yours."
+    },
+    {
+      "question": "How is the work priced?",
+      "answer": "Fixed price per milestone tied to acceptance criteria, a dedicated team on a monthly rate, or time and materials. The scoping call covers which fits."
+    },
+    {
+      "question": "How do you add AI to an existing product?",
+      "answer": "We start with one feature where AI clearly helps users, build it behind a flag with evaluation and cost tracking, and expand once it performs."
+    },
+    {
+      "question": "Who owns the intellectual property?",
+      "answer": "You do. Code lives in your repositories and ownership transfers on payment."
+    },
+    {
+      "question": "What happens after launch?",
+      "answer": "We can continue under a support agreement covering fixes, monitoring, upgrades and new features."
+    }
+  ],
   "metaTitle": "AI Product Development and SaaS Engineering",
-  "stage": "Build"
+  "stage": "Build",
+  "answer": "Techlio builds AI products and SaaS platforms from first prototype to a multi-tenant system in production. A senior team handles design, engineering, QA, cloud and security, releases working software every week, and can price the work per milestone against agreed acceptance criteria."
 }

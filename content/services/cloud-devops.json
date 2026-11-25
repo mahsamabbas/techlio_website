@@ -61,7 +61,29 @@
   "closeText": "Describe your current setup and what hurts. We will reply within 24 hours with where we would start.",
   "examplesTitle": "",
   "examples": [],
-  "faqs": [],
+  "faqs": [
+    {
+      "question": "What is LLMOps?",
+      "answer": "The practices for running language-model features in production: tracking answer quality, cost and response time, testing prompt and model changes before release, and rolling back when quality drops."
+    },
+    {
+      "question": "Which clouds do you work with?",
+      "answer": "Mostly AWS, with experience across the major providers. We work in your accounts so you keep ownership and access."
+    },
+    {
+      "question": "Can you take over a system another team built?",
+      "answer": "Yes. We start with a review of the architecture, release process and monitoring, fix the highest risks first, then move to regular operations."
+    },
+    {
+      "question": "How do you control AI running costs?",
+      "answer": "By measuring cost per request, caching and routing simpler tasks to smaller models where quality allows, and setting alerts on spend."
+    },
+    {
+      "question": "Do you offer ongoing support?",
+      "answer": "Yes. Managed operations run under a support agreement with agreed response times."
+    }
+  ],
   "metaTitle": "Cloud, DevOps and Managed AI Operations",
-  "stage": "Run"
+  "stage": "Run",
+  "answer": "Techlio's cloud, DevOps and AI operations service keeps software and AI systems running reliably after launch. We design the cloud architecture, automate testing and releases, monitor quality, cost and latency for AI features, and handle model upgrades so a change never reaches users without being checked."
 }

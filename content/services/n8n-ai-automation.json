@@ -109,5 +109,6 @@
       "answer": "A single workflow is usually a matter of days or a few weeks, not months. You get a fixed scope and timeline after the first call."
     }
   ],
-  "stage": "Build"
+  "stage": "Build",
+  "answer": "Techlio builds n8n and AI automations that take repetitive work off a small or mid-size business: bookings, orders, follow-ups, invoices and reports. We connect the tools you already use, add AI for the steps that involve reading or writing, and keep a person in control of anything unusual."
 }

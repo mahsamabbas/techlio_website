@@ -66,5 +66,20 @@
   ],
   "closeTitle": "Start with a two-week diagnostic",
   "closeText": "You get a seam map, a ranked migration plan and an honest view of what AI can do on your stack today.",
-  "metaTitle": "Legacy System Modernization for AI"
+  "metaTitle": "Legacy System Modernization for AI",
+  "answer": "Legacy-to-AI Modernization prepares an existing system for AI features without rewriting it. Techlio upgrades the parts that block progress, such as outdated frameworks, missing APIs and inaccessible data, in stages, so the system stays in use throughout.",
+  "faqs": [
+    {
+      "question": "Do we have to rebuild the whole system?",
+      "answer": "No. We modernise in stages, starting with the parts that block the AI features you want."
+    },
+    {
+      "question": "Will there be downtime?",
+      "answer": "The work is planned to avoid it, with changes released behind flags and rollback ready."
+    },
+    {
+      "question": "What makes a system ready for AI?",
+      "answer": "Clean, accessible data, APIs that expose the actions an agent would take, an audit trail, and a release process that can test changes safely."
+    }
+  ]
 }

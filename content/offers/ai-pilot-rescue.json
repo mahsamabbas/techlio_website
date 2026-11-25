@@ -73,5 +73,20 @@
     "vcreative"
   ],
   "closeTitle": "Have a pilot that will not ship?",
-  "closeText": "Send us what you have. Within 24 hours we will tell you whether a one-week diagnostic makes sense."
+  "closeText": "Send us what you have. Within 24 hours we will tell you whether a one-week diagnostic makes sense.",
+  "answer": "AI Pilot-to-Production Rescue is for companies with an AI pilot that works in a demo but has not gone live. Techlio reviews what exists, identifies what is blocking launch, and then adds the missing parts, usually evaluation, integration with real systems, guardrails and monitoring.",
+  "faqs": [
+    {
+      "question": "Do you keep our existing work?",
+      "answer": "Where it is sound, yes. The review tells you what can be kept and what needs rebuilding before any commitment."
+    },
+    {
+      "question": "What usually blocks a pilot?",
+      "answer": "No way to measure quality, demo data instead of real data, no integration with live systems, missing guardrails, unknown running cost, or no owner."
+    },
+    {
+      "question": "How long does a rescue take?",
+      "answer": "It depends on what exists. The review at the start gives you a scoped plan and estimate."
+    }
+  ]
 }

@@ -268,6 +268,7 @@ collections:
       - { label: "Search description", name: description, widget: text }
       - { label: "Page heading", name: h1, widget: string }
       - { label: "Intro", name: intro, widget: text }
+      - { label: "In short", name: answer, widget: text, required: false, hint: "Two or three sentences saying plainly what this service is and who it is for. Shown in a box under the heading; search engines and AI assistants quote it." }
       - { label: "Diagram", name: diagram, widget: select, required: false, options: ["", "agent", "knowledge", "workflow", "roadmap", "saas", "smallbiz", "secure", "platform", "modernize", "release"], hint: "Interactive diagram shown under the page heading. Leave empty for none." }
       - { label: "Diagram description", name: caption, widget: text, required: false, hint: "Read by screen readers" }
       - { label: "Home page card", name: card, widget: object, fields: [ { label: "Lead line", name: lead, widget: string }, { label: "Text", name: text, widget: text }, { label: "Tags", name: tags, widget: list, field: { label: "Tag", name: item, widget: string } } ] }
@@ -308,6 +309,7 @@ collections:
       - { label: "Label above heading", name: kicker, widget: string, required: false }
       - { label: "Page heading", name: h1, widget: string }
       - { label: "Intro", name: intro, widget: text }
+      - { label: "In short", name: answer, widget: text, required: false, hint: "Two or three sentences saying plainly what this service is and who it is for. Shown in a box under the heading; search engines and AI assistants quote it." }
       - { label: "Main button label", name: primaryLabel, widget: string }
       - { label: "Diagram", name: diagram, widget: select, required: false, options: ["", "agent", "knowledge", "workflow", "roadmap", "saas", "smallbiz", "secure", "platform", "modernize", "release"], hint: "Interactive diagram shown under the page heading. Leave empty for none." }
       - { label: "Diagram description", name: caption, widget: text, required: false }
@@ -331,5 +333,6 @@ collections:
             { label: "Title", name: title, widget: string },
             { label: "Text", name: text, widget: text } ] }
       - { label: "Related case studies", name: cases, widget: relation, collection: case_studies, search_fields: ["name"], value_field: "slug", display_fields: ["name"], multiple: true, required: false }
+      - { label: "FAQs", name: faqs, widget: list, required: false, summary: "{{fields.question}}", fields: [ { label: "Question", name: question, widget: string }, { label: "Answer", name: answer, widget: text } ] }
       - { label: "Closing heading", name: closeTitle, widget: string }
       - { label: "Closing text", name: closeText, widget: text }

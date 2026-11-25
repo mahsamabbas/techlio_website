@@ -866,3 +866,6 @@ html.dialog-open { overflow: hidden; }
 .consent[hidden] { display: none; }
 .consent p { flex: 1 1 16rem; max-width: none; }
 .consent div { display: flex; gap: 0.5rem; }
+
+.answer-band { padding-bottom: clamp(1rem, 3vw, 2rem); }
+.answer-band .article-answer { margin-top: 0; max-width: 56rem; }

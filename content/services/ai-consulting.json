@@ -61,7 +61,29 @@
   },
   "examplesTitle": "",
   "examples": [],
-  "faqs": [],
+  "faqs": [
+    {
+      "question": "What do we receive at the end?",
+      "answer": "A written assessment of your data and systems, a ranked list of AI opportunities with expected effort and value, a target architecture, and a build estimate."
+    },
+    {
+      "question": "Do we have to build with Techlio afterwards?",
+      "answer": "No. The output is written so your own engineers or another vendor can build from it."
+    },
+    {
+      "question": "How is this different from a strategy firm?",
+      "answer": "The people doing the assessment are senior engineers who ship AI systems, so recommendations come with the technical detail and trade-offs needed to act on them."
+    },
+    {
+      "question": "What do you need from us?",
+      "answer": "Access to the people who run the workflows, a view of the systems and data involved, and a named decision-maker. We keep the time asked of your team small."
+    },
+    {
+      "question": "We are not sure we are ready for AI. Is this still useful?",
+      "answer": "Yes. Finding out that a use case is not worth building, or that the data needs work first, saves the cost of a failed pilot."
+    }
+  ],
   "metaTitle": "AI Strategy, Readiness Assessment and Architecture",
-  "stage": "Plan"
+  "stage": "Plan",
+  "answer": "AI consulting from Techlio is a short, practical engagement that tells you where AI will pay off in your business, what to build first, and what it will take. You get a readiness assessment, a ranked list of use cases, an architecture your own team or any vendor could build from, and a realistic estimate, written by engineers who build these systems."
 }

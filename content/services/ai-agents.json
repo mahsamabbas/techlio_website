@@ -61,7 +61,33 @@
   },
   "examplesTitle": "",
   "examples": [],
-  "faqs": [],
+  "faqs": [
+    {
+      "question": "What is the difference between an AI agent and a chatbot?",
+      "answer": "A chatbot answers questions. An agent also acts: it can look up an order, update a CRM record, create a ticket or draft a document, using tools it has been given permission to use."
+    },
+    {
+      "question": "How do you stop an agent giving wrong answers?",
+      "answer": "We build an evaluation set from your real cases and score every change against it. In production, answers are checked against the retrieved sources, and low-confidence cases go to a person."
+    },
+    {
+      "question": "Which AI models do you build with?",
+      "answer": "We choose per project and test candidates against your eval set. We commonly work with Claude and OpenAI models and can use open models where data must stay in your environment."
+    },
+    {
+      "question": "Can the agent work with our existing systems?",
+      "answer": "Yes. Agents connect to CRMs, help desks, databases, document stores and internal APIs through permissioned tools, using the same access rules a staff member would have."
+    },
+    {
+      "question": "How long does it take to build an AI agent?",
+      "answer": "It depends on how many systems it touches and how clean the data is. A focused first agent is usually measured in weeks. A scoping call gives you an estimate for your case."
+    },
+    {
+      "question": "Who owns the code and the data?",
+      "answer": "You do. Work happens in your accounts and repositories where possible, and intellectual property transfers to you. A mutual NDA is available before the first call."
+    }
+  ],
   "metaTitle": "AI Agent Development and Agentic AI Systems",
-  "stage": "Build"
+  "stage": "Build",
+  "answer": "An AI agent is software that uses a language model to understand a request, look up the facts it needs in your systems, and take an action such as updating a record or replying to a customer. Techlio designs and builds these agents for companies that need them to work in production: grounded in your own data, tested against real cases, limited to approved actions, and able to hand off to a person when unsure."
 }

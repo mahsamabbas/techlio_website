@@ -70,8 +70,21 @@
     {
       "question": "Can you secure an AI system someone else built?",
       "answer": "Yes. We start with an assessment of the existing system and its data flows, then fix the highest-risk findings first."
+    },
+    {
+      "question": "What does an AI security assessment cover?",
+      "answer": "Access control, data exposure, prompt injection and misuse risks, logging and audit trail, third-party model and vendor risk, and the documentation a security review or regulator will ask for."
+    },
+    {
+      "question": "How do you test for prompt injection?",
+      "answer": "We run adversarial tests against the system's inputs, documents and tools, then add screening, permission limits on actions and human approval for high-impact steps."
+    },
+    {
+      "question": "Can you help us prepare for the EU AI Act?",
+      "answer": "We help with the engineering side: classifying systems, documenting how they work, logging decisions and adding human oversight. Legal interpretation remains with your counsel."
     }
   ],
   "metaTitle": "AI Security, Governance and DevSecOps Services",
-  "stage": "Secure"
+  "stage": "Secure",
+  "answer": "Techlio's AI security and governance service makes an AI system defensible to a security team and a regulator. We assess the risks, harden access and data handling, test for prompt injection and misuse, add logging and human oversight, and produce the documentation reviews ask for."
 }

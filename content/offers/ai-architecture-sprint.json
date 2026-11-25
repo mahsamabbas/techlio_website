@@ -81,5 +81,20 @@
   ],
   "closeTitle": "Have a use case worth two weeks?",
   "closeText": "Tell us the problem and the data you have. We will confirm within 24 hours whether it fits a sprint.",
-  "metaTitle": "14-Day AI Prototype and Architecture Sprint"
+  "metaTitle": "14-Day AI Prototype and Architecture Sprint",
+  "answer": "The AI Architecture Sprint is a fixed-scope, 14-day engagement. At the end you have a working prototype of your AI use case, an architecture ready to build from, and a costed plan, so you can decide whether and how to proceed with evidence instead of a slide deck.",
+  "faqs": [
+    {
+      "question": "What do we need to provide?",
+      "answer": "A clear problem, access to sample data and the people who know the workflow, and a decision-maker available during the two weeks."
+    },
+    {
+      "question": "Is the prototype production-ready?",
+      "answer": "No. It proves the approach on your data. The architecture and plan describe what production requires."
+    },
+    {
+      "question": "Can we build it ourselves afterwards?",
+      "answer": "Yes. The deliverables are yours and written for any competent team to use."
+    }
+  ]
 }

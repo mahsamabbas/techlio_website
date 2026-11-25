@@ -61,7 +61,29 @@
   },
   "examplesTitle": "",
   "examples": [],
-  "faqs": [],
+  "faqs": [
+    {
+      "question": "Which workflows are good candidates?",
+      "answer": "Work that is frequent, follows rules most of the time, and moves data between systems: document processing, order and ticket handling, back-office reconciliation, reporting and follow-ups."
+    },
+    {
+      "question": "What happens when the automation is unsure?",
+      "answer": "The case is routed to a person with the context already gathered. Their decision is recorded and used to improve the workflow."
+    },
+    {
+      "question": "Will this replace our staff?",
+      "answer": "The aim is to remove repetitive hours so staff spend time on exceptions and customers. Most clients redeploy the time saved."
+    },
+    {
+      "question": "Which tools do you use?",
+      "answer": "We choose per case: n8n for visual, maintainable workflows, custom code where volume or logic needs it, and language models for the steps that involve reading or writing."
+    },
+    {
+      "question": "How do we know it is working?",
+      "answer": "Each workflow has logging, alerts on failure and a simple dashboard showing volume, exceptions and time saved."
+    }
+  ],
   "metaTitle": "AI Workflow Automation Services",
-  "stage": "Build"
+  "stage": "Build",
+  "answer": "AI workflow automation uses software and language models to carry out repetitive, multi-step work such as processing invoices, routing requests or preparing reports, while a person handles the exceptions. Techlio maps the workflow with the people who run it, automates the routine steps with checks at each stage, and keeps a human approval point for anything unusual."
 }
