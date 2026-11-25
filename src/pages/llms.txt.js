@@ -15,6 +15,7 @@ export function GET() {
     '## Company facts',
     '',
     `- Website: ${site.url}`,
+    ...(site.founded ? [`- Founded: ${site.founded}`] : []),
     `- Email: ${site.email}`,
     `- Phone: ${site.phone}`,
     ...site.offices.map((o) => `- Office (${o.country}): ${o.address}`),
