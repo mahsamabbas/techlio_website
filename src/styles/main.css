@@ -734,3 +734,12 @@ html.dialog-open { overflow: hidden; }
   .proof-banner { padding-bottom: clamp(2rem, 5vw, 3.5rem); }
   .case-summary { font-size: 1.1rem; }
 }
+
+/* QA pass */
+.leader figcaption .leader-avatar { font-size: 1.6rem; }
+@media (max-width: 760px) {
+  .platforms { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
+  .platforms a { min-width: 0; padding: 0.8rem 0.4rem; }
+  .platforms strong { font-size: 1rem; }
+  .platforms span { display: none; }
+}

@@ -9,7 +9,7 @@ const items = pickCases(slugs);
     items.map((c) => (
       <article class="case-card">
         <div class="case-card-visual">
-          {c.logo ? <img src={c.logo} alt="" width={c.logoWidth} height={c.logoHeight} loading="lazy" /> : <span aria-hidden="true">{c.name}</span>}
+          {c.logo ? <img src={c.logo} alt="" width={c.logoWidth} height={c.logoHeight} /> : <span aria-hidden="true">{c.name}</span>}
         </div>
         <div class="case-card-body">
           <p class="case-tag">{c.industry}</p>
