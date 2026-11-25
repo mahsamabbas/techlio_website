@@ -23,7 +23,10 @@
     "AWS",
     "Twilio / Telnyx",
     "Docker",
-    "GitHub Actions"
+    "GitHub Actions",
+    "ServiceNow",
+    "Scikit-learn",
+    "n8n"
   ],
   "metrics": [
     {

@@ -28,7 +28,11 @@
     "Node.js",
     "Google Ads API",
     "CRM integration",
-    "Figma"
+    "Figma",
+    "n8n",
+    "Apache Airflow",
+    "dbt",
+    "Snowflake"
   ],
   "metrics": [
     {

@@ -1,6 +1,12 @@
 {
   "team": [],
-  "stack": [],
+  "stack": [
+    "n8n",
+    "Pinecone / Qdrant",
+    "Apache Airflow",
+    "dbt",
+    "Snowflake"
+  ],
   "challenges": [
     {
       "title": "Shows depended on a connected console",

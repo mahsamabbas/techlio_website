@@ -23,7 +23,13 @@
     "NestJS",
     "TypeORM",
     "AWS Lambda",
-    "RxJS"
+    "RxJS",
+    "Django",
+    "PostgreSQL",
+    "Hugging Face",
+    "PyTorch",
+    "BigQuery",
+    "NeMo Guardrails / Presidio"
   ],
   "metrics": [
     {

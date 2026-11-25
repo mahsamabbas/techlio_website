@@ -21,7 +21,14 @@
     "Node.js",
     "MySQL",
     "DigitalOcean",
-    "Laravel Forge"
+    "Laravel Forge",
+    "PyTorch",
+    "Scikit-learn",
+    "Pinecone / Qdrant",
+    "Apache Airflow",
+    "dbt",
+    "Snowflake",
+    "n8n"
   ],
   "metrics": [
     {

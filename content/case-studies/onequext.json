@@ -30,7 +30,12 @@
     "IoT / Z-Wave",
     "AWS",
     "PostgreSQL",
-    "Figma"
+    "Figma",
+    "Hugging Face",
+    "Pinecone / Qdrant",
+    "Apache Airflow",
+    "dbt",
+    "Snowflake"
   ],
   "metrics": [
     {
