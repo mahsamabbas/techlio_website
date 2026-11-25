@@ -1,0 +1,61 @@
+{
+  "slug": "rag-vs-fine-tuning-company-knowledge",
+  "title": "RAG or fine-tuning: how to choose for company knowledge",
+  "metaTitle": "RAG vs Fine-Tuning for Company Knowledge: How to Choose",
+  "description": "When to use retrieval-augmented generation, when to fine-tune a model, and when to combine them, explained for teams building AI on their own documents and data.",
+  "category": "Comparison",
+  "date": "2026-11-25",
+  "updated": "2026-11-25",
+  "author": "Techlio Engineering",
+  "authorRole": "Senior engineers at Techlio",
+  "answer": "Use retrieval-augmented generation (RAG) when the AI must answer from your own documents and data, especially when that information changes or access to it is restricted. Use fine-tuning when you need the model to follow a consistent style, format or narrow task that prompting cannot achieve. For company knowledge, RAG is almost always the starting point, and fine-tuning is an optional later step.",
+  "sections": [
+    {
+      "heading": "What each one does",
+      "text": "RAG leaves the model unchanged. When a question arrives, the system searches your documents, passes the most relevant passages to the model, and asks it to answer from them with citations. Fine-tuning changes the model itself by training it further on examples, so the behaviour is built in.",
+      "bullets": []
+    },
+    {
+      "heading": "Why RAG fits company knowledge",
+      "text": "Company knowledge has three properties that favour retrieval.",
+      "bullets": [
+        "It changes. A new policy or price takes effect the moment the document is indexed. A fine-tuned model would need retraining.",
+        "It is restricted. Retrieval can respect who is allowed to see which document. Knowledge trained into a model is available to everyone who uses it.",
+        "It needs sources. A RAG answer can link each claim to the passage it came from, which is what lets a person check it."
+      ]
+    },
+    {
+      "heading": "When fine-tuning earns its cost",
+      "text": "Fine-tuning is worth considering when the task is narrow and repeated at high volume: classifying tickets into your own categories, writing in a strict house format, or extracting fields from a document type the base model handles poorly. It can also allow a smaller, cheaper model to do a job that otherwise needs a larger one. It requires hundreds to thousands of good examples and a way to measure the result.",
+      "bullets": []
+    },
+    {
+      "heading": "What decides quality in a RAG system",
+      "text": "Most weak RAG systems fail at retrieval, not at the model. The parts that matter are how documents are split, whether search combines keywords with meaning, whether results are re-ranked, and whether the system admits when it found nothing relevant. Score retrieval and answer quality separately, so you know which one to fix.",
+      "bullets": []
+    },
+    {
+      "heading": "A sensible order of work",
+      "text": "Start with good prompting and RAG over a small, clean set of documents. Build an eval set of real questions. Improve retrieval until the right passage is found reliably. Only then ask whether a remaining gap in tone, format or cost justifies fine-tuning.",
+      "bullets": []
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is RAG cheaper than fine-tuning?",
+      "answer": "Usually at the start, because there is no training run and documents can be updated without retraining. At very high volume a fine-tuned smaller model can be cheaper per request, so the answer depends on scale."
+    },
+    {
+      "question": "Can we use both?",
+      "answer": "Yes. A common pattern is a model fine-tuned for format or tone that still retrieves current facts through RAG."
+    },
+    {
+      "question": "Does RAG stop the model inventing answers?",
+      "answer": "It reduces the risk but does not remove it. Add a grounding check that confirms each claim is supported by a retrieved passage, and send unsupported answers to a person."
+    }
+  ],
+  "related": [
+    "ai-agents",
+    "ai-consulting"
+  ]
+}

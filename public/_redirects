@@ -1,3 +1,6 @@
+# Send the Netlify address to the real domain so only techlio.co is indexed.
+https://techlio.netlify.app/*  https://techlio.co/:splat  301!
+
 # Old techlio.co addresses -> new pages, so existing search rankings and links carry over.
 /about-us/                      /about/                    301
 /customer/                      /case-studies/             301

@@ -16,6 +16,9 @@ const list = (mods) =>
 export const services = list(import.meta.glob('../../content/services/*.json', { eager: true }));
 export const offers = list(import.meta.glob('../../content/offers/*.json', { eager: true }));
 export const cases = list(import.meta.glob('../../content/case-studies/*.json', { eager: true }));
+export const insights = Object.values(import.meta.glob('../../content/insights/*.json', { eager: true }))
+  .map((m) => m.default)
+  .sort((a, b) => String(b.date).localeCompare(String(a.date)) || a.title.localeCompare(b.title));
 
 export const pages = { home, process: processPage, about, contact, privacy, terms, careers };
 export { site };
@@ -25,6 +28,7 @@ export const phoneHref = '+' + site.phone.replace(/\D/g, '');
 export const nav = [
   { href: '/process/', label: 'Process' },
   { href: '/case-studies/', label: 'Case Studies' },
+  { href: '/insights/', label: 'Insights' },
   { href: '/about/', label: 'About' },
   { href: '/contact/', label: 'Contact' },
 ];
@@ -56,6 +60,18 @@ export const serviceSchema = (e) => ({
   provider: { '@id': `${site.url}/#organization` },
   areaServed: ['US', 'GB', 'Europe'],
 });
+export const articleSchema = (a) => ({
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: a.title,
+  description: a.description,
+  datePublished: a.date,
+  dateModified: a.updated || a.date,
+  author: { '@type': 'Organization', name: a.author, url: site.url },
+  publisher: { '@id': `${site.url}/#organization` },
+  mainEntityOfPage: abs(`/insights/${a.slug}/`),
+});
+export const longDate = (d) => new Date(d + 'T00:00:00Z').toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
 export const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',

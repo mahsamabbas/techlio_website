@@ -214,6 +214,37 @@ collections:
             { label: "Title", name: title, widget: string },
             { label: "Text", name: text, widget: text } ] }
       - { label: "Results", name: results, widget: list, field: { label: "Result", name: item, widget: string } }
+  - name: insights
+    label: Insights
+    label_singular: Article
+    folder: content/insights
+    extension: json
+    format: json
+    create: true
+    identifier_field: title
+    slug: "{{fields.slug}}"
+    summary: "{{title}} ({{date}})"
+    sortable_fields: [date, title]
+    editor: { preview: false }
+    fields:
+      - { label: "Title", name: title, widget: string }
+      - { label: "Page address", name: slug, widget: string, hint: "Lowercase words joined by hyphens. This becomes the URL: /insights/your-address/" }
+      - { label: "Browser title", name: metaTitle, widget: string, required: false, hint: "Shown in search results. Keep under 60 characters." }
+      - { label: "Search description", name: description, widget: text, hint: "One or two sentences. Shown in search results and on the Insights list." }
+      - { label: "Category", name: category, widget: select, options: ["Guide", "Comparison", "Explainer", "Case story", "Pricing guide"] }
+      - { label: "Published date", name: date, widget: string, hint: "Format: 2026-11-25" }
+      - { label: "Last updated", name: updated, widget: string, required: false, hint: "Format: 2026-11-25" }
+      - { label: "Author", name: author, widget: string }
+      - { label: "Author role", name: authorRole, widget: string, required: false }
+      - { label: "The short answer", name: answer, widget: text, hint: "Two or three sentences that answer the title's question directly. Search engines and AI assistants quote this." }
+      - { label: "Sections", name: sections, widget: list, summary: "{{fields.heading}}", fields: [
+            { label: "Heading", name: heading, widget: string },
+            { label: "Text", name: text, widget: text, required: false, hint: "Leave a blank line between paragraphs." },
+            { label: "Bullet points", name: bullets, widget: list, required: false, field: { label: "Point", name: item, widget: string } } ] }
+      - { label: "Common questions", name: faqs, widget: list, required: false, summary: "{{fields.question}}", fields: [
+            { label: "Question", name: question, widget: string },
+            { label: "Answer", name: answer, widget: text } ] }
+      - { label: "Related service pages", name: related, widget: list, required: false, field: { label: "Page address", name: item, widget: string }, hint: "For example: ai-agents" }
   - name: services
     label: Services
     label_singular: Service

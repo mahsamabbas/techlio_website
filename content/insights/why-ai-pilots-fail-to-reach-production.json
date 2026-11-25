@@ -1,0 +1,62 @@
+{
+  "slug": "why-ai-pilots-fail-to-reach-production",
+  "title": "Why most AI pilots never reach production, and what fixes them",
+  "metaTitle": "Why AI Pilots Fail to Reach Production (and How to Fix Them)",
+  "description": "The six reasons AI pilots stall before production, and the engineering practices that get them live: evals, data access, guardrails, ownership and cost control.",
+  "category": "Guide",
+  "date": "2026-11-25",
+  "updated": "2026-11-25",
+  "author": "Techlio Engineering",
+  "authorRole": "Senior engineers at Techlio",
+  "answer": "AI pilots stall because a demo only has to work once, on chosen examples, for a friendly audience. Production has to work every day on messy data, inside real systems, with someone accountable when it is wrong. The fix is to treat the pilot as software: measure answer quality with an eval set, connect it to real data with real permissions, add guardrails and a human approval path, and give it an owner and a budget.",
+  "sections": [
+    {
+      "heading": "Six reasons pilots stall",
+      "text": "These are the patterns we see most often when a company asks us to rescue a pilot.",
+      "bullets": [
+        "No way to measure quality. The team judges answers by reading a few of them, so nobody can say whether a change made things better or worse.",
+        "Demo data instead of real data. The pilot ran on a clean export. The live systems have duplicates, missing fields and permissions.",
+        "No integration. The model produces a good answer in a chat window, but nothing writes it back to the CRM, the ticket or the order.",
+        "No guardrails. There is no check for prompt injection, no limit on what the agent can do, and no path to a person for unusual cases, so security or legal blocks the launch.",
+        "Unknown running cost. Nobody has estimated tokens, latency and infrastructure at real volume.",
+        "No owner. The pilot belonged to an innovation budget, and no team is responsible for running it."
+      ]
+    },
+    {
+      "heading": "What gets a pilot live",
+      "text": "None of this is exotic. It is ordinary engineering discipline applied to a system whose output varies.",
+      "bullets": [
+        "Build an eval set first: 50 to 200 real cases with known good answers. Score every prompt, model or retrieval change against it before release.",
+        "Connect to the real systems early, with the same access rules a human user would have.",
+        "Give the agent typed, permissioned tools, and log every action it takes.",
+        "Set a confidence threshold. Below it, the case goes to a person, and their decision becomes a new eval case.",
+        "Release to a small group first and watch quality, cost and latency on a dashboard.",
+        "Name an owner and agree what happens when the model provider changes a model."
+      ]
+    },
+    {
+      "heading": "How long a rescue takes",
+      "text": "It depends on what exists. If the pilot has working prompts and access to data, the gap is usually evals, integration and guardrails, which is weeks of work, not months. If the pilot was a slide deck and a chat demo, it is closer to a new build. An architecture review at the start tells you which case you are in before you commit budget.",
+      "bullets": []
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is an eval set?",
+      "answer": "A fixed collection of real inputs with known good outputs. Every change to the system is scored against it, so quality becomes a number you can track instead of an opinion."
+    },
+    {
+      "question": "Should we switch models to fix a stalled pilot?",
+      "answer": "Rarely as a first step. Most stalled pilots are held back by data access, missing evals or missing guardrails. Measure first, then test a different model against the same eval set."
+    },
+    {
+      "question": "When should a human stay in the loop?",
+      "answer": "Whenever an action is hard to reverse, involves money or personal data, or the system's confidence is low. The aim is for people to handle the unusual cases while the agent handles the routine ones."
+    }
+  ],
+  "related": [
+    "ai-pilot-rescue",
+    "ai-agents",
+    "ai-consulting"
+  ]
+}

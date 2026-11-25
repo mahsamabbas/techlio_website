@@ -1,4 +1,24 @@
+# Techlio welcomes search engines and AI assistants.
 User-agent: *
+Allow: /
+Disallow: /admin/
+
+# AI search and answer crawlers
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+Allow: /
+Disallow: /admin/
+
+# AI model crawlers
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
 Allow: /
 Disallow: /admin/
 

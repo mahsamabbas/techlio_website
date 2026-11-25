@@ -1,0 +1,32 @@
+---
+import Base from '../../layouts/Base.astro';
+import Closing from '../../components/Closing.astro';
+import { insights, breadcrumbSchema, longDate } from '../../lib/content.js';
+---
+
+<Base
+  title="AI Engineering Insights: Guides and Comparisons"
+  description="Practical guides and comparisons on AI agents, n8n and workflow automation, RAG, AI security and running AI in production, written by Techlio's engineers."
+  schema={[breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Insights', path: '/insights/' }])]}
+>
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Insights</span>
+      <h1>What we have learned <span class="accent">shipping AI.</span></h1>
+      <p class="lede">Guides and comparisons from our engineers on agents, automation and running AI in production. Each one opens with the short answer.</p>
+      <div class="insight-list">
+        {
+          insights.map((a) => (
+            <article class="insight-card">
+              <p class="case-tag">{a.category} <span>{longDate(a.date)}</span></p>
+              <h2><a href={`/insights/${a.slug}/`}>{a.title}</a></h2>
+              <p>{a.description}</p>
+              <span class="more">Read the article</span>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+  <Closing title="Have a question we have not answered?" text="Bring it to a scoping call. A senior engineer will answer it for your situation." />
+</Base>

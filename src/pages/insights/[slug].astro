@@ -1,0 +1,67 @@
+---
+import Base from '../../layouts/Base.astro';
+import Closing from '../../components/Closing.astro';
+import { insights, services, offers, articleSchema, faqSchema, breadcrumbSchema, longDate } from '../../lib/content.js';
+
+export function getStaticPaths() {
+  return insights.map((a) => ({ params: { slug: a.slug }, props: { a } }));
+}
+const { a } = Astro.props;
+const linked = (a.related || []).map((s) => [...services, ...offers].find((e) => e.slug === s)).filter(Boolean);
+const others = insights.filter((o) => o.slug !== a.slug).slice(0, 2);
+const paras = (t = '') => String(t).split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean);
+const schema = [
+  articleSchema(a),
+  ...faqSchema(a.faqs),
+  breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Insights', path: '/insights/' }, { name: a.title, path: `/insights/${a.slug}/` }]),
+];
+---
+
+<Base title={a.metaTitle || a.title} description={a.description} schema={schema}>
+  <article class="page-hero">
+    <div class="wrap doc article">
+      <a class="back" href="/insights/">All insights</a>
+      <span class="eyebrow">{a.category}</span>
+      <h1>{a.title}</h1>
+      <p class="article-meta">By {a.author} <span>Published {longDate(a.date)}</span>{a.updated && a.updated !== a.date && <span>Updated {longDate(a.updated)}</span>}</p>
+      <div class="article-answer">
+        <strong>The short answer</strong>
+        <p>{a.answer}</p>
+      </div>
+      {
+        a.sections.map((s) => (
+          <section class="doc-section">
+            <h2>{s.heading}</h2>
+            {paras(s.text).map((p) => <p>{p}</p>)}
+            {s.bullets && s.bullets.length > 0 && <ul class="article-list">{s.bullets.map((b) => <li>{b}</li>)}</ul>}
+          </section>
+        ))
+      }
+      {
+        a.faqs && a.faqs.length > 0 && (
+          <section class="doc-section">
+            <h2>Common questions</h2>
+            <div class="faq">{a.faqs.map((f) => <details><summary>{f.question}</summary><p>{f.answer}</p></details>)}</div>
+          </section>
+        )
+      }
+      {
+        linked.length > 0 && (
+          <section class="doc-section">
+            <h2>Related services</h2>
+            <ul class="chips chips-large">{linked.map((e) => <li><a href={`/${e.slug}/`}>{e.title}</a></li>)}</ul>
+          </section>
+        )
+      }
+      {
+        others.length > 0 && (
+          <section class="doc-section">
+            <h2>Keep reading</h2>
+            <ul class="article-more">{others.map((o) => <li><a href={`/insights/${o.slug}/`}>{o.title}</a></li>)}</ul>
+          </section>
+        )
+      }
+    </div>
+  </article>
+  <Closing title="Want this applied to your systems?" text="Tell us what you are building and where it is stuck. A senior engineer replies within 24 hours." />
+</Base>
