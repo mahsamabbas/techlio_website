@@ -90,7 +90,7 @@
     "Four-division brand architecture unified across the site",
     "Click-to-call and quote forms on every service and location page"
   ],
-  "logo": "/clients/carpet-tech.png",
+  "logo": "/clients/carpet-tech.webp",
   "logoWidth": 315,
   "logoHeight": 87,
   "architecture": "The site combines WordPress and React with Node.js services, connected to the Google Ads API and the client's CRM for lead handling. n8n automations and an Apache Airflow, dbt and Snowflake reporting pipeline sit behind the lead system."

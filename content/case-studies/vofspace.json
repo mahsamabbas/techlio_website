@@ -86,7 +86,7 @@
     "Post-session payment delays reduced to near zero",
     "Featured in Woman's World"
   ],
-  "logo": "/clients/vofspace.png",
+  "logo": "/clients/vofspace.webp",
   "logoWidth": 289,
   "logoHeight": 86,
   "architecture": "A React app and Node.js services run on PostgreSQL. WebRTC powers in-browser sessions with no download, and Stripe automates billing after each session."

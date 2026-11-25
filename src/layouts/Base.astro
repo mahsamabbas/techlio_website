@@ -1,5 +1,10 @@
 ---
+import '@fontsource-variable/inter/wght.css';
+import '@fontsource/instrument-serif/400-italic.css';
+import '@fontsource/jetbrains-mono/400.css';
+import '@fontsource/jetbrains-mono/500.css';
 import '../styles/main.css';
+import interFile from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import BookDialog from '../components/BookDialog.astro';
@@ -48,16 +53,8 @@ const org = {
     <meta name="msvalidate.01" content="F59AECB6243A75B7A3137681BAC685A3" />
     <meta name="theme-color" content="#010027" />
     <link rel="icon" href="/favicon.png" type="image/png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Fonts load without holding up the first paint; the page shows in system fonts until they arrive. -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
-      media="print"
-      onload="this.media='all'"
-    />
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" /></noscript>
+    <!-- Fonts are served from this site; the main text font is fetched early so headings paint once. -->
+    <link rel="preload" href={interFile} as="font" type="font/woff2" crossorigin />
     {
       (site.gtmId || site.ga4Id) && (
         <script is:inline define:vars={{ gtmId: site.gtmId || '', ga4Id: site.ga4Id || '' }}>
@@ -80,8 +77,11 @@ const org = {
             if (ga4Id) load('https://www.googletagmanager.com/gtag/js?id=' + ga4Id);
             if (gtmId) load('https://www.googletagmanager.com/gtm.js?id=' + gtmId);
           }
-          if (document.readyState === 'complete') setTimeout(start, 1200);
-          else window.addEventListener('load', function () { setTimeout(start, 1200); });
+          // Wait for the visitor's first action (or 8 seconds) so analytics never competes with the page loading.
+          var started = false, evs = ['pointerdown', 'keydown', 'scroll', 'touchstart', 'mousemove'];
+          function go() { if (started) return; started = true; evs.forEach(function (e) { window.removeEventListener(e, go); }); start(); }
+          evs.forEach(function (e) { window.addEventListener(e, go, { passive: true, once: true }); });
+          window.addEventListener('load', function () { setTimeout(go, 8000); });
         </script>
       )
     }

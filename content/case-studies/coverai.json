@@ -85,7 +85,7 @@
     "AI development",
     "SaaS engineering"
   ],
-  "logo": "/clients/coverai.png",
+  "logo": "/clients/coverai.webp",
   "logoWidth": 269,
   "logoHeight": 80,
   "architecture": "A React front end and Node.js API run on PostgreSQL and AWS. The OpenAI API generates each letter, with prompts that control role, tone and format."

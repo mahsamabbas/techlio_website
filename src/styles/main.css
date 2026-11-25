@@ -4,7 +4,8 @@
    Layout language: soft light ground, white rounded cards, pill buttons, generous spacing. */
 
 /* Fallback faces sized to match the web fonts, so text does not move when they finish loading */
-@font-face { font-family: 'Inter Fallback'; src: local('Arial'); ascent-override: 90.44%; descent-override: 22.52%; line-gap-override: 0%; size-adjust: 107.12%; }
+@font-face { font-family: 'Inter Fallback'; src: local('Arial'); ascent-override: 90.44%; descent-override: 22.52%; line-gap-override: 0%; size-adjust: 107.4%; }
+@font-face { font-family: 'Instrument Serif Fallback'; font-style: italic; src: local('Georgia Italic'), local('Georgia'); size-adjust: 80.5%; }
 :root {
   --bg: #f5f8fc;
   --card: #ffffff;
@@ -25,8 +26,8 @@
   --shadow: 0 1px 2px rgb(3 33 71 / 0.04), 0 12px 32px -12px rgb(3 33 71 / 0.14);
   --shadow-lg: 0 2px 4px rgb(3 33 71 / 0.04), 0 28px 60px -24px rgb(3 33 71 / 0.25);
 
-  --sans: 'Inter', 'Inter Fallback', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --serif: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+  --sans: 'Inter Variable', 'Inter', 'Inter Fallback', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --serif: 'Instrument Serif', 'Instrument Serif Fallback', Georgia, 'Times New Roman', serif;
   --mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
 
   --wrap: 1180px;

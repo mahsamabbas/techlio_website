@@ -92,7 +92,7 @@
     "30% energy savings through smart thermostat control",
     "Three legacy products unified into one platform with zero-downtime migration"
   ],
-  "logo": "/clients/onequext.png",
+  "logo": "/clients/onequext.webp",
   "logoWidth": 169,
   "logoHeight": 86,
   "architecture": "React front ends and Node.js services on AWS, with PostgreSQL as the system of record, form the unified platform, and the device hub speaks Z-Wave to in-unit hardware. Python data services use Apache Airflow and dbt to move operational data into Snowflake for analytics, with Hugging Face models and vector search on Pinecone and Qdrant supporting the platform's AI features."

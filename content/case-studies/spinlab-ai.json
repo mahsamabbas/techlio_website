@@ -88,7 +88,7 @@
     "SaaS engineering",
     "Cloud & DevOps"
   ],
-  "logo": "/clients/spinlab-ai.png",
+  "logo": "/clients/spinlab-ai.webp",
   "logoWidth": 276,
   "logoHeight": 88,
   "architecture": "A React front end and Node.js API sit in front of Python services that run the TensorFlow biomechanics models. MySQL and PostgreSQL hold athlete, video and drill data, and the platform runs on AWS."
