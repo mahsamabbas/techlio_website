@@ -896,3 +896,4 @@ html.dialog-open { overflow: hidden; }
 @media (max-width: 900px) { .arch-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 600px) { .arch-grid { grid-template-columns: 1fr; } }
 .arch-card .tech-badge { justify-self: start; }
+.article-sources a { font-weight: 500; font-size: 0.95rem; }

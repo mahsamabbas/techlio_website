@@ -250,6 +250,7 @@ collections:
             { label: "Question", name: question, widget: string },
             { label: "Answer", name: answer, widget: text } ] }
       - { label: "Related service pages", name: related, widget: list, required: false, field: { label: "Page address", name: item, widget: string }, hint: "For example: ai-agents" }
+      - { label: "Sources", name: sources, widget: list, required: false, summary: "{{fields.title}}", fields: [ { label: "Title", name: title, widget: string }, { label: "Link", name: url, widget: string } ] }
   - name: technologies
     label: Technologies
     label_singular: Technology

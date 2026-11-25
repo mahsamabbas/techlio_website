@@ -46,6 +46,14 @@ const schema = [
         )
       }
       {
+        a.sources && a.sources.length > 0 && (
+          <section class="doc-section">
+            <h2>Sources</h2>
+            <ul class="article-more article-sources">{a.sources.map((x) => <li><a href={x.url} target="_blank" rel="noopener">{x.title}</a></li>)}</ul>
+          </section>
+        )
+      }
+      {
         linked.length > 0 && (
           <section class="doc-section">
             <h2>Related services</h2>
