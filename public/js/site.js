@@ -197,7 +197,8 @@
         if (!r.ok) throw new Error(String(r.status));
         form.reset();
         window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({ event: 'generate_lead', form_name: 'scoping-call', lead_source: data.source || '', lead_interest: data.interest || '' });
+        (function () { window.dataLayer.push(arguments); })('event', 'generate_lead', { form_name: 'scoping-call', lead_source: data.source || '', lead_interest: data.interest || '' });
+        window.dataLayer.push({ event: 'scoping_call_requested', form_name: 'scoping-call', lead_source: data.source || '', lead_interest: data.interest || '' });
         setStatus('Scoping call requested. A senior engineer replies within 24 hours.', 'ok');
       })
       .catch(function () { draftEmail(data); })

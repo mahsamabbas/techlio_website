@@ -54,8 +54,8 @@ const org = {
       rel="stylesheet"
     />
     {
-      site.gtmId && (
-        <script is:inline define:vars={{ gtmId: site.gtmId }}>
+      (site.gtmId || site.ga4Id) && (
+        <script is:inline define:vars={{ gtmId: site.gtmId || '', ga4Id: site.ga4Id || '' }}>
           window.dataLayer = window.dataLayer || [];
           function gtag() { dataLayer.push(arguments); }
           var EU = ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH'];
@@ -67,11 +67,9 @@ const org = {
             if (saved === 'yes') gtag('consent', 'update', { analytics_storage: 'granted' });
             if (saved === 'no') gtag('consent', 'update', { analytics_storage: 'denied' });
           } catch (e) {}
-          (function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-            var f = d.getElementsByTagName(s)[0], j = d.createElement(s);
-            j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i; f.parentNode.insertBefore(j, f);
-          })(window, document, 'script', 'dataLayer', gtmId);
+          function load(src) { var f = document.getElementsByTagName('script')[0], j = document.createElement('script'); j.async = true; j.src = src; f.parentNode.insertBefore(j, f); }
+          if (ga4Id) { gtag('js', new Date()); gtag('config', ga4Id); load('https://www.googletagmanager.com/gtag/js?id=' + ga4Id); }
+          if (gtmId) { dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); load('https://www.googletagmanager.com/gtm.js?id=' + gtmId); }
         </script>
       )
     }
@@ -88,7 +86,7 @@ const org = {
     <Footer />
     {!form && <BookDialog />}
     {
-      site.gtmId && (
+      (site.gtmId || site.ga4Id) && (
         <div class="consent" id="consent" hidden role="region" aria-label="Cookie choice">
           <p>We use analytics cookies to see which pages are useful. No advertising cookies. See our <a href={site.privacyUrl}>privacy policy</a>.</p>
           <div>
