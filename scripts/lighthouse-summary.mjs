@@ -9,7 +9,17 @@ for (const f of readdirSync(dir).filter((x) => x.startsWith('lhr-') && x.endsWit
   for (const k of ['accessibility', 'best-practices', 'seo']) {
     for (const ref of c[k]?.auditRefs || []) {
       const a = r.audits[ref.id];
-      if (a && a.score !== null && a.score < 1 && a.scoreDisplayMode !== 'notApplicable' && a.scoreDisplayMode !== 'manual') console.log(`   FAIL ${k}: ${a.id} - ${a.title}`);
+      if (a && a.score !== null && a.score < 1 && a.scoreDisplayMode !== 'notApplicable' && a.scoreDisplayMode !== 'manual') {
+        console.log(`   FAIL ${k}: ${a.id} - ${a.title}`);
+        for (const it of (a.details?.items || []).slice(0, 12)) console.log(`      > ${(it.node?.snippet || '').slice(0, 110)} | ${(it.node?.explanation || '').replace(/\s+/g, ' ').slice(0, 150)}`);
+      }
     }
+  }
+  const lcp = r.audits['largest-contentful-paint-element']?.details?.items?.[0]?.items?.[0]?.node;
+  if (lcp) console.log(`   LCP element: ${lcp.snippet?.slice(0, 140)}`);
+  for (const it of (r.audits['layout-shifts']?.details?.items || r.audits['layout-shift-elements']?.details?.items || []).slice(0, 4)) console.log(`   SHIFT ${it.score ?? ''}: ${(it.node?.snippet || '').slice(0, 140)}`);
+  for (const id of ['render-blocking-resources', 'unused-javascript', 'font-display', 'unsized-images']) {
+    const a = r.audits[id];
+    if (a && a.score !== null && a.score < 1) console.log(`   PERF ${id}: ${a.displayValue || ''} ${(a.details?.items || []).slice(0, 4).map((i) => i.url || i.node?.snippet || '').join(' , ').slice(0, 260)}`);
   }
 }
