@@ -49,7 +49,7 @@
     },
     {
       "heading": "Website chat assistant",
-      "body": "The chat assistant on this website is an automated AI system. Messages you type into it are sent to Anthropic, our AI provider, to generate a reply, and are handled through our hosting provider, Netlify. We do not use the chat to collect contact details, and the conversation is kept only in your browser for the current visit. Please do not enter sensitive personal information into the chat."
+      "body": "The chat assistant on this website is an automated AI system. Messages you type into it are sent to Anthropic, our AI provider, to generate a reply. A transcript of the conversation is recorded through our hosting provider, Netlify, and emailed to the Techlio team so that we can follow up on enquiries and improve our answers. Please do not enter sensitive personal information into the chat."
     },
     {
       "heading": "Contact us",

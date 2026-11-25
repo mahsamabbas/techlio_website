@@ -13,6 +13,25 @@
   function el(tag, cls, text) { var n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; }
   function save() { try { sessionStorage.setItem(KEY, JSON.stringify(history.slice(-30))); } catch (e) {} }
 
+  // Transcript record: when the visitor leaves the page or hides the tab, the conversation so far is sent to
+  // Techlio as a form submission (Netlify emails it on). Only sent when there is something new since the last send.
+  var META = 'tl-chat-meta', meta = null;
+  try { meta = JSON.parse(sessionStorage.getItem(META) || 'null'); } catch (e) {}
+  if (!meta) meta = { id: Date.now().toString(36) + Math.random().toString(36).slice(2, 7), started: new Date().toISOString(), page: location.pathname, sent: 0 };
+  function saveMeta() { try { sessionStorage.setItem(META, JSON.stringify(meta)); } catch (e) {} }
+  function sendTranscript() {
+    var asked = history.filter(function (m) { return m.role === 'user'; }).length;
+    if (!asked || history.length <= meta.sent || busy) return;
+    var lines = history.map(function (m) { return (m.role === 'user' ? 'VISITOR: ' : 'ASSISTANT: ') + m.content; });
+    var body = new URLSearchParams({ 'form-name': 'chat-transcript', conversation: meta.id, started: meta.started, page: meta.page, 'visitor-messages': String(asked), transcript: lines.join('\n\n').slice(0, 15000) });
+    var ok = false;
+    try { ok = navigator.sendBeacon && navigator.sendBeacon('/chat-form.html', body); } catch (e) {}
+    if (!ok) { try { fetch('/chat-form.html', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body.toString(), keepalive: true }); } catch (e) {} }
+    meta.sent = history.length; saveMeta();
+  }
+  document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'hidden') sendTranscript(); });
+  window.addEventListener('pagehide', sendTranscript);
+
   // Turns the assistant's reply into safe HTML: text is escaped first, then links to this site and bold are allowed.
   function render(text) {
     var esc = text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -60,7 +79,7 @@
     var sendBtn = el('button', null, 'Send'); sendBtn.type = 'submit';
     form.appendChild(input); form.appendChild(sendBtn);
     var foot = el('p', 'chat-foot');
-    foot.innerHTML = 'This is an AI assistant and can be wrong. Please do not share sensitive details. <a href="' + (root.getAttribute('data-privacy') || '/privacy/') + '">Privacy</a> · <a href="/contact/#book">Talk to a person</a>';
+    foot.innerHTML = 'This is an AI assistant and can be wrong. Chats are recorded and read by the Techlio team; please do not share sensitive details. <a href="' + (root.getAttribute('data-privacy') || '/privacy/') + '">Privacy</a> · <a href="/contact/#book">Talk to a person</a>';
     panel.appendChild(head); panel.appendChild(log); panel.appendChild(form); panel.appendChild(foot);
     root.appendChild(panel);
 

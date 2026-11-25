@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="robots" content="noindex"><title>Chat transcript form</title></head>
+<body>
+<!-- This page only exists so Netlify registers the form that receives chat transcripts. Visitors never see it. -->
+<form name="chat-transcript" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input name="bot-field">
+  <input name="conversation">
+  <input name="started">
+  <input name="page">
+  <input name="visitor-messages">
+  <textarea name="transcript"></textarea>
+</form>
+</body>
+</html>
