@@ -1,0 +1,73 @@
+{
+  "slug": "how-to-evaluate-an-ai-development-agency",
+  "title": "How to evaluate an AI development agency: 12 questions to ask",
+  "metaTitle": "How to Evaluate an AI Development Agency: 12 Questions",
+  "description": "Twelve questions that separate AI agencies who ship production systems from those who ship demos, with what a good answer sounds like.",
+  "category": "Guide",
+  "date": "2026-11-25",
+  "updated": "2026-11-25",
+  "author": "Techlio Engineering",
+  "authorRole": "Senior engineers at Techlio",
+  "answer": "Judge an AI development agency on how it proves quality, not on its demo. Ask how they measure answer accuracy, how the system connects to your real data and permissions, what happens when the AI is unsure, who will do the work, and who owns the code. An agency that ships production systems answers these with specifics and examples; one that ships demos answers with enthusiasm.",
+  "sections": [
+    {
+      "heading": "Questions about quality",
+      "text": "These show whether the agency treats AI as engineering.",
+      "bullets": [
+        "How will you measure whether the system's answers are right? A good answer describes an evaluation set built from your own cases and scored on every change.",
+        "What happens when the model is unsure or wrong? Look for confidence thresholds, human review and an audit trail.",
+        "How do you test before each release? Expect automated tests plus evals, not manual spot checks.",
+        "What does it cost to run per month at our volume? They should be able to estimate tokens, infrastructure and support."
+      ]
+    },
+    {
+      "heading": "Questions about your data and systems",
+      "text": "Most AI projects succeed or fail on integration.",
+      "bullets": [
+        "How will it connect to our systems, and whose permissions will it use? The AI should see only what the current user may see.",
+        "Where does our data go, and is it used to train anyone's model? Ask for the provider terms in writing.",
+        "How do you protect against prompt injection and misuse? Expect input screening, limited tool permissions and approval for high-impact actions.",
+        "What do you need from our team, and how much of their time?"
+      ]
+    },
+    {
+      "heading": "Questions about the team and the contract",
+      "text": "These decide what the working relationship is like.",
+      "bullets": [
+        "Who exactly will work on this, and will the people on the sales call stay involved?",
+        "Can we speak to a client whose system has been in production for more than a year?",
+        "Who owns the code, prompts and evaluation data? It should be you, in your repositories.",
+        "How is the work priced, and what happens if a milestone is missed? Milestones tied to acceptance criteria protect both sides."
+      ]
+    },
+    {
+      "heading": "Warning signs",
+      "text": "Be cautious if an agency cannot name a production client, shows only chat demos, has no view on evaluation, promises a fixed accuracy figure before seeing your data, or wants your data sent to accounts you do not control.",
+      "bullets": []
+    },
+    {
+      "heading": "How to run the comparison",
+      "text": "Send the same twelve questions to each agency on your shortlist and compare the written answers side by side. Then ask the strongest two for a short paid discovery or architecture sprint. Two weeks of real work tells you more than any proposal.",
+      "bullets": []
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many agencies should we shortlist?",
+      "answer": "Three to five is enough. More than that and the comparison becomes shallow."
+    },
+    {
+      "question": "Should we choose the cheapest quote?",
+      "answer": "Compare what is included. A low quote that leaves out evaluation, integration and monitoring usually costs more by launch."
+    },
+    {
+      "question": "Is a paid discovery phase worth it?",
+      "answer": "Yes for any project of meaningful size. It gives you an architecture and estimate you own, and shows how the team works before a larger commitment."
+    }
+  ],
+  "related": [
+    "ai-consulting",
+    "ai-architecture-sprint",
+    "ai-agents"
+  ]
+}
