@@ -1,0 +1,77 @@
+{
+  "slug": "triplenerdscore",
+  "order": 19,
+  "name": "Triplenerdscore",
+  "industry": "Digital agency partner",
+  "categories": [
+    "Astro websites",
+    "AEO and SEO"
+  ],
+  "services": [
+    "Web & growth",
+    "AI development"
+  ],
+  "headline": "Astro websites built for search engines and AI answers, delivered as an ongoing engineering partner",
+  "overview": "Triplenerdscore works with Techlio as an ongoing engineering partner for websites built on Astro. Techlio builds and redesigns the sites from supplied designs, and handles the technical SEO and answer engine optimisation (AEO) that makes them easy for Google and AI assistants to read and cite.",
+  "liveUrl": "",
+  "duration": "Ongoing",
+  "team": [],
+  "stack": [
+    "Astro",
+    "TypeScript",
+    "Structured data (schema.org)",
+    "Technical SEO",
+    "AEO"
+  ],
+  "architecture": "Each site is built on Astro, which ships pages as plain HTML with very little JavaScript, so they load quickly and are easy for crawlers to read. Structured data, clean URLs, sitemaps and answer-first content are built in from the start.",
+  "metrics": [
+    {
+      "value": "Astro",
+      "label": "framework for every site"
+    },
+    {
+      "value": "SEO + AEO",
+      "label": "built in from the first release"
+    },
+    {
+      "value": "Weekly",
+      "label": "delivery rhythm"
+    }
+  ],
+  "challenges": [
+    {
+      "title": "Sites that need to be found",
+      "text": "The sites depend on search and, increasingly, on being cited by AI assistants."
+    },
+    {
+      "title": "Designs delivered as files",
+      "text": "Redesigns arrive as finished designs that have to be matched closely in code."
+    }
+  ],
+  "solutions": [
+    {
+      "title": "Astro builds and redesigns",
+      "text": "Sites built and redesigned in Astro from supplied designs, with existing data mapped to the new structure."
+    },
+    {
+      "title": "Technical SEO",
+      "text": "Fast pages, clean URLs, sitemaps, redirects and structured data on every page."
+    },
+    {
+      "title": "Answer engine optimisation",
+      "text": "Answer-first content sections, FAQ markup and crawler rules so AI assistants can read and quote the site."
+    },
+    {
+      "title": "Ongoing delivery",
+      "text": "Work is planned and tracked ticket by ticket, with changes shipped every week."
+    }
+  ],
+  "results": [
+    "Websites delivered on Astro for speed and crawlability",
+    "Technical SEO and AEO foundations on every site",
+    "A continuing weekly engagement"
+  ],
+  "logo": "",
+  "logoWidth": 0,
+  "logoHeight": 0
+}
