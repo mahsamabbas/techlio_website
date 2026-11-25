@@ -1,9 +1,9 @@
 {
   "slug": "n8n",
-  "order": 1,
+  "order": 6,
   "name": "n8n",
   "metaTitle": "n8n Development and Automation Services",
-  "description": "Techlio builds and maintains n8n workflows and AI agents for business automation: bookings, orders, invoices, reporting and internal operations.",
+  "description": "Techlio builds and maintains self-hosted and cloud n8n workflows and AI agents for business automation: bookings, orders, invoicing, CRM syncs, and internal operations.",
   "h1": "n8n workflows and AI agents, *built to keep running.*",
   "answer": "n8n is a workflow automation platform that connects business apps and can run AI agents inside a workflow. Techlio designs, builds and maintains n8n automations for companies that want control over their data, logic and running cost, with error handling, logging and a human approval step for unusual cases.",
   "builds": [
@@ -46,5 +46,7 @@
       "question": "Is n8n right for a small business?",
       "answer": "Often, yes. A few well-built workflows can remove hours of weekly admin. If nobody will maintain it, we will say so and suggest a simpler tool."
     }
-  ]
+  ],
+  "short": "n8n",
+  "category": "Enterprise & Automation"
 }

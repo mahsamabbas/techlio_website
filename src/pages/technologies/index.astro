@@ -2,25 +2,33 @@
 import Base from '../../layouts/Base.astro';
 import Closing from '../../components/Closing.astro';
 import { technologies, breadcrumbSchema } from '../../lib/content.js';
+const order = ['AI & Agents', 'Enterprise & Automation', 'Data & ML', 'SaaS & Web Apps', 'Cybersecurity & Cloud', 'AEO & SEO'];
+const cats = order.filter((c) => technologies.some((t) => t.category === c));
 ---
 
 <Base
-  title="Technologies We Build With: n8n, LangChain, Claude, OpenAI, Python, React, AWS"
-  description="The tools Techlio's engineers use to build AI agents, automations and SaaS products, with real client projects for each."
+  title="Technologies We Build With: Claude, OpenAI, MCP, n8n, Python, React, AWS"
+  description="The technologies Techlio's engineers use to build AI agents, automations, data systems and SaaS products, grouped by category."
   schema={[breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Technologies', path: '/technologies/' }])]}
 >
   <section class="page-hero">
     <div class="wrap">
       <span class="eyebrow">Technologies</span>
       <h1>The tools we build with, <span class="accent">and what we build with them.</span></h1>
-      <p class="lede">We choose the stack for the problem, not the other way round. These are the technologies our engineers use most, each with client work behind it.</p>
-      <div class="insight-list">
+      <p class="lede">We choose the stack for the problem, not the other way round. These are the technologies our engineers work with, grouped by the kind of system they serve.</p>
+      <div class="filters" role="group" aria-label="Filter technologies by category">
+        <button type="button" class="filter" aria-pressed="true" data-filter="all">All</button>
+        {cats.map((c) => <button type="button" class="filter" aria-pressed="false" data-filter={c}>{c}</button>)}
+      </div>
+      <p class="filter-empty" hidden>No technologies in that category yet.</p>
+      <div class="insight-list tech-list">
         {
           technologies.map((t) => (
-            <article class="insight-card">
+            <article class="insight-card filter-item" data-services={t.category}>
+              <p class="tech-badge">{t.category}</p>
               <h2><a href={`/technologies/${t.slug}/`}>{t.name}</a></h2>
               <p>{t.description}</p>
-              <span class="more">How we use {t.name}</span>
+              <span class="more">How we use {t.short || t.name}</span>
             </article>
           ))
         }

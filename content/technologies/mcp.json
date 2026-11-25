@@ -1,0 +1,47 @@
+{
+  "slug": "mcp",
+  "order": 3,
+  "name": "Model Context Protocol (MCP)",
+  "short": "MCP",
+  "category": "AI & Agents",
+  "metaTitle": "MCP Server Development Services",
+  "description": "Techlio architects and builds custom MCP servers that connect LLMs securely to your internal databases, SaaS APIs, CRMs, and proprietary workflows.",
+  "h1": "MCP servers that connect AI *to your own systems.*",
+  "answer": "The Model Context Protocol is an open standard that lets AI models use external tools and data through a common interface. Techlio builds custom MCP servers that expose your databases, APIs and workflows to assistants such as Claude in a controlled way, with authentication, permission checks and logging on every call.",
+  "builds": [
+    {
+      "title": "Custom MCP servers",
+      "text": "Servers that expose the specific actions and data your teams need, with typed inputs and clear descriptions the model can follow."
+    },
+    {
+      "title": "Secure access",
+      "text": "Authentication, per-user permissions and audit logs, so the model can only do what the current user may do."
+    },
+    {
+      "title": "Product integrations",
+      "text": "MCP endpoints for SaaS products, so your customers can use your platform from their own AI assistant."
+    }
+  ],
+  "fits": [
+    "You want an AI assistant to read from or act on internal systems",
+    "Your SaaS customers are asking to use your product from their AI tools",
+    "You need one integration that works across several AI clients"
+  ],
+  "cases": [
+    "convert"
+  ],
+  "services": [
+    "ai-agents",
+    "product-development"
+  ],
+  "faqs": [
+    {
+      "question": "Is MCP only for Claude?",
+      "answer": "No. It is an open standard supported by a growing number of AI clients and developer tools."
+    },
+    {
+      "question": "Is it safe to connect AI to internal systems?",
+      "answer": "It can be, when every tool is permissioned, inputs are validated, high-impact actions need approval and all calls are logged."
+    }
+  ]
+}

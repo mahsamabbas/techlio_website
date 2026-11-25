@@ -263,6 +263,8 @@ collections:
     editor: { preview: false }
     fields:
       - { label: "Technology name", name: name, widget: string }
+      - { label: "Short name", name: short, widget: string, required: false, hint: "Used in sentences, for example: How we use AWS" }
+      - { label: "Category", name: category, widget: select, options: ["AI & Agents", "Enterprise & Automation", "Data & ML", "SaaS & Web Apps", "Cybersecurity & Cloud", "AEO & SEO"] }
       - { label: "Page address", name: slug, widget: string, hint: "Lowercase words joined by hyphens. The URL becomes /technologies/your-address/" }
       - { label: "Order", name: order, widget: number, value_type: int }
       - { label: "Browser title", name: metaTitle, widget: string, required: false }

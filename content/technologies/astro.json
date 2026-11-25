@@ -1,0 +1,44 @@
+{
+  "slug": "astro",
+  "order": 17,
+  "name": "Astro",
+  "short": "Astro",
+  "category": "SaaS & Web Apps",
+  "metaTitle": "Astro Website Development for Speed and SEO",
+  "description": "Techlio engineers ultra-fast, zero-bloat marketing and content platforms with Astro, optimized for Core Web Vitals, technical SEO, and AI search crawlability.",
+  "h1": "Marketing and content sites *that load fast and get found.*",
+  "answer": "Astro is a web framework that ships pages as plain HTML with very little JavaScript, which makes sites fast and easy for search engines and AI crawlers to read. Techlio builds marketing and content platforms on it with an editor for non-technical teams. This website is built on Astro.",
+  "builds": [
+    {
+      "title": "Marketing and content sites",
+      "text": "Fast, accessible sites with structured data and clean URLs."
+    },
+    {
+      "title": "Editor-friendly content",
+      "text": "A content panel where your team edits pages and publishes articles without a developer."
+    },
+    {
+      "title": "SEO and AI search foundations",
+      "text": "Sitemaps, schema markup, llms.txt and crawler rules set up from the start."
+    }
+  ],
+  "fits": [
+    "Search and AI visibility matter to your pipeline",
+    "Your current site is slow or hard to edit",
+    "You want a content site without the upkeep of a heavy CMS"
+  ],
+  "cases": [],
+  "services": [
+    "product-development"
+  ],
+  "faqs": [
+    {
+      "question": "Can non-developers edit an Astro site?",
+      "answer": "Yes. We add a content panel so pages, case studies and articles are edited in forms."
+    },
+    {
+      "question": "Is Astro suitable for a web application?",
+      "answer": "It is best for content-led sites. For application-style products we use React and Next.js."
+    }
+  ]
+}

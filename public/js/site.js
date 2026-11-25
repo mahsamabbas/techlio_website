@@ -78,7 +78,7 @@
   // Case study filters.
   var filters = document.querySelectorAll('.filter');
   if (filters.length) {
-    var items = document.querySelectorAll('.case-item'), empty = document.querySelector('.filter-empty');
+    var items = document.querySelectorAll('.case-item, .filter-item'), empty = document.querySelector('.filter-empty');
     Array.prototype.forEach.call(filters, function (btn) {
       btn.addEventListener('click', function () {
         var f = btn.getAttribute('data-filter'), shown = 0;

@@ -18,3 +18,9 @@ https://techlio.netlify.app/*  https://techlio.co/:splat  301!
 /privacy-policy/                /privacy/                  301
 /terms-of-use/                  /terms/                    301
 /career/                        /careers/                  301
+
+# Technology pages that were renamed
+/technologies/python/            /technologies/python-fastapi/        301
+/technologies/react/             /technologies/react-nextjs/          301
+/technologies/machine-learning/  /technologies/pytorch-scikit-learn/  301
+/technologies/data-engineering/  /technologies/airflow-dbt/           301

@@ -1,0 +1,49 @@
+{
+  "slug": "nodejs-typescript",
+  "order": 15,
+  "name": "Node.js & TypeScript",
+  "short": "Node.js and TypeScript",
+  "category": "SaaS & Web Apps",
+  "metaTitle": "Node.js and TypeScript Back-End Development",
+  "description": "Techlio builds end-to-end type-safe APIs, real-time webhook middleware, and scalable backend services in Node.js and TypeScript.",
+  "h1": "Type-safe back ends *in Node.js and TypeScript.*",
+  "answer": "Node.js runs JavaScript on the server, and TypeScript adds static types that catch errors before release. Techlio uses them to build APIs, real-time services and integration middleware, often sharing types with a React front end so changes stay consistent across the product.",
+  "builds": [
+    {
+      "title": "APIs and services",
+      "text": "REST and GraphQL back ends with validation, authentication and tests."
+    },
+    {
+      "title": "Real-time and webhooks",
+      "text": "Messaging, notifications and webhook handling for products that react to events as they happen."
+    },
+    {
+      "title": "Integrations",
+      "text": "Middleware connecting payment, communication and CRM platforms to your product."
+    }
+  ],
+  "fits": [
+    "Your front end is React and you want one language across the product",
+    "The product is real-time or integration-heavy",
+    "You value type safety across API and client"
+  ],
+  "cases": [
+    "vofspace",
+    "onequext",
+    "coverai"
+  ],
+  "services": [
+    "product-development",
+    "legacy-modernization"
+  ],
+  "faqs": [
+    {
+      "question": "Node.js or Python for the back end?",
+      "answer": "Node for real-time and integration-heavy products; Python where AI and data work dominate. Many systems use both."
+    },
+    {
+      "question": "Which frameworks do you use?",
+      "answer": "Commonly NestJS and Express, chosen to fit the product and your team."
+    }
+  ]
+}

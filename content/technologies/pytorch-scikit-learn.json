@@ -1,0 +1,46 @@
+{
+  "slug": "pytorch-scikit-learn",
+  "order": 7,
+  "name": "PyTorch & Scikit-learn",
+  "metaTitle": "PyTorch and Scikit-learn Machine Learning Development",
+  "description": "Techlio develops and deploys custom machine learning models for forecasting, classification, anomaly detection, and computer vision backed by reproducible training pipelines.",
+  "h1": "Custom machine learning models, *from training to production.*",
+  "answer": "PyTorch and Scikit-learn are the standard Python libraries for building machine learning models: PyTorch for deep learning and computer vision, Scikit-learn for classical prediction and classification. Techlio uses them to build custom models when a general language model is not the right tool, with reproducible training, held-out evaluation and monitored serving.",
+  "builds": [
+    {
+      "title": "Forecasting and scoring",
+      "text": "Models trained on your data for demand forecasting, lead and risk scoring, and routing."
+    },
+    {
+      "title": "Computer vision",
+      "text": "Models that analyse images and video, served through an application people can use."
+    },
+    {
+      "title": "Anomaly detection",
+      "text": "Detection of unusual transactions, readings or behaviour, with thresholds your team controls."
+    }
+  ],
+  "fits": [
+    "You have historical data and a decision that is made repeatedly",
+    "A general language model alone does not solve the problem",
+    "You need the model running in production, not only in a notebook"
+  ],
+  "cases": [],
+  "services": [
+    "ai-agents",
+    "ai-consulting",
+    "product-development"
+  ],
+  "faqs": [
+    {
+      "question": "Do we need a custom model?",
+      "answer": "Often not. A current language model with good retrieval solves many problems. We recommend custom training only when it clearly performs better or costs less."
+    },
+    {
+      "question": "How do you know the model is good?",
+      "answer": "Against a held-out test set and agreed metrics before launch, and by monitoring in production afterwards."
+    }
+  ],
+  "short": "PyTorch and Scikit-learn",
+  "category": "Data & ML"
+}

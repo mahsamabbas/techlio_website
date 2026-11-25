@@ -1,9 +1,9 @@
 {
   "slug": "langchain",
-  "order": 2,
-  "name": "LangChain",
+  "order": 4,
+  "name": "LangChain & LangGraph",
   "metaTitle": "LangChain and LangGraph Development Services",
-  "description": "Techlio builds production AI agents and retrieval systems with LangChain and LangGraph, with evaluation, guardrails and tracing built in.",
+  "description": "Techlio builds stateful, multi-agent AI workflows and retrieval systems with LangChain and LangGraph, with human-in-the-loop approvals, guardrails, and LangSmith tracing built in.",
   "h1": "LangChain agents and RAG systems *that hold up in production.*",
   "answer": "LangChain is an open-source framework for building applications on language models, and LangGraph extends it for multi-step agents with state. Techlio uses them to build retrieval systems and agents that are evaluated against real cases, traced end to end, and limited to approved tools.",
   "builds": [
@@ -45,5 +45,7 @@
       "question": "Which vector stores do you use?",
       "answer": "Commonly pgvector, because it keeps vectors beside your existing Postgres data. We use others when scale or features call for it."
     }
-  ]
+  ],
+  "short": "LangChain",
+  "category": "AI & Agents"
 }

@@ -21,23 +21,23 @@ const schema = [
 ---
 
 <Base title={t.metaTitle || t.name} description={t.description} schema={schema}>
-  <PageHero back={{ href: '/technologies/', label: 'All technologies' }} title={t.h1} intro={t.description} secondary={{ href: '/case-studies/', label: 'See shipped work' }} />
+  <PageHero kicker={t.category} back={{ href: '/technologies/', label: 'All technologies' }} title={t.h1} intro={t.description} secondary={{ href: '/case-studies/', label: 'See shipped work' }} />
   <section class="answer-band">
     <div class="wrap"><div class="article-answer"><strong>In short</strong><p>{t.answer}</p></div></div>
   </section>
-  <Section eyebrow="What we build" title={`What we build with *${t.name}*`}>
+  <Section eyebrow="What we build" title={`What we build with *${t.short || t.name}*`}>
     <Blocks items={t.builds} />
   </Section>
   {
     t.fits && t.fits.length > 0 && (
-      <Section tint title={`When ${t.name} is *the right choice*`}>
+      <Section tint title={`When ${t.short || t.name} is *the right choice*`}>
         <ul class="ticks ticks-grid">{t.fits.map((x) => <li>{x}</li>)}</ul>
       </Section>
     )
   }
   {
     shown.length > 0 && (
-      <Section eyebrow="Client work" title={`Projects built with *${t.name}*`}>
+      <Section eyebrow="Client work" title={`Projects built with *${t.short || t.name}*`}>
         <CaseCards slugs={shown.map((c) => c.slug)} />
       </Section>
     )
@@ -56,5 +56,5 @@ const schema = [
       </Section>
     )
   }
-  <Closing title={`Planning something with ${t.name}?`} text="Tell us what you are building. A senior engineer replies within 24 hours." />
+  <Closing title={`Planning something with ${t.short || t.name}?`} text="Tell us what you are building. A senior engineer replies within 24 hours." />
 </Base>

@@ -1,0 +1,45 @@
+{
+  "slug": "ai-guardrails",
+  "order": 21,
+  "name": "NeMo Guardrails & Presidio",
+  "short": "NeMo Guardrails and Presidio",
+  "category": "Cybersecurity & Cloud",
+  "metaTitle": "AI Guardrails and PII Redaction: NeMo Guardrails and Presidio",
+  "description": "Techlio adds input and output guardrails and automatic redaction of personal data to AI systems, so sensitive information stays protected and responses stay within policy.",
+  "h1": "Guardrails and data redaction *for AI in production.*",
+  "answer": "NeMo Guardrails is an open-source toolkit for controlling what an AI system will accept and say, and Presidio is an open-source tool for detecting and redacting personal data. Techlio uses them to screen inputs, constrain outputs and remove sensitive data before it reaches a model or a log.",
+  "builds": [
+    {
+      "title": "Input and output guardrails",
+      "text": "Rules that block prompt injection attempts, off-topic requests and responses outside policy."
+    },
+    {
+      "title": "PII detection and redaction",
+      "text": "Personal data masked before prompts are sent to a model and before anything is logged."
+    },
+    {
+      "title": "Testing",
+      "text": "Adversarial test suites that show the guardrails hold before release."
+    }
+  ],
+  "fits": [
+    "Your AI system handles personal or regulated data",
+    "A security team needs evidence of controls",
+    "The assistant is exposed to the public or to customers"
+  ],
+  "cases": [],
+  "services": [
+    "cybersecurity",
+    "ai-agents"
+  ],
+  "faqs": [
+    {
+      "question": "Do guardrails stop every attack?",
+      "answer": "No single control does. We combine guardrails with limited tool permissions, human approval and monitoring."
+    },
+    {
+      "question": "Does redaction reduce answer quality?",
+      "answer": "Sometimes slightly. We tune what is masked so the model keeps the context it needs."
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "slug": "vector-databases",
+  "order": 10,
+  "name": "Qdrant & Pinecone",
+  "short": "Qdrant and Pinecone",
+  "category": "Data & ML",
+  "metaTitle": "Vector Database Development: Qdrant and Pinecone",
+  "description": "Techlio designs low-latency vector indexing, metadata filtering, and hybrid search architectures on Qdrant and Pinecone for high-scale knowledge retrieval.",
+  "h1": "Vector search *built for scale and speed.*",
+  "answer": "Qdrant and Pinecone are dedicated vector databases built for fast similarity search across very large collections. Techlio designs retrieval architectures on them when volume, latency or filtering needs go beyond what a general database handles comfortably.",
+  "builds": [
+    {
+      "title": "High-scale retrieval",
+      "text": "Indexes sized and tuned for large collections with low response times."
+    },
+    {
+      "title": "Filtering and hybrid search",
+      "text": "Metadata filters and combined keyword and semantic search, so results are both relevant and permitted."
+    },
+    {
+      "title": "Ingestion pipelines",
+      "text": "Chunking, embedding and re-indexing jobs that keep the index current."
+    }
+  ],
+  "fits": [
+    "You are searching very large document or record collections",
+    "Response time targets are tight",
+    "You need advanced filtering or multi-region serving"
+  ],
+  "cases": [],
+  "services": [
+    "ai-agents",
+    "cloud-devops"
+  ],
+  "faqs": [
+    {
+      "question": "Qdrant or Pinecone?",
+      "answer": "Qdrant can be self-hosted; Pinecone is fully managed. We choose on data control, scale and budget."
+    },
+    {
+      "question": "Do we need a vector database at all?",
+      "answer": "Not always. For smaller collections pgvector is simpler. We recommend a dedicated store only when it is needed."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "slug": "huggingface",
+  "order": 8,
+  "name": "Hugging Face",
+  "short": "Hugging Face",
+  "category": "Data & ML",
+  "metaTitle": "Hugging Face Model Fine-Tuning and Deployment",
+  "description": "Techlio fine-tunes and deploys open-weights models and custom embedding pipelines inside private cloud environments for teams requiring full model ownership and data privacy.",
+  "h1": "Open models, *running in your own cloud.*",
+  "answer": "Hugging Face is the main hub for open-weights AI models and the libraries used to run and fine-tune them. Techlio uses it to deploy and adapt open models inside a client's own cloud, for teams that need full control over the model and where their data goes.",
+  "builds": [
+    {
+      "title": "Private model deployment",
+      "text": "Open language and embedding models served inside your cloud account, with autoscaling and monitoring."
+    },
+    {
+      "title": "Fine-tuning",
+      "text": "Models adapted to your task and data, evaluated against a base model before anyone commits to them."
+    },
+    {
+      "title": "Embedding pipelines",
+      "text": "Custom embeddings for search and retrieval over your documents."
+    }
+  ],
+  "fits": [
+    "Data cannot leave your environment",
+    "You want to own the model and avoid dependence on one provider",
+    "Volume is high enough that a smaller self-hosted model is cheaper"
+  ],
+  "cases": [],
+  "services": [
+    "ai-agents",
+    "cloud-devops",
+    "cybersecurity"
+  ],
+  "faqs": [
+    {
+      "question": "Are open models as good as commercial ones?",
+      "answer": "For many focused tasks, yes. We test candidates against your eval set and show the difference in quality and cost."
+    },
+    {
+      "question": "What does self-hosting cost?",
+      "answer": "Mainly GPU time and operations. We estimate it for your volume before recommending it."
+    }
+  ]
+}

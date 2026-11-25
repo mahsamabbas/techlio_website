@@ -1,9 +1,9 @@
 {
   "slug": "django",
-  "order": 6,
+  "order": 14,
   "name": "Django",
   "metaTitle": "Django Development Services for SaaS and AI Products",
-  "description": "Techlio builds and modernises web platforms and APIs with Django, including admin tools, multi-tenant SaaS and AI features.",
+  "description": "Techlio builds and modernizes secure web platforms, internal admin portals, and multi-tenant SaaS backends with Django and AI integrations.",
   "h1": "Django platforms and APIs, *ready for AI features.*",
   "answer": "Django is a Python web framework for building secure, data-driven applications quickly. Techlio uses it for SaaS back ends, internal tools and APIs, and for adding AI features to products already built on Python.",
   "builds": [
@@ -43,5 +43,7 @@
       "question": "Does Django scale?",
       "answer": "Yes, with the usual practices: caching, background workers, database tuning and horizontal scaling."
     }
-  ]
+  ],
+  "short": "Django",
+  "category": "SaaS & Web Apps"
 }

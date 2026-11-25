@@ -1,0 +1,46 @@
+{
+  "slug": "airflow-dbt",
+  "order": 11,
+  "name": "Apache Airflow & dbt",
+  "metaTitle": "Apache Airflow and dbt Data Pipeline Development",
+  "description": "Techlio builds automated ETL/ELT data pipelines, warehouse transformations, and data quality checks that keep analytics dashboards and AI models reliable.",
+  "h1": "Data pipelines *that analytics and AI can rely on.*",
+  "answer": "Apache Airflow schedules and monitors data pipelines, and dbt transforms data inside a warehouse with tested, version-controlled SQL. Techlio uses them to build pipelines that bring data together from apps, databases and files, check its quality, and keep dashboards and AI systems supplied with current data.",
+  "builds": [
+    {
+      "title": "ETL and ELT pipelines",
+      "text": "Scheduled and event-driven jobs that collect and load data from your systems."
+    },
+    {
+      "title": "Warehouse transformations",
+      "text": "dbt models with tests and documentation, so every metric has one agreed definition."
+    },
+    {
+      "title": "Data quality checks",
+      "text": "Automated checks and alerts that catch missing or wrong data before it reaches a dashboard or a model."
+    }
+  ],
+  "fits": [
+    "Data lives in several systems that do not agree",
+    "Reports are compiled by hand each week",
+    "An AI project is blocked by data access or quality"
+  ],
+  "cases": [],
+  "services": [
+    "ai-consulting",
+    "cloud-devops",
+    "ai-workflow-automation"
+  ],
+  "faqs": [
+    {
+      "question": "Do we need a data warehouse first?",
+      "answer": "Not necessarily. Many AI systems start with a small, clean set of sources. We build what the use case needs."
+    },
+    {
+      "question": "Can you work with our existing tools?",
+      "answer": "Yes. We build on what you have before suggesting anything new."
+    }
+  ],
+  "short": "Airflow and dbt",
+  "category": "Data & ML"
+}

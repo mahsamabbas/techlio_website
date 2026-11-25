@@ -1,0 +1,46 @@
+{
+  "slug": "react-native",
+  "order": 18,
+  "name": "React Native",
+  "short": "React Native",
+  "category": "SaaS & Web Apps",
+  "metaTitle": "React Native Mobile App Development",
+  "description": "Techlio builds cross-platform iOS and Android mobile applications in React Native that share business logic and real-time AI capabilities with your web platform.",
+  "h1": "One codebase *for iOS and Android.*",
+  "answer": "React Native builds iOS and Android apps from one codebase using React. Techlio uses it to deliver mobile apps that share logic with the web product, including camera, offline and real-time features.",
+  "builds": [
+    {
+      "title": "Cross-platform apps",
+      "text": "iOS and Android apps released together from one codebase."
+    },
+    {
+      "title": "Device features",
+      "text": "Camera, scanning, notifications and offline use built into the app."
+    },
+    {
+      "title": "Shared logic with web",
+      "text": "Business rules and API clients reused between web and mobile."
+    }
+  ],
+  "fits": [
+    "You need both iOS and Android without two teams",
+    "Your web product is already in React",
+    "The app relies on device features such as the camera"
+  ],
+  "cases": [
+    "xo-armor"
+  ],
+  "services": [
+    "product-development"
+  ],
+  "faqs": [
+    {
+      "question": "Is React Native as good as native?",
+      "answer": "For most business apps, users cannot tell the difference. We go native for the few features that need it."
+    },
+    {
+      "question": "Can you publish to the app stores for us?",
+      "answer": "Yes, including store listings, review and release management."
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "slug": "postgresql-rls",
+  "order": 20,
+  "name": "PostgreSQL Row-Level Security (RLS)",
+  "short": "PostgreSQL RLS",
+  "category": "Cybersecurity & Cloud",
+  "metaTitle": "PostgreSQL Row-Level Security for Multi-Tenant SaaS",
+  "description": "Techlio implements database-enforced tenant isolation using PostgreSQL RLS to prevent cross-customer data leakage across multi-tenant SaaS and RAG applications.",
+  "h1": "Tenant isolation *enforced by the database.*",
+  "answer": "Row-Level Security is a PostgreSQL feature that makes the database itself decide which rows each user or tenant can see. Techlio uses it in multi-tenant SaaS and RAG systems so that a bug in application code cannot expose one customer's data to another.",
+  "builds": [
+    {
+      "title": "Tenant isolation",
+      "text": "Policies that restrict every query to the current tenant, tested with automated checks."
+    },
+    {
+      "title": "Secure RAG retrieval",
+      "text": "Vector and keyword search that returns only documents the current user may read."
+    },
+    {
+      "title": "Audits and retrofits",
+      "text": "Review of an existing schema and staged introduction of policies without downtime."
+    }
+  ],
+  "fits": [
+    "Several customers share one database",
+    "AI retrieval must respect document permissions",
+    "A security review asks how isolation is guaranteed"
+  ],
+  "cases": [],
+  "services": [
+    "cybersecurity",
+    "product-development"
+  ],
+  "faqs": [
+    {
+      "question": "Does RLS slow the database down?",
+      "answer": "With sensible indexes the cost is small. We measure it on your workload."
+    },
+    {
+      "question": "Can RLS be added to an existing product?",
+      "answer": "Yes, table by table, with tests proving each policy before it is enforced."
+    }
+  ]
+}

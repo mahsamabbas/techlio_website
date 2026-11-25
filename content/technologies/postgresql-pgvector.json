@@ -1,0 +1,47 @@
+{
+  "slug": "postgresql-pgvector",
+  "order": 9,
+  "name": "PostgreSQL & pgvector",
+  "short": "PostgreSQL and pgvector",
+  "category": "Data & ML",
+  "metaTitle": "PostgreSQL and pgvector Development for RAG and SaaS",
+  "description": "Techlio architects multi-tenant relational databases and hybrid semantic-keyword RAG retrieval stores on PostgreSQL and pgvector with strict Row-Level Security.",
+  "h1": "One database for your data *and your AI retrieval.*",
+  "answer": "PostgreSQL is a widely used open-source relational database, and pgvector is an extension that adds vector search to it. Techlio uses the pair to keep application data and AI retrieval in one place, so permissions, backups and queries work the same way for both.",
+  "builds": [
+    {
+      "title": "Retrieval stores for RAG",
+      "text": "Hybrid keyword and semantic search over your documents, with filters and re-ranking."
+    },
+    {
+      "title": "Multi-tenant schemas",
+      "text": "Data models for SaaS products where each customer's data is isolated at the database level."
+    },
+    {
+      "title": "Performance and migration",
+      "text": "Indexing, query tuning and staged migrations from other databases."
+    }
+  ],
+  "fits": [
+    "You already run Postgres and want AI retrieval without a second system",
+    "Retrieved results must respect per-user or per-tenant permissions",
+    "Your document volume is in the range one well-tuned database handles"
+  ],
+  "cases": [
+    "ordaos"
+  ],
+  "services": [
+    "ai-agents",
+    "product-development"
+  ],
+  "faqs": [
+    {
+      "question": "When should we use a dedicated vector database instead?",
+      "answer": "At very large scale or when you need features pgvector lacks. We size it for your data before deciding."
+    },
+    {
+      "question": "Can pgvector combine keyword and semantic search?",
+      "answer": "Yes. Hybrid search usually gives better retrieval than either alone."
+    }
+  ]
+}

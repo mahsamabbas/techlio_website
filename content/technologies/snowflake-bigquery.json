@@ -1,0 +1,45 @@
+{
+  "slug": "snowflake-bigquery",
+  "order": 12,
+  "name": "Snowflake & BigQuery",
+  "short": "Snowflake and BigQuery",
+  "category": "Data & ML",
+  "metaTitle": "Snowflake and BigQuery Data Warehouse Services",
+  "description": "Techlio models and optimizes cloud data warehouses on Snowflake and BigQuery to unify operational data for executive BI and machine learning workloads.",
+  "h1": "A data warehouse *your whole company can trust.*",
+  "answer": "Snowflake and BigQuery are cloud data warehouses that store and query large volumes of business data. Techlio designs the data models, loads and cost controls on them, so reporting and machine learning draw on one consistent source.",
+  "builds": [
+    {
+      "title": "Warehouse modelling",
+      "text": "Clear, documented data models that match how the business measures itself."
+    },
+    {
+      "title": "Cost and performance tuning",
+      "text": "Partitioning, clustering and query review to keep spend predictable."
+    },
+    {
+      "title": "BI and ML readiness",
+      "text": "Clean tables for dashboards and feature tables for models."
+    }
+  ],
+  "fits": [
+    "Operational data is spread across many tools",
+    "Leadership needs one set of numbers",
+    "Query cost or speed has become a problem"
+  ],
+  "cases": [],
+  "services": [
+    "ai-consulting",
+    "cloud-devops"
+  ],
+  "faqs": [
+    {
+      "question": "Snowflake or BigQuery?",
+      "answer": "Usually whichever fits your existing cloud and team. We compare cost for your workload before recommending one."
+    },
+    {
+      "question": "Can you migrate an existing warehouse?",
+      "answer": "Yes, in stages, with results reconciled against the old system."
+    }
+  ]
+}

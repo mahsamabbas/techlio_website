@@ -1,0 +1,45 @@
+{
+  "slug": "servicenow",
+  "order": 5,
+  "name": "ServiceNow",
+  "short": "ServiceNow",
+  "category": "Enterprise & Automation",
+  "metaTitle": "ServiceNow Development and Integration Services",
+  "description": "Techlio builds and integrates custom ServiceNow workflows, ITSM/CSM modules, and AI-assisted ticketing automations connected to your internal APIs and enterprise data systems.",
+  "h1": "ServiceNow workflows, *connected to the rest of your business.*",
+  "answer": "ServiceNow is an enterprise platform for IT, customer and employee service workflows. Techlio builds custom workflows and integrations on it, and adds AI assistance to ticket handling, so requests are routed, enriched and resolved with less manual work.",
+  "builds": [
+    {
+      "title": "Custom workflows and modules",
+      "text": "ITSM and CSM configurations, catalog items and approval flows shaped to how your teams work."
+    },
+    {
+      "title": "Integrations",
+      "text": "Connections between ServiceNow and internal APIs, CRMs and data systems, so tickets carry the context needed to resolve them."
+    },
+    {
+      "title": "AI-assisted ticketing",
+      "text": "Classification, summarisation and suggested resolutions for incoming tickets, with a person approving the outcome."
+    }
+  ],
+  "fits": [
+    "ServiceNow is already your system of record for service work",
+    "Tickets need data from other systems to be resolved",
+    "You want AI to reduce handling time without removing human control"
+  ],
+  "cases": [],
+  "services": [
+    "ai-workflow-automation",
+    "ai-agents"
+  ],
+  "faqs": [
+    {
+      "question": "Do you replace our ServiceNow partner?",
+      "answer": "Not necessarily. We often work alongside an existing administrator or partner on custom integrations and AI features."
+    },
+    {
+      "question": "Can AI resolve tickets automatically?",
+      "answer": "Routine ones, within rules you set. Anything unusual goes to a person with the context already gathered."
+    }
+  ]
+}

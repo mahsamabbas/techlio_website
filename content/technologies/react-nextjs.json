@@ -1,11 +1,11 @@
 {
-  "slug": "react",
-  "order": 7,
-  "name": "React",
-  "metaTitle": "React Development Services for SaaS and AI Products",
-  "description": "Techlio builds web and mobile front ends in React and React Native for SaaS platforms, dashboards and AI products.",
-  "h1": "React front ends *for products people use every day.*",
-  "answer": "React is the most widely used library for building web interfaces, and React Native extends it to mobile apps. Techlio uses both to build SaaS products, dashboards and AI interfaces, with design, accessibility and performance handled by the same team.",
+  "slug": "react-nextjs",
+  "order": 16,
+  "name": "React & Next.js",
+  "metaTitle": "React and Next.js Development for SaaS and AI Products",
+  "description": "Techlio builds fast, server-rendered SaaS applications, complex analytics dashboards, and interactive AI interfaces in React and Next.js.",
+  "h1": "React and Next.js front ends *for products people use every day.*",
+  "answer": "React is the most widely used library for building web interfaces, and Next.js adds server rendering and routing for fast, search-friendly applications. Techlio uses them to build SaaS products, dashboards and AI interfaces, with design, accessibility and performance handled by the same team.",
   "builds": [
     {
       "title": "SaaS web applications",
@@ -16,8 +16,8 @@
       "text": "Clear, fast interfaces over operational and AI data."
     },
     {
-      "title": "Mobile and desktop apps",
-      "text": "React Native and Electron apps that share logic with the web product."
+      "title": "AI interfaces",
+      "text": "Chat, review and approval screens with streaming responses and source citations."
     }
   ],
   "fits": [
@@ -47,5 +47,7 @@
       "question": "Do you use TypeScript?",
       "answer": "By default, for safer changes and easier hand-over."
     }
-  ]
+  ],
+  "short": "React and Next.js",
+  "category": "SaaS & Web Apps"
 }

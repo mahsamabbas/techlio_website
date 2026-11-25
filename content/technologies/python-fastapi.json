@@ -1,11 +1,11 @@
 {
-  "slug": "python",
-  "order": 5,
-  "name": "Python",
-  "metaTitle": "Python Development for AI and Data Systems",
-  "description": "Techlio builds AI back ends, data pipelines and automation in Python, from model serving and retrieval to scheduled data jobs.",
-  "h1": "Python for AI back ends, *data pipelines and automation.*",
-  "answer": "Python is the main language of AI and data work. Techlio uses it to build the back ends behind AI features, the pipelines that prepare data, and the automation that connects systems, written to be tested, deployed and maintained like any other production software.",
+  "slug": "python-fastapi",
+  "order": 13,
+  "name": "Python & FastAPI",
+  "metaTitle": "Python and FastAPI Development for AI Back Ends",
+  "description": "Techlio builds high-concurrency AI backends, async microservices, model-serving APIs, and automated data workers in Python and FastAPI.",
+  "h1": "Python and FastAPI *for AI back ends and APIs.*",
+  "answer": "Python is the main language of AI and data work, and FastAPI is a modern framework for building fast, typed APIs in it. Techlio uses them to build the services behind AI features: retrieval, model calls, evaluation and background jobs, written to be tested, deployed and maintained like any other production software.",
   "builds": [
     {
       "title": "AI back ends and APIs",
@@ -47,5 +47,7 @@
       "question": "Can you work in our existing codebase?",
       "answer": "Yes. We follow your conventions and review process."
     }
-  ]
+  ],
+  "short": "Python and FastAPI",
+  "category": "SaaS & Web Apps"
 }

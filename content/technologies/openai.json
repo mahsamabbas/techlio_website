@@ -1,9 +1,9 @@
 {
   "slug": "openai",
-  "order": 4,
+  "order": 2,
   "name": "OpenAI",
   "metaTitle": "OpenAI API Integration and Development Services",
-  "description": "Techlio builds products and automations on the OpenAI API: generative features, assistants, document processing and AI agents.",
+  "description": "Techlio builds multimodal AI features, voice agents, structured extraction pipelines, and custom assistants on the OpenAI API with strict evaluation and cost controls.",
   "h1": "OpenAI models, *engineered into products people use.*",
   "answer": "OpenAI provides language, vision and speech models through an API. Techlio builds products and automations on them, from generative features inside a SaaS product to agents that process requests, with evaluation, cost tracking and safeguards around every call.",
   "builds": [
@@ -47,5 +47,7 @@
       "question": "Can it work with our private data?",
       "answer": "Yes, through retrieval and permissioned tools, so the model sees only what the current user is allowed to see."
     }
-  ]
+  ],
+  "short": "OpenAI",
+  "category": "AI & Agents"
 }
