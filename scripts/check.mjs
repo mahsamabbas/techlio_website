@@ -17,7 +17,7 @@ async function walk(dir) {
   return out;
 }
 
-const files = (await walk(dist)).filter((f) => !f.includes(`${path.sep}admin${path.sep}`));
+const files = (await walk(dist)).filter((f) => !f.includes(`${path.sep}admin${path.sep}`) && !f.endsWith("chat-form.html")); // chat-form.html is a hidden form holder, not a page
 const html = Object.fromEntries(await Promise.all(files.map(async (f) => [f, await readFile(f, 'utf8')])));
 const ids = (doc) => new Set([...doc.matchAll(/\sid="([^"]+)"/g)].map((m) => m[1]));
 const errors = [];
