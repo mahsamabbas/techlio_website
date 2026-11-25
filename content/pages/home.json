@@ -8,7 +8,7 @@
   "heroFlowNote": "Illustrative examples. We build each agent around your own systems and rules.",
   "heroFlow": [
     {
-      "tab": "Customer support",
+      "tab": "Support",
       "request": "A customer emails: “Where is my refund?”",
       "work": "The agent reads the order and your refund policy.",
       "sources": [
