@@ -86,3 +86,37 @@ const escapeHtml = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;')
 export const fmt = (s = '') => escapeHtml(s).replace(/\*([^*]+)\*/g, '<span class="accent">$1</span>');
 export const plain = (s = '') => String(s).replace(/\*/g, '');
 export const initials = (name = '') => name.replace(/[^A-Za-z0-9 ]/g, '').split(/\s+/).filter(Boolean).slice(0, 2).map((w) => w[0].toUpperCase()).join('');
+
+/** Links a case study's stack item to its technology page, when one exists. Matches only on what the case study lists. */
+const techRules = [
+  [/react native/i, 'react-native'],
+  [/claude/i, 'claude'],
+  [/openai/i, 'openai'],
+  [/\bmcp\b/i, 'mcp'],
+  [/langchain|langgraph/i, 'langchain'],
+  [/n8n/i, 'n8n'],
+  [/pgvector|postgres/i, 'postgresql-pgvector'],
+  [/django/i, 'django'],
+  [/python|fastapi/i, 'python-fastapi'],
+  [/node\.?js|nestjs|typescript/i, 'nodejs-typescript'],
+  [/\breact\b|next\.?js/i, 'react-nextjs'],
+  [/\baws\b/i, 'aws'],
+  [/pytorch|scikit/i, 'pytorch-scikit-learn'],
+  [/hugging ?face/i, 'huggingface'],
+  [/qdrant|pinecone/i, 'vector-databases'],
+  [/airflow|\bdbt\b/i, 'airflow-dbt'],
+  [/snowflake|bigquery/i, 'snowflake-bigquery'],
+  [/servicenow/i, 'servicenow'],
+  [/astro\b/i, 'astro'],
+];
+export const techFor = (item = '') => {
+  const rule = techRules.find(([re]) => re.test(item));
+  const slug = rule && rule[1];
+  return slug && technologies.some((t) => t.slug === slug) ? slug : null;
+};
+/** Case studies whose listed stack includes the technology, after any chosen by hand. */
+export const casesForTech = (t) => {
+  const chosen = t.cases || [];
+  const found = cases.filter((cs) => !chosen.includes(cs.slug) && (cs.stack || []).some((s) => techFor(s) === t.slug)).map((cs) => cs.slug);
+  return [...chosen, ...found];
+};

@@ -880,3 +880,6 @@ html.dialog-open { overflow: hidden; }
 .tech-list .insight-card[data-services='SaaS & Web Apps'] { border-top-color: #19a9e6; }
 .tech-list .insight-card[data-services='Cybersecurity & Cloud'] { border-top-color: #0f52a3; }
 .tech-list .insight-card[data-services='AEO & SEO'] { border-top-color: #12a150; }
+
+.stack-chips a { color: var(--blue); text-decoration: none; font-weight: 600; }
+.stack-chips a:hover { text-decoration: underline; }
