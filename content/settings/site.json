@@ -17,7 +17,7 @@
   "x": "https://x.com/techlio",
   "clutch": "https://clutch.co/profile/techlio-1",
   "google": "https://share.google/g0D88ZU4SI7k8MEe5",
-  "clutchLogo": "",
+  "clutchLogo": "/uploads/clutch.png",
   "googleLogo": "",
   "linkedinLogo": "",
   "termsUrl": "/terms/",
@@ -29,6 +29,7 @@
   "ctaLabel": "Book a technical scoping call",
   "navCtaLabel": "Book a scoping call",
   "responsePromise": "We reply within 24 hours. A mutual NDA is available before the first call.",
+  "clientsLabel": "Trusted by product and engineering teams at",
   "heroProof": [
     "100M+ users reached",
     "98% client retention",
@@ -125,6 +126,5 @@
     }
   ],
   "formEmail": "mahsam@techlio.co",
-  "formEndpoint": "",
-  "clientsLabel": "Trusted by product and engineering teams at"
+  "formEndpoint": ""
 }
