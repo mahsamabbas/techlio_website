@@ -8,7 +8,7 @@
   --card: #ffffff;
   --ink: #0b0d24;
   --body: #4d5670;
-  --muted: #6b7491;
+  --muted: #5b6482;
   --line: #e2e9f1;
   --blue: #176bce;
   --blue-deep: #0f52a3;
@@ -385,6 +385,8 @@ p { max-width: 64ch; }
 .pipe-outcome.is-review { color: var(--amber); }
 .pipe-outcome.is-blocked { color: var(--red); }
 /* Compact diagram used beside hero text */
+/* Reserve room before the script draws the diagram, so the page below does not jump */
+.pipe[data-compact] { min-height: 52rem; }
 .pipe[data-compact] .pipe-head { padding: 0.8rem 1rem; }
 .pipe[data-compact] .pipe-title { flex: 1 1 100%; }
 .pipe[data-compact] .pipe-stage { padding: 0.9rem 1rem; }

@@ -70,8 +70,15 @@ const org = {
             if (saved === 'no') gtag('consent', 'update', { analytics_storage: 'denied' });
           } catch (e) {}
           function load(src) { var f = document.getElementsByTagName('script')[0], j = document.createElement('script'); j.async = true; j.src = src; f.parentNode.insertBefore(j, f); }
-          if (ga4Id) { gtag('js', new Date()); gtag('config', ga4Id); load('https://www.googletagmanager.com/gtag/js?id=' + ga4Id); }
-          if (gtmId) { dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); load('https://www.googletagmanager.com/gtm.js?id=' + gtmId); }
+          if (ga4Id) { gtag('js', new Date()); gtag('config', ga4Id); }
+          if (gtmId) dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+          // Load the tag scripts once the page itself has finished, so they do not slow the first paint.
+          function start() {
+            if (ga4Id) load('https://www.googletagmanager.com/gtag/js?id=' + ga4Id);
+            if (gtmId) load('https://www.googletagmanager.com/gtm.js?id=' + gtmId);
+          }
+          if (document.readyState === 'complete') setTimeout(start, 1200);
+          else window.addEventListener('load', function () { setTimeout(start, 1200); });
         </script>
       )
     }

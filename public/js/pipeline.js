@@ -149,7 +149,7 @@
       els.dot = dot;
       Object.keys(L.pos).forEach(function (nid) {
         var p = L.pos[nid], n = nodeIndex[nid];
-        var g = svg('g', { class: 'pipe-node', tabindex: 0, role: 'button', 'aria-label': n.label + ': ' + n.sub, transform: 'translate(' + p.x + ' ' + p.y + ')' }, root);
+        var g = svg('g', { class: 'pipe-node', tabindex: 0, role: 'button', 'aria-label': n.label + ' ' + n.sub, transform: 'translate(' + p.x + ' ' + p.y + ')' }, root);
         svg('rect', { width: p.w, height: p.h, rx: 10 }, g);
         svg('rect', { x: 6, y: 10, width: 3, height: p.h - 20, rx: 1.5, class: 'pipe-node-bar' }, g);
         svg('text', { x: 16, y: p.h / 2 - 4, class: 'pipe-node-label' }, g).textContent = n.label;
