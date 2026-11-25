@@ -744,48 +744,58 @@ html.dialog-open { overflow: hidden; }
   .platforms span { display: none; }
 }
 
-/* Hero example: one request through an AI agent */
-.hflow { position: relative; background: var(--card); border: 1px solid var(--line); border-radius: 26px; box-shadow: var(--shadow-lg); overflow: hidden; }
-.hflow::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 4px; background: linear-gradient(90deg, #176bce, #23ebf2); }
-.hflow-head { padding: 1.4rem 1.4rem 1rem; border-bottom: 1px solid var(--line); background: linear-gradient(180deg, #f7fafd, #fff); }
-.hflow-title { font-size: 1.05rem; font-weight: 700; letter-spacing: -0.015em; color: var(--ink); margin-bottom: 0.9rem; }
-.hflow-tabs { display: flex; gap: 0.3rem; padding: 0.3rem; background: #edf3fa; border-radius: 999px; }
-.hflow-tab { position: relative; flex: 1; min-height: 2.5rem; padding: 0.4rem 0.6rem; border: 0; border-radius: 999px; background: transparent; font: 600 0.82rem/1.2 var(--sans); color: var(--body); cursor: pointer; overflow: hidden; transition: background 0.2s, color 0.2s; }
-.hflow-tab:hover { color: var(--ink); }
-.hflow-tab.is-active { background: #fff; color: var(--blue); box-shadow: 0 1px 3px rgb(3 33 71 / 0.14); }
-.hflow-tab::after { content: ''; position: absolute; left: 18%; right: 18%; bottom: 3px; height: 2px; border-radius: 2px; background: var(--grad); transform: scaleX(0); transform-origin: left; }
-.hflow-panels { display: grid; padding: 1.4rem; }
-.hflow-panel { grid-area: 1 / 1; display: grid; gap: 0.2rem; align-content: start; visibility: hidden; opacity: 0; }
-.hflow-panel.is-active { visibility: visible; opacity: 1; }
-.hflow-step { position: relative; display: grid; grid-template-columns: 2.6rem 1fr; gap: 0.9rem; padding-bottom: 1.15rem; }
-.hflow-step:not(:last-child)::after { content: ''; position: absolute; left: 1.3rem; top: 2.6rem; bottom: 0; width: 2px; margin-left: -1px; background: linear-gradient(180deg, #b9d6f3, #dbe8f6); transform-origin: top; }
-.hflow-icon { position: relative; z-index: 1; display: grid; place-items: center; width: 2.6rem; height: 2.6rem; border-radius: 13px; background: var(--tint); border: 1px solid #d3e4f7; color: var(--blue); }
-.hflow-icon svg { width: 1.2rem; height: 1.2rem; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-.hflow-label { display: block; margin-top: 0.15rem; font-size: 0.78rem; font-weight: 600; color: var(--muted); }
-.hflow-step p { font-size: 0.98rem; line-height: 1.4; font-weight: 500; color: var(--ink); }
-.hflow-sources { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.5rem; }
-.hflow-sources li { padding: 0.2rem 0.65rem; border-radius: 999px; background: #f1f6fc; border: 1px solid #dbe8f6; font: 500 0.7rem/1.4 var(--mono); color: var(--blue-deep); }
-.hflow-step.is-auto .hflow-icon { background: #e7f7ee; border-color: #c5ead5; color: var(--green); }
-.hflow-step.is-human .hflow-icon { background: #fff5e0; border-color: #f3dfb0; color: var(--amber); }
-.hflow-step.is-result { padding: 0.9rem; margin: 0 -0.9rem; border-radius: 16px; background: linear-gradient(110deg, #010027, #176bce 85%, #1fa9e0); box-shadow: 0 16px 32px -18px rgb(23 107 206 / 0.75); grid-template-columns: 2.6rem 1fr; }
-.hflow-step.is-result .hflow-icon { background: rgb(255 255 255 / 0.14); border-color: rgb(255 255 255 / 0.28); color: #fff; }
-.hflow-step.is-result .hflow-label { color: rgb(255 255 255 / 0.72); }
-.hflow-step.is-result p { color: #fff; font-weight: 600; }
-.hflow-note { padding: 0.9rem 1.4rem 1.2rem; border-top: 1px solid var(--line); font-size: 0.8rem; line-height: 1.45; color: var(--muted); max-width: none; }
+/* Hero graphic: tools in, AI agent, finished work out */
+.hv { position: relative; margin: 0; padding: 1.5rem; background: var(--card); border: 1px solid var(--line); border-radius: 28px; box-shadow: var(--shadow-lg); }
+.hv::before { content: ''; position: absolute; inset: -12% -8% auto auto; width: 70%; height: 60%; z-index: -1; background: radial-gradient(closest-side, rgb(35 235 242 / 0.22), rgb(23 107 206 / 0.1) 60%, transparent); filter: blur(10px); }
+.hv-title { font-size: 1.15rem; font-weight: 700; letter-spacing: -0.02em; color: var(--ink); text-align: center; margin-bottom: 1.25rem; }
+.hv-flow { display: grid; grid-template-columns: minmax(0, 1fr) clamp(1.5rem, 6%, 2.75rem) auto clamp(1.5rem, 6%, 2.75rem) minmax(0, 1.15fr); align-items: stretch; }
+.hv-col { display: grid; grid-template-rows: repeat(var(--n), 1fr); gap: 0.55rem; }
+.hv-col li { display: flex; align-items: center; min-height: 2.6rem; padding: 0.4rem 0.8rem; border-radius: 12px; background: #f4f8fd; border: 1px solid #dbe8f6; font-size: 0.86rem; font-weight: 600; line-height: 1.2; color: var(--ink); }
+.hv-in li { justify-content: center; text-align: center; }
+.hv-out li { gap: 0.5rem; background: #fff; border-color: #cfe3f8; box-shadow: 0 6px 14px -10px rgb(23 107 206 / 0.5); }
+.hv-out li::before { content: ''; flex: none; width: 1.15rem; height: 1.15rem; border-radius: 50%; background: #e3f6ec url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%2312a150' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4.5 8.3 7 10.8l4.5-5'/%3E%3C/svg%3E") center / 0.8rem no-repeat; }
+.hv-wires { width: 100%; height: 100%; overflow: visible; }
+.hv-wires path { fill: none; stroke: #c3dbf5; stroke-width: 1.5; vector-effect: non-scaling-stroke; }
+.hv-wires .hv-pulse { stroke: #176bce; stroke-width: 2.5; stroke-linecap: round; stroke-dasharray: 14 100; stroke-dashoffset: 14; opacity: 0; }
+.hv-wires .hv-pulse.is-out { stroke: #12a150; }
+.hv-hub { position: relative; display: grid; justify-items: center; align-content: center; gap: 0.15rem; padding: 0 0.35rem; text-align: center; }
+.hv-core { position: relative; display: grid; place-items: center; width: 4.6rem; height: 4.6rem; margin-bottom: 0.6rem; border-radius: 22px; background: linear-gradient(140deg, #010027, #176bce 70%, #23ebf2 150%); box-shadow: 0 18px 36px -14px rgb(23 107 206 / 0.75), 0 0 0 8px rgb(23 107 206 / 0.08), 0 0 0 18px rgb(23 107 206 / 0.04); }
+.hv-core img { display: block; width: 2.4rem; height: 2.4rem; object-fit: contain; filter: brightness(0) invert(1); }
+.hv-hub strong { font-size: 0.98rem; letter-spacing: -0.01em; color: var(--ink); }
+.hv-hub span:last-child { font-size: 0.72rem; color: var(--muted); }
+.hv-legend { display: flex; justify-content: space-between; margin-top: 0.7rem; font: 500 0.66rem/1 var(--mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--blue); }
+.hv-build { position: relative; overflow: hidden; margin-top: 1.25rem; padding: 1rem 1rem 2.6rem; border-radius: 18px; background: linear-gradient(180deg, #f4f8fd, #eef5fc); border: 1px solid #dbe8f6; }
+.hv-build p { font-size: 0.8rem; font-weight: 600; color: var(--muted); margin-bottom: 0.6rem; }
+.hv-build ul { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.hv-build li { padding: 0.35rem 0.8rem; border-radius: 999px; background: #fff; border: 1px solid #d3e4f7; font-size: 0.82rem; font-weight: 600; color: var(--blue-deep); }
+.hv-build svg { position: absolute; inset: auto 0 0 0; width: 100%; height: 2.75rem; }
+.hv-area { fill: rgb(23 107 206 / 0.08); }
+.hv-line { fill: none; stroke: #176bce; stroke-width: 2; vector-effect: non-scaling-stroke; stroke-linejoin: round; stroke-linecap: round; }
+.hv-life { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 0.2rem 0; margin-top: 1rem; padding: 0.75rem 1rem; border-radius: 999px; background: #fff; border: 1px solid var(--line); font: 500 0.72rem/1 var(--mono); letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink); }
+.hv-life li + li::before { content: '\2192'; margin: 0 0.7rem; color: var(--blue); letter-spacing: 0; }
 @media (prefers-reduced-motion: no-preference) {
-  .hero-grid > .hflow { animation: rise 0.9s 0.2s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
-  .hflow.is-live .hflow-panel.is-active .hflow-step { animation: hflow-in 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both; animation-delay: calc(var(--i) * 0.5s); }
-  .hflow.is-live .hflow-panel.is-active .hflow-step:not(:last-child)::after { animation: hflow-line 0.45s ease-out both; animation-delay: calc(var(--i) * 0.5s + 0.3s); }
-  .hflow.is-auto .hflow-tab.is-active::after { animation: hflow-timer var(--hflow-time, 7s) linear both; }
-  .hflow.is-auto.is-paused .hflow-tab.is-active::after { animation-play-state: paused; }
-  @keyframes hflow-in { from { opacity: 0; transform: translateY(10px); } }
-  @keyframes hflow-line { from { transform: scaleY(0); } }
-  @keyframes hflow-timer { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  .hero-grid > .hv { animation: rise 0.9s 0.2s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+  .hv-wires .hv-pulse { animation: hv-pulse 6s linear infinite; animation-delay: calc(var(--i) * 1.5s); }
+  .hv-wires .hv-pulse.is-out { animation-delay: calc(var(--i) * 1.5s + 0.75s); }
+  .hv-out li { animation: hv-done 6s ease-out infinite; animation-delay: calc(var(--i) * 1.5s + 1.4s); }
+  .hv-in li { animation: hv-send 6s ease-out infinite; animation-delay: calc(var(--i) * 1.5s); }
+  .hv-core { animation: hv-breathe 3s ease-in-out infinite; }
+  .hv-line { stroke-dasharray: 600; animation: hv-draw 2.2s 0.6s ease-out both; }
+  @keyframes hv-pulse { 0% { stroke-dashoffset: 14; opacity: 0; } 2% { opacity: 1; } 12% { stroke-dashoffset: -100; opacity: 1; } 13%, 100% { stroke-dashoffset: -100; opacity: 0; } }
+  @keyframes hv-send { 0%, 14%, 100% { border-color: #dbe8f6; background: #f4f8fd; } 3% { border-color: #176bce; background: #e6f0fb; } }
+  @keyframes hv-done { 0%, 22%, 100% { border-color: #cfe3f8; transform: none; } 4% { border-color: #12a150; transform: translateX(3px); } }
+  @keyframes hv-breathe { 50% { box-shadow: 0 18px 36px -14px rgb(23 107 206 / 0.75), 0 0 0 11px rgb(23 107 206 / 0.1), 0 0 0 24px rgb(23 107 206 / 0.05); } }
+  @keyframes hv-draw { from { stroke-dashoffset: 600; } to { stroke-dashoffset: 0; } }
 }
 @media (max-width: 480px) {
-  .hflow-tab { font-size: 0.74rem; padding-inline: 0.3rem; }
-  .hflow-head, .hflow-panels { padding-inline: 1.1rem; }
-  .hflow-note { padding-inline: 1.1rem; }
+  .hv { padding: 1.1rem; }
+  .hv-col li { font-size: 0.76rem; padding: 0.35rem 0.5rem; }
+  .hv-out li::before { width: 1rem; height: 1rem; }
+  .hv-core { width: 3.6rem; height: 3.6rem; border-radius: 18px; }
+  .hv-core img { width: 1.9rem; height: 1.9rem; }
+  .hv-hub strong { font-size: 0.82rem; }
+  .hv-life { letter-spacing: 0.12em; font-size: 0.66rem; }
+  .hv-life li + li::before { margin: 0 0.4rem; }
 }
 
 /* Review profiles, emphasised */

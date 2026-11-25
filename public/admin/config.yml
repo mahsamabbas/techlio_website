@@ -59,16 +59,12 @@ collections:
           - { label: "Hero heading", name: heroTitle, widget: string }
           - { label: "Hero intro", name: heroIntro, widget: text }
           - { label: "Hero second button", name: heroSecondaryLabel, widget: string }
-          - { label: "Hero example heading", name: heroFlowTitle, widget: string }
-          - { label: "Hero example note", name: heroFlowNote, widget: string }
-          - { label: "Hero examples", name: heroFlow, widget: list, summary: "{{fields.tab}}", fields: [
-            { label: "Tab name", name: tab, widget: string },
-            { label: "1. Request", name: request, widget: string },
-            { label: "2. What the agent does", name: work, widget: string },
-            { label: "Systems it uses", name: sources, widget: list, field: { label: "System", name: item, widget: string } },
-            { label: "3. Check", name: check, widget: string },
-            { label: "Check type", name: checkKind, widget: select, options: [ { label: "Automatic", value: auto }, { label: "Person approves", value: human } ] },
-            { label: "4. Result", name: result, widget: string } ] }
+          - { label: "Hero graphic heading", name: heroVisualTitle, widget: string }
+          - { label: "Hero graphic: tools going in", name: heroInputs, widget: list, field: { label: "Tool", name: item, widget: string }, hint: "Four work best" }
+          - { label: "Hero graphic: centre label", name: heroHub, widget: string }
+          - { label: "Hero graphic: finished work", name: heroOutputs, widget: list, field: { label: "Outcome", name: item, widget: string }, hint: "Four work best" }
+          - { label: "Hero graphic: what we build", name: heroProducts, widget: list, field: { label: "Item", name: item, widget: string } }
+          - { label: "Hero graphic: lifecycle", name: heroLifecycle, widget: list, field: { label: "Stage", name: item, widget: string } }
           - { label: "Services heading", name: servicesTitle, widget: string }
           - { label: "Services intro", name: servicesIntro, widget: text }
           - { label: "Offers prompt", name: offersPrompt, widget: string }

@@ -1,0 +1,45 @@
+---
+// Hero graphic: the client's tools flow into an AI agent built by Techlio, and finished work flows out.
+const { title, inputs = [], hub, outputs = [], products = [], lifecycle = [] } = Astro.props;
+const n = Math.max(inputs.length, outputs.length, 1);
+const y = (i, count) => ((i + 0.5) / count) * 100;
+const inPath = (i) => `M0 ${y(i, inputs.length)} C 55 ${y(i, inputs.length)}, 45 50, 100 50`;
+const outPath = (i) => `M0 50 C 55 50, 45 ${y(i, outputs.length)}, 100 ${y(i, outputs.length)}`;
+---
+
+<figure class="hv" style={`--n:${n}`}>
+  <figcaption class="hv-title">{title}</figcaption>
+  <div class="hv-flow">
+    <ul class="hv-col hv-in" aria-label="Your tools">
+      {inputs.map((t, i) => <li style={`--i:${i}`}>{t}</li>)}
+    </ul>
+    <svg class="hv-wires" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+      {inputs.map((_, i) => <path d={inPath(i)} />)}
+      {inputs.map((_, i) => <path class="hv-pulse" pathLength="100" d={inPath(i)} style={`--i:${i}`} />)}
+    </svg>
+    <div class="hv-hub">
+      <span class="hv-core"><img src="/icon.png" alt="" width="40" height="40" /></span>
+      <strong>{hub}</strong>
+      <span>built by Techlio</span>
+    </div>
+    <svg class="hv-wires" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+      {outputs.map((_, i) => <path d={outPath(i)} />)}
+      {outputs.map((_, i) => <path class="hv-pulse is-out" pathLength="100" d={outPath(i)} style={`--i:${i}`} />)}
+    </svg>
+    <ul class="hv-col hv-out" aria-label="Finished work">
+      {outputs.map((t, i) => <li style={`--i:${i}`}>{t}</li>)}
+    </ul>
+  </div>
+  <div class="hv-legend" aria-hidden="true"><span>Your tools</span><span>Finished work</span></div>
+  <div class="hv-build">
+    <p>What we build</p>
+    <ul>{products.map((t) => <li>{t}</li>)}</ul>
+    <svg viewBox="0 0 300 44" preserveAspectRatio="none" aria-hidden="true">
+      <path class="hv-area" d="M0 36 L40 30 L80 33 L120 22 L160 26 L200 14 L240 17 L300 5 L300 44 L0 44 Z" />
+      <path class="hv-line" d="M0 36 L40 30 L80 33 L120 22 L160 26 L200 14 L240 17 L300 5" />
+    </svg>
+  </div>
+  <ol class="hv-life" aria-label="How we work">
+    {lifecycle.map((t) => <li>{t}</li>)}
+  </ol>
+</figure>

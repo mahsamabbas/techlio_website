@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import Section from '../components/Section.astro';
-import HeroFlow from '../components/HeroFlow.astro';
+import HeroVisual from '../components/HeroVisual.astro';
 import Icon from '../components/Icon.astro';
 import StatsBand from '../components/StatsBand.astro';
 import BookingForm from '../components/BookingForm.astro';
@@ -29,7 +29,7 @@ const host = (url) => (url ? new URL(url).hostname : '');
         </div>
         <ul class="proofline">{site.heroProof.map((p) => <li>{p}</li>)}</ul>
       </div>
-      <HeroFlow title={home.heroFlowTitle} note={home.heroFlowNote} items={home.heroFlow} />
+      <HeroVisual title={home.heroVisualTitle} inputs={home.heroInputs} hub={home.heroHub} outputs={home.heroOutputs} products={home.heroProducts} lifecycle={home.heroLifecycle} />
     </div>
   </section>
 
