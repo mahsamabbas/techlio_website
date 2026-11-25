@@ -743,3 +743,47 @@ html.dialog-open { overflow: hidden; }
   .platforms strong { font-size: 1rem; }
   .platforms span { display: none; }
 }
+
+/* Hero example: one request through an AI agent */
+.hflow { position: relative; background: var(--card); border: 1px solid var(--line); border-radius: 26px; box-shadow: var(--shadow-lg); overflow: hidden; }
+.hflow::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 4px; background: linear-gradient(90deg, #176bce, #23ebf2); }
+.hflow-head { padding: 1.4rem 1.4rem 1rem; border-bottom: 1px solid var(--line); background: linear-gradient(180deg, #f7fafd, #fff); }
+.hflow-title { font-size: 1.05rem; font-weight: 700; letter-spacing: -0.015em; color: var(--ink); margin-bottom: 0.9rem; }
+.hflow-tabs { display: flex; gap: 0.3rem; padding: 0.3rem; background: #edf3fa; border-radius: 999px; }
+.hflow-tab { position: relative; flex: 1; min-height: 2.5rem; padding: 0.4rem 0.6rem; border: 0; border-radius: 999px; background: transparent; font: 600 0.82rem/1.2 var(--sans); color: var(--body); cursor: pointer; overflow: hidden; transition: background 0.2s, color 0.2s; }
+.hflow-tab:hover { color: var(--ink); }
+.hflow-tab.is-active { background: #fff; color: var(--blue); box-shadow: 0 1px 3px rgb(3 33 71 / 0.14); }
+.hflow-tab::after { content: ''; position: absolute; left: 18%; right: 18%; bottom: 3px; height: 2px; border-radius: 2px; background: var(--grad); transform: scaleX(0); transform-origin: left; }
+.hflow-panels { display: grid; padding: 1.4rem; }
+.hflow-panel { grid-area: 1 / 1; display: grid; gap: 0.2rem; align-content: start; visibility: hidden; opacity: 0; }
+.hflow-panel.is-active { visibility: visible; opacity: 1; }
+.hflow-step { position: relative; display: grid; grid-template-columns: 2.6rem 1fr; gap: 0.9rem; padding-bottom: 1.15rem; }
+.hflow-step:not(:last-child)::after { content: ''; position: absolute; left: 1.3rem; top: 2.6rem; bottom: 0; width: 2px; margin-left: -1px; background: linear-gradient(180deg, #b9d6f3, #dbe8f6); transform-origin: top; }
+.hflow-icon { position: relative; z-index: 1; display: grid; place-items: center; width: 2.6rem; height: 2.6rem; border-radius: 13px; background: var(--tint); border: 1px solid #d3e4f7; color: var(--blue); }
+.hflow-icon svg { width: 1.2rem; height: 1.2rem; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.hflow-label { display: block; margin-top: 0.15rem; font-size: 0.78rem; font-weight: 600; color: var(--muted); }
+.hflow-step p { font-size: 0.98rem; line-height: 1.4; font-weight: 500; color: var(--ink); }
+.hflow-sources { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.5rem; }
+.hflow-sources li { padding: 0.2rem 0.65rem; border-radius: 999px; background: #f1f6fc; border: 1px solid #dbe8f6; font: 500 0.7rem/1.4 var(--mono); color: var(--blue-deep); }
+.hflow-step.is-auto .hflow-icon { background: #e7f7ee; border-color: #c5ead5; color: var(--green); }
+.hflow-step.is-human .hflow-icon { background: #fff5e0; border-color: #f3dfb0; color: var(--amber); }
+.hflow-step.is-result { padding: 0.9rem; margin: 0 -0.9rem; border-radius: 16px; background: linear-gradient(110deg, #010027, #176bce 85%, #1fa9e0); box-shadow: 0 16px 32px -18px rgb(23 107 206 / 0.75); grid-template-columns: 2.6rem 1fr; }
+.hflow-step.is-result .hflow-icon { background: rgb(255 255 255 / 0.14); border-color: rgb(255 255 255 / 0.28); color: #fff; }
+.hflow-step.is-result .hflow-label { color: rgb(255 255 255 / 0.72); }
+.hflow-step.is-result p { color: #fff; font-weight: 600; }
+.hflow-note { padding: 0.9rem 1.4rem 1.2rem; border-top: 1px solid var(--line); font-size: 0.8rem; line-height: 1.45; color: var(--muted); max-width: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .hero-grid > .hflow { animation: rise 0.9s 0.2s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+  .hflow.is-live .hflow-panel.is-active .hflow-step { animation: hflow-in 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both; animation-delay: calc(var(--i) * 0.5s); }
+  .hflow.is-live .hflow-panel.is-active .hflow-step:not(:last-child)::after { animation: hflow-line 0.45s ease-out both; animation-delay: calc(var(--i) * 0.5s + 0.3s); }
+  .hflow.is-auto .hflow-tab.is-active::after { animation: hflow-timer var(--hflow-time, 7s) linear both; }
+  .hflow.is-auto.is-paused .hflow-tab.is-active::after { animation-play-state: paused; }
+  @keyframes hflow-in { from { opacity: 0; transform: translateY(10px); } }
+  @keyframes hflow-line { from { transform: scaleY(0); } }
+  @keyframes hflow-timer { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+}
+@media (max-width: 480px) {
+  .hflow-tab { font-size: 0.74rem; padding-inline: 0.3rem; }
+  .hflow-head, .hflow-panels { padding-inline: 1.1rem; }
+  .hflow-note { padding-inline: 1.1rem; }
+}

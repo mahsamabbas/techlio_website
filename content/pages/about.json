@@ -43,6 +43,7 @@
   "officesTitle": "Where *we work*",
   "closeTitle": "Meet the engineers who would do the work",
   "closeText": "The scoping call is with a senior engineer who stays on your project.",
+  "showFounder": false,
   "founderQuote": "Anyone can make an AI demo work once. Our job starts after that: making it work on your real data, inside your real systems, every day, *with someone accountable when it does not.*",
   "founderName": "Mahsam Abbas",
   "founderRole": "CEO & Founder",

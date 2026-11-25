@@ -1,0 +1,55 @@
+---
+// Hero visual: one request followed through an AI agent, in four plain steps. Examples come from the home page content.
+const { title, note, items = [] } = Astro.props;
+const icons = {
+  request: 'M4 6h16v12H4zM4 7l8 6 8-6',
+  work: 'M12 3v3M12 18v3M3 12h3M18 12h3M7.5 7.5l1.5 1.5M15 15l1.5 1.5M16.5 7.5 15 9M9 15l-1.5 1.5M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6z',
+  auto: 'M12 3 5 6v6c0 4 3 7 7 9 4-2 7-5 7-9V6zM9 12l2 2 4-4',
+  human: 'M12 4a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zM5 20a7 7 0 0 1 14 0',
+  result: 'M5 12.5l4.5 4.5L19 7.5',
+};
+---
+
+<div class="hflow" data-hero-flow>
+  <div class="hflow-head">
+    <p class="hflow-title">{title}</p>
+    <div class="hflow-tabs" role="tablist" aria-label="Example requests">
+      {
+        items.map((it, i) => (
+          <button class:list={['hflow-tab', { 'is-active': i === 0 }]} type="button" role="tab" id={`hflow-tab-${i}`} aria-selected={i === 0 ? 'true' : 'false'} aria-controls={`hflow-panel-${i}`} tabindex={i === 0 ? 0 : -1}>
+            {it.tab}
+          </button>
+        ))
+      }
+    </div>
+  </div>
+  <div class="hflow-panels">
+    {
+      items.map((it, i) => (
+        <ol class:list={['hflow-panel', { 'is-active': i === 0 }]} id={`hflow-panel-${i}`} role="tabpanel" aria-labelledby={`hflow-tab-${i}`} aria-hidden={i === 0 ? 'false' : 'true'}>
+          <li class="hflow-step" style="--i:0">
+            <span class="hflow-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d={icons.request} /></svg></span>
+            <div><span class="hflow-label">A request comes in</span><p>{it.request}</p></div>
+          </li>
+          <li class="hflow-step" style="--i:1">
+            <span class="hflow-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d={icons.work} /></svg></span>
+            <div>
+              <span class="hflow-label">The agent finds the facts</span>
+              <p>{it.work}</p>
+              <ul class="hflow-sources">{it.sources.map((s) => <li>{s}</li>)}</ul>
+            </div>
+          </li>
+          <li class:list={['hflow-step', it.checkKind === 'human' ? 'is-human' : 'is-auto']} style="--i:2">
+            <span class="hflow-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d={icons[it.checkKind === 'human' ? 'human' : 'auto']} /></svg></span>
+            <div><span class="hflow-label">{it.checkKind === 'human' ? 'A person approves' : 'Safety checks pass'}</span><p>{it.check}</p></div>
+          </li>
+          <li class="hflow-step is-result" style="--i:3">
+            <span class="hflow-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d={icons.result} /></svg></span>
+            <div><span class="hflow-label">The work is done</span><p>{it.result}</p></div>
+          </li>
+        </ol>
+      ))
+    }
+  </div>
+  <p class="hflow-note">{note}</p>
+</div>

@@ -92,6 +92,41 @@
     });
   }
 
+  // Hero example: tabs with a gentle auto-advance that stops as soon as the visitor takes over.
+  var flow = document.querySelector('[data-hero-flow]');
+  if (flow) {
+    var ftabs = flow.querySelectorAll('.hflow-tab'), fpanels = flow.querySelectorAll('.hflow-panel');
+    var current = 0, timer = null, period = 7000, auto = !calm && ftabs.length > 1;
+    function show(n, focus) {
+      current = (n + ftabs.length) % ftabs.length;
+      Array.prototype.forEach.call(ftabs, function (t, i) {
+        var on = i === current;
+        t.classList.toggle('is-active', on); t.setAttribute('aria-selected', String(on)); t.tabIndex = on ? 0 : -1;
+        fpanels[i].classList.toggle('is-active', on); fpanels[i].setAttribute('aria-hidden', String(!on));
+      });
+      if (focus) ftabs[current].focus();
+    }
+    function stop() { auto = false; clearTimeout(timer); flow.classList.remove('is-auto'); }
+    function tick() {
+      clearTimeout(timer);
+      if (!auto) return;
+      timer = setTimeout(function () { if (!flow.classList.contains('is-paused') && !document.hidden) show(current + 1); tick(); }, period);
+    }
+    Array.prototype.forEach.call(ftabs, function (t, i) {
+      t.addEventListener('click', function () { stop(); show(i); });
+      t.addEventListener('keydown', function (ev) {
+        if (ev.key === 'ArrowRight' || ev.key === 'ArrowLeft') { ev.preventDefault(); stop(); show(current + (ev.key === 'ArrowRight' ? 1 : -1), true); }
+      });
+    });
+    flow.addEventListener('mouseenter', function () { flow.classList.add('is-paused'); });
+    flow.addEventListener('mouseleave', function () { flow.classList.remove('is-paused'); });
+    flow.addEventListener('focusin', function () { flow.classList.add('is-paused'); });
+    flow.addEventListener('focusout', function () { flow.classList.remove('is-paused'); });
+    flow.style.setProperty('--hflow-time', period + 'ms');
+    flow.classList.add('is-live');
+    if (auto) { flow.classList.add('is-auto'); tick(); }
+  }
+
   // Booking links: scroll to the form when it is on this page, otherwise open it in a dialog. No page load either way.
   var bookSection = document.getElementById('book');
   var bookDialog = document.getElementById('book-dialog');

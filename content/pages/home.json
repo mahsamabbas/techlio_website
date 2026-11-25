@@ -4,6 +4,46 @@
   "heroTitle": "We build AI agents, automations and software *that run your business.*",
   "heroIntro": "Most AI pilots never reach production. Techlio builds AI agents, n8n and AI automations and SaaS products that do: tested against evals, secured and governed, and run by the senior engineers who scoped them.",
   "heroSecondaryLabel": "See shipped work",
+  "heroFlowTitle": "What an AI agent does for your team",
+  "heroFlowNote": "Illustrative examples. We build each agent around your own systems and rules.",
+  "heroFlow": [
+    {
+      "tab": "Customer support",
+      "request": "A customer emails: “Where is my refund?”",
+      "work": "The agent reads the order and your refund policy.",
+      "sources": [
+        "Order system",
+        "Help centre"
+      ],
+      "check": "Inside policy, so it goes ahead without waiting.",
+      "checkKind": "auto",
+      "result": "Refund issued, customer answered, ticket closed."
+    },
+    {
+      "tab": "Operations",
+      "request": "A supplier invoice arrives as a PDF.",
+      "work": "The agent extracts the totals and matches the purchase order.",
+      "sources": [
+        "Inbox",
+        "Accounting"
+      ],
+      "check": "Totals differ, so a manager approves first.",
+      "checkKind": "human",
+      "result": "Invoice booked and scheduled for payment."
+    },
+    {
+      "tab": "Sales",
+      "request": "A new lead fills in your website form.",
+      "work": "The agent looks up the company and scores the fit.",
+      "sources": [
+        "CRM",
+        "Calendar"
+      ],
+      "check": "Matches your qualification rules.",
+      "checkKind": "auto",
+      "result": "Meeting booked and CRM updated."
+    }
+  ],
   "servicesTitle": "Plan it, build it, secure it, *run it*",
   "servicesIntro": "Four stages of getting AI into production, each available on its own. Start where you are.",
   "offersPrompt": "Prefer a fixed scope and a fixed date?",
