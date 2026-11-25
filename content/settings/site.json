@@ -129,5 +129,5 @@
   "formEndpoint": "",
   "gtmId": "GTM-W7TQJ6LR",
   "ga4Id": "G-JN5S5CYFCC",
-  "chatEnabled": false
+  "chatEnabled": true
 }
