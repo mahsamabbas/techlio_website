@@ -28,6 +28,9 @@ collections:
           - { label: "X URL", name: x, widget: string }
           - { label: "Clutch profile URL", name: clutch, widget: string, required: false }
           - { label: "Google Business Profile URL", name: google, widget: string, required: false }
+          - { label: "Clutch logo", name: clutchLogo, widget: image, required: false, hint: "Official logo file from Clutch. Shown on the review card on the home page." }
+          - { label: "Google logo", name: googleLogo, widget: image, required: false, hint: "Official logo file from Google's brand page." }
+          - { label: "LinkedIn logo", name: linkedinLogo, widget: image, required: false, hint: "Official logo file from LinkedIn's brand page." }
           - { label: "Terms of use URL", name: termsUrl, widget: string }
           - { label: "Privacy policy URL", name: privacyUrl, widget: string }
           - { label: "Careers URL", name: careersUrl, widget: string }
