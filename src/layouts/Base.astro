@@ -15,7 +15,7 @@ const org = {
   '@id': `${site.url}/#organization`,
   name: site.name,
   url: site.url,
-  logo: new URL('/logo.png', site.url).href,
+  logo: new URL('/icon-512.png', site.url).href,
   description: site.tagline,
   ...(site.founded ? { foundingDate: String(site.founded) } : {}),
   areaServed: ['US', 'GB', 'Europe'],

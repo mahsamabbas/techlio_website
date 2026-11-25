@@ -15,6 +15,10 @@ for (const f of readdirSync(dir).filter((x) => x.startsWith('lhr-') && x.endsWit
       }
     }
   }
+  for (const id of ['largest-contentful-paint-element', 'lcp-breakdown-insight', 'layout-shifts', 'cls-culprits-insight', 'render-blocking-resources', 'render-blocking-insight', 'network-dependency-tree-insight', 'server-response-time', 'font-display', 'total-byte-weight']) {
+    const a = r.audits[id];
+    if (a && a.details && /index\.html$/.test(new URL(r.finalDisplayedUrl || r.finalUrl).pathname) && !/\/(ai-agents|insights|technologies|contact)\//.test(r.finalDisplayedUrl || r.finalUrl)) console.log(`   DIAG ${id}: ${a.displayValue || ''} ${JSON.stringify(a.details).replace(/"(boundingRect|lhId|path|nodeLabel)":("[^"]*"|\{[^}]*\}),?/g, '').slice(0, 1400)}`);
+  }
   const lcp = r.audits['largest-contentful-paint-element']?.details?.items?.[0]?.items?.[0]?.node;
   if (lcp) console.log(`   LCP element: ${lcp.snippet?.slice(0, 140)}`);
   for (const it of (r.audits['layout-shifts']?.details?.items || r.audits['layout-shift-elements']?.details?.items || []).slice(0, 4)) console.log(`   SHIFT ${it.score ?? ''}: ${(it.node?.snippet || '').slice(0, 140)}`);
