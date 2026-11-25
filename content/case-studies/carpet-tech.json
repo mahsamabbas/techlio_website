@@ -32,7 +32,8 @@
     "n8n",
     "Apache Airflow",
     "dbt",
-    "Snowflake"
+    "Snowflake",
+    "Apache Airflow / dbt"
   ],
   "metrics": [
     {

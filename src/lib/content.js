@@ -108,6 +108,7 @@ const techRules = [
   [/snowflake|bigquery/i, 'snowflake-bigquery'],
   [/servicenow/i, 'servicenow'],
   [/guardrails|presidio/i, 'ai-guardrails'],
+  [/guardrails|presidio/i, 'ai-guardrails'],
   [/astro\b/i, 'astro'],
 ];
 export const techFor = (item = '') => {
