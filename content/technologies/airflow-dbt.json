@@ -27,6 +27,7 @@
   ],
   "cases": [],
   "services": [
+    "data-engineering",
     "ai-consulting",
     "cloud-devops",
     "ai-workflow-automation"

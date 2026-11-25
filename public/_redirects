@@ -24,3 +24,6 @@ https://techlio.netlify.app/*  https://techlio.co/:splat  301!
 /technologies/react/             /technologies/react-nextjs/          301
 /technologies/machine-learning/  /technologies/pytorch-scikit-learn/  301
 /technologies/data-engineering/  /technologies/airflow-dbt/           301
+
+# Service address used in some briefs
+/services/data-engineering/      /data-engineering/                   301

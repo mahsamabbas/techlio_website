@@ -1,6 +1,6 @@
 {
   "slug": "cloud-devops",
-  "order": 7,
+  "order": 8,
   "title": "Cloud, DevOps & AI Operations",
   "short": "Cloud and AI operations",
   "description": "Cloud architecture, migration, CI/CD and managed AI operations from Techlio: monitoring, evals, cost control and model upgrades on AWS, Azure and Google Cloud.",

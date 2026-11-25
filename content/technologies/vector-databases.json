@@ -29,6 +29,7 @@
   ],
   "cases": [],
   "services": [
+    "data-engineering",
     "ai-agents",
     "cloud-devops"
   ],

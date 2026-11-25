@@ -319,6 +319,11 @@ collections:
       - { label: "Reasons", name: why, widget: list, summary: "{{fields.title}}", fields: [
             { label: "Title", name: title, widget: string },
             { label: "Text", name: text, widget: text } ] }
+      - { label: "Problems heading", name: painsTitle, widget: string, required: false }
+      - { label: "Problems we solve", name: pains, widget: list, required: false, field: { label: "Problem", name: item, widget: string } }
+      - { label: "Show deliverables before the process", name: examplesFirst, widget: boolean, required: false, default: false }
+      - { label: "Tech stack heading", name: techsTitle, widget: string, required: false }
+      - { label: "Tech stack (technology page addresses)", name: techs, widget: list, required: false, field: { label: "Page address", name: item, widget: string }, hint: "For example: airflow-dbt" }
       - { label: "FAQs", name: faqs, widget: list, required: false, summary: "{{fields.question}}", hint: "Shown on the page and marked up for search engines", fields: [ { label: "Question", name: question, widget: string }, { label: "Answer", name: answer, widget: text } ] }
       - { label: "Closing heading", name: closeTitle, widget: string }
       - { label: "Closing text", name: closeText, widget: text }

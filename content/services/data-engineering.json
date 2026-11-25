@@ -1,0 +1,129 @@
+{
+  "slug": "data-engineering",
+  "order": 6,
+  "stage": "Build",
+  "title": "Data Engineering & AI Data Pipelines",
+  "short": "Data engineering and pipelines",
+  "metaTitle": "Data Engineering and AI Data Pipeline Services",
+  "description": "Techlio builds automated ETL/ELT pipelines, cloud data warehouses and vector-ready retrieval stores that keep AI agents, RAG systems and dashboards supplied with clean, governed data.",
+  "h1": "Data engineering and AI data pipelines *built for production.*",
+  "intro": "Most AI pilots stall because company data is scattered across CRMs, ERPs, PDFs and legacy databases. Techlio builds automated ETL/ELT pipelines, cloud data warehouses and vector-ready retrieval stores, tested, monitored and owned by senior engineers.",
+  "answer": "Data engineering is the work of collecting, cleaning and organising company data so that AI systems, reports and applications can rely on it. Techlio builds the pipelines, warehouses and retrieval stores behind AI agents, RAG and analytics, with quality checks and access rules at every step, so the answers your AI gives are based on current, permitted data.",
+  "diagram": "",
+  "caption": "",
+  "card": {
+    "lead": "Clean, governed data pipelines that power AI, RAG, and analytics.",
+    "text": "AI agents and dashboards are only as reliable as the data feeding them. We build automated ETL/ELT pipelines, cloud data warehouses, and vector-ready knowledge stores with automated quality checks at every step.",
+    "tags": [
+      "ETL / ELT pipelines",
+      "Data warehousing",
+      "RAG data prep",
+      "Data quality & governance"
+    ]
+  },
+  "painsTitle": "When teams *bring us in*",
+  "pains": [
+    "Operational data is locked inside disconnected SaaS tools, legacy SQL databases and unstructured documents.",
+    "RAG systems and AI agents give wrong answers because the source data is stale, poorly chunked or unverified.",
+    "Fragile cron jobs and manual spreadsheet exports keep breaking executive reporting and BI dashboards.",
+    "Multi-tenant isolation, PII redaction and auditability are required before any enterprise data reaches a language model."
+  ],
+  "examplesFirst": true,
+  "examplesTitle": "What *we build*",
+  "examples": [
+    {
+      "title": "Automated ETL / ELT pipelines",
+      "text": "Reliable ingestion and transformation workflows using Python, Apache Airflow and dbt, with automated schema validation and failure alerts."
+    },
+    {
+      "title": "AI and RAG knowledge ingestion",
+      "text": "Document parsing, semantic chunking, metadata enrichment and incremental syncing into pgvector, Qdrant or Pinecone, so AI agents always query fresh data."
+    },
+    {
+      "title": "Cloud data warehouses and lakehouses",
+      "text": "Clean, query-fast analytical layers in Snowflake, BigQuery and PostgreSQL for BI dashboards and ML training datasets."
+    },
+    {
+      "title": "Data quality, observability and governance",
+      "text": "Automated anomaly detection, lineage tracking, PII masking with Presidio and PostgreSQL Row-Level Security, so sensitive records never leak across tenants or models."
+    },
+    {
+      "title": "Legacy database modernisation and CDC",
+      "text": "Change Data Capture and zero-downtime migrations from legacy on-premises or monolithic databases into modern cloud architectures."
+    }
+  ],
+  "techsTitle": "The stack *we work in*",
+  "techs": [
+    "python-fastapi",
+    "airflow-dbt",
+    "postgresql-pgvector",
+    "snowflake-bigquery",
+    "vector-databases",
+    "postgresql-rls",
+    "ai-guardrails",
+    "aws"
+  ],
+  "offerTitle": "How a data platform gets built",
+  "offerIntro": "The same four stages as every Techlio engagement.",
+  "offerings": [
+    {
+      "title": "Scope",
+      "text": "We inventory your sources, their owners and their quality, and agree which decisions, dashboards or AI features the data has to serve."
+    },
+    {
+      "title": "Design",
+      "text": "A target data model, pipeline design and access rules, with the tools chosen for your volume and budget."
+    },
+    {
+      "title": "Build",
+      "text": "Pipelines, warehouse models and retrieval stores delivered in weekly increments, each with tests and data quality checks."
+    },
+    {
+      "title": "Run",
+      "text": "Monitoring, alerts and cost tracking in production, with fixes and new sources added under a support agreement."
+    }
+  ],
+  "cases": [
+    "ordaos",
+    "vcreative"
+  ],
+  "whyTitle": "Why data work done this way lasts",
+  "why": [
+    {
+      "title": "Tested like software",
+      "text": "Every pipeline and model has automated tests, so a broken source is caught before it reaches a dashboard or an AI answer."
+    },
+    {
+      "title": "Permissions carried through",
+      "text": "Access rules follow the data from source to warehouse to retrieval store, so AI sees only what the user may see."
+    },
+    {
+      "title": "Built for the use case",
+      "text": "We build what your AI feature or report needs first, not a platform for its own sake."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Do we need a data warehouse before starting with AI?",
+      "answer": "Not necessarily. Many AI systems start with a small, clean set of sources. We build what the use case needs and extend from there."
+    },
+    {
+      "question": "How do you keep RAG data fresh?",
+      "answer": "Incremental sync jobs detect new and changed documents, re-chunk and re-embed only those, and remove what was deleted."
+    },
+    {
+      "question": "How is sensitive data protected?",
+      "answer": "Personal data can be masked before it reaches a model or a log, tenant isolation is enforced in the database, and every access is logged."
+    },
+    {
+      "question": "Can you work with our existing tools?",
+      "answer": "Yes. We build on the warehouse, orchestration and BI tools you already have before suggesting anything new."
+    },
+    {
+      "question": "Which tools do you use?",
+      "answer": "Commonly Python, Apache Airflow, dbt, PostgreSQL with pgvector, Snowflake, BigQuery and AWS, chosen to fit your volume and team."
+    }
+  ],
+  "closeTitle": "Is your data ready for the AI you want to build?",
+  "closeText": "Tell us where the data lives and what you want to do with it. A senior engineer replies within 24 hours."
+}

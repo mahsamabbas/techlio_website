@@ -7,7 +7,7 @@ import Steps from '../components/Steps.astro';
 import Blocks from '../components/Blocks.astro';
 import CaseCards from '../components/CaseCards.astro';
 import Closing from '../components/Closing.astro';
-import { services, offers, serviceSchema, faqSchema, breadcrumbSchema } from '../lib/content.js';
+import { services, offers, technologies, serviceSchema, faqSchema, breadcrumbSchema } from '../lib/content.js';
 
 export function getStaticPaths() {
   return [
@@ -42,10 +42,27 @@ const schema = [
             <div class="wrap"><div class="article-answer"><strong>In short</strong><p>{e.answer}</p></div></div>
           </section>
         )}
-        <Section eyebrow="How it works" title={e.offerTitle} intro={e.offerIntro}>
+        {has(e.pains) && (
+          <Section title={e.painsTitle || 'When teams *bring us in*'}>
+            <ul class="pains">{e.pains.map((p) => <li>{p}</li>)}</ul>
+          </Section>
+        )}
+        {e.examplesFirst && has(e.examples) && (
+          <Section tint eyebrow="Deliverables" title={e.examplesTitle}>
+            <Blocks items={e.examples} />
+          </Section>
+        )}
+        {has(e.techs) && (
+          <Section eyebrow="Tech stack" title={e.techsTitle || 'The stack *we work in*'}>
+            <ul class="chips chips-large article">
+              {e.techs.map((s) => technologies.find((x) => x.slug === s)).filter(Boolean).map((x) => <li><a href={`/technologies/${x.slug}/`}>{x.name}</a></li>)}
+            </ul>
+          </Section>
+        )}
+        <Section eyebrow="How it works" tint={has(e.techs)} title={e.offerTitle} intro={e.offerIntro}>
           <Steps items={e.offerings} />
         </Section>
-        {has(e.examples) && (
+        {!e.examplesFirst && has(e.examples) && (
           <Section tint title={e.examplesTitle}>
             <Blocks items={e.examples} />
           </Section>
