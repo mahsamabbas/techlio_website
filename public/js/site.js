@@ -92,6 +92,24 @@
     });
   }
 
+  // Cookie choice: asked once, for visitors in Europe and the UK, and remembered on this device.
+  var consent = document.getElementById('consent');
+  if (consent) {
+    var choice = null, tz = '';
+    try { choice = localStorage.getItem('tl-consent'); } catch (e) {}
+    try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {}
+    if (!choice && /^(Europe|Atlantic\/(Reykjavik|Canary|Madeira|Faroe|Azores))/.test(tz)) consent.hidden = false;
+    consent.addEventListener('click', function (ev) {
+      var btn = ev.target.closest('[data-consent]');
+      if (!btn) return;
+      var yes = btn.getAttribute('data-consent') === 'yes';
+      try { localStorage.setItem('tl-consent', yes ? 'yes' : 'no'); } catch (e) {}
+      window.dataLayer = window.dataLayer || [];
+      (function () { window.dataLayer.push(arguments); })('consent', 'update', { analytics_storage: yes ? 'granted' : 'denied' });
+      consent.hidden = true;
+    });
+  }
+
   // Booking links: scroll to the form when it is on this page, otherwise open it in a dialog. No page load either way.
   var bookSection = document.getElementById('book');
   var bookDialog = document.getElementById('book-dialog');
@@ -178,6 +196,8 @@
       .then(function (r) {
         if (!r.ok) throw new Error(String(r.status));
         form.reset();
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'generate_lead', form_name: 'scoping-call', lead_source: data.source || '', lead_interest: data.interest || '' });
         setStatus('Scoping call requested. A senior engineer replies within 24 hours.', 'ok');
       })
       .catch(function () { draftEmail(data); })

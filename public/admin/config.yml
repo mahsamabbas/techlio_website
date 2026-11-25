@@ -24,6 +24,7 @@ collections:
           - { label: "Email", name: email, widget: string }
           - { label: "Phone", name: phone, widget: string }
           - { label: "Offices", name: offices, widget: list, summary: "{{fields.country}}", fields: [ { label: "Country", name: country, widget: string }, { label: "Address", name: address, widget: string } ] }
+          - { label: "Google Tag Manager ID", name: gtmId, widget: string, required: false, hint: "Looks like GTM-XXXXXXX. Leave empty to switch tracking off." }
           - { label: "LinkedIn URL", name: linkedin, widget: string }
           - { label: "X URL", name: x, widget: string }
           - { label: "Clutch profile URL", name: clutch, widget: string, required: false }

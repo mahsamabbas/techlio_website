@@ -53,10 +53,33 @@ const org = {
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    {
+      site.gtmId && (
+        <script is:inline define:vars={{ gtmId: site.gtmId }}>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { dataLayer.push(arguments); }
+          var EU = ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH'];
+          var off = { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied' };
+          gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'granted' });
+          gtag('consent', 'default', Object.assign({ region: EU, wait_for_update: 500 }, off));
+          try {
+            var saved = localStorage.getItem('tl-consent');
+            if (saved === 'yes') gtag('consent', 'update', { analytics_storage: 'granted' });
+            if (saved === 'no') gtag('consent', 'update', { analytics_storage: 'denied' });
+          } catch (e) {}
+          (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+            var f = d.getElementsByTagName(s)[0], j = d.createElement(s);
+            j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i; f.parentNode.insertBefore(j, f);
+          })(window, document, 'script', 'dataLayer', gtmId);
+        </script>
+      )
+    }
     <script is:inline type="application/ld+json" set:html={JSON.stringify(org)} />
     {schema.map((item) => <script is:inline type="application/ld+json" set:html={JSON.stringify(item)} />)}
   </head>
   <body>
+    {site.gtmId && <noscript><iframe src={`https://www.googletagmanager.com/ns.html?id=${site.gtmId}`} height="0" width="0" style="display:none;visibility:hidden" title="Tag manager"></iframe></noscript>}
     <div class="progress" aria-hidden="true"></div>
     <Header />
     <main id="main">
@@ -64,6 +87,17 @@ const org = {
     </main>
     <Footer />
     {!form && <BookDialog />}
+    {
+      site.gtmId && (
+        <div class="consent" id="consent" hidden role="region" aria-label="Cookie choice">
+          <p>We use analytics cookies to see which pages are useful. No advertising cookies. See our <a href={site.privacyUrl}>privacy policy</a>.</p>
+          <div>
+            <button type="button" class="btn btn-ghost btn-small" data-consent="no">Decline</button>
+            <button type="button" class="btn btn-primary btn-small" data-consent="yes">Accept</button>
+          </div>
+        </div>
+      )
+    }
     {diagrams && <script is:inline src="/js/diagrams.js" defer></script>}
     {diagrams && <script is:inline src="/js/pipeline.js" defer></script>}
     <script is:inline src="/js/site.js" defer></script>
