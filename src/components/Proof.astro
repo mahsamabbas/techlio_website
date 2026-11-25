@@ -3,9 +3,9 @@
 import { site, pages } from '../lib/content.js';
 const reviews = site.reviews || [];
 const profiles = [
-  site.clutch && { name: 'Clutch', note: 'Verified client reviews', href: site.clutch },
-  site.google && { name: 'Google', note: 'Business profile and reviews', href: site.google },
-  site.linkedin && { name: 'LinkedIn', note: 'Team and company updates', href: site.linkedin },
+  site.clutch && { name: 'Clutch', note: 'Verified client reviews', action: 'Read our reviews', href: site.clutch, icon: 'M12 3.5l2.6 5.3 5.9.9-4.25 4.1 1 5.8L12 16.9l-5.25 2.7 1-5.8L3.5 9.7l5.9-.9z' },
+  site.google && { name: 'Google', note: 'Business profile', action: 'See our profile', href: site.google, icon: 'M12 21s-6.5-5.4-6.5-10.5a6.5 6.5 0 0 1 13 0C18.5 15.6 12 21 12 21zM12 8a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z' },
+  site.linkedin && { name: 'LinkedIn', note: 'Team and company updates', action: 'Follow Techlio', href: site.linkedin, icon: 'M8.5 4a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM3 20a5.5 5.5 0 0 1 11 0M16 5.5a2.5 2.5 0 1 1 0 5M17 14.2a4.5 4.5 0 0 1 4 5.8' },
 ].filter(Boolean);
 ---
 
@@ -25,8 +25,9 @@ const profiles = [
             {profiles.map((p) => (
               <li>
                 <a href={p.href} target="_blank" rel="noopener">
-                  <strong>{p.name}</strong>
-                  <span>{p.note}</span>
+                  <span class="platform-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d={p.icon} /></svg></span>
+                  <span class="platform-text"><strong>{p.name}</strong><span>{p.note}</span></span>
+                  <span class="platform-go">{p.action}</span>
                 </a>
               </li>
             ))}
