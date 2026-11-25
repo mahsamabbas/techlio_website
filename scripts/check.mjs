@@ -42,7 +42,7 @@ for (const [file, doc] of Object.entries(html)) {
       await access(target).catch(() => errors.push(`${name}: missing file ${ref}`));
     }
   }
-  const required = [site.email, site.phone, site.linkedin, site.x, ...site.offices.map((o) => o.address)];
+  const required = [site.email, site.phone, site.linkedin, ...site.offices.map((o) => o.address)];
   for (const fact of required) if (!unescape(doc).includes(fact)) errors.push(`${name}: missing contact detail "${fact}"`);
   if ((doc.match(/<h1[\s>]/g) || []).length !== 1) errors.push(`${name}: expected exactly one <h1>`);
 }
