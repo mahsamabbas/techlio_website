@@ -87,7 +87,8 @@
   "services": [
     "Cloud & DevOps",
     "Business automation",
-    "SaaS engineering"
+    "SaaS engineering",
+    "Data engineering & pipelines"
   ],
   "logo": "/clients/dp360-crm.png",
   "logoWidth": 346,

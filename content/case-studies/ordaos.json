@@ -83,7 +83,8 @@
   "services": [
     "AI development",
     "Business automation",
-    "Cloud & DevOps"
+    "Cloud & DevOps",
+    "Data engineering & pipelines"
   ],
   "logo": "/clients/ordaos.png",
   "logoWidth": 325,

@@ -2,7 +2,9 @@
 import Base from '../../layouts/Base.astro';
 import Closing from '../../components/Closing.astro';
 import { site, cases } from '../../lib/content.js';
-const areas = [...new Set(cases.flatMap((c) => c.services || []))];
+const order = ['AI development', 'Data engineering & pipelines', 'Business automation', 'SaaS engineering', 'Cloud & DevOps', 'Security & compliance', 'Web & growth', 'End-to-end delivery'];
+const rank = (a) => (order.indexOf(a) + 1) || 99;
+const areas = [...new Set(cases.flatMap((c) => c.services || []))].sort((a, b) => rank(a) - rank(b));
 ---
 
 <Base
