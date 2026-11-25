@@ -5,8 +5,7 @@
     "Pinecone / Qdrant",
     "Apache Airflow",
     "dbt",
-    "Snowflake",
-    "Apache Airflow / dbt"
+    "Snowflake"
   ],
   "challenges": [
     {
