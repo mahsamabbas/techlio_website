@@ -2,3 +2,6 @@ dist/
 node_modules/
 .astro/
 .DS_Store
+
+# generated for the chat assistant on every build
+netlify/functions/chat/knowledge.mjs

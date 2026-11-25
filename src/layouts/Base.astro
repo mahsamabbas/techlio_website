@@ -110,6 +110,17 @@ const org = {
     }
     {diagrams && <script is:inline src="/js/diagrams.js" defer></script>}
     {diagrams && <script is:inline src="/js/pipeline.js" defer></script>}
+    {
+      site.chatEnabled && (
+        <div class="chat" id="tl-chat" data-privacy={site.privacyUrl}>
+          <button type="button" class="chat-toggle" aria-expanded="false" aria-label="Chat with the Techlio assistant">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-5A8.5 8.5 0 1 1 21 11.5z" /><path d="M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01" /></svg>
+            <span>Ask Techlio</span>
+          </button>
+        </div>
+      )
+    }
     <script is:inline src="/js/site.js" defer></script>
+    {site.chatEnabled && <script is:inline src="/js/chat.js" defer></script>}
   </body>
 </html>
