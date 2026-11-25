@@ -68,7 +68,9 @@ export const articleSchema = (a) => ({
   description: a.description,
   datePublished: a.date,
   dateModified: a.updated || a.date,
-  author: { '@type': 'Organization', name: a.author, url: site.url },
+  author: /techlio/i.test(a.author)
+    ? { '@type': 'Organization', name: a.author, url: site.url }
+    : { '@type': 'Person', name: a.author, ...(a.authorRole ? { jobTitle: a.authorRole } : {}), worksFor: { '@id': `${site.url}/#organization` } },
   publisher: { '@id': `${site.url}/#organization` },
   mainEntityOfPage: abs(`/insights/${a.slug}/`),
 });

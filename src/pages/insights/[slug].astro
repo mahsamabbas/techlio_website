@@ -23,7 +23,7 @@ const schema = [
       <a class="back" href="/insights/">All insights</a>
       <span class="eyebrow">{a.category}</span>
       <h1>{a.title}</h1>
-      <p class="article-meta">By {a.author} <span>Published {longDate(a.date)}</span>{a.updated && a.updated !== a.date && <span>Updated {longDate(a.updated)}</span>}</p>
+      <p class="article-meta">By {a.author}{a.authorRole && `, ${a.authorRole}`} <span>Published {longDate(a.date)}</span>{a.updated && a.updated !== a.date && <span>Updated {longDate(a.updated)}</span>}</p>
       <div class="article-answer">
         <strong>The short answer</strong>
         <p>{a.answer}</p>

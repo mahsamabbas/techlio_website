@@ -6,8 +6,8 @@
   "category": "Guide",
   "date": "2026-11-25",
   "updated": "2026-11-25",
-  "author": "Techlio Engineering",
-  "authorRole": "Senior engineers at Techlio",
+  "author": "Mahsam Abbas",
+  "authorRole": "Founder, Techlio",
   "answer": "Judge an AI development agency on how it proves quality, not on its demo. Ask how they measure answer accuracy, how the system connects to your real data and permissions, what happens when the AI is unsure, who will do the work, and who owns the code. An agency that ships production systems answers these with specifics and examples; one that ships demos answers with enthusiasm.",
   "sections": [
     {

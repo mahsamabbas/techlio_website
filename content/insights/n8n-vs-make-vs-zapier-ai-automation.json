@@ -6,8 +6,8 @@
   "category": "Comparison",
   "date": "2026-11-25",
   "updated": "2026-11-25",
-  "author": "Techlio Engineering",
-  "authorRole": "Senior engineers at Techlio",
+  "author": "Mahsam Abbas",
+  "authorRole": "Founder, Techlio",
   "answer": "Choose Zapier when a non-technical team needs simple automations live this week. Choose Make when the workflows branch and you want a visual builder with more control. Choose n8n when the automation is core to the business, involves AI agents or sensitive data, or will run at a volume where per-task pricing hurts, because n8n can be self-hosted and extended with code.",
   "sections": [
     {

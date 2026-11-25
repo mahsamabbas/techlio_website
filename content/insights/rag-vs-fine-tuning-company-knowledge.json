@@ -6,8 +6,8 @@
   "category": "Comparison",
   "date": "2026-11-25",
   "updated": "2026-11-25",
-  "author": "Techlio Engineering",
-  "authorRole": "Senior engineers at Techlio",
+  "author": "Mahsam Abbas",
+  "authorRole": "Founder, Techlio",
   "answer": "Use retrieval-augmented generation (RAG) when the AI must answer from your own documents and data, especially when that information changes or access to it is restricted. Use fine-tuning when you need the model to follow a consistent style, format or narrow task that prompting cannot achieve. For company knowledge, RAG is almost always the starting point, and fine-tuning is an optional later step.",
   "sections": [
     {

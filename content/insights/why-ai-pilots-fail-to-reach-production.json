@@ -6,8 +6,8 @@
   "category": "Guide",
   "date": "2026-11-25",
   "updated": "2026-11-25",
-  "author": "Techlio Engineering",
-  "authorRole": "Senior engineers at Techlio",
+  "author": "Mahsam Abbas",
+  "authorRole": "Founder, Techlio",
   "answer": "AI pilots stall because a demo only has to work once, on chosen examples, for a friendly audience. Production has to work every day on messy data, inside real systems, with someone accountable when it is wrong. The fix is to treat the pilot as software: measure answer quality with an eval set, connect it to real data with real permissions, add guardrails and a human approval path, and give it an owner and a budget.",
   "sections": [
     {
