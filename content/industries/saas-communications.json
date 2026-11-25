@@ -1,0 +1,40 @@
+{
+  "slug": "saas-communications",
+  "name": "SaaS and communications platforms",
+  "metaTitle": "SaaS and Communications Platform Engineering",
+  "description": "Techlio engineers SaaS products and communications platforms: self-serve portals, billing, analytics, MCP servers and integrations that let AI agents use the product.",
+  "h1": "SaaS engineering for products that *other software depends on.*",
+  "answer": "Techlio builds and extends SaaS platforms, including the parts that make a product usable by AI agents. For Signal House we built a self-serve messaging and voice platform end to end. For Convert, an experimentation platform behind 40,000+ sites, we built full-stack experimentation and a remote MCP server for AI-driven workflows.",
+  "problems": [
+    "Onboarding, registration and billing that still need a person on your side",
+    "Customers asking how their AI agents can use your product",
+    "New modules that must not slow down a performance-sensitive core",
+    "A roadmap larger than the in-house team"
+  ],
+  "cases": [
+    "signal-house",
+    "convert",
+    "vofspace"
+  ],
+  "services": [
+    "product-development",
+    "ai-agents",
+    "cloud-devops",
+    "cybersecurity"
+  ],
+  "faqs": [
+    {
+      "question": "What is an MCP server and does our SaaS need one?",
+      "answer": "An MCP server exposes your product's actions to AI assistants in a standard way, so a customer's agent can use your product directly. It is worth building when customers already ask for AI access. We built a remote MCP server for Convert."
+    },
+    {
+      "question": "Can you take a product from idea to launch?",
+      "answer": "Yes. Signal House was delivered across discovery, design, development, deployment and support. We can also join an existing team for one module."
+    },
+    {
+      "question": "How do you add features without hurting performance?",
+      "answer": "Performance is set as a requirement before the design, then measured in the release pipeline. On Convert the new experimentation work added no load time to the tracking snippet."
+    }
+  ],
+  "order": 5
+}

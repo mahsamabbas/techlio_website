@@ -1,0 +1,38 @@
+{
+  "slug": "insurtech-fintech",
+  "name": "Insurtech and fintech",
+  "metaTitle": "Insurtech and Fintech Software Development",
+  "description": "Techlio builds compliance-sensitive platforms for insurance and financial workflows: agreement engines, multi-party portals, audit trails and automated tracking.",
+  "h1": "Platforms for money and insurance workflows, *with the audit trail built in.*",
+  "answer": "Techlio builds software for financial and insurance workflows where every step has to be recorded. For Fund My Deductible we built a secure three-sided platform that connects contractors, sales teams and homeowners with automated agreements, income tracking and full audit trails. Contractors report closing twice as many deals, and a homeowner can be set up in five minutes.",
+  "problems": [
+    "A legally complex workflow run on spreadsheets, email and paper agreements",
+    "Several parties who each need their own view of the same transaction",
+    "Records that have to stand up to a later review",
+    "Onboarding that loses customers because it takes too long"
+  ],
+  "cases": [
+    "fund-my-deductible"
+  ],
+  "services": [
+    "product-development",
+    "cybersecurity",
+    "ai-workflow-automation",
+    "ai-architecture-sprint"
+  ],
+  "faqs": [
+    {
+      "question": "Can you build software for a workflow that has no existing product?",
+      "answer": "Yes. Fund My Deductible had no dedicated software for its workflow. We mapped the process with the client and their legal requirements, then built the agreement engine and portals around it."
+    },
+    {
+      "question": "How do you approach compliance?",
+      "answer": "You and your legal advisers define the rules; we build them into the system as required steps, permissions and audit trails so the software enforces them. We do not give legal or regulatory advice."
+    },
+    {
+      "question": "How long does a platform like this take?",
+      "answer": "Fund My Deductible was a fixed-scope build delivered in seven months. Your timeline depends on scope, which we set out after a scoping call."
+    }
+  ],
+  "order": 6
+}

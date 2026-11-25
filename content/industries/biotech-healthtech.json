@@ -1,0 +1,39 @@
+{
+  "slug": "biotech-healthtech",
+  "name": "Biotech and health technology",
+  "metaTitle": "Biotech and Health Technology Software and AI Development",
+  "description": "Techlio builds AI search, data pipelines and workflow automation for biotech research teams, and device and clinic software for health technology companies.",
+  "h1": "AI and software for biotech and health technology, *grounded in the source.*",
+  "answer": "Techlio builds AI and software for science-led companies. For Ordaōs, a protein-design biotech, we built source-grounded AI search over 250K documents and 12 production AI workflows. For XO Armor we built the scanning app, customization software and ordering portal that let clinics print custom orthotics on site in 45 to 60 minutes.",
+  "problems": [
+    "Research knowledge spread across papers, reports and internal documents that nobody can search as one body",
+    "Scientists spending time on manual data handling and reporting",
+    "AI answers that are no use unless every claim links back to a source",
+    "Clinic-facing software that staff must be able to use without training"
+  ],
+  "cases": [
+    "ordaos",
+    "xo-armor"
+  ],
+  "services": [
+    "ai-agents",
+    "data-engineering",
+    "product-development",
+    "cybersecurity"
+  ],
+  "faqs": [
+    {
+      "question": "How do you stop an AI assistant inventing answers about research?",
+      "answer": "The assistant answers only from retrieved documents and cites them, and a grounding check compares the answer with its sources before it is shown. Where the sources do not support an answer, it says so. That is how the Ordaōs knowledge assistant works."
+    },
+    {
+      "question": "Do you handle regulated health data?",
+      "answer": "We build with access controls, audit trails and encryption, and we design to the requirements your compliance team sets. We are engineers, not a compliance certifier, so the regulatory sign-off stays with you and your advisers."
+    },
+    {
+      "question": "Can you build mobile and desktop software that works with hardware?",
+      "answer": "Yes. For XO Armor we built an iPhone 3D scanning app and desktop software that prepares a scan for an on-site 3D printer, plus the portal and dashboard behind them."
+    }
+  ],
+  "order": 4
+}

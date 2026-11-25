@@ -902,3 +902,16 @@ html.dialog-open { overflow: hidden; }
 
 /* Nine cards on the home services grid: three even rows */
 @media (min-width: 1001px) { .svc-grid { grid-template-columns: repeat(3, 1fr); } }
+
+/* Industry pages: one block per client project, filled from the case study */
+.industry-work { display: grid; gap: 1.25rem; margin-top: 2rem; }
+.industry-case { display: grid; gap: 1rem; padding: 1.75rem; background: var(--card); border: 1px solid var(--line); border-radius: 20px; box-shadow: var(--shadow); }
+.industry-case header { display: flex; gap: 1.1rem; align-items: center; }
+.industry-case header .tile { width: 7rem; height: 4.5rem; }
+.industry-case h3 { font-size: 1.3rem; line-height: 1.3; letter-spacing: -0.015em; }
+.industry-case > p { color: var(--body); max-width: 75ch; }
+.industry-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+.industry-metrics dt { font-size: 1.5rem; font-weight: 700; color: var(--blue); letter-spacing: -0.02em; }
+.industry-metrics dd { color: var(--muted); font-size: 0.88rem; }
+.industry-case .btn { justify-self: start; }
+@media (max-width: 720px) { .industry-metrics { grid-template-columns: 1fr; } .industry-case header { flex-direction: column; align-items: flex-start; } }

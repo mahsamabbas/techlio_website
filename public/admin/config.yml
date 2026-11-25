@@ -250,6 +250,30 @@ collections:
             { label: "Answer", name: answer, widget: text } ] }
       - { label: "Related service pages", name: related, widget: list, required: false, field: { label: "Page address", name: item, widget: string }, hint: "For example: ai-agents" }
       - { label: "Sources", name: sources, widget: list, required: false, summary: "{{fields.title}}", fields: [ { label: "Title", name: title, widget: string }, { label: "Link", name: url, widget: string } ] }
+  - name: industries
+    label: Industries
+    label_singular: Industry
+    folder: content/industries
+    extension: json
+    format: json
+    create: true
+    identifier_field: name
+    slug: "{{fields.slug}}"
+    summary: "{{name}}"
+    sortable_fields: [order, name]
+    editor: { preview: false }
+    fields:
+      - { label: "Industry name", name: name, widget: string }
+      - { label: "Page address", name: slug, widget: string, hint: "Lowercase words joined by hyphens. The URL becomes /industries/your-address/" }
+      - { label: "Order", name: order, widget: number, value_type: int }
+      - { label: "Browser title", name: metaTitle, widget: string, required: false }
+      - { label: "Search description", name: description, widget: text }
+      - { label: "Page heading", name: h1, widget: string, hint: "Wrap words in *asterisks* for the blue italic style" }
+      - { label: "In short", name: answer, widget: text, hint: "Two or three sentences: what Techlio builds in this industry and for whom. Use only facts that are in the linked case studies." }
+      - { label: "Problems we are asked to solve", name: problems, widget: list, field: { label: "Problem", name: item, widget: string } }
+      - { label: "Case studies", name: cases, widget: list, field: { label: "Case study address", name: item, widget: string }, hint: "The page addresses of the case studies to show, for example onequext. The client details on the page are taken from each case study." }
+      - { label: "Related service pages", name: services, widget: list, required: false, field: { label: "Page address", name: item, widget: string } }
+      - { label: "Questions", name: faqs, widget: list, summary: "{{fields.question}}", fields: [ { label: "Question", name: question, widget: string }, { label: "Answer", name: answer, widget: text } ] }
   - name: technologies
     label: Technologies
     label_singular: Technology

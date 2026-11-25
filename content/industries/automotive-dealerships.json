@@ -1,0 +1,38 @@
+{
+  "slug": "automotive-dealerships",
+  "name": "Automotive and dealerships",
+  "metaTitle": "Automotive and Dealership CRM Software Development",
+  "description": "Techlio builds and modernizes CRM, lead management, messaging and integration software for automotive, powersports, marine and RV retail.",
+  "h1": "CRM and messaging software for dealerships, *kept running while it is rebuilt.*",
+  "answer": "Techlio engineers dealership software: lead management and sales CRM, SMS and telephony, lead routing and partner integrations. Since 2019 we have been a core engineering team on DP360 CRM, used by 2,000+ dealerships, where we moved the product off Angular 1, built its messaging infrastructure and kept 300+ integrations running.",
+  "problems": [
+    "A CRM on a legacy front-end framework that is hard to hire for and slow to change",
+    "Leads arriving from many sources that need routing to the right salesperson quickly",
+    "SMS and phone conversations that live outside the CRM record",
+    "Hundreds of partner integrations that must keep working through every release"
+  ],
+  "cases": [
+    "dp360-crm"
+  ],
+  "services": [
+    "legacy-modernization",
+    "product-development",
+    "ai-workflow-automation",
+    "cloud-devops"
+  ],
+  "faqs": [
+    {
+      "question": "Can a legacy Angular application be upgraded without a full rewrite?",
+      "answer": "Usually, yes. DP360 CRM was taken from Angular 1 to Angular 17 in stages while dealerships kept using it. We review the codebase first and tell you plainly if a staged upgrade or a rebuild is the cheaper route."
+    },
+    {
+      "question": "Do you build SMS and telephony into a CRM?",
+      "answer": "Yes. We built the SMS and telephony platform for DP360 CRM so conversations sit on the customer record. Carrier registration and compliance requirements vary by country, and we plan for them at the start."
+    },
+    {
+      "question": "How do you protect existing integrations during a rebuild?",
+      "answer": "By treating them as a contract. Integrations are inventoried, covered by automated tests and released through CI/CD so a change that breaks one is caught before it ships. DP360 kept 300+ running through its modernization."
+    }
+  ],
+  "order": 3
+}

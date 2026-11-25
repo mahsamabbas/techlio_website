@@ -1,0 +1,38 @@
+{
+  "slug": "education",
+  "name": "Education",
+  "metaTitle": "Education Software Development for Universities",
+  "description": "Techlio builds platforms for universities and education providers to manage courses, students and academic operations, with workflow automation and staff dashboards.",
+  "h1": "Software for universities, *built around academic operations.*",
+  "answer": "Techlio builds platforms that help education providers manage courses, student records and day-to-day academic work. For Park University we delivered a platform covering course and programme management, student records and enrolment, automated workflows and staff dashboards, from discovery through to support.",
+  "problems": [
+    "Course, student and enrolment information held in separate systems",
+    "Routine academic administration done by hand",
+    "Staff without a single view of what needs attention",
+    "Security expectations around student records"
+  ],
+  "cases": [
+    "park-university"
+  ],
+  "services": [
+    "product-development",
+    "ai-workflow-automation",
+    "cybersecurity",
+    "ai-consulting"
+  ],
+  "faqs": [
+    {
+      "question": "Do you replace an existing student information system?",
+      "answer": "Not necessarily. Often the better route is a platform that works alongside what you have and automates the work between systems. We recommend one or the other after reviewing your current setup."
+    },
+    {
+      "question": "How is student data protected?",
+      "answer": "With role-based access, encryption and audit logging designed in from the start, to the requirements your institution sets. Security was part of the Park University build from the first stage."
+    },
+    {
+      "question": "Can you support the platform after launch?",
+      "answer": "Yes. Support is one of the five stages we delivered for Park University, alongside discovery, design, development and deployment."
+    }
+  ],
+  "order": 7
+}

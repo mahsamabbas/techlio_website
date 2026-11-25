@@ -1,0 +1,37 @@
+{
+  "slug": "home-services-small-business",
+  "name": "Home services and small business",
+  "metaTitle": "Websites and Automation for Home Services and Small Businesses",
+  "description": "Techlio builds lead-generating websites and n8n automations for home services companies and growing small businesses, including multi-location operators.",
+  "h1": "Websites and automation for local businesses, *measured in leads.*",
+  "answer": "Techlio builds websites that bring in enquiries and automations that handle the follow-up. For Carpet Tech, a home services and restoration company across Texas and New Mexico, we rebuilt the web presence as a lead-generation platform with 10+ city pages, and inbound leads grew 10 to 15% month over month.",
+  "problems": [
+    "A website that looks fine and produces few enquiries",
+    "Several locations or divisions competing with each other in search",
+    "Enquiries answered late because the team is on a job",
+    "Bookings, quotes and invoices re-typed between tools"
+  ],
+  "cases": [
+    "carpet-tech"
+  ],
+  "services": [
+    "n8n-ai-automation",
+    "ai-workflow-automation",
+    "product-development"
+  ],
+  "faqs": [
+    {
+      "question": "What should a small business automate first?",
+      "answer": "The task that happens most often and follows the same steps each time: usually enquiry follow-up, booking or invoicing. We start with one workflow, prove it saves time, then add the next."
+    },
+    {
+      "question": "Do you build multi-location websites?",
+      "answer": "Yes. Carpet Tech has 10+ city landing pages and four divisions under one brand, structured so each location can be found for its own area."
+    },
+    {
+      "question": "We are a small company. Is that a fit?",
+      "answer": "Yes, for a defined piece of work. A website rebuild or a first set of automations is typically a fixed-scope project; Carpet Tech was delivered in six months."
+    }
+  ],
+  "order": 8
+}

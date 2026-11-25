@@ -1,0 +1,39 @@
+{
+  "slug": "proptech-real-estate",
+  "name": "Proptech and real estate",
+  "metaTitle": "Proptech and Real Estate Software Development",
+  "description": "Techlio builds resident platforms, smart-building software, automated leasing and investor-facing platforms for property technology companies and real estate firms.",
+  "h1": "Software and AI for property technology, *built around the building.*",
+  "answer": "Techlio engineers software for proptech companies and real estate firms: resident apps, access control and smart-device platforms, AI-assisted leasing, and investor-facing sites with automated workflows. For OneQuext we merged three property-tech products into one platform with zero downtime, and for Madera Equity we built the firm's digital platform from discovery to support.",
+  "problems": [
+    "Several products bought or built over time that residents and staff experience as separate systems",
+    "Access control, smart devices and Wi-Fi that each come with their own app and data",
+    "Leasing and enquiry work that depends on staff being available to answer",
+    "Investor and market information kept in documents instead of a platform the team can update"
+  ],
+  "cases": [
+    "onequext",
+    "madera-equity"
+  ],
+  "services": [
+    "product-development",
+    "ai-agents",
+    "ai-workflow-automation",
+    "legacy-modernization"
+  ],
+  "faqs": [
+    {
+      "question": "Can you merge existing products without taking them offline?",
+      "answer": "Yes. On OneQuext we consolidated three existing products into one platform with zero downtime. The approach depends on the systems involved, so we start with an architecture review before committing to a migration plan."
+    },
+    {
+      "question": "Do you work with hardware such as locks and intercoms?",
+      "answer": "We build the software side: the platform, mobile apps and integrations that talk to access control, smart devices and video intercom. The OneQuext platform manages all of these. We do not manufacture or install hardware."
+    },
+    {
+      "question": "Can AI handle leasing enquiries?",
+      "answer": "It can handle the repeatable part: answering common questions, qualifying an enquiry and booking a viewing, with a hand-off to staff for anything unusual. Automated leasing is part of the OneQuext platform."
+    }
+  ],
+  "order": 1
+}

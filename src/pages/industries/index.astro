@@ -1,0 +1,32 @@
+---
+import Base from '../../layouts/Base.astro';
+import Closing from '../../components/Closing.astro';
+import { industries, pickCases, breadcrumbSchema } from '../../lib/content.js';
+---
+
+<Base
+  title="Industries We Build For: Proptech, Media, Automotive, Biotech, SaaS, Fintech"
+  description="The industries where Techlio has shipped AI, automation and software, each with the named client work behind it."
+  schema={[breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Industries', path: '/industries/' }])]}
+>
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Industries</span>
+      <h1>Industries we have shipped in, <span class="accent">with the work to show for it.</span></h1>
+      <p class="lede">We only list an industry where there is a client project you can read about. Each page covers the problems we were asked to solve and what we built.</p>
+      <div class="insight-list tech-list">
+        {
+          industries.map((t) => (
+            <article class="insight-card">
+              <p class="tech-badge">{pickCases(t.cases).map((c) => c.name).join(', ')}</p>
+              <h2><a href={`/industries/${t.slug}/`}>{t.name}</a></h2>
+              <p>{t.description}</p>
+              <span class="more">See the {t.name.toLowerCase()} work</span>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+  <Closing title="Your industry is not listed?" text="Most of what we build carries across industries. Tell us about the problem and we will say plainly whether we are a fit." />
+</Base>

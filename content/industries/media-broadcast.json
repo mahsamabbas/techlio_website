@@ -1,0 +1,38 @@
+{
+  "slug": "media-broadcast",
+  "name": "Media and broadcast",
+  "metaTitle": "Media and Broadcast Software Development",
+  "description": "Techlio modernizes workflow platforms for media and broadcast companies and adds AI features for order intake, scriptwriting and production.",
+  "h1": "Engineering for media and broadcast, *where the deadline is air time.*",
+  "answer": "Techlio builds and modernizes the workflow software behind advertising and production in radio and TV. Since 2019 we have worked as an embedded engineering team on vCreative, the platform used by 9,000+ stations: modernizing its front end, building TV production workflows and shipping AI features for order intake and scriptwriting.",
+  "problems": [
+    "A platform that thousands of users depend on daily and that cannot stop for a rewrite",
+    "Front-end frameworks several major versions out of date",
+    "Order intake and creative work that still passes through email and manual re-entry",
+    "New AI features that have to respect existing approval and workflow controls"
+  ],
+  "cases": [
+    "vcreative"
+  ],
+  "services": [
+    "legacy-modernization",
+    "product-development",
+    "ai-agents",
+    "data-engineering"
+  ],
+  "faqs": [
+    {
+      "question": "Can you modernize a platform while it stays in use?",
+      "answer": "Yes. On vCreative the front end was upgraded in stages while stations kept using the platform. We modernize in increments, release behind controls and keep the old path available until the new one is proven."
+    },
+    {
+      "question": "What kind of AI features make sense in a broadcast workflow?",
+      "answer": "The ones that remove re-typing and waiting: reading an incoming order and filling the record, and drafting a script for a person to edit and approve. Both are in production on vCreative. People still approve what goes to air."
+    },
+    {
+      "question": "Do you work as an embedded team or on fixed projects?",
+      "answer": "Both. With vCreative we have been an embedded team for more than seven years. For a defined piece of work, such as a single module or an upgrade, a fixed scope is often the better fit."
+    }
+  ],
+  "order": 2
+}

@@ -17,6 +17,7 @@ export const services = list(import.meta.glob('../../content/services/*.json', {
 export const offers = list(import.meta.glob('../../content/offers/*.json', { eager: true }));
 export const cases = list(import.meta.glob('../../content/case-studies/*.json', { eager: true }));
 export const technologies = list(import.meta.glob('../../content/technologies/*.json', { eager: true }));
+export const industries = list(import.meta.glob('../../content/industries/*.json', { eager: true }));
 export const insights = Object.values(import.meta.glob('../../content/insights/*.json', { eager: true }))
   .map((m) => m.default)
   .sort((a, b) => String(b.date).localeCompare(String(a.date)) || a.title.localeCompare(b.title));
@@ -138,3 +139,6 @@ export const stackGroups = (cs) => {
   });
   return { groups, other };
 };
+
+/** Industry pages that feature a given case study. */
+export const industriesForCase = (c) => industries.filter((i) => (i.cases || []).includes(c.slug));
