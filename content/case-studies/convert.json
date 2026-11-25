@@ -90,5 +90,6 @@
   ],
   "logo": "/clients/convert.png",
   "logoWidth": 313,
-  "logoHeight": 73
+  "logoHeight": 73,
+  "architecture": "React and Node.js, with .NET services, run on PostgreSQL and AWS, built so the tracking snippet adds no load time. A remote MCP server exposes the platform to AI assistants, and ServiceNow supports service workflows."
 }

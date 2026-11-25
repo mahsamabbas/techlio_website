@@ -97,6 +97,7 @@ const techRules = [
   [/n8n/i, 'n8n'],
   [/pgvector|postgres/i, 'postgresql-pgvector'],
   [/django/i, 'django'],
+  [/laravel/i, 'laravel'],
   [/python|fastapi/i, 'python-fastapi'],
   [/node\.?js|nestjs|typescript/i, 'nodejs-typescript'],
   [/\breact\b|next\.?js/i, 'react-nextjs'],
@@ -121,4 +122,17 @@ export const casesForTech = (t) => {
   const chosen = t.cases || [];
   const found = cases.filter((cs) => !chosen.includes(cs.slug) && (cs.stack || []).some((s) => techFor(s) === t.slug)).map((cs) => cs.slug);
   return [...chosen, ...found];
+};
+
+/** A case study's stack grouped by technology page, plus the items with no page. */
+export const stackGroups = (cs) => {
+  const groups = [], other = [];
+  (cs.stack || []).forEach((item) => {
+    const slug = techFor(item);
+    if (!slug) return other.push(item);
+    let g = groups.find((x) => x.tech.slug === slug);
+    if (!g) groups.push((g = { tech: technologies.find((t) => t.slug === slug), items: [] }));
+    g.items.push(item);
+  });
+  return { groups, other };
 };

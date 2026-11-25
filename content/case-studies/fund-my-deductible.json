@@ -90,5 +90,6 @@
   ],
   "logo": "/clients/fund-my-deductible.png",
   "logoWidth": 152,
-  "logoHeight": 83
+  "logoHeight": 83,
+  "architecture": "Three React portals share one Node.js API on MySQL, hosted on AWS. Stripe handles payments and payouts."
 }

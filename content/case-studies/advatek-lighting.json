@@ -87,5 +87,6 @@
       "title": "Security built in",
       "text": "Techlio's security baseline applied from the first sprint: OWASP-based secure coding and review, role-based access control, encryption in transit and at rest, least-privilege access to cloud resources and vulnerability scans before each release. For Advatek that covers access control on the management interface and integrity checks on firmware and configuration updates."
     }
-  ]
+  ],
+  "architecture": "n8n handles operational automations, Apache Airflow and dbt pipelines load data into Snowflake for reporting, and vector search runs on Pinecone and Qdrant."
 }

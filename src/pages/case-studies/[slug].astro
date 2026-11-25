@@ -4,13 +4,14 @@ import Section from '../../components/Section.astro';
 import Blocks from '../../components/Blocks.astro';
 import CaseCards from '../../components/CaseCards.astro';
 import Closing from '../../components/Closing.astro';
-import { cases, breadcrumbSchema, techFor } from '../../lib/content.js';
+import { cases, breadcrumbSchema, stackGroups } from '../../lib/content.js';
 
 export function getStaticPaths() {
   return cases.map((c) => ({ params: { slug: c.slug }, props: { c } }));
 }
 
 const { c } = Astro.props;
+const stack = stackGroups(c);
 const related = cases.filter((x) => x.slug !== c.slug).slice(0, 2).map((x) => x.slug);
 const schema = [
   breadcrumbSchema([
@@ -52,12 +53,35 @@ const host = c.liveUrl ? new URL(c.liveUrl).hostname : '';
 
   <Section eyebrow="Solution" title="What *we built*">
     <Blocks items={c.solutions} cols={2} />
-    {has(c.stack) && <h3 class="sub">Stack</h3>}
-    {has(c.stack) && <ul class="chips chips-large stack-chips">{c.stack.map((x) => (techFor(x) ? <li><a href={`/technologies/${techFor(x)}/`}>{x}</a></li> : <li>{x}</li>))}</ul>}
   </Section>
 
+  {has(c.stack) && (
+    <Section eyebrow="Architecture" tint title="Tech stack and *architecture*">
+      {c.architecture && <p class="arch-text">{c.architecture}</p>}
+      {stack.groups.length > 0 && (
+        <div class="arch-grid">
+          {stack.groups.map((g) => (
+            <a class="arch-card" href={`/technologies/${g.tech.slug}/`}>
+              <span class="tech-badge">{g.tech.category}</span>
+              <strong>{g.tech.name}</strong>
+              <span class="arch-items">Used here: {g.items.join(', ')}</span>
+            </a>
+          ))}
+        </div>
+      )}
+      {stack.other.length > 0 && <h3 class="sub">Also in the stack</h3>}
+      {stack.other.length > 0 && <ul class="chips chips-large">{stack.other.map((x) => <li>{x}</li>)}</ul>}
+      {has(c.metrics) && (
+        <div class="arch-outcomes">
+          <h3 class="sub">What it delivered</h3>
+          <div class="metrics">{c.metrics.map((m) => <p class="metric"><strong>{m.value}</strong><span>{m.label}</span></p>)}</div>
+        </div>
+      )}
+    </Section>
+  )}
+
   {has(c.results) && (
-    <Section eyebrow="Results" tint title="The *results*">
+    <Section eyebrow="Results" title="The *results*">
       <ul class="ticks ticks-grid ticks-2">{c.results.map((x) => <li>{x}</li>)}</ul>
     </Section>
   )}

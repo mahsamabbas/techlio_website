@@ -93,5 +93,6 @@
   ],
   "logo": "/clients/launchboom.png",
   "logoWidth": 406,
-  "logoHeight": 44
+  "logoHeight": 44,
+  "architecture": "The core application is Laravel and React on MySQL, hosted on DigitalOcean and deployed with Laravel Forge, with Node.js services for integrations. Python analytics services use Apache Airflow and dbt to load data into Snowflake, PyTorch and Scikit-learn for modelling, vector search on Pinecone and Qdrant, and n8n for operational automations."
 }

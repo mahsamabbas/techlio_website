@@ -91,5 +91,6 @@
   ],
   "logo": "/clients/dp360-crm.png",
   "logoWidth": 346,
-  "logoHeight": 54
+  "logoHeight": 54,
+  "architecture": "An Angular 17 front end runs over CakePHP and Node.js services on MySQL, hosted on AWS with Docker and GitHub Actions for CI/CD, and Twilio and Telnyx for SMS and telephony. n8n, Scikit-learn and ServiceNow support workflow automation, data analysis and service workflows around the CRM."
 }

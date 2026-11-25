@@ -80,5 +80,6 @@
   ],
   "logo": "/clients/awkward-media.png",
   "logoWidth": 340,
-  "logoHeight": 47
+  "logoHeight": 47,
+  "architecture": "A React and TypeScript client app runs on Supabase Postgres. An OpenAI-based agent answers client questions, Google's SEO APIs supply the live ranking data, and the marketing site moved from WordPress to React."
 }

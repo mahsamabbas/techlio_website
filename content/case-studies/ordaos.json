@@ -87,5 +87,6 @@
   ],
   "logo": "/clients/ordaos.png",
   "logoWidth": 325,
-  "logoHeight": 79
+  "logoHeight": 79,
+  "architecture": "Python services ingest and prepare research documents. pgvector stores their embeddings in PostgreSQL beside the relational data, LangChain orchestrates retrieval, and Claude writes answers that cite their sources. n8n runs the operational workflows, and everything is deployed on AWS."
 }

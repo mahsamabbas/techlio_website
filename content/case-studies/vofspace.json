@@ -88,5 +88,6 @@
   ],
   "logo": "/clients/vofspace.png",
   "logoWidth": 289,
-  "logoHeight": 86
+  "logoHeight": 86,
+  "architecture": "A React app and Node.js services run on PostgreSQL. WebRTC powers in-browser sessions with no download, and Stripe automates billing after each session."
 }

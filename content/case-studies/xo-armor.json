@@ -87,5 +87,6 @@
   ],
   "logo": "/clients/xo-armor.png",
   "logoWidth": 107,
-  "logoHeight": 97
+  "logoHeight": 97,
+  "architecture": "A React Native iPhone app captures the 3D scan, Electron desktop software with Three.js handles customisation and print preparation, and a Node.js API on PostgreSQL and AWS connects clinics, subscriptions and the admin dashboard."
 }

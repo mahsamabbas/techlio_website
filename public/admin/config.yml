@@ -209,6 +209,7 @@ collections:
       - { label: "Live website", name: liveUrl, widget: string, required: false, hint: "Full address starting with https://" }
       - { label: "Duration", name: duration, widget: string, required: false }
       - { label: "Team", name: team, widget: list, field: { label: "Role", name: item, widget: string } }
+      - { label: "Architecture summary", name: architecture, widget: text, required: false, hint: "Two or three sentences on how the technologies fit together. Shown above the technology cards." }
       - { label: "Tech stack", name: stack, widget: list, field: { label: "Technology", name: item, widget: string } }
       - { label: "Headline metrics", name: metrics, widget: list, max: 3, summary: "{{fields.value}} {{fields.label}}", fields: [ { label: "Value", name: value, widget: string }, { label: "Label", name: label, widget: string } ] }
       - { label: "Challenges", name: challenges, widget: list, summary: "{{fields.title}}", fields: [

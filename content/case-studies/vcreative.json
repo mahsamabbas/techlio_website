@@ -95,5 +95,6 @@
   ],
   "logo": "/clients/vcreative.png",
   "logoWidth": 188,
-  "logoHeight": 42
+  "logoHeight": 42,
+  "architecture": "The front end runs on Angular 19 with PrimeNG, over NestJS services with TypeORM and AWS Lambda for event-driven work. Python services built with Django, PyTorch and Hugging Face libraries handle data analytics and the AI features, with BigQuery for analytics storage and NeMo Guardrails and Presidio as safeguards around AI inputs and outputs."
 }

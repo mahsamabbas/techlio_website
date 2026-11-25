@@ -1,0 +1,47 @@
+{
+  "slug": "laravel",
+  "order": 14.5,
+  "name": "Laravel",
+  "short": "Laravel",
+  "category": "SaaS & Web Apps",
+  "metaTitle": "Laravel Development Services for SaaS Platforms",
+  "description": "Techlio builds and scales SaaS platforms, funnel builders and admin back ends in Laravel, with queues, integrations and analytics built in.",
+  "h1": "Laravel platforms *that carry real revenue.*",
+  "answer": "Laravel is a PHP framework for building web applications quickly with a clean structure for queues, authentication and integrations. Techlio builds and maintains SaaS platforms on it, including the pre-launch platform behind LaunchBoom's crowdfunding campaigns.",
+  "builds": [
+    {
+      "title": "SaaS platforms",
+      "text": "Multi-user products with billing, roles and reporting."
+    },
+    {
+      "title": "Builders and funnels",
+      "text": "Page and funnel builders with analytics and A/B testing."
+    },
+    {
+      "title": "Integrations",
+      "text": "Payment, advertising and marketplace integrations with queued, retryable jobs."
+    }
+  ],
+  "fits": [
+    "Your product or team is already on PHP",
+    "You want to ship a full-featured web product quickly",
+    "The platform needs many third-party integrations"
+  ],
+  "cases": [
+    "launchboom"
+  ],
+  "services": [
+    "product-development",
+    "legacy-modernization"
+  ],
+  "faqs": [
+    {
+      "question": "Can you take over an existing Laravel codebase?",
+      "answer": "Yes. We start with a review of the code, tests and deployment, then fix the highest risks first."
+    },
+    {
+      "question": "Does Laravel scale?",
+      "answer": "Yes, with caching, queues, database tuning and horizontal scaling."
+    }
+  ]
+}
