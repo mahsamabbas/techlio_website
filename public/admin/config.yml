@@ -1,6 +1,7 @@
 # Decap CMS configuration for the Techlio content editor at /admin.
 # Tip for editors: wrap words in *asterisks* in a heading to show them in the accent colour.
 # Generated layout: one section per content type. Fields mirror the JSON files in /content.
+publish_mode: editorial_workflow
 backend:
   name: github
   repo: mahsamabbas/techlio_website
@@ -248,6 +249,33 @@ collections:
             { label: "Question", name: question, widget: string },
             { label: "Answer", name: answer, widget: text } ] }
       - { label: "Related service pages", name: related, widget: list, required: false, field: { label: "Page address", name: item, widget: string }, hint: "For example: ai-agents" }
+  - name: technologies
+    label: Technologies
+    label_singular: Technology
+    folder: content/technologies
+    extension: json
+    format: json
+    create: true
+    identifier_field: name
+    slug: "{{fields.slug}}"
+    summary: "{{name}}"
+    sortable_fields: [order, name]
+    editor: { preview: false }
+    fields:
+      - { label: "Technology name", name: name, widget: string }
+      - { label: "Page address", name: slug, widget: string, hint: "Lowercase words joined by hyphens. The URL becomes /technologies/your-address/" }
+      - { label: "Order", name: order, widget: number, value_type: int }
+      - { label: "Browser title", name: metaTitle, widget: string, required: false }
+      - { label: "Search description", name: description, widget: text }
+      - { label: "Page heading", name: h1, widget: string, hint: "Wrap words in *asterisks* for the blue italic style" }
+      - { label: "In short", name: answer, widget: text, hint: "Two or three sentences: what the technology is and what Techlio does with it." }
+      - { label: "What we build", name: builds, widget: list, summary: "{{fields.title}}", fields: [
+            { label: "Title", name: title, widget: string },
+            { label: "Text", name: text, widget: text } ] }
+      - { label: "When it is the right choice", name: fits, widget: list, required: false, field: { label: "Reason", name: item, widget: string } }
+      - { label: "Client projects", name: cases, widget: relation, collection: case_studies, search_fields: ["name"], value_field: "slug", display_fields: ["name"], multiple: true, required: false }
+      - { label: "Related service pages", name: services, widget: list, required: false, field: { label: "Page address", name: item, widget: string } }
+      - { label: "FAQs", name: faqs, widget: list, required: false, summary: "{{fields.question}}", fields: [ { label: "Question", name: question, widget: string }, { label: "Answer", name: answer, widget: text } ] }
   - name: services
     label: Services
     label_singular: Service

@@ -1,0 +1,51 @@
+{
+  "slug": "openai",
+  "order": 4,
+  "name": "OpenAI",
+  "metaTitle": "OpenAI API Integration and Development Services",
+  "description": "Techlio builds products and automations on the OpenAI API: generative features, assistants, document processing and AI agents.",
+  "h1": "OpenAI models, *engineered into products people use.*",
+  "answer": "OpenAI provides language, vision and speech models through an API. Techlio builds products and automations on them, from generative features inside a SaaS product to agents that process requests, with evaluation, cost tracking and safeguards around every call.",
+  "builds": [
+    {
+      "title": "Generative product features",
+      "text": "Writing, summarising and personalisation features built into web and mobile products."
+    },
+    {
+      "title": "Assistants and agents",
+      "text": "Agents that use function calling to look things up and act inside your systems."
+    },
+    {
+      "title": "Document and data processing",
+      "text": "Extraction, classification and summarisation of documents, emails and records at volume."
+    }
+  ],
+  "fits": [
+    "You are adding a generative feature to an existing product",
+    "You need vision, speech or structured output alongside text",
+    "You want a widely supported API with many integration options"
+  ],
+  "cases": [
+    "coverai",
+    "awkward-media"
+  ],
+  "services": [
+    "ai-agents",
+    "product-development",
+    "ai-workflow-automation"
+  ],
+  "faqs": [
+    {
+      "question": "How do you control OpenAI costs?",
+      "answer": "We measure cost per request, cache where possible, and route simpler tasks to smaller models when quality allows."
+    },
+    {
+      "question": "What happens when OpenAI changes a model?",
+      "answer": "Changes are tested against your eval set before release, with a rollback ready."
+    },
+    {
+      "question": "Can it work with our private data?",
+      "answer": "Yes, through retrieval and permissioned tools, so the model sees only what the current user is allowed to see."
+    }
+  ]
+}

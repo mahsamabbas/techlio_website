@@ -1,0 +1,49 @@
+{
+  "slug": "langchain",
+  "order": 2,
+  "name": "LangChain",
+  "metaTitle": "LangChain and LangGraph Development Services",
+  "description": "Techlio builds production AI agents and retrieval systems with LangChain and LangGraph, with evaluation, guardrails and tracing built in.",
+  "h1": "LangChain agents and RAG systems *that hold up in production.*",
+  "answer": "LangChain is an open-source framework for building applications on language models, and LangGraph extends it for multi-step agents with state. Techlio uses them to build retrieval systems and agents that are evaluated against real cases, traced end to end, and limited to approved tools.",
+  "builds": [
+    {
+      "title": "Retrieval-augmented generation",
+      "text": "Search over your documents and data that returns answers with their sources, respecting who is allowed to see what."
+    },
+    {
+      "title": "Multi-step agents",
+      "text": "LangGraph agents that plan, call tools, pause for human approval and resume, with every step logged."
+    },
+    {
+      "title": "Evaluation and tracing",
+      "text": "An eval set from your own cases and tracing on every request, so quality and cost are measured, not guessed."
+    }
+  ],
+  "fits": [
+    "The system needs several steps, tools or data sources, not a single prompt",
+    "You want to switch or compare models without a rewrite",
+    "You need traces and evaluations to satisfy a security or quality review"
+  ],
+  "cases": [
+    "ordaos"
+  ],
+  "services": [
+    "ai-agents",
+    "ai-consulting"
+  ],
+  "faqs": [
+    {
+      "question": "Do we need LangChain at all?",
+      "answer": "Not always. For a single prompt or a simple workflow, direct API calls are easier to maintain. We recommend the framework only where its structure earns its keep."
+    },
+    {
+      "question": "Can you improve an existing LangChain app?",
+      "answer": "Yes. The usual gains come from better retrieval, an eval set, and tighter tool permissions."
+    },
+    {
+      "question": "Which vector stores do you use?",
+      "answer": "Commonly pgvector, because it keeps vectors beside your existing Postgres data. We use others when scale or features call for it."
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "slug": "django",
+  "order": 6,
+  "name": "Django",
+  "metaTitle": "Django Development Services for SaaS and AI Products",
+  "description": "Techlio builds and modernises web platforms and APIs with Django, including admin tools, multi-tenant SaaS and AI features.",
+  "h1": "Django platforms and APIs, *ready for AI features.*",
+  "answer": "Django is a Python web framework for building secure, data-driven applications quickly. Techlio uses it for SaaS back ends, internal tools and APIs, and for adding AI features to products already built on Python.",
+  "builds": [
+    {
+      "title": "SaaS back ends and APIs",
+      "text": "Multi-tenant platforms with authentication, roles, billing hooks and REST APIs."
+    },
+    {
+      "title": "Internal tools and admin",
+      "text": "Operational dashboards and back-office tools built on Django's admin and ORM."
+    },
+    {
+      "title": "AI features on Django",
+      "text": "Retrieval, agents and background AI jobs added to an existing Django product."
+    }
+  ],
+  "fits": [
+    "You want a mature framework with security features built in",
+    "The product is data-heavy with complex permissions",
+    "Your AI services are in Python and you want one language on the back end"
+  ],
+  "cases": [],
+  "services": [
+    "product-development",
+    "legacy-modernization"
+  ],
+  "faqs": [
+    {
+      "question": "Django or Node.js?",
+      "answer": "Both are sound. We choose Django when the product is data-heavy or the team is Python-first, and Node when real-time features or a shared TypeScript codebase matter more."
+    },
+    {
+      "question": "Can you upgrade an old Django version?",
+      "answer": "Yes, in stages with tests, so the system stays in use throughout."
+    },
+    {
+      "question": "Does Django scale?",
+      "answer": "Yes, with the usual practices: caching, background workers, database tuning and horizontal scaling."
+    }
+  ]
+}

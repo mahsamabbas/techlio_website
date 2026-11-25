@@ -1,0 +1,51 @@
+{
+  "slug": "data-engineering",
+  "order": 10,
+  "name": "Data engineering",
+  "metaTitle": "Data Engineering Services for AI and Analytics",
+  "description": "Techlio builds the data pipelines, stores and quality checks that AI systems and dashboards depend on.",
+  "h1": "Data engineering *that makes AI and reporting possible.*",
+  "answer": "Data engineering is the work of collecting, cleaning and organising data so that software, reports and AI systems can rely on it. Techlio builds the pipelines, stores and checks that keep data current, permissioned and trustworthy, which is the part most AI projects underestimate.",
+  "builds": [
+    {
+      "title": "Pipelines and integrations",
+      "text": "Scheduled and real-time jobs that bring data together from apps, databases and files."
+    },
+    {
+      "title": "Search and vector stores",
+      "text": "Indexing of documents and records so AI systems can retrieve the right passage."
+    },
+    {
+      "title": "Dashboards and reporting",
+      "text": "Clean data models behind dashboards that operations teams use daily."
+    }
+  ],
+  "fits": [
+    "Data lives in several systems that do not agree",
+    "An AI project is blocked by data access or quality",
+    "Reports are compiled by hand each week"
+  ],
+  "cases": [
+    "ordaos",
+    "spinlab-ai"
+  ],
+  "services": [
+    "ai-consulting",
+    "cloud-devops",
+    "ai-workflow-automation"
+  ],
+  "faqs": [
+    {
+      "question": "Do we need a data warehouse first?",
+      "answer": "Not necessarily. Many AI systems start with a small, clean set of sources. We build what the use case needs."
+    },
+    {
+      "question": "How do you handle sensitive data?",
+      "answer": "Access rules are carried through the pipeline, with encryption and an audit trail."
+    },
+    {
+      "question": "Can you work with our existing tools?",
+      "answer": "Yes. We build on what you have before suggesting anything new."
+    }
+  ]
+}

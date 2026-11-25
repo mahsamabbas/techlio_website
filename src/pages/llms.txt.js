@@ -1,5 +1,5 @@
 // llms.txt: a plain-text summary of the company and its key pages for AI assistants. Built from the site content.
-import { site, services, offers, cases, insights } from '../lib/content.js';
+import { site, services, offers, cases, insights, technologies } from '../lib/content.js';
 
 const url = (p) => new URL(p, site.url).href;
 const clean = (s = '') => String(s).replace(/\*/g, '').replace(/\s+/g, ' ').trim();
@@ -29,6 +29,10 @@ export function GET() {
     '## Fixed-scope offers',
     '',
     ...offers.map((o) => `- [${clean(o.title)}](${url(`/${o.slug}/`)}): ${clean(o.description)}`),
+    '',
+    '## Technologies',
+    '',
+    ...technologies.map((t) => `- [${t.name}](${url(`/technologies/${t.slug}/`)}): ${clean(t.description)}`),
     '',
     '## Case studies',
     '',

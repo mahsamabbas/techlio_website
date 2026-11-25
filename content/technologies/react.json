@@ -1,0 +1,51 @@
+{
+  "slug": "react",
+  "order": 7,
+  "name": "React",
+  "metaTitle": "React Development Services for SaaS and AI Products",
+  "description": "Techlio builds web and mobile front ends in React and React Native for SaaS platforms, dashboards and AI products.",
+  "h1": "React front ends *for products people use every day.*",
+  "answer": "React is the most widely used library for building web interfaces, and React Native extends it to mobile apps. Techlio uses both to build SaaS products, dashboards and AI interfaces, with design, accessibility and performance handled by the same team.",
+  "builds": [
+    {
+      "title": "SaaS web applications",
+      "text": "Multi-tenant products with complex forms, real-time updates and role-based views."
+    },
+    {
+      "title": "Dashboards and data views",
+      "text": "Clear, fast interfaces over operational and AI data."
+    },
+    {
+      "title": "Mobile and desktop apps",
+      "text": "React Native and Electron apps that share logic with the web product."
+    }
+  ],
+  "fits": [
+    "You need a responsive web product with rich interaction",
+    "You want web and mobile to share code and skills",
+    "You are adding AI features that need streaming responses and review screens"
+  ],
+  "cases": [
+    "coverai",
+    "onequext",
+    "vofspace"
+  ],
+  "services": [
+    "product-development",
+    "legacy-modernization"
+  ],
+  "faqs": [
+    {
+      "question": "Do you design as well as build?",
+      "answer": "Yes. UI and UX design are part of the same team and process."
+    },
+    {
+      "question": "Can you modernise an older front end?",
+      "answer": "Yes. We have moved large products off outdated frameworks in stages, with regression testing."
+    },
+    {
+      "question": "Do you use TypeScript?",
+      "answer": "By default, for safer changes and easier hand-over."
+    }
+  ]
+}

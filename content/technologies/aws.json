@@ -1,0 +1,51 @@
+{
+  "slug": "aws",
+  "order": 8,
+  "name": "AWS",
+  "metaTitle": "AWS Cloud and DevOps Services for AI Workloads",
+  "description": "Techlio designs, deploys and runs software and AI systems on AWS: architecture, CI/CD, serverless, monitoring and cost control.",
+  "h1": "AWS architecture and operations *for software and AI.*",
+  "answer": "Amazon Web Services is the cloud platform most of Techlio's client systems run on. Techlio designs the architecture, automates releases, and operates applications and AI workloads on AWS, working inside the client's own account.",
+  "builds": [
+    {
+      "title": "Cloud architecture",
+      "text": "Secure, cost-aware designs using containers, serverless functions and managed databases."
+    },
+    {
+      "title": "CI/CD and release automation",
+      "text": "Pipelines that test and deploy every change, with staged rollouts and rollback."
+    },
+    {
+      "title": "AI workloads",
+      "text": "Model access, vector storage, background jobs and monitoring for AI features in production."
+    }
+  ],
+  "fits": [
+    "You want infrastructure in an account you own and control",
+    "The system needs to scale with demand",
+    "Security reviews require clear access control, logging and encryption"
+  ],
+  "cases": [
+    "dp360-crm",
+    "vcreative",
+    "onequext"
+  ],
+  "services": [
+    "cloud-devops",
+    "cybersecurity"
+  ],
+  "faqs": [
+    {
+      "question": "Do you work in our AWS account?",
+      "answer": "Yes. You keep ownership, billing and access."
+    },
+    {
+      "question": "Can you reduce our AWS bill?",
+      "answer": "Usually. A review finds idle resources, oversized instances and missing caching."
+    },
+    {
+      "question": "Do you support other clouds?",
+      "answer": "Yes, though most of our production work is on AWS."
+    }
+  ]
+}

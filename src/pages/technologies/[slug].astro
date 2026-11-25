@@ -1,0 +1,60 @@
+---
+import Base from '../../layouts/Base.astro';
+import Section from '../../components/Section.astro';
+import Blocks from '../../components/Blocks.astro';
+import CaseCards from '../../components/CaseCards.astro';
+import PageHero from '../../components/PageHero.astro';
+import Closing from '../../components/Closing.astro';
+import { technologies, services, offers, pickCases, faqSchema, breadcrumbSchema, site } from '../../lib/content.js';
+
+export function getStaticPaths() {
+  return technologies.map((t) => ({ params: { slug: t.slug }, props: { t } }));
+}
+const { t } = Astro.props;
+const linked = (t.services || []).map((s) => [...services, ...offers].find((e) => e.slug === s)).filter(Boolean);
+const shown = pickCases(t.cases).slice(0, 3);
+const schema = [
+  { '@context': 'https://schema.org', '@type': 'Service', name: t.metaTitle || `${t.name} development services`, description: t.description, url: new URL(`/technologies/${t.slug}/`, site.url).href, provider: { '@id': `${site.url}/#organization` }, areaServed: ['US', 'GB', 'Europe'] },
+  ...faqSchema(t.faqs),
+  breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Technologies', path: '/technologies/' }, { name: t.name, path: `/technologies/${t.slug}/` }]),
+];
+---
+
+<Base title={t.metaTitle || t.name} description={t.description} schema={schema}>
+  <PageHero back={{ href: '/technologies/', label: 'All technologies' }} title={t.h1} intro={t.description} secondary={{ href: '/case-studies/', label: 'See shipped work' }} />
+  <section class="answer-band">
+    <div class="wrap"><div class="article-answer"><strong>In short</strong><p>{t.answer}</p></div></div>
+  </section>
+  <Section eyebrow="What we build" title={`What we build with *${t.name}*`}>
+    <Blocks items={t.builds} />
+  </Section>
+  {
+    t.fits && t.fits.length > 0 && (
+      <Section tint title={`When ${t.name} is *the right choice*`}>
+        <ul class="ticks ticks-grid">{t.fits.map((x) => <li>{x}</li>)}</ul>
+      </Section>
+    )
+  }
+  {
+    shown.length > 0 && (
+      <Section eyebrow="Client work" title={`Projects built with *${t.name}*`}>
+        <CaseCards slugs={shown.map((c) => c.slug)} />
+      </Section>
+    )
+  }
+  {
+    t.faqs && t.faqs.length > 0 && (
+      <Section tint eyebrow="FAQ" title="Common *questions*">
+        <div class="faq">{t.faqs.map((f) => <details><summary>{f.question}</summary><p>{f.answer}</p></details>)}</div>
+      </Section>
+    )
+  }
+  {
+    linked.length > 0 && (
+      <Section title="Related *services*">
+        <ul class="chips chips-large article">{linked.map((e) => <li><a href={`/${e.slug}/`}>{e.title}</a></li>)}</ul>
+      </Section>
+    )
+  }
+  <Closing title={`Planning something with ${t.name}?`} text="Tell us what you are building. A senior engineer replies within 24 hours." />
+</Base>

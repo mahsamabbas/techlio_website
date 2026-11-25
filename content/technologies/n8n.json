@@ -1,0 +1,50 @@
+{
+  "slug": "n8n",
+  "order": 1,
+  "name": "n8n",
+  "metaTitle": "n8n Development and Automation Services",
+  "description": "Techlio builds and maintains n8n workflows and AI agents for business automation: bookings, orders, invoices, reporting and internal operations.",
+  "h1": "n8n workflows and AI agents, *built to keep running.*",
+  "answer": "n8n is a workflow automation platform that connects business apps and can run AI agents inside a workflow. Techlio designs, builds and maintains n8n automations for companies that want control over their data, logic and running cost, with error handling, logging and a human approval step for unusual cases.",
+  "builds": [
+    {
+      "title": "Business automations",
+      "text": "Bookings, order intake, invoice processing, follow-ups and reporting connected across the tools you already use."
+    },
+    {
+      "title": "AI agents inside workflows",
+      "text": "Agents that read a request, look up facts in your systems, and act, with memory, tools and a vector store where needed."
+    },
+    {
+      "title": "Self-hosted and managed setups",
+      "text": "n8n deployed in your own cloud for data control, with monitoring, backups, upgrades and credentials owned by your company."
+    }
+  ],
+  "fits": [
+    "Automation is becoming core to how the business runs",
+    "Customer or patient data must stay in your own environment",
+    "Volumes are high enough that per-task pricing on other platforms adds up",
+    "Workflows need custom code, branching logic or AI agents"
+  ],
+  "cases": [
+    "ordaos"
+  ],
+  "services": [
+    "n8n-ai-automation",
+    "ai-workflow-automation"
+  ],
+  "faqs": [
+    {
+      "question": "Do you host n8n for us?",
+      "answer": "We deploy it in your cloud account or use n8n's hosted plan, whichever fits your data and budget. Either way the account and credentials belong to you."
+    },
+    {
+      "question": "Can you take over workflows someone else built?",
+      "answer": "Yes. We review them first for error handling, security and maintainability, then fix the highest risks before adding more."
+    },
+    {
+      "question": "Is n8n right for a small business?",
+      "answer": "Often, yes. A few well-built workflows can remove hours of weekly admin. If nobody will maintain it, we will say so and suggest a simpler tool."
+    }
+  ]
+}

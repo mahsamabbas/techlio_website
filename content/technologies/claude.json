@@ -1,0 +1,50 @@
+{
+  "slug": "claude",
+  "order": 3,
+  "name": "Claude",
+  "metaTitle": "Claude API Integration and Development Services",
+  "description": "Techlio integrates Anthropic's Claude into products and internal tools: agents, document analysis, retrieval systems and MCP servers.",
+  "h1": "Claude, integrated into *your product and your workflows.*",
+  "answer": "Claude is a family of AI models from Anthropic, used through an API for reasoning, writing, code and document analysis. Techlio integrates Claude into products and internal systems, including agents that use tools, retrieval over company knowledge, and MCP servers that connect Claude to your own software.",
+  "builds": [
+    {
+      "title": "Agents and assistants",
+      "text": "Claude-based agents that work through permissioned tools and hand off to a person when evidence is thin."
+    },
+    {
+      "title": "Document and knowledge systems",
+      "text": "Analysis and question answering over long documents and research material, with citations to the source."
+    },
+    {
+      "title": "MCP servers",
+      "text": "Connectors built on the Model Context Protocol so Claude can read from and act on your internal systems safely."
+    }
+  ],
+  "fits": [
+    "Tasks involve long documents, careful reasoning or code",
+    "You want an assistant that follows instructions closely and cites sources",
+    "You are connecting AI to internal tools through MCP"
+  ],
+  "cases": [
+    "ordaos",
+    "convert"
+  ],
+  "services": [
+    "ai-agents",
+    "product-development"
+  ],
+  "faqs": [
+    {
+      "question": "Claude or OpenAI: which should we use?",
+      "answer": "We test both against your own cases and choose on quality, cost and latency. Many systems use more than one model."
+    },
+    {
+      "question": "Is our data used to train the model?",
+      "answer": "Commercial API terms differ from consumer apps. We review the provider's current terms with you and can deploy through your cloud provider where required."
+    },
+    {
+      "question": "What is MCP?",
+      "answer": "The Model Context Protocol is an open standard for connecting AI models to tools and data. An MCP server exposes your system's actions to the model in a controlled way."
+    }
+  ]
+}

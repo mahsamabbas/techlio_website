@@ -1,0 +1,51 @@
+{
+  "slug": "python",
+  "order": 5,
+  "name": "Python",
+  "metaTitle": "Python Development for AI and Data Systems",
+  "description": "Techlio builds AI back ends, data pipelines and automation in Python, from model serving and retrieval to scheduled data jobs.",
+  "h1": "Python for AI back ends, *data pipelines and automation.*",
+  "answer": "Python is the main language of AI and data work. Techlio uses it to build the back ends behind AI features, the pipelines that prepare data, and the automation that connects systems, written to be tested, deployed and maintained like any other production software.",
+  "builds": [
+    {
+      "title": "AI back ends and APIs",
+      "text": "Services that handle retrieval, model calls, evaluation and tool use behind a clean API."
+    },
+    {
+      "title": "Data pipelines",
+      "text": "Ingestion, cleaning and transformation jobs that keep AI systems supplied with current, permissioned data."
+    },
+    {
+      "title": "Machine learning services",
+      "text": "Model training and serving for prediction, classification and computer vision."
+    }
+  ],
+  "fits": [
+    "The work involves models, data processing or scientific libraries",
+    "You need one language across data, AI and back-end services",
+    "Your team already maintains Python and wants to keep the stack simple"
+  ],
+  "cases": [
+    "ordaos",
+    "spinlab-ai"
+  ],
+  "services": [
+    "ai-agents",
+    "product-development",
+    "cloud-devops"
+  ],
+  "faqs": [
+    {
+      "question": "Do you use Python for whole products?",
+      "answer": "Often for the AI and data services, alongside a JavaScript or TypeScript front end. We fit the stack to the product and your team."
+    },
+    {
+      "question": "How do you keep Python services reliable?",
+      "answer": "Typed code, automated tests, containers and CI/CD, with monitoring on latency, errors and cost."
+    },
+    {
+      "question": "Can you work in our existing codebase?",
+      "answer": "Yes. We follow your conventions and review process."
+    }
+  ]
+}
