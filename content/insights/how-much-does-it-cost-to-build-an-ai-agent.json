@@ -1,0 +1,87 @@
+{
+  "slug": "how-much-does-it-cost-to-build-an-ai-agent",
+  "title": "How much does it cost to build an AI agent in 2026?",
+  "metaTitle": "How Much Does It Cost to Build an AI Agent in 2026?",
+  "description": "What drives the cost of building and running an AI agent in 2026: integrations, data, evals, guardrails and model usage, with current model prices and a worked example.",
+  "category": "Pricing guide",
+  "date": "2026-11-26",
+  "updated": "2026-11-26",
+  "author": "Mahsam Abbas",
+  "authorRole": "Founder, Techlio",
+  "answer": "There is no honest single price, because the model is the cheap part. The build cost is set by how many systems the agent must read from and write to, how clean the data is, and how much proof of accuracy you need before launch. The running cost is set by volume and model choice, and you can estimate it with simple arithmetic before any code is written.",
+  "sections": [
+    {
+      "heading": "What you are paying for in the build",
+      "text": "An agent that answers questions in a chat window is a small project. An agent that looks up an order, updates the CRM and knows when to hand over to a person is an integration project with a language model inside it. Most of the engineering time goes to the parts around the model.",
+      "bullets": [
+        "Integrations. Each system the agent touches needs a tool with defined inputs, permissions and error handling. This is usually the largest line.",
+        "Data preparation. Documents need cleaning, chunking and access rules before retrieval gives reliable answers.",
+        "Evals. A set of real cases with known good answers, scored automatically on every change. Without it nobody can say whether the agent is ready.",
+        "Guardrails and human review. Permission checks, injection screening, approval steps on risky actions and an audit trail.",
+        "Deployment and monitoring. Logging, cost limits, dashboards and a plan for model upgrades."
+      ]
+    },
+    {
+      "heading": "What makes one agent cost several times another",
+      "text": "When two quotes for an \"AI agent\" differ widely, the scope usually differs in one of these ways.",
+      "bullets": [
+        "Read-only or acting. An agent that only answers is cheaper than one that changes records, sends messages or moves money.",
+        "Number and age of systems. A modern API is quick to connect. A legacy system without one is not.",
+        "Accuracy bar. An internal assistant can launch with a person checking its work. A customer-facing agent in a regulated field needs more testing and more evidence."
+      ]
+    },
+    {
+      "heading": "Running costs: model usage",
+      "text": "Model providers charge per million tokens, with output priced higher than input. On 26 November 2026, Anthropic's pricing page lists models from $0.10 input and $0.50 output per million tokens (Claude Haiku 5.5, for prompts up to 100,000 tokens) to $10 and $50 (Claude Fable 5.1), with Claude Sonnet 5.5 at $2 and $10. OpenAI's page shows a similar spread: gpt-6-luna at $0.10 and $0.50, gpt-6.2-sol at $2 and $10, and gpt-6.2-astra at $8 and $40. These prices change often, so check each vendor's current pricing page before you budget.\n\nA worked example, with assumptions you should replace with your own: 10,000 tasks a month, each using 20,000 input tokens and 2,000 output tokens. That is 200 million input and 20 million output tokens. On a $2 and $10 model the bill is about $600 a month. On a $0.10 and $0.50 model it is about $30. On an $8 and $40 model it is about $2,400. The same workload varies by a factor of 80 depending on the model, which is why we test cheaper models against the eval set before assuming the largest one is needed.",
+      "bullets": [
+        "Prompt caching. Anthropic prices cache reads at a tenth of the base input price on most models, which matters when every request repeats the same long instructions.",
+        "Batch processing. Anthropic's Batch API gives a 50 percent discount on input and output for work that does not need an immediate answer.",
+        "Tools. Built-in web search is listed at $10 per 1,000 searches by both vendors, plus the tokens for the results."
+      ]
+    },
+    {
+      "heading": "Running costs beyond the model",
+      "text": "Budget for hosting, a vector store or database, logging and monitoring, and the engineering time to keep the agent healthy. Models are retired and replaced, prompts need re-testing after each upgrade, and new failure cases must be added to the eval set. An agent with no owner and no maintenance budget degrades quietly. We would not recommend launching one that way.",
+      "bullets": []
+    },
+    {
+      "heading": "How to get a number you can trust",
+      "text": "Ask for a fixed-scope first phase before you ask for a full build price. A short piece of work on one use case, with your real data, produces the three things an estimate depends on: a working prototype, an eval baseline and a measured cost per task. Our 14-Day AI and Architecture Sprint is built for this and ends with a production build estimate and its assumptions.\n\nBe wary of a fixed price for a whole agent quoted before anyone has seen your data or systems. Either it carries a large margin for the unknowns, or the unknowns will come back as change requests.",
+      "bullets": [
+        "List every system the agent must read or write, and who owns each.",
+        "Decide which actions need human approval.",
+        "Estimate monthly task volume and the acceptable response time.",
+        "Collect 50 real cases with known good answers."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is it cheaper to buy an off-the-shelf agent than to build one?",
+      "answer": "Often, yes, if a product already fits your process and connects to your systems. A custom build makes sense when the work depends on your own data, your own rules or systems that packaged tools cannot reach."
+    },
+    {
+      "question": "Which costs more, the build or the running cost?",
+      "answer": "For most business agents the build and its upkeep cost more than model usage. Usage becomes the larger figure only at high volume or when every task needs the most capable model."
+    },
+    {
+      "question": "How long does it take to build an AI agent?",
+      "answer": "It depends on how many systems it touches and how clean the data is. A focused first agent is usually measured in weeks. A scoping call gives you an estimate for your case."
+    }
+  ],
+  "related": [
+    "ai-agents",
+    "ai-architecture-sprint",
+    "ai-consulting"
+  ],
+  "sources": [
+    {
+      "title": "Anthropic: Claude API pricing",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+    },
+    {
+      "title": "OpenAI: API pricing",
+      "url": "https://developers.openai.com/api/docs/pricing"
+    }
+  ]
+}
