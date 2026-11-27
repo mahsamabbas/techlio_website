@@ -1,0 +1,101 @@
+{
+  "slug": "what-the-eu-ai-act-requires-from-a-saas-company",
+  "title": "What the EU AI Act requires from a SaaS company",
+  "metaTitle": "What the EU AI Act Requires From a SaaS Company",
+  "description": "Which EU AI Act obligations apply to a SaaS product with AI features, which dates moved after the Digital Omnibus, and the engineering work to do now.",
+  "category": "Explainer",
+  "date": "2026-11-27",
+  "updated": "2026-11-27",
+  "author": "Mahsam Abbas",
+  "authorRole": "Founder, Techlio",
+  "answer": "If people in the EU use an AI feature in your product, the EU AI Act applies to you wherever your company is based. For most SaaS products the obligations that matter today are transparency ones: tell users when they are dealing with an AI and make generated content identifiable. The strict requirements are reserved for high-risk uses such as recruitment, education and credit decisions, and those now apply from 2 December 2027.",
+  "sections": [
+    {
+      "heading": "Does the Act apply to your product?",
+      "text": "The Commission's guidance says the Act covers public and private organisations inside and outside the EU that place an AI system on the EU market, put one into service, or use one in the EU. A US or UK company with European customers is in scope.\n\nThe Act gives duties to two main roles. The Commission's own example is a company that develops a CV-screening tool, which is the provider, and a bank that uses it, which is the deployer. A SaaS company is usually the provider of the AI features it ships, and a deployer of the AI tools it uses internally. Your customers are deployers of your product.\n\nThis article covers the engineering side. Which role and risk level apply to a specific feature is a legal question for counsel.",
+      "bullets": []
+    },
+    {
+      "heading": "Classify each AI feature by risk",
+      "text": "The Act sorts AI uses into four levels. It depends on what the feature is used for, not on which model sits behind it, so classify per feature.",
+      "bullets": [
+        "Prohibited. Practices such as social scoring, manipulation, and emotion recognition in workplaces and schools. A further ban on systems that generate non-consensual sexual deepfakes and child sexual abuse material starts to apply on 2 December 2026.",
+        "High-risk. The Commission's examples include CV-sorting software for recruitment, exam scoring, credit scoring, biometric identification and safety components in critical infrastructure.",
+        "Transparency risk. Chatbots, generative features and deepfakes. Most SaaS AI features land here.",
+        "Minimal risk. The Commission says this is the majority of AI systems, with spam filters as an example. No additional obligations."
+      ]
+    },
+    {
+      "heading": "What already applies",
+      "text": "The Act entered into force on 1 August 2024 and has applied in stages since.",
+      "bullets": [
+        "Since 2 February 2025: the prohibitions and the AI literacy provisions.",
+        "Since 2 August 2025: obligations on providers of general-purpose AI models. If you call a model through a vendor's API, these sit with the model provider, who must give downstream builders the technical information they need.",
+        "Since 2 August 2026: the Article 50 transparency rules, and enforcement by the AI Office and national authorities. Users must be told when they are interacting with a machine, providers of generative systems must mark output as AI-generated in a machine-readable way, and deepfakes and AI-written text on matters of public interest must be labelled.",
+        "2 December 2026: a transitional deadline for certain providers whose systems were already on the market before 2 August 2026 to meet the Article 50(2) marking requirement."
+      ]
+    },
+    {
+      "heading": "If a feature is high-risk",
+      "text": "The Digital Omnibus on AI, which entered into force on 27 July 2026, pushed the high-risk dates back. Rules for the high-risk use cases listed in Annex III now apply from 2 December 2027, and rules for AI embedded in regulated products such as medical devices, toys and lifts apply from 2 August 2028.\n\nThe delay is not a reason to wait if you sell into HR, education or lending. These requirements shape the architecture and are cheaper to design in than to retrofit. The Commission lists these for providers before a high-risk system goes on the market:",
+      "bullets": [
+        "A risk assessment and mitigation system.",
+        "High-quality datasets, to reduce the risk of discriminatory outcomes.",
+        "Logging of activity so results can be traced.",
+        "Detailed documentation of the system and its purpose.",
+        "Clear information for the deployer.",
+        "Human oversight measures.",
+        "A high level of robustness, cybersecurity and accuracy.",
+        "A conformity assessment, a quality management system and registration in an EU database."
+      ]
+    },
+    {
+      "heading": "What we would do this quarter",
+      "text": "Most of this is ordinary engineering. We would not recommend buying a compliance tool before you have an inventory, or assuming that your model vendor's compliance covers your product. It covers their model.",
+      "bullets": [
+        "List every place AI touches your product and your internal operations, with the data it sees and the decision it influences.",
+        "Classify each use against the four levels and write down the reasoning.",
+        "Add a clear AI disclosure to every chat or voice interface, and label generated content.",
+        "Log inputs, outputs, model versions and human overrides.",
+        "For anything close to high-risk, design the human review step and the documentation now."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Does the EU AI Act apply to a US or UK SaaS company?",
+      "answer": "Yes, if you place an AI system on the EU market or it is used in the EU. The Commission's guidance says the Act covers organisations inside and outside the EU."
+    },
+    {
+      "question": "We only call a model through an API. Are we a general-purpose AI model provider?",
+      "answer": "In the usual case, no. The general-purpose model obligations fall on the company that provides the model. You remain responsible for the AI system you build on top of it. If you fine-tune and distribute a model yourself, ask counsel."
+    },
+    {
+      "question": "Did the Digital Omnibus delay everything?",
+      "answer": "No. It moved the high-risk dates to 2 December 2027 and 2 August 2028. The prohibitions, the general-purpose model obligations and the Article 50 transparency rules already apply."
+    }
+  ],
+  "related": [
+    "cybersecurity",
+    "ai-consulting",
+    "ai-architecture-sprint"
+  ],
+  "sources": [
+    {
+      "title": "European Commission: AI Act (Shaping Europe's digital future)",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+    },
+    {
+      "title": "European Commission: Navigating the AI Act (FAQ)",
+      "url": "https://digital-strategy.ec.europa.eu/en/faqs/navigating-ai-act"
+    },
+    {
+      "title": "AI Act Service Desk: Timeline for the Implementation of the EU AI Act",
+      "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/eu-ai-act-implementation-timeline"
+    },
+    {
+      "title": "European Commission: EU agrees to simplify AI rules to boost innovation and ban 'nudification' apps",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/eu-agrees-simplify-ai-rules-boost-innovation-and-ban-nudification-apps-protect-citizens"
+    }
+  ]
+}
