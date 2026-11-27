@@ -963,6 +963,4 @@ html.dialog-open { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) { .chat-wait span { animation: none; opacity: 0.6; } .chat-toggle { transition: none; } }
 @media print { .chat { display: none; } }
 
-/* Sections below the first screen are laid out only as they approach the viewport, which shortens the first render. */
-main > .section { content-visibility: auto; contain-intrinsic-size: auto 900px; }
 /* Looping decorative animations start once the page has loaded (the "fx" class is set by site.js) and stop while the tab is hidden. */
