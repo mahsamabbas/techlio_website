@@ -548,8 +548,8 @@ p { max-width: 64ch; }
   .hero-grid > div:first-child > :nth-child(4), .page-hero .wrap > div:first-child > :nth-child(4), .page-hero .wrap:not(.hero-grid) > :nth-child(4) { animation-delay: 0.21s; }
   .hero-grid > div:first-child > :nth-child(n + 5), .page-hero .wrap > div:first-child > :nth-child(n + 5), .page-hero .wrap:not(.hero-grid) > :nth-child(n + 5) { animation-delay: 0.28s; }
   .hero-grid > .pipe { animation: rise 0.9s 0.2s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
-  .hero::before { animation: drift 16s ease-in-out infinite alternate; }
-  .badge::before { animation: pulse 2.4s ease-in-out infinite; }
+  .fx .hero::before { animation: drift 16s ease-in-out infinite alternate; }
+  .fx .badge::before { animation: pulse 2.4s ease-in-out infinite; }
   .case-visual { transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1); }
   .case-visual:hover { transform: translateY(-4px) scale(1.01); }
   .tile { transition: transform 0.3s; }
@@ -784,11 +784,11 @@ html.dialog-open { overflow: hidden; }
 .hv-life li + li::before { content: '\2192'; margin: 0 0.7rem; color: var(--blue); letter-spacing: 0; }
 @media (prefers-reduced-motion: no-preference) {
   .hero-grid > .hv { animation: rise 0.9s 0.2s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
-  .hv-wires .hv-pulse { animation: hv-pulse 6s linear infinite; animation-delay: calc(var(--i) * 1.5s); }
+  .fx .hv-wires .hv-pulse { animation: hv-pulse 6s linear infinite; animation-delay: calc(var(--i) * 1.5s); }
   .hv-wires .hv-pulse.is-out { animation-delay: calc(var(--i) * 1.5s + 0.75s); }
-  .hv-out li { animation: hv-done 6s ease-out infinite; animation-delay: calc(var(--i) * 1.5s + 1.4s); }
-  .hv-in li { animation: hv-send 6s ease-out infinite; animation-delay: calc(var(--i) * 1.5s); }
-  .hv-core { animation: hv-breathe 3s ease-in-out infinite; }
+  .fx .hv-out li { animation: hv-done 6s ease-out infinite; animation-delay: calc(var(--i) * 1.5s + 1.4s); }
+  .fx .hv-in li { animation: hv-send 6s ease-out infinite; animation-delay: calc(var(--i) * 1.5s); }
+  .fx .hv-core { animation: hv-breathe 3s ease-in-out infinite; }
   .hv-line { stroke-dasharray: 600; animation: hv-draw 2.2s 0.6s ease-out both; }
   @keyframes hv-pulse { 0% { stroke-dashoffset: 14; opacity: 0; } 2% { opacity: 1; } 12% { stroke-dashoffset: -100; opacity: 1; } 13%, 100% { stroke-dashoffset: -100; opacity: 0; } }
   @keyframes hv-send { 0%, 14%, 100% { border-color: #dbe8f6; background: #f4f8fd; } 3% { border-color: #176bce; background: #e6f0fb; } }
@@ -962,3 +962,7 @@ html.dialog-open { overflow: hidden; }
 @media (max-width: 560px) { .chat { right: 0.75rem; bottom: 0.75rem; } .chat-toggle span { display: none; } .chat-toggle { width: 3.25rem; padding: 0; justify-content: center; } }
 @media (prefers-reduced-motion: reduce) { .chat-wait span { animation: none; opacity: 0.6; } .chat-toggle { transition: none; } }
 @media print { .chat { display: none; } }
+
+/* Sections below the first screen are laid out only as they approach the viewport, which shortens the first render. */
+main > .section { content-visibility: auto; contain-intrinsic-size: auto 900px; }
+/* Looping decorative animations start once the page has loaded (the "fx" class is set by site.js) and stop while the tab is hidden. */

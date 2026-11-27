@@ -205,3 +205,11 @@
       .then(function () { button.disabled = false; });
   });
 })();
+
+/* Decorative looping animations wait until the page has finished loading, so they never compete with the first render. */
+(function () {
+  function on() { document.documentElement.classList.add('fx'); }
+  function start() { if ('requestIdleCallback' in window) requestIdleCallback(on, { timeout: 3000 }); else setTimeout(on, 1500); }
+  if (document.readyState === 'complete') start(); else window.addEventListener('load', start);
+  document.addEventListener('visibilitychange', function () { document.documentElement.classList.toggle('fx', document.visibilityState === 'visible'); });
+})();
