@@ -46,7 +46,7 @@ jobs:
       - run: npm run build
       - name: Lighthouse
         run: |
-          npx -y @lhci/cli@0.14.x collect --staticDistDir=dist --numberOfRuns=1 \
+          npx -y @lhci/cli@0.14.x collect --staticDistDir=dist --numberOfRuns=3 \
             --url=http://localhost/index.html \
             --url=http://localhost/ai-agents/index.html \
             --url=http://localhost/case-studies/index.html \

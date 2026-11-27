@@ -1,8 +1,14 @@
 // Prints a one-line Lighthouse summary per page, plus the audits that failed, from the reports LHCI just collected.
 import { readdirSync, readFileSync } from 'node:fs';
 const dir = '.lighthouseci';
-for (const f of readdirSync(dir).filter((x) => x.startsWith('lhr-') && x.endsWith('.json'))) {
-  const r = JSON.parse(readFileSync(`${dir}/${f}`, 'utf8'));
+// Each page is tested several times; report the run with the median performance score, since single runs are noisy.
+const all = readdirSync(dir).filter((x) => x.startsWith('lhr-') && x.endsWith('.json')).map((f) => JSON.parse(readFileSync(`${dir}/${f}`, 'utf8')));
+const byUrl = new Map();
+for (const r of all) { const u = r.finalDisplayedUrl || r.finalUrl; byUrl.set(u, [...(byUrl.get(u) || []), r]); }
+for (const runs of byUrl.values()) {
+  runs.sort((x, y) => (x.categories.performance?.score ?? 0) - (y.categories.performance?.score ?? 0));
+  const r = runs[Math.floor(runs.length / 2)];
+  console.log(`RUNS ${new URL(r.finalDisplayedUrl || r.finalUrl).pathname} perf scores: ${runs.map((x) => Math.round((x.categories.performance?.score ?? 0) * 100)).join(', ')}`);
   const c = r.categories;
   const pct = (k) => Math.round((c[k]?.score ?? 0) * 100);
   console.log(`LH ${new URL(r.finalDisplayedUrl || r.finalUrl).pathname} perf=${pct('performance')} a11y=${pct('accessibility')} best=${pct('best-practices')} seo=${pct('seo')} LCP=${r.audits['largest-contentful-paint']?.displayValue} CLS=${r.audits['cumulative-layout-shift']?.displayValue} TBT=${r.audits['total-blocking-time']?.displayValue}`);

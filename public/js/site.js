@@ -41,12 +41,15 @@
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    // Measure everything first, then change styles: mixing the two forces the browser to lay the page out once per element.
+    var fold = window.innerHeight * 0.92, below = [];
     Array.prototype.forEach.call(targets, function (el) {
-      if (el.getBoundingClientRect().top < window.innerHeight * 0.92) return;
-      var i = Array.prototype.indexOf.call(el.parentNode.children, el);
-      el.style.setProperty('--d', Math.min(i, 5) * 70 + 'ms');
-      el.classList.add('reveal');
-      io.observe(el);
+      if (el.getBoundingClientRect().top >= fold) below.push([el, Array.prototype.indexOf.call(el.parentNode.children, el)]);
+    });
+    below.forEach(function (pair) {
+      pair[0].style.setProperty('--d', Math.min(pair[1], 5) * 70 + 'ms');
+      pair[0].classList.add('reveal');
+      io.observe(pair[0]);
     });
   }
 
