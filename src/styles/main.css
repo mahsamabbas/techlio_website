@@ -4,8 +4,8 @@
    Layout language: soft light ground, white rounded cards, pill buttons, generous spacing. */
 
 /* Fallback faces sized to match the web fonts, so text does not move when they finish loading */
-@font-face { font-family: 'Inter Fallback'; src: local('Arial'); ascent-override: 90.44%; descent-override: 22.52%; line-gap-override: 0%; size-adjust: 107.4%; }
-@font-face { font-family: 'Instrument Serif Fallback'; font-style: italic; src: local('Georgia Italic'), local('Georgia'); size-adjust: 80.5%; }
+@font-face { font-family: 'Inter Fallback'; src: local('Arial'); ascent-override: 90.44%; descent-override: 22.52%; line-gap-override: 0%; size-adjust: 108%; }
+@font-face { font-family: 'Instrument Serif Fallback'; font-style: italic; src: local('Georgia Italic'), local('Georgia'); size-adjust: 81.5%; }
 :root {
   --bg: #f5f8fc;
   --card: #ffffff;
