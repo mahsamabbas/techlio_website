@@ -637,7 +637,7 @@ html.dialog-open { overflow: hidden; }
 
 /* Service cards: each carries its own accent */
 .svc-card { --acc: #176bce; --acc2: #19a9e6; }
-.svc-card:nth-child(4n + 2) { --acc: #0a8fa8; --acc2: #23d3e6; }
+.svc-card:nth-child(4n + 2) { --acc: #08768b; --acc2: #23d3e6; }
 .svc-card:nth-child(4n + 3) { --acc: #3d47c9; --acc2: #176bce; }
 .svc-card:nth-child(4n + 4) { --acc: #0f52a3; --acc2: #0a8fa8; }
 .svc-card::before { opacity: 1; height: 3px; background: linear-gradient(90deg, var(--acc), var(--acc2)); }
@@ -651,7 +651,7 @@ html.dialog-open { overflow: hidden; }
 /* Info cards carry an icon instead of a bar */
 .info-card::before { display: none; }
 .info-card > .icon-chip { margin-bottom: 1rem; border: 1px solid #d9e8f8; }
-.cards > .info-card:nth-child(3n + 2) > .icon-chip { background: #e6f7fa; color: #0a8fa8; border-color: #c9ecf2; }
+.cards > .info-card:nth-child(3n + 2) > .icon-chip { background: #e6f7fa; color: #08768b; border-color: #c9ecf2; }
 .cards > .info-card:nth-child(3n + 3) > .icon-chip { background: #ecedfb; color: #3d47c9; border-color: #d9dbf6; }
 .dark-panel .info-card > .icon-chip { background: rgb(255 255 255 / 0.08); border-color: rgb(255 255 255 / 0.16); color: #7fd8f5; }
 .case-hero-metrics .info-card > .icon-chip { display: none; }
@@ -662,13 +662,13 @@ html.dialog-open { overflow: hidden; }
 .phase::before { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(3.6rem, 2.6rem + 3vw, 5rem); letter-spacing: -0.02em; margin-bottom: 1.1rem; padding-right: 0.15em; width: max-content; position: relative; z-index: 1; }
 .phase:not(:last-child)::after { content: ''; position: absolute; top: clamp(1.8rem, 1.3rem + 1.5vw, 2.5rem); left: clamp(5.2rem, 4rem + 4vw, 7rem); right: -2.5rem; height: 1px; background: linear-gradient(90deg, #b9d6f3, #e2e9f1); }
 .phase-label { display: block; margin-bottom: 0.5rem; font: 500 0.7rem/1 var(--mono); letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); }
-.phase:nth-child(2) .phase-label { color: #0a8fa8; }
+.phase:nth-child(2) .phase-label { color: #08768b; }
 .phase:nth-child(3) .phase-label { color: #3d47c9; }
 .phase:nth-child(4) .phase-label { color: #0f52a3; }
 
 /* Featured case rows: one accent per client */
 .case-row { --acc: #176bce; --acc-grad: linear-gradient(140deg, #010027 0%, #176bce 65%, #23ebf2 130%); }
-.case-row:nth-child(3n + 2) { --acc: #0a8fa8; --acc-grad: linear-gradient(140deg, #012b3a 0%, #0a8fa8 70%, #6ff2e6 135%); }
+.case-row:nth-child(3n + 2) { --acc: #08768b; --acc-grad: linear-gradient(140deg, #012b3a 0%, #0a8fa8 70%, #6ff2e6 135%); }
 .case-row:nth-child(3n + 3) { --acc: #3d47c9; --acc-grad: linear-gradient(140deg, #0b0a3d 0%, #3d47c9 70%, #19a9e6 135%); }
 .case-row .case-visual { background: var(--acc-grad); }
 .case-row .case-eyebrow, .case-row .metric strong, .case-row .more { color: var(--acc); }
@@ -727,7 +727,7 @@ html.dialog-open { overflow: hidden; }
 .rail li:nth-child(3) { border-color: var(--blue); box-shadow: 0 0 0 4px rgb(23 107 206 / 0.1), var(--shadow-lg); }
 .rail li:nth-child(3)::before { background: var(--grad); color: #fff; }
 .path:nth-child(2) { border-top-color: #0a8fa8; }
-.path:nth-child(2) .path-line { color: #0a8fa8; }
+.path:nth-child(2) .path-line { color: #08768b; }
 .path:nth-child(3) { border-top-color: #3d47c9; }
 .path:nth-child(3) .path-line { color: #3d47c9; }
 .timeline .ticks { margin-top: 0.9rem; padding: 1rem 1.15rem; background: #eef4fc; border: 1px solid #d9e8f8; border-radius: 14px; }
