@@ -1,0 +1,94 @@
+{
+  "slug": "n8n-agency-or-freelancer-how-to-choose",
+  "title": "n8n agency or freelancer: how a small business should choose",
+  "metaTitle": "n8n Agency or Freelancer: How Small Businesses Choose",
+  "description": "When a freelancer is the right choice for n8n automation, when an agency is, and the questions and ownership terms that matter more than either label.",
+  "category": "Guide",
+  "date": "2026-11-27",
+  "updated": "2026-11-27",
+  "author": "Mahsam Abbas",
+  "authorRole": "Founder, Techlio",
+  "answer": "Hire a freelancer when you need one well-defined workflow and can live with it being down for a day or two. Hire an agency when the automation touches customers, payments or bookings, or when you want someone on the hook for keeping it running. In both cases the workflows should run in an n8n account you own, with documentation that lets someone else take over.",
+  "sections": [
+    {
+      "heading": "The real question is who fixes it when it breaks",
+      "text": "Building an n8n workflow is the easy part. Workflows break later: an app changes its API, a login token expires, a customer sends a message in a format nobody expected. The choice between a freelancer and an agency is mostly a choice about what happens on that day.\n\nA freelancer is one person. A good one will fix it quickly, unless they are on holiday, ill or busy with a larger client. An agency costs more because you are paying for cover, review by a second engineer and a process for monitoring.",
+      "bullets": []
+    },
+    {
+      "heading": "When a freelancer is the right choice",
+      "text": "We are an agency, and we would still tell some owners to hire a freelancer. It is the sensible choice when:",
+      "bullets": [
+        "The job is one workflow with a clear start and end, such as copying form entries into a spreadsheet and sending a notification.",
+        "Nothing bad happens if it stops for a day. Someone can do the task by hand in the meantime.",
+        "It does not handle payments, health records or other sensitive data.",
+        "Someone on your team is comfortable opening n8n, reading an error and restarting a workflow."
+      ]
+    },
+    {
+      "heading": "When an agency is worth the extra cost",
+      "text": "The more a workflow is part of how the business runs, the more that cover matters.",
+      "bullets": [
+        "Customers see the result directly: bookings, order confirmations, replies written by an AI step.",
+        "Several workflows depend on each other, or on a system with awkward integration such as an older practice or stock system.",
+        "The automation makes decisions with AI, which needs testing on real messages and a path to a person for unusual cases.",
+        "You handle regulated data and need access limits and a record of what the automation did.",
+        "Nobody in the business wants to look after it."
+      ]
+    },
+    {
+      "heading": "Whoever you hire, own the account",
+      "text": "This matters more than the freelancer or agency label. Ask where the workflows will run. The answer we would look for is your own n8n account, either n8n Cloud or a server you control, with the builder invited as a user.\n\nn8n's licence FAQ for the self-hosted version explicitly permits consultants to charge for building, setting up and maintaining workflows. It does not permit a consultant to host n8n as a service and let clients build workflows on it. A builder may legitimately run your automation on their own instance and deliver only the results, but then you depend on them for as long as it runs. Check the current licence FAQ and n8n Cloud terms if this affects you.\n\nAlso ask for an export of every workflow. Exports are JSON files you can import elsewhere. Saved credentials are not included in the export, so you will need the logins for each connected app in your own name too. Be aware that an API key typed directly into a step as plain text does end up in the file.",
+      "bullets": []
+    },
+    {
+      "heading": "Questions to ask before you sign",
+      "text": "These apply to both. Builders in the n8n community give similar advice: judge on one real workflow and on how failure is handled, not on a broad portfolio.",
+      "bullets": [
+        "What happens when a step fails or times out? Where do failed items go, and who gets told?",
+        "What stops the same booking or order being processed twice?",
+        "Will I get documentation a non-developer can follow, and could another builder maintain this without you?",
+        "Can we start with a small paid piece of work before committing to the whole project?",
+        "Who covers when you are unavailable, and how fast do you respond?",
+        "What does support cost after launch?"
+      ]
+    },
+    {
+      "heading": "What we would not recommend",
+      "text": "Do not choose on hourly rate alone. A cheap build with no error handling costs more the first time it silently drops a week of enquiries. Do not hire from a marketplace profile without a test task; one business owner on the n8n forum described that route as a lottery. And do not accept an arrangement where the builder is the only one with access to the account, the credentials or the workflow files, however good they are.",
+      "bullets": []
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Can I move my n8n workflows from one builder to another?",
+      "answer": "Yes, if the workflows run in your own account or you hold the exported files. The new builder imports them and reconnects the credentials."
+    },
+    {
+      "question": "Do I need a support contract after the workflow is built?",
+      "answer": "For anything customer-facing, yes. Connected apps change and tokens expire. At minimum, agree who receives failure alerts and how quickly they act."
+    },
+    {
+      "question": "Is n8n free for a small business?",
+      "answer": "The self-hosted community version is free for your own internal use under n8n's licence, but you pay for the server and someone's time to run it. n8n Cloud is a paid subscription. Check n8n's current pricing page before deciding."
+    }
+  ],
+  "related": [
+    "n8n-ai-automation",
+    "ai-workflow-automation"
+  ],
+  "sources": [
+    {
+      "title": "n8n Docs: License FAQ",
+      "url": "https://docs.n8n.io/n8n-community-license/community-license/license-faq"
+    },
+    {
+      "title": "n8n Community: Does Workflow Export Include Credentials or Sensitive Data?",
+      "url": "https://community.n8n.io/t/does-workflow-export-include-credentials-or-sensitive-data/182892"
+    },
+    {
+      "title": "n8n Community: Looking to hire n8n developers for ongoing automation projects - what should I look for?",
+      "url": "https://community.n8n.io/t/looking-to-hire-n8n-developers-for-ongoing-automation-projects-what-should-i-look-for/294759"
+    }
+  ]
+}
