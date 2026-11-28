@@ -1,0 +1,84 @@
+{
+  "slug": "ai-agent-evals-explained",
+  "title": "Evals explained: how to know your AI agent is right",
+  "metaTitle": "AI Agent Evals Explained: How to Know Your Agent Is Right",
+  "description": "What an eval is, how the three kinds of grader work, why you run each case more than once, and how to start an eval set for an AI agent from your own failures.",
+  "category": "Explainer",
+  "date": "2026-11-28",
+  "updated": "2026-11-28",
+  "author": "Mahsam Abbas",
+  "authorRole": "Founder, Techlio",
+  "answer": "An eval is a test for an AI system: you give the agent a fixed input, let it run, and score the result with written rules. A set of evals built from your own real cases, run on every change, is the only reliable way to know whether an agent is right and whether the last change made it better or worse. Reading a handful of answers and liking them is not evidence.",
+  "sections": [
+    {
+      "heading": "What an eval is, in plain terms",
+      "text": "Ordinary software gives the same output for the same input, so a unit test passes or fails. An agent's output varies from run to run, and there is often more than one acceptable answer. An eval is the test for that kind of system. The terms below follow Anthropic's engineering guide on agent evals.",
+      "bullets": [
+        "Task: one test case, with a defined input and a definition of success.",
+        "Trial: one attempt at a task. You run several because results vary.",
+        "Grader: the logic that scores one aspect of the result.",
+        "Outcome: the state of the world at the end. Did the booking land in the database, not did the agent say it booked."
+      ]
+    },
+    {
+      "heading": "Three ways to grade an answer",
+      "text": "Every grader is one of three kinds, and a serious eval set mixes them. Our default is code wherever a rule can be written, a model judge for qualities that need reading, and people to check that the judge agrees with them.",
+      "bullets": [
+        "Code-based graders check facts: the right record was updated, the output parses, the required field is present. They are fast, cheap and repeatable, but brittle when a correct answer is worded differently.",
+        "Model-based graders use a second model with a rubric to judge tone, completeness or whether an answer is supported by its sources. They handle open-ended output, but they vary between runs and have to be calibrated against human graders.",
+        "Human graders are the reference standard, and the slowest and most expensive. Use them to build the first cases and to spot-check the model judge."
+      ]
+    },
+    {
+      "heading": "Grade the outcome, and run it more than once",
+      "text": "Two mistakes make an eval set misleading.\n\nThe first is grading the path instead of the result. Requiring an exact sequence of tool calls fails agents that found a valid shorter route. The guide advises grading what the agent produced in most cases. Check the path only where the path is the requirement, for example that the agent verified identity before sharing account details.\n\nThe second is running each task once. The guide works through the arithmetic: at a 75% success rate per trial, the chance of three successes in a row is about 42%. For a customer-facing agent, measure how often every trial passes.",
+      "bullets": []
+    },
+    {
+      "heading": "Capability evals and regression evals",
+      "text": "The guide separates two jobs. Capability evals cover what the agent cannot do reliably yet, so the pass rate starts low and the team works to raise it. Regression evals cover what the agent already does, and the pass rate should stay close to 100%. A capability case that passes consistently moves into the regression set.\n\nThe regression set protects you when a prompt is edited, a retrieval setting changes or the provider replaces a model. We run it in the build pipeline, so a change that breaks a case that used to pass does not ship.",
+      "bullets": []
+    },
+    {
+      "heading": "How to start an eval set",
+      "text": "Teams delay evals because they picture hundreds of cases. The guide says 20 to 50 simple tasks drawn from real failures is a good start, because early changes have effects large enough for a small set to show.",
+      "bullets": [
+        "Collect real inputs: support tickets, questions staff ask, the checks someone already does by hand before a release.",
+        "Write the expected result for each. A good case is one that two people who know the domain would grade the same way.",
+        "Include cases where the right behaviour is to refuse, ask a question or hand over to a person.",
+        "Turn every production failure into a new case before you fix it.",
+        "Read transcripts regularly, to find graders that pass bad answers or fail good ones."
+      ]
+    },
+    {
+      "heading": "What evals do not replace",
+      "text": "Evals run before release, so they miss the inputs nobody thought of. Production monitoring, user feedback and reading sampled transcripts catch those, and each miss becomes a new case.\n\nWe would not recommend buying an eval platform before you have written cases. The value is in the cases and expected results, which can only come from your own data and the people who know the work. We would also not accept an accuracy figure from a supplier without asking which cases it was measured on and how they were graded.",
+      "bullets": []
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many eval cases does an AI agent need?",
+      "answer": "Fewer than most teams expect. Anthropic's guide suggests starting with 20 to 50 simple tasks taken from real failures. The set should then grow with every production failure and every new capability."
+    },
+    {
+      "question": "Can one model reliably grade another model's answers?",
+      "answer": "Within limits. A model judge with a clear rubric handles open-ended answers that code cannot score, but its results vary and it has to be calibrated against human graders. Have people review a sample of its decisions."
+    },
+    {
+      "question": "Who should own the eval set?",
+      "answer": "The people who know what a correct answer looks like, usually the operations or support lead, together with the engineers who maintain the agent. If an outside team builds the agent, the eval set should be handed over with the code."
+    }
+  ],
+  "related": [
+    "ai-agents",
+    "ai-pilot-rescue",
+    "ai-consulting"
+  ],
+  "sources": [
+    {
+      "title": "Anthropic Engineering: Demystifying evals for AI agents",
+      "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
+    }
+  ]
+}
