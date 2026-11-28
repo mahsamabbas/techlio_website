@@ -1,0 +1,91 @@
+{
+  "slug": "human-in-the-loop-where-an-ai-agent-should-stop-and-ask",
+  "title": "Human in the loop: where an AI agent should stop and ask",
+  "metaTitle": "Human in the Loop: Where an AI Agent Should Stop and Ask",
+  "description": "How to decide which AI agent actions need human approval, how the pause and resume works in practice, and how to stop approval turning into a rubber stamp.",
+  "category": "Guide",
+  "date": "2026-11-28",
+  "updated": "2026-11-28",
+  "author": "Mahsam Abbas",
+  "authorRole": "Founder, Techlio",
+  "answer": "An AI agent should stop and ask a person before any action that is hard to reverse, moves money, sends something outside the company, touches personal data in bulk, or rests on thin evidence. Everything else it should do on its own, with a log. Decide this per tool, not per agent, and design the approval step so the reviewer sees exactly what will happen and can approve, change or reject it.",
+  "sections": [
+    {
+      "heading": "Why the question matters",
+      "text": "An agent acts through tools. If a model misreads a request, or a retrieved document contains hidden instructions, the damage is whatever its tools allow. OWASP calls this risk excessive agency in its Top 10 for LLM applications, and names three causes: more functions than the job needs, more permissions than the job needs, and too much autonomy, meaning high-impact actions that run without anyone checking them.\n\nHuman approval addresses only the third cause, and it is the most expensive control because it spends staff time on every use. Put it where it earns that cost.",
+      "bullets": []
+    },
+    {
+      "heading": "Sort actions by what it costs to be wrong",
+      "text": "List every tool the agent has and place each in one of three groups. The business owner should sign this list, not only the engineers.",
+      "bullets": [
+        "Act without asking: read-only lookups, drafts saved for later, internal notes, anything that can be undone in one step.",
+        "Act, then report: low-value changes that are easy to reverse, such as tagging a ticket or updating a status field. A person sees a summary and can undo it.",
+        "Ask first: refunds and payments, emails or messages to customers, deleting or overwriting records, changing permissions, contract or pricing commitments, and anything a regulator would expect a person to have decided."
+      ]
+    },
+    {
+      "heading": "Add a second trigger for uncertainty",
+      "text": "Risk of the action is one trigger. The other is the quality of the evidence. An agent should also hand over when it could not find a source for its answer, when sources disagree, or when the customer asks for a person.\n\nRules can depend on the arguments, not only the tool: a refund under a set amount may run on its own while a larger one waits. LangChain's human-in-the-loop middleware and the OpenAI Agents SDK both let you require approval per tool, either always or through a function that inspects the specific call.",
+      "bullets": []
+    },
+    {
+      "heading": "How the pause works in practice",
+      "text": "The mechanics are similar across frameworks. When the agent proposes a tool call that needs review, the run pauses before the tool executes, its state is saved, and the pending action is returned to your application. After a person decides, the run resumes.\n\nTeams underestimate the saved state. A reviewer may answer the next morning, so the paused run has to live in a database, not in memory. LangChain's documentation requires a checkpointer and recommends a persistent one for production. The OpenAI Agents SDK lets you serialise the run state and restore it later, and warns that restoring does not verify who owns a snapshot, so your server has to authenticate the reviewer first.\n\nReviewer options differ. LangChain's middleware offers approve, edit, reject and respond. The OpenAI SDK page describes approve and reject. If reviewers need to correct an amount before approving, confirm the framework supports editing.",
+      "bullets": []
+    },
+    {
+      "heading": "Stop approval becoming a rubber stamp",
+      "text": "A person who approves hundreds of requests a day stops reading them. The EU AI Act names this directly: Article 14 requires that people overseeing a high-risk system can stay aware of automation bias, override or reverse its output, and interrupt it. Those obligations cover high-risk systems only, but they are a sound checklist for any agent.",
+      "bullets": [
+        "Show the reviewer the exact action and its arguments, and the evidence the agent used.",
+        "Keep the queue short. If almost everything is approved unchanged, move that action to act-then-report and review a sample.",
+        "Record who approved what and when, next to the agent's own trace.",
+        "Feed rejections and edits back into the eval set.",
+        "Give operators a way to switch the agent off that does not need a developer."
+      ]
+    },
+    {
+      "heading": "What we would not recommend",
+      "text": "We would not rely on the prompt to enforce approval. An instruction such as \"always confirm before sending\" is a request to the model, not a control. OWASP makes the same point: authorisation should be enforced in downstream systems, not left to the model.\n\nWe would not put approval on every action either. It makes the agent slower than the manual process it replaced and trains reviewers to click through. And approval is no substitute for narrow permissions.",
+      "bullets": []
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Does human in the loop mean the agent is not really automated?",
+      "answer": "No. In a well-designed agent most actions run without a person, and approval is reserved for the few that are costly to get wrong. People spend their time on exceptions while the agent handles routine work."
+    },
+    {
+      "question": "Does the EU AI Act require human approval for every AI agent?",
+      "answer": "No. Article 14 applies to high-risk AI systems, and it requires that people can understand, override and interrupt the system, not that they approve each action. Classify your use case first and take legal advice where it is close."
+    },
+    {
+      "question": "Can approval steps be removed later?",
+      "answer": "Yes. Start with more approval than you think you need, record every decision, and relax a step when the record shows reviewers approve it unchanged almost every time. Keep approval on irreversible actions."
+    }
+  ],
+  "related": [
+    "ai-agents",
+    "cybersecurity",
+    "ai-architecture-sprint"
+  ],
+  "sources": [
+    {
+      "title": "OWASP Gen AI Security Project: LLM06:2025 Excessive Agency",
+      "url": "https://genai.owasp.org/llmrisk/llm062025-excessive-agency/"
+    },
+    {
+      "title": "EU Artificial Intelligence Act: Article 14, Human Oversight",
+      "url": "https://artificialintelligenceact.eu/article/14/"
+    },
+    {
+      "title": "LangChain documentation: Human-in-the-loop",
+      "url": "https://docs.langchain.com/oss/python/langchain/human-in-the-loop"
+    },
+    {
+      "title": "OpenAI Agents SDK documentation: Human-in-the-loop",
+      "url": "https://openai.github.io/openai-agents-js/guides/human-in-the-loop"
+    }
+  ]
+}
